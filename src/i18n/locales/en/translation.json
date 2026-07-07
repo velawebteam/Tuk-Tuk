@@ -1,0 +1,226 @@
+{
+  "nav": {
+    "home": "Home",
+    "tuk_tuk": "Tuk Tuk",
+    "jeep": "Jeep",
+    "before_booking": "Before Booking",
+    "faqs": "FAQs",
+    "about": "About Us",
+    "contact": "Contacts"
+  },
+  "hero": {
+    "title_part1": "Discover Tavira with ",
+    "title_highlight": "private tours",
+    "title_part2": " from Tavira Roots",
+    "subtitle": "Explore salt pans, chocolate and olive factories in private Tuk Tuk and Jeep tours. No groups, just you, your party, and the guide.",
+    "cta_tuk": "Tuk Tuk Tours",
+    "cta_jeep": "Jeep Adventure"
+  },
+  "common": {
+    "private": "Private",
+    "duration": "Duration",
+    "capacity": "Capacity",
+    "from": "From",
+    "pax": "pax",
+    "view_details": "View Details",
+    "reserve_now": "Book Now",
+    "contact_whatsapp": "Talk to Guide via WhatsApp"
+  },
+  "tuk_tuk_page": {
+    "title": "Tuk Tuk Tours in Tavira",
+    "subtitle_top": "Urban & Traditional Exploration",
+    "description": "Agile, eco-friendly, and charming. Our Tuk Tuks take you where others can't reach, always with the privacy that defines us.",
+    "faq_title": "Questions about Tuk Tuk?",
+    "faq_desc": "Our Tuk Tuks are 100% electric or low-emission, ideal for the narrow streets of the historical center. Maximum capacity is 6 people per vehicle."
+  },
+  "jeep_page": {
+    "title": "Jeep Adventure in Tavira",
+    "subtitle_top": "Adventure & Barrocal",
+    "description": "Feel the 4x4 adrenaline as we explore Tavira's inland. Visit traditional factories and breathtaking landscapes.",
+    "why_title": "Why choose the Jeep?",
+    "why_item1_title": "Off-Road Access",
+    "why_item1_desc": "We reach places inaccessible to normal cars or Tuk Tuks.",
+    "why_item2_title": "Comfort & Safety",
+    "why_item2_desc": "Robust vehicles and experienced guides for a worry-free adventure.",
+    "why_item3_title": "Panoramic Views",
+    "why_item3_desc": "Climb to the highest points of the Barrocal and enjoy incredible views over the coast.",
+    "why_item4_title": "Fully Private",
+    "why_item4_desc": "As with all our tours, the jeep is exclusive to your group."
+  },
+  "diff": {
+    "title": "Our Difference",
+    "subtitle": "Unlike the competition, at Tavira Roots, all our tours are strictly private.",
+    "exclusivity_title": "Total Exclusivity",
+    "exclusivity_desc": "Your group goes alone with the guide. No strangers, no rushing, at your own pace.",
+    "authentic_title": "Authentic Itineraries",
+    "authentic_desc": "We visit the most genuine parts of Tavira: salt pans, clay, olive, and chocolate factories.",
+    "guides_title": "Passionate Guides",
+    "guides_desc": "Our team knows every corner and story of Tavira, ensuring a rich and memorable experience."
+  },
+  "home": {
+    "featured_title": "Featured Experiences",
+    "featured_subtitle": "Choose between the agile charm of the Tuk Tuk or the adventurous robustness of the Jeep. All our tours are customizable.",
+    "view_all": "View all tours",
+    "attractions_title": "What will you visit?",
+    "attractions_subtitle": "Much more than a simple ride, an immersion into Tavira's culture.",
+    "chocolate": "Chocolate",
+    "olives": "Olives",
+    "salt": "Salt Pans",
+    "pottery": "Clay Walls",
+    "cta_box_title": "Ready for your private adventure?",
+    "cta_box_subtitle": "Book now and secure your spot on the best tour in Tavira. Exclusivity and fun guaranteed."
+  },
+  "tours": {
+    "cidade_tavira": {
+      "name": "Tavira City",
+      "desc": "Discover the heart of Tavira on a tour that covers history, rivers, and the Natural Park."
+    },
+    "tavira_total": {
+      "name": "Tavira Total",
+      "desc": "A complete Tavira experience, including tuna heritage and traditional salt pans."
+    },
+    "city_tapas": {
+      "name": "City & Tapas",
+      "desc": "Combine Tavira's culture with local gastronomy on a tour that ends with a tasting menu."
+    },
+    "historical_wine": {
+      "name": "Historical & Wine Tasting",
+      "desc": "A journey through Tavira's history with an exclusive tasting of Algarve region wines."
+    },
+    "city_chocolate": {
+      "name": "Tavira City & Chocolate",
+      "desc": "Explore the city and sweeten your day with a tasting of artisanal chocolate."
+    },
+    "tuk_tuk_boat": {
+      "name": "Tuk Tuk & Boat",
+      "desc": "The best way to see Tavira: by land in a Tuk Tuk and by sea on a boat tour through Ria Formosa."
+    },
+    "city_ice_cream": {
+      "name": "City & Ice Cream",
+      "desc": "A refreshing tour through the city with a stop for a 100% natural ice cream."
+    },
+    "city_olive_factory": {
+      "name": "City & Olive Factory",
+      "desc": "Learn about the olive tradition in Tavira with a factory visit and tasting of local products."
+    },
+    "santa_luzia_tuk": {
+      "name": "Santa Luzia",
+      "desc": "Visit the octopus capital and traditional salt pans on a tour focused on nature and local culture."
+    },
+    "jeep_vinho": {
+      "name": "Tavira, Santa Luzia & Wine Tasting",
+      "desc": "A private off-road adventure combining culture, nature, and gastronomy. The best way to see the Algarve Barrocal."
+    },
+    "ceramica": {
+      "name": "Traditional Ceramics (Terracotta)",
+      "desc": "Discover the ancestral art of ceramics and clay in Tavira. A private tour that takes you to the heart of artisanal production."
+    },
+    "centro_historico_salinas": {
+      "name": "Old Town, Salt Pans & Santa Luzia",
+      "desc": "Explore Tavira and its surroundings with the comfort and versatility of a private Jeep. Salt pans, history, and sea in one tour."
+    },
+    "tavira_gold": {
+      "name": "Tavira´s Gold: From Tuna, Salt and Olives to Octopus Capital",
+      "desc": "A complete tour connecting the white gold of salt pans to the liquid gold of olive oil and the octopus capital."
+    },
+    "ria_formosa_jeep": {
+      "name": "Ria Formosa JeepTour: Tuna, Salt Pans, Cacela Velha & Lunch",
+      "desc": "Explore the beauty of Ria Formosa with a stop in Cacela Velha and a regional lunch included."
+    },
+    "fuzeta_olhao_bath": {
+      "name": "JeepTour - Fuzeta, Olhão & Mud and Salt Bath",
+      "desc": "4x4 adventure with a stop in Olhão and a unique experience of mud and salt baths."
+    },
+    "santa_luzia_clay": {
+      "name": "Santa Luzia, Fuseta & Clay Factory",
+      "desc": "Discover the fishing tradition and the art of manual pottery in this exclusive tour."
+    },
+    "liquid_gold_route": {
+      "name": "The Liquid Gold Route Jeep & Olive Grove 2,000-Year History",
+      "desc": "Visit millennial olive trees and taste the best olive oil in the region in a historical setting."
+    },
+    "jeep_boat_anchors": {
+      "name": "Tavira: Jeep & Boat – Anchorgraveyard",
+      "desc": "The perfect combination of land and sea, with a visit to the iconic anchor graveyard."
+    },
+    "tavira_roots_wine": {
+      "name": "Tavira Roots: Salt Pans, Octopus, Tuna Heritage Wine & Tapas",
+      "desc": "The essence of Tavira in a ride that ends with local wines and tapas."
+    },
+    "jeep_boat_history": {
+      "name": "Jeep & Boat History & Nature",
+      "desc": "A journey through the history and nature of Tavira, exploring Ria Formosa by boat and jeep."
+    },
+    "full_day_sotavento": {
+      "name": "Full day in Sotavento W/Lunch",
+      "desc": "A full day to discover the Eastern Algarve with lunch included and authentic experiences."
+    }
+  },
+  "tour_detail": {
+    "departure": "Departure Point",
+    "departure_desc": "We meet in Tavira city center or at your hotel (subject to confirmation)."
+  },
+  "footer": {
+    "mission": "Private and exclusive experiences in Tavira. Discover the soul of the Algarve with us, in Tuk Tuk and Jeep tours designed for those who value authenticity and comfort.",
+    "explore": "Explore",
+    "legal": "Legal Information",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "complaints": "Complaints Book",
+    "rights": "All rights reserved"
+  },
+  "about_page": {
+    "hero_subtitle": "The Soul of Tavira at every turn",
+    "story_title_part1": "",
+    "story_title_part2": "was born from a passion for our roots.",
+    "story_p1": "We are a family business, passionate about Tavira and its unique history. Our mission is to provide unforgettable moments to those who visit us, showing the real Algarve, far from the crowds.",
+    "story_p2": "We believe the best way to get to know a place is through the people who love it. That's why our guides are local and our tours are strictly private, allowing for an authentic and personalized connection.",
+    "stat1": "Happy Customers",
+    "stat2": "Private Tours",
+    "values_title": "Our Values",
+    "values_subtitle": "What guides us every day.",
+    "value1_title": "Exclusivity",
+    "value1_desc": "Tours always private, no exceptions.",
+    "value2_title": "Passion",
+    "value2_desc": "We love what we do and where we live.",
+    "value3_title": "Knowledge",
+    "value3_desc": "History and culture in every explanation.",
+    "value4_title": "Quality",
+    "value4_desc": "Premium service and impeccable vehicles."
+  },
+  "faqs_page": {
+    "subtitle": "Get all your questions answered about our private tours.",
+    "q1": "Are the tours really private?",
+    "a1": "Yes! This is our main differentiator. When booking with Tavira Roots, the vehicle (Tuk Tuk or Jeep) and the guide will be exclusively focused on your group. We do not mix people from different groups.",
+    "q2": "What is the maximum capacity of each vehicle?",
+    "a2": "Our Tuk Tuks take up to 6 people. Jeeps also have capacity for 6 people comfortably. If your group is larger, we can take multiple vehicles together.",
+    "q3": "Do the tours include factory visits?",
+    "a3": "Yes, depending on the chosen tour. We have partnerships with chocolate, olive, salt pan, and ceramic factories. Visiting time and tastings vary according to the itinerary.",
+    "q4": "What languages does the guide speak?",
+    "a4": "Our guides are fluent in Portuguese and English. Upon prior request and availability, we may have guides who speak French or Spanish.",
+    "q5": "Do children pay the same price?",
+    "a5": "Children up to 3 years old travel for free (on lap). For children between 4 and 12 years old, we have special prices on certain tours. Check the details for each tour.",
+    "q6": "Can we customize the itinerary?",
+    "a6": "Since the tours are private, we have some flexibility. If there's a specific point in Tavira you really want to see, talk to your guide at the start of the tour and we'll try to adapt the route.",
+    "still_doubts": "Still have questions?",
+    "contact_us": "Contact us Directly"
+  },
+  "before_booking_page": {
+    "title": "Before Booking",
+    "subtitle": "Everything you need to know to ensure your experience with Tavira Roots is perfect.",
+    "item1_title": "Private Tours",
+    "item1_desc": "All our tours are 100% private. The price indicated is per vehicle or per person depending on the tour, but the vehicle will always be exclusive to your group.",
+    "item2_title": "Booking and Schedule",
+    "item2_desc": "We recommend booking at least 24 hours in advance. During high season, availability may be limited.",
+    "item3_title": "Meeting Point",
+    "item3_desc": "The default meeting point is in the center of Tavira. However, we offer pick-up service at selected hotels upon prior request.",
+    "item4_title": "Cancellations",
+    "item4_desc": "Free cancellations up to 48 hours before the tour. After this period, a cancellation fee may be charged.",
+    "item5_title": "Weather Conditions",
+    "item5_desc": "In case of adverse weather conditions that compromise safety, the tour may be rescheduled or canceled with a full refund.",
+    "item6_title": "Payments",
+    "item6_desc": "We accept payments via FareHarbor (online), cards, or cash on-site (upon confirmed booking).",
+    "special_needs_title": "Do you have any special needs?",
+    "special_needs_desc": "If you are traveling with small children (car seats), pets, or have mobility difficulties, please inform us at the time of booking so we can adapt the experience."
+  }
+}

@@ -1,0 +1,174 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "tuk_tuk": "Tuk Tuk",
+    "jeep": "Jeep",
+    "before_booking": "Avant de Réserver",
+    "faqs": "FAQs",
+    "about": "À Propos",
+    "contact": "Contacts"
+  },
+  "hero": {
+    "title_part1": "Découvrez Tavira avec les ",
+    "title_highlight": "tours privés",
+    "title_part2": " de Tavira Roots",
+    "subtitle": "Explorez les salines, les usines de chocolat et d'olives lors de visites privées en Tuk Tuk et en Jeep. Pas de groupes, juste vous, les vôtres et le guide.",
+    "cta_tuk": "Tours en Tuk Tuk",
+    "cta_jeep": "Aventure en Jeep"
+  },
+  "common": {
+    "private": "Privé",
+    "duration": "Durée",
+    "capacity": "Capacité",
+    "from": "À partir de",
+    "pax": "pax",
+    "view_details": "Voir Détails",
+    "reserve_now": "Réserver Maintenant",
+    "contact_whatsapp": "Parler au Guide via WhatsApp"
+  },
+  "tuk_tuk_page": {
+    "title": "Tours en Tuk Tuk à Tavira",
+    "subtitle_top": "Exploration Urbaine & Traditionnelle",
+    "description": "Agiles, écologiques et charmants. Nos Tuk Tuks vous emmènent là où les autres ne peuvent pas aller, toujours avec l'intimité qui nous caractérise.",
+    "faq_title": "Des questions sur le Tuk Tuk ?",
+    "faq_desc": "Nos Tuk Tuks sont 100% électriques ou à faibles émissions, idéaux pour les rues étroites du centre historique. La capacité maximale est de 6 personnes par véhicule."
+  },
+  "jeep_page": {
+    "title": "Aventure en Jeep à Tavira",
+    "subtitle_top": "Aventure & Barrocal",
+    "description": "Ressentez l'adrénaline du 4x4 en explorant l'arrière-pays de Tavira. Visitez des usines traditionnelles et des paysages à couper le souffle.",
+    "why_title": "Pourquoi choisir la Jeep ?",
+    "why_item1_title": "Accès Tout-Terrain",
+    "why_item1_desc": "Nous atteignons des endroits inaccessibles aux voitures normales ou aux Tuk Tuks.",
+    "why_item2_title": "Confort & Sécurité",
+    "why_item2_desc": "Des véhicules robustes et des guides expérimentés pour une aventure sans souci.",
+    "why_item3_title": "Vues Panoramiques",
+    "why_item3_desc": "Montez sur les points les plus hauts du Barrocal et profitez de vues incroyables sur la côte.",
+    "why_item4_title": "Entièrement Privé",
+    "why_item4_desc": "Comme pour tous nos tours, la jeep est exclusive à votre groupe."
+  },
+  "diff": {
+    "title": "Notre Différence",
+    "subtitle": "Contrairement à la concurrence, chez Tavira Roots, toutes nos visites sont strictement privées.",
+    "exclusivity_title": "Exclusivité Totale",
+    "exclusivity_desc": "Votre groupe part seul avec le guide. Pas d'étrangers, pas de précipitation, à votre rythme.",
+    "authentic_title": "Itinéraires Authentiques",
+    "authentic_desc": "Nous visitons ce que Tavira a de plus authentique : salines, usines de terre cuite, d'olives et de chocolat.",
+    "guides_title": "Guides Passionnés",
+    "guides_desc": "Notre équipe connaît chaque recoin et chaque história de Tavira, garantissant une expérience riche et mémorable."
+  },
+  "home": {
+    "featured_title": "Expériences à la Une",
+    "featured_subtitle": "Choisissez entre le charme agile du Tuk Tuk ou la robustez aventureuse de la Jeep. Toutes nos visites sont personnalisables.",
+    "view_all": "Voir toutes les visites",
+    "attractions_title": "Que visiterez-vous ?",
+    "attractions_subtitle": "Bien plus qu'une simple promenade, une immersion dans la culture de Tavira.",
+    "chocolate": "Chocolat",
+    "olives": "Olives",
+    "salt": "Marais Salants",
+    "pottery": "Murs d'Argile",
+    "cta_box_title": "Prêt pour votre aventure privée ?",
+    "cta_box_subtitle": "Réservez maintenant et garantissez votre place pour le meilleur tour de Tavira. Exclusivité et plaisir garantis."
+  },
+  "tours": {
+    "cidade_tavira": {
+      "name": "Ville de Tavira",
+      "desc": "Explorez le charme historique de Tavira lors d'une balade privée en Tuk Tuk. Découvrez les églises, les rues pittoresques et les secrets de la ville."
+    },
+    "tavira_total": {
+      "name": "Tavira Total",
+      "desc": "Une expérience complète de Tavira. Nous visitons les lieux les plus emblématiques et les environs dans un parcours privé et exclusif."
+    },
+    "tapas_vinhos": {
+      "name": "Tapas et Vins",
+      "desc": "Savourez le meilleur de l'Algarve. Un tour gastronomique privé avec des arrêts stratégiques pour déguster des vins et des tapas locaux."
+    },
+    "cidade_chocolate": {
+      "name": "Ville de Tavira et Chocolat",
+      "desc": "Le tour idéal pour les amateurs de douceurs. Nous visitons la ville et terminons par une délicieuse visite d'une usine de chocolat."
+    },
+    "santa_luzia": {
+      "name": "Santa Luzia",
+      "desc": "Visitez la capitale du poulpe. Une balade privée jusqu'au pittoresque village de Santa Luzia, en passant par les célèbres marais salants."
+    },
+    "jeep_vinho": {
+      "name": "Tavira, Santa Luzia et Dégustation de Vin",
+      "desc": "Une aventure tout-terrain privée combinant culture, nature et gastronomie. La meilleure façon de voir le Barrocal de l'Algarve."
+    },
+    "ceramica": {
+      "name": "Céramique Traditionnelle (Terracotta)",
+      "desc": "Découvrez l'art ancestral de la céramique et de l'argile à Tavira. Un tour privé qui vous emmène au cœur de la production artisanale."
+    },
+    "centro_historico_salinas": {
+      "name": "Vieille Ville, Marais Salants et Santa Luzia",
+      "desc": "Explorez Tavira et ses environs avec le confort et la polyvalence d'une Jeep privée. Marais salants, histoire et mer en un seul tour."
+    }
+  },
+  "tour_detail": {
+    "departure": "Point de Départ",
+    "departure_desc": "Nous nous retrouvons au centre-ville de Tavira ou à votre hôtel (sous réserve de confirmation)."
+  },
+  "footer": {
+    "mission": "Expériences privées et exclusives à Tavira. Découvrez l'âme de l'Algarve avec nous, dans des visites en Tuk Tuk et en Jeep conçues pour ceux qui apprécient l'authenticité et le confort.",
+    "explore": "Explorer",
+    "legal": "Informations Légales",
+    "privacy": "Politique de Confidentialité",
+    "terms": "Termes et Conditions",
+    "complaints": "Livre de Réclamations",
+    "rights": "Tous droits réservés"
+  },
+  "about_page": {
+    "hero_subtitle": "L'Âme de Tavira à chaque tournant",
+    "story_title_part1": "",
+    "story_title_part2": "est né d'une passion pour nos racines.",
+    "story_p1": "Nous sommes une entreprise familiale, passionnée par Tavira et son histoire unique. Notre mission est d'offrir des moments inoubliables à ceux qui nous rendent visite, en montrant le vrai Algarve, loin des foules.",
+    "story_p2": "Nous croyons que la meilleure façon de connaître un lieu est à travers les gens qui l'aiment. C'est pourquoi nos guides sont locaux et nos visites sont strictement privées, permettant une connexion authentique et personnalisée.",
+    "stat1": "Clients Heureux",
+    "stat2": "Tours Privés",
+    "values_title": "Nos Valeurs",
+    "values_subtitle": "Ce qui nous guide chaque jour.",
+    "value1_title": "Exclusivité",
+    "value1_desc": "Visites toujours privées, sans exception.",
+    "value2_title": "Passion",
+    "value2_desc": "Nous aimons ce que nous faisons et où nous vivons.",
+    "value3_title": "Connaissance",
+    "value3_desc": "Histoire et culture dans chaque explication.",
+    "value4_title": "Qualité",
+    "value4_desc": "Service premium et véhicules impeccables."
+  },
+  "faqs_page": {
+    "subtitle": "Obtenez des réponses à toutes vos questions sur nos visites privées.",
+    "q1": "Les tours sont-ils vraiment privés ?",
+    "a1": "Oui ! C'est notre principal différenciateur. En réservant avec Tavira Roots, le véhicule (Tuk Tuk ou Jeep) et le guide seront exclusivement concentrés sur votre groupe. Nous ne mélangeons pas des personnes de groupes différents.",
+    "q2": "Quelle est la capacité maximale de chaque véhicule ?",
+    "a2": "Nos Tuk Tuks peuvent accueillir jusqu'à 6 personnes. Les Jeeps ont également une capacité de 6 personnes confortablement. Si votre groupe est plus nombreux, nous pouvons prendre plusieurs véhicules ensemble.",
+    "q3": "Les tours incluent-ils des visites d'usines ?",
+    "a3": "Oui, selon le tour choisi. Nous avons des partenariats avec des usines de chocolat, d'olives, des marais salants et des poteries. Le temps de visite et les dégustations varient selon l'itinéraire.",
+    "q4": "Quelles langues parle le guide ?",
+    "a4": "Nos guides parlent couramment le portugais et l'anglais. Sur demande préalable et selon disponibilité, nous pouvons avoir des guides parlant français ou espagnol.",
+    "q5": "Les enfants paient-ils le même prix ?",
+    "a5": "Les enfants jusqu'à 3 ans voyagent gratuitement (sur les genoux). Para les enfants entre 4 et 12 ans, nous avons des tarifs spéciaux sur certains tours. Consultez les détails pour chaque tour.",
+    "q6": "Pouvons-nous personnaliser l'itinéraire ?",
+    "a6": "Puisque les visites sont privées, nous avons une certaine flexibilité. S'il y a um point spécifique à Tavira que vous voulez absolument voir, parlez-en à votre guide au début du tour et nous essaierons d'adapter l'itinéraire.",
+    "still_doubts": "Vous avez encore des questions ?",
+    "contact_us": "Contactez-nous Directement"
+  },
+  "before_booking_page": {
+    "title": "Avant de Réserver",
+    "subtitle": "Tout ce que vous devez savoir pour que votre expérience avec Tavira Roots soit parfaite.",
+    "item1_title": "Visites Privées",
+    "item1_desc": "Toutes nos visites sont 100% privées. Le prix indiqué est par véhicule ou par personne selon le tour, mais le véhicule sera toujours exclusif à votre groupe.",
+    "item2_title": "Réservations et Horaires",
+    "item2_desc": "Nous recommandons de réserver au moins 24 heures à l'avance. En haute saison, la disponibilité peut être limitée.",
+    "item3_title": "Point de Rencontre",
+    "item3_desc": "Le point de rencontre par défaut est au centre de Tavira. Cependant, nous proposons un service de prise en charge dans certains hôtels sur demande préalable.",
+    "item4_title": "Annulations",
+    "item4_desc": "Annulations gratuites jusqu'à 48 heures avant le tour. Passé ce délai, des frais d'annulation peuvent être appliqués.",
+    "item5_title": "Conditions Météorologiques",
+    "item5_desc": "En cas de conditions météorologiques défavorables compromettant la sécurité, le tour peut être reprogrammé ou annulé avec un remboursement complet.",
+    "item6_title": "Paiements",
+    "item6_desc": "Nous acceptons les paiements via FareHarbor (en ligne), par carte ou en espèces sur place (sur réservation confirmée).",
+    "special_needs_title": "Avez-vous des besoins particuliers ?",
+    "special_needs_desc": "Si vous voyagez avec de jeunes enfants (sièges auto), des animaux domestiques ou si vous avez des difficultés de mobilité, veuillez nous en informer au moment de la réservation afin que nous puissions adapter l'expérience."
+  }
+}

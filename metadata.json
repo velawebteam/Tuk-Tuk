@@ -1,0 +1,6 @@
+{
+  "name": "Tavira Roots",
+  "description": "Tours e experiências privadas de Tuk Tuk e Jipe em Tavira, Algarve.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
