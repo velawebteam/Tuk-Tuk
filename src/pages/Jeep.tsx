@@ -2,12 +2,44 @@ import { motion } from 'motion/react';
 import { jeepTours } from '@/src/data/tours';
 import { TourCard } from '@/src/components/TourCard';
 import { useTranslation } from 'react-i18next';
+import { SEO } from '../components/SEO';
 
 export default function Jeep() {
   const { t } = useTranslation();
   
   return (
     <div className="pb-24">
+      <SEO 
+        title={t('jeep_page.title')}
+        description={t('jeep_page.description')}
+        canonical="/jipe"
+        schemaData={{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "itemListElement": jeepTours.map((tour, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "item": {
+              "@type": "TouristTrip",
+              "name": t(tour.nameKey),
+              "description": t(tour.descriptionKey),
+              "image": tour.image,
+              "touristType": "Off-Road",
+              "itinerary": {
+                "@type": "ItemList",
+                "numberOfItems": 1,
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Algarve Mountains"
+                  }
+                ]
+              }
+            }
+          }))
+        }}
+      />
       {/* Header */}
       <section className="relative min-h-[70vh] md:min-h-[85vh] flex items-center text-white overflow-hidden bg-brand-black">
         <div className="absolute inset-0 z-0">
@@ -69,7 +101,7 @@ export default function Jeep() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div className="rounded-3xl overflow-hidden shadow-2xl">
               <img 
-                src="https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?q=80&w=1000&auto=format&fit=crop" 
+                src="https://lh3.googleusercontent.com/d/14S6ou3WQn8B4Nbrugjn7UZ_O8jwWBq0-" 
                 alt="Jeep Adventure" 
                 className="w-full h-full object-cover"
               />

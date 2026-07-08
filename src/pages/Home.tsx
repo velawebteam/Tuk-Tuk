@@ -3,6 +3,7 @@ import { Users, Map, Star, ChevronRight, Camera, Coffee, Leaf } from 'lucide-rea
 import { Link } from 'react-router-dom';
 import { tukTukTours, jeepTours } from '@/src/data/tours';
 import { useTranslation } from 'react-i18next';
+import { SEO } from '../components/SEO';
 
 export default function Home() {
   const { t } = useTranslation();
@@ -10,6 +11,11 @@ export default function Home() {
 
   return (
     <div>
+      <SEO 
+        title={t('hero.title_part1') + t('hero.title_highlight')}
+        description={t('hero.subtitle')}
+        canonical="/"
+      />
       {/* Hero Section */}
       <section className="relative h-[85vh] min-h-[600px] flex items-center overflow-hidden bg-brand-black">
         <div className="absolute inset-0 z-0">
@@ -29,7 +35,7 @@ export default function Home() {
             className="max-w-4xl mx-auto"
           >
             <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight mb-6">
-              {t('hero.title_part1')}<span className="text-brand-brown underline decoration-brand-brown/30 underline-offset-8">{t('hero.title_highlight')}</span>{t('hero.title_part2')}
+              {t('hero.title_part1')}<span className="text-white">{t('hero.title_highlight')}</span>{t('hero.title_part2')}
             </h1>
             <p className="text-lg md:text-2xl text-brand-cream mb-10 leading-relaxed max-w-3xl mx-auto px-4">
               {t('hero.subtitle')}

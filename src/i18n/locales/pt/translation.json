@@ -9,10 +9,10 @@
     "contact": "Contactos"
   },
   "hero": {
-    "title_part1": "Conheça Tavira com os ",
-    "title_highlight": "passeios privados",
-    "title_part2": " da Tavira Roots",
-    "subtitle": "Explore salinas, fábricas de chocolate e azeitonas em passeios privados de Tuk Tuk e Jipe. Sem grupos, apenas você, os seus e o guia.",
+    "title_part1": "Tavira Roots | ",
+    "title_highlight": "Passeios Privados",
+    "title_part2": " em Tavira",
+    "subtitle": "Leve a sua família a conhecer a cidade de Tavira e visite salinas, fábricas de chocolate, azeite e as paisagens mais bonitas do Algarve",
     "cta_tuk": "Passeios Tuk Tuk",
     "cta_jeep": "Aventura em Jipe"
   },
@@ -31,7 +31,7 @@
     "subtitle_top": "Exploração Urbana & Tradicional",
     "description": "Agéis, ecológicos e charmosos. Os nossos Tuk Tuks levam-no onde os outros não chegam, sempre com a privacidade que nos caracteriza.",
     "faq_title": "Dúvidas sobre o Tuk Tuk?",
-    "faq_desc": "Os nossos Tuk Tuks são 100% elétricos ou de baixas emissões, ideais para as ruas estreitas do centro histórico. A capacidade máxima é de 6 pessoas por veículo."
+    "faq_desc": "Os nossos Tuk Tuks são 100% elétricos ou de baixas emissões, ideais para as ruas estreitas do centro histórico. A capacidade máxima é de 9 pessoas por veículo."
   },
   "jeep_page": {
     "title": "Aventura de Jipe em Tavira",
@@ -193,7 +193,7 @@
     "q1": "Os passeios são realmente privados?",
     "a1": "Sim! Este é o nosso maior diferencial. Ao reservar com a Tavira Roots, o veículo (Tuk Tuk ou Jipe) e o guia estarão focados exclusivamente no seu grupo. Não juntamos pessoas de grupos diferentes.",
     "q2": "Qual é a lotação máxima de cada veículo?",
-    "a2": "Os nossos Tuk Tuks levam até 6 pessoas. Os Jipes também têm capacidade para 6 pessoas confortavelmente. Se o seu grupo for maior, podemos levar vários veículos em conjunto.",
+    "a2": "Os nossos Tuk Tuks levam até 9 pessoas. Os Jipes têm capacidade para 5 pessoas confortavelmente. Se o seu grupo for maior, podemos levar vários veículos em conjunto.",
     "q3": "As tours incluem visitas às fábricas?",
     "a3": "Sim, dependendo da tour escolhida. Temos parcerias com fábricas de chocolate, azeitonas, salinas e cerâmica. O tempo de visita e degustações variam conforme o itinerário.",
     "q4": "O guia fala que línguas?",

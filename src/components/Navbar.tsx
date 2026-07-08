@@ -4,6 +4,7 @@ import { Menu, X, ChevronRight, Languages } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { cn } from '@/src/lib/utils';
 import { useTranslation } from 'react-i18next';
+import mapPattern from '@/src/assets/images/map_pattern.jpg';
 
 export function Navbar() {
   const { t, i18n } = useTranslation();
@@ -49,38 +50,51 @@ export function Navbar() {
   };
 
   return (
-    <nav className={cn(
-      "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-      isSolid 
-        ? "bg-white border-b border-brand-brown/5 shadow-md" 
-        : "bg-transparent"
-    )}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav 
+      className={cn(
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 overflow-hidden",
+        isSolid 
+          ? "bg-brand-cream border-b border-brand-brown/10 shadow-md" 
+          : "bg-transparent"
+      )}
+    >
+      {/* Background Pattern Overlay */}
+      {isSolid && (
+        <div 
+          className="absolute inset-0 z-0 opacity-15 pointer-events-none"
+          style={{ 
+            backgroundImage: `url(${mapPattern})`,
+            backgroundSize: '600px',
+            backgroundRepeat: 'repeat',
+          }}
+        />
+      )}
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className={cn(
-          "flex justify-between items-center transition-all duration-300",
+          "flex justify-between items-center transition-all duration-300 w-full",
           isScrolled ? "h-16" : "h-24"
         )}>
-          <div className="flex items-center">
-            <Link to="/" className="flex items-center group">
-              <img 
-                src="https://lh3.googleusercontent.com/d/1MY_rwU0fvXf14ORYxazgy9iRqbVj1MBn" 
-                alt="Tavira Roots Logo" 
-                className={cn(
-                  "w-auto transition-all duration-300",
-                  isScrolled ? "h-10 md:h-12" : "h-16 md:h-[90px]"
-                )}
-              />
-            </Link>
-          </div>
+          {/* Logo - Left */}
+          <Link to="/" className="flex items-center group">
+            <img 
+              src="https://lh3.googleusercontent.com/d/1_oz5jkibMRM3DtpxiwDJxKeBCRoqe1yo" 
+              alt="Tavira Roots Logo" 
+              className={cn(
+                "w-auto transition-all duration-300",
+                isScrolled ? "h-10 md:h-12" : "h-16 md:h-[90px]"
+              )}
+            />
+          </Link>
 
-          {/* Desktop Links */}
+          {/* Desktop Links - Right */}
           <div className="hidden lg:flex items-center space-x-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 to={link.href}
                 className={cn(
-                  "text-sm font-bold uppercase tracking-widest transition-all duration-300 hover:text-brand-brown relative group",
+                  "text-sm font-bold uppercase tracking-widest transition-all duration-300 hover:text-brand-brown relative group font-display",
                   isSolid ? "text-brand-black" : "text-white",
                   location.pathname === link.href && (isSolid ? "text-brand-brown" : "text-brand-cream")
                 )}
@@ -99,7 +113,7 @@ export function Navbar() {
               <button
                 onClick={() => setIsLangOpen(!isLangOpen)}
                 className={cn(
-                  "flex items-center gap-1 text-sm font-bold transition-colors uppercase",
+                  "flex items-center gap-1 text-sm font-bold transition-colors uppercase font-display",
                   isSolid ? "text-brand-black hover:text-brand-brown" : "text-white hover:text-brand-cream"
                 )}
               >
@@ -183,7 +197,7 @@ export function Navbar() {
                   to={link.href}
                   onClick={() => setIsOpen(false)}
                   className={cn(
-                    "flex items-center justify-between px-3 py-3 rounded-lg text-base font-bold uppercase tracking-widest transition-colors",
+                    "flex items-center justify-between px-3 py-3 rounded-lg text-base font-bold uppercase tracking-widest transition-colors font-display",
                     location.pathname === link.href
                       ? "bg-brand-cream text-brand-brown"
                       : "text-brand-black hover:bg-brand-cream/50"

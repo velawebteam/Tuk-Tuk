@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Plus, Minus } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { SEO } from '../components/SEO';
 
 export default function FAQs() {
   const { t } = useTranslation();
@@ -36,6 +37,23 @@ export default function FAQs() {
 
   return (
     <div className="pt-24 pb-24 bg-brand-cream min-h-screen">
+      <SEO 
+        title={t('nav.faqs')}
+        description={t('faqs_page.subtitle')}
+        canonical="/faqs"
+        schemaData={{
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "mainEntity": faqs.map(faq => ({
+            "@type": "Question",
+            "name": faq.question,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": faq.answer
+            }
+          }))
+        }}
+      />
       <section className="max-w-4xl mx-auto px-4 py-12 md:py-20">
         <div className="text-center mb-12 md:mb-16">
           <h1 className="text-3xl md:text-5xl font-black text-brand-black mb-6 uppercase tracking-tight">{t('nav.faqs')}</h1>

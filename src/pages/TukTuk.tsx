@@ -2,15 +2,58 @@ import { motion } from 'motion/react';
 import { tukTukTours } from '@/src/data/tours';
 import { TourCard } from '@/src/components/TourCard';
 import { useTranslation } from 'react-i18next';
+import { SEO } from '../components/SEO';
 
 export default function TukTuk() {
   const { t } = useTranslation();
   
   return (
     <div className="pb-24">
+      <SEO 
+        title={t('tuk_tuk_page.title')}
+        description={t('tuk_tuk_page.description')}
+        canonical="/tuk-tuk"
+        schemaData={{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "itemListElement": tukTukTours.map((tour, index) => ({
+            "@type": "ListItem",
+            "position": index + 1,
+            "item": {
+              "@type": "TouristTrip",
+              "name": t(tour.nameKey),
+              "description": t(tour.descriptionKey),
+              "image": tour.image,
+              "touristType": "Sightseeing",
+              "itinerary": {
+                "@type": "ItemList",
+                "numberOfItems": 1,
+                "itemListElement": [
+                  {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Tavira"
+                  }
+                ]
+              }
+            }
+          }))
+        }}
+      />
       {/* Header */}
-      <section className="bg-brand-black py-12 md:py-20 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-16 md:pt-0">
+      <section className="relative h-[500px] md:h-[800px] overflow-hidden flex items-center justify-center text-white">
+        {/* Video Background Overlay */}
+        <div className="absolute inset-0 z-0 pointer-events-none">
+          <div className="absolute inset-0 bg-brand-black/60 z-10" />
+          <iframe
+            className="absolute top-1/2 left-1/2 w-[300%] h-[300%] -translate-x-1/2 -translate-y-1/2"
+            src="https://www.youtube.com/embed/G4qOa_eTe6A?autoplay=1&mute=1&loop=1&playlist=G4qOa_eTe6A&controls=0&showinfo=0&autohide=1&modestbranding=1&rel=0"
+            allow="autoplay; encrypted-media"
+            title="Background Video"
+          />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-16 md:pt-0 relative z-20">
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

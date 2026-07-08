@@ -7,6 +7,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import { useEffect } from 'react';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
+import { VideoPreloader } from './components/VideoPreloader';
 import Home from './pages/Home';
 import TukTuk from './pages/TukTuk';
 import Jeep from './pages/Jeep';
@@ -31,6 +32,7 @@ export default function App() {
     <Router>
       <div className="min-h-screen bg-brand-cream font-sans text-brand-black">
         <ScrollToTop />
+        <VideoPreloader />
         <Navbar />
         <main>
           <Routes>

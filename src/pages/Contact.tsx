@@ -1,8 +1,14 @@
 import { Mail, Phone, MapPin, Instagram, Facebook, Clock } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
 export default function Contact() {
   return (
     <div className="pt-24 pb-24 bg-brand-cream min-h-screen">
+      <SEO 
+        title="Contactos | Fale Connosco"
+        description="Tem alguma questão sobre as nossas tours privadas de Tuk Tuk ou Jipe? Entre em contacto connosco para planear a sua experiência perfeita em Tavira."
+        canonical="/contactos"
+      />
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           <div>

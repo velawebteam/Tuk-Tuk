@@ -9,10 +9,10 @@
     "contact": "Contacts"
   },
   "hero": {
-    "title_part1": "Discover Tavira with ",
-    "title_highlight": "private tours",
-    "title_part2": " from Tavira Roots",
-    "subtitle": "Explore salt pans, chocolate and olive factories in private Tuk Tuk and Jeep tours. No groups, just you, your party, and the guide.",
+    "title_part1": "Tavira Roots | ",
+    "title_highlight": "Private Tours",
+    "title_part2": " in Tavira",
+    "subtitle": "Take your family to discover the city of Tavira and visit salt pans, chocolate and olive oil factories, and the most beautiful landscapes of the Algarve",
     "cta_tuk": "Tuk Tuk Tours",
     "cta_jeep": "Jeep Adventure"
   },
@@ -31,7 +31,7 @@
     "subtitle_top": "Urban & Traditional Exploration",
     "description": "Agile, eco-friendly, and charming. Our Tuk Tuks take you where others can't reach, always with the privacy that defines us.",
     "faq_title": "Questions about Tuk Tuk?",
-    "faq_desc": "Our Tuk Tuks are 100% electric or low-emission, ideal for the narrow streets of the historical center. Maximum capacity is 6 people per vehicle."
+    "faq_desc": "Our Tuk Tuks are 100% electric or low-emission, ideal for the narrow streets of the historical center. Maximum capacity is 9 people per vehicle."
   },
   "jeep_page": {
     "title": "Jeep Adventure in Tavira",
@@ -193,7 +193,7 @@
     "q1": "Are the tours really private?",
     "a1": "Yes! This is our main differentiator. When booking with Tavira Roots, the vehicle (Tuk Tuk or Jeep) and the guide will be exclusively focused on your group. We do not mix people from different groups.",
     "q2": "What is the maximum capacity of each vehicle?",
-    "a2": "Our Tuk Tuks take up to 6 people. Jeeps also have capacity for 6 people comfortably. If your group is larger, we can take multiple vehicles together.",
+    "a2": "Our Tuk Tuks take up to 9 people. Jeeps have capacity for 5 people comfortably. If your group is larger, we can take multiple vehicles together.",
     "q3": "Do the tours include factory visits?",
     "a3": "Yes, depending on the chosen tour. We have partnerships with chocolate, olive, salt pan, and ceramic factories. Visiting time and tastings vary according to the itinerary.",
     "q4": "What languages does the guide speak?",
