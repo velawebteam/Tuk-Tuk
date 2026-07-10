@@ -18,20 +18,22 @@
   },
   "common": {
     "private": "Privé",
+    "languages_available": "Langues disponibles :",
     "duration": "Durée",
     "capacity": "Capacité",
     "from": "À partir de",
     "pax": "pax",
     "view_details": "Voir Détails",
     "reserve_now": "Réserver Maintenant",
-    "contact_whatsapp": "Parler au Guide via WhatsApp"
+    "contact_whatsapp": "Parler au Guide via WhatsApp",
+    "museum_closure_notice": "Le musée du thon est fermé entre le 10 novembre et le 10 février."
   },
   "tuk_tuk_page": {
     "title": "Tours en Tuk Tuk à Tavira",
     "subtitle_top": "Exploration Urbaine & Traditionnelle",
     "description": "Agiles, écologiques et charmants. Nos Tuk Tuks vous emmènent là où les autres ne peuvent pas aller, toujours avec l'intimité qui nous caractérise.",
     "faq_title": "Des questions sur le Tuk Tuk ?",
-    "faq_desc": "Nos Tuk Tuks sont 100% électriques ou à faibles émissions, idéaux pour les rues étroites du centre historique. La capacité maximale est de 9 personnes par véhicule."
+    "faq_desc": "Nos Tuk Tuks sont 100% électriques ou à faibles émissions, idéaux pour les rues étroites du centre historique. La capacité maximale totale est de 9 personnes (réparties sur deux véhicules, un de 5 places et un autre de 4 places)."
   },
   "jeep_page": {
     "title": "Aventure en Jeep à Tavira",
@@ -141,7 +143,7 @@
     "q1": "Les tours sont-ils vraiment privés ?",
     "a1": "Oui ! C'est notre principal différenciateur. En réservant avec Tavira Roots, le véhicule (Tuk Tuk ou Jeep) et le guide seront exclusivement concentrés sur votre groupe. Nous ne mélangeons pas des personnes de groupes différents.",
     "q2": "Quelle est la capacité maximale de chaque véhicule ?",
-    "a2": "Nos Tuk Tuks peuvent accueillir jusqu'à 9 personnes. Les Jeeps ont une capacité de 5 personnes confortablement. Si votre groupe est plus nombreux, nous pouvons prendre plusieurs véhicules ensemble.",
+    "a2": "Nos Tuk Tuks peuvent accueillir jusqu'à 9 personnes (sur deux véhicules de 5 et 4 places). Les Jeeps ont une capacité de 5 personnes confortablement. Si votre groupe est plus nombreux, nous pouvons prendre plusieurs véhicules ensemble.",
     "q3": "Les tours incluent-ils des visites d'usines ?",
     "a3": "Oui, selon le tour choisi. Nous avons des partenariats avec des usines de chocolat, d'olives, des marais salants et des poteries. Le temps de visite et les dégustations varient selon l'itinéraire.",
     "q4": "Quelles langues parle le guide ?",

@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Plus, Minus } from 'lucide-react';
+import { Plus, Minus, AlertCircle } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import { SEO } from '../components/SEO';
 
@@ -56,6 +56,16 @@ export default function FAQs() {
       />
       <section className="max-w-4xl mx-auto px-4 py-12 md:py-20">
         <div className="text-center mb-12 md:mb-16">
+          <motion.div 
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-10 p-4 bg-orange-50 border border-orange-200 rounded-2xl flex items-center justify-center gap-3 text-orange-900"
+          >
+            <AlertCircle className="shrink-0 text-orange-600" size={20} />
+            <p className="font-bold text-xs md:text-sm uppercase tracking-wide">
+              {t('common.museum_closure_notice')}
+            </p>
+          </motion.div>
           <h1 className="text-3xl md:text-5xl font-black text-brand-black mb-6 uppercase tracking-tight">{t('nav.faqs')}</h1>
           <p className="text-brand-black/60 font-medium">{t('faqs_page.subtitle')}</p>
         </div>

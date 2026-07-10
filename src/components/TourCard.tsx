@@ -57,6 +57,22 @@ export function TourCard({ tour }: TourCardProps) {
           </div>
         </div>
 
+        <div className="mb-6">
+          <span className="text-[10px] uppercase tracking-wider text-brand-black/40 font-bold mb-2 block">
+            {t('common.languages_available')}
+          </span>
+          <div className="flex flex-wrap gap-2">
+            {tour.languages.map((lang) => (
+              <span 
+                key={lang} 
+                className="px-2 py-0.5 bg-brand-brown/5 text-brand-brown border border-brand-brown/10 rounded-md text-[10px] font-bold uppercase tracking-wider"
+              >
+                {lang}
+              </span>
+            ))}
+          </div>
+        </div>
+
         <div className="flex items-center justify-between">
           <div className="flex flex-col">
             <span className="text-[10px] uppercase tracking-wider text-brand-black/40 font-bold">{t('common.from')}</span>

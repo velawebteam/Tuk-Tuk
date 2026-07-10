@@ -41,7 +41,7 @@ export default function TukTuk() {
         }}
       />
       {/* Header */}
-      <section className="relative h-[500px] md:h-[800px] overflow-hidden flex items-center justify-center text-white">
+      <section className="relative h-[500px] md:h-[800px] overflow-hidden flex items-center justify-center text-white pt-16 md:pt-0">
         {/* Video Background Overlay */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute inset-0 bg-brand-black/60 z-10" />
@@ -92,6 +92,43 @@ export default function TukTuk() {
               <TourCard tour={tour} />
             </motion.div>
           ))}
+        </div>
+      </section>
+
+      {/* Why Tuk Tuk? */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <div className="space-y-12">
+              <div className="rounded-3xl overflow-hidden shadow-2xl">
+                <img 
+                  src="https://lh3.googleusercontent.com/d/14S6ou3WQn8B4Nbrugjn7UZ_O8jwWBq0-" 
+                  alt="Tuk Tuk Adventure" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+            <div>
+              <h2 className="text-3xl md:text-4xl font-black text-brand-black mb-6 uppercase tracking-tight">{t('diff.title')}</h2>
+              <ul className="space-y-6">
+                {[
+                  { title: t('diff.exclusivity_title'), desc: t('diff.exclusivity_desc') },
+                  { title: t('diff.authentic_title'), desc: t('diff.authentic_desc') },
+                  { title: t('diff.guides_title'), desc: t('diff.guides_desc') }
+                ].map((item, i) => (
+                  <li key={i} className="flex gap-4">
+                    <div className="w-6 h-6 rounded-full bg-brand-cream flex items-center justify-center shrink-0 mt-1 border border-brand-brown/10">
+                      <div className="w-2 h-2 rounded-full bg-brand-brown"></div>
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-brand-black uppercase tracking-wide text-sm">{item.title}</h3>
+                      <p className="text-brand-black/60 text-sm font-medium">{item.desc}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
         </div>
       </section>
 

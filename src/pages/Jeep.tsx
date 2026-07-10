@@ -41,7 +41,7 @@ export default function Jeep() {
         }}
       />
       {/* Header */}
-      <section className="relative min-h-[70vh] md:min-h-[85vh] flex items-center text-white overflow-hidden bg-brand-black">
+      <section className="relative min-h-[70vh] md:min-h-[85vh] flex items-center text-white overflow-hidden bg-brand-black pt-16 md:pt-0">
         <div className="absolute inset-0 z-0">
           <iframe
             className="w-[300%] h-[300%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
@@ -99,12 +99,14 @@ export default function Jeep() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-            <div className="rounded-3xl overflow-hidden shadow-2xl">
-              <img 
-                src="https://lh3.googleusercontent.com/d/14S6ou3WQn8B4Nbrugjn7UZ_O8jwWBq0-" 
-                alt="Jeep Adventure" 
-                className="w-full h-full object-cover"
-              />
+            <div className="space-y-12">
+              <div className="rounded-3xl overflow-hidden shadow-2xl">
+                <img 
+                  src="https://lh3.googleusercontent.com/d/14S6ou3WQn8B4Nbrugjn7UZ_O8jwWBq0-" 
+                  alt="Jeep Adventure" 
+                  className="w-full h-full object-cover"
+                />
+              </div>
             </div>
             <div>
               <h2 className="text-3xl md:text-4xl font-black text-brand-black mb-6 uppercase tracking-tight">{t('jeep_page.why_title')}</h2>

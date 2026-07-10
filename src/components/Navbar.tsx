@@ -52,7 +52,7 @@ export function Navbar() {
   return (
     <nav 
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 overflow-hidden",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isSolid 
           ? "bg-brand-cream border-b border-brand-brown/10 shadow-md" 
           : "bg-transparent"

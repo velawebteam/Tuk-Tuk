@@ -1,6 +1,7 @@
+import { useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { motion } from 'motion/react';
-import { Clock, Users, ShieldCheck, MapPin, CheckCircle2, ChevronLeft, Calendar, Backpack, Info, XCircle, Map, Star } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
+import { Clock, Users, ShieldCheck, MapPin, CheckCircle2, ChevronLeft, ChevronRight, Calendar, Backpack, Info, XCircle, Map, Star, AlertCircle } from 'lucide-react';
 import { allTours } from '@/src/data/tours';
 import { useTranslation } from 'react-i18next';
 
@@ -8,6 +9,25 @@ export default function TourDetail() {
   const { id } = useParams();
   const { t } = useTranslation();
   const tour = allTours.find(t => t.id === id);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+
+  const images = tour?.gallery && tour.gallery.length > 0 ? tour.gallery : [tour?.image || ''];
+
+  const nextImage = () => {
+    setSelectedImageIndex((prev) => (prev + 1) % images.length);
+  };
+
+  const prevImage = () => {
+    setSelectedImageIndex((prev) => (prev - 1 + images.length) % images.length);
+  };
+
+  const includesMuseum = tour?.features.some(f => 
+    f.toLowerCase().includes('museu do atum') || 
+    f.toLowerCase().includes('museu atum')
+  ) || tour?.itinerary?.some(i => 
+    i.activity.toLowerCase().includes('museu do atum') || 
+    i.activity.toLowerCase().includes('museu atum')
+  );
 
   if (!tour) {
     return (
@@ -30,15 +50,62 @@ export default function TourDetail() {
 
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-          {/* Image & Key Info */}
-          <div className="space-y-8">
-            <motion.div
-              initial={{ opacity: 0, scale: 0.9 }}
-              animate={{ opacity: 1, scale: 1 }}
-              className="rounded-[2.5rem] overflow-hidden shadow-2xl h-[500px]"
-            >
-              <img src={tour.image} alt={t(tour.nameKey)} className="w-full h-full object-cover" />
-            </motion.div>
+          {/* Gallery Carousel (Hero Area) */}
+          <div className="space-y-6">
+            <div className="relative group">
+              {/* Main Image Viewer */}
+              <div className="aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl bg-black relative">
+                <AnimatePresence mode="wait">
+                  <motion.img
+                    key={selectedImageIndex}
+                    src={images[selectedImageIndex]}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    transition={{ duration: 0.4 }}
+                    className="w-full h-full object-cover"
+                    alt={`${tour?.nameKey} gallery ${selectedImageIndex}`}
+                  />
+                </AnimatePresence>
+
+                {/* Navigation Arrows */}
+                {images.length > 1 && (
+                  <>
+                    <button 
+                      onClick={prevImage}
+                      className="absolute left-6 top-1/2 -translate-y-1/2 p-4 bg-white/20 backdrop-blur-md text-white rounded-full hover:bg-white hover:text-brand-black transition-all shadow-xl z-20 opacity-0 group-hover:opacity-100"
+                    >
+                      <ChevronLeft size={28} />
+                    </button>
+                    <button 
+                      onClick={nextImage}
+                      className="absolute right-6 top-1/2 -translate-y-1/2 p-4 bg-white/20 backdrop-blur-md text-white rounded-full hover:bg-white hover:text-brand-black transition-all shadow-xl z-20 opacity-0 group-hover:opacity-100"
+                    >
+                      <ChevronRight size={28} />
+                    </button>
+                  </>
+                )}
+              </div>
+
+              {/* Thumbnails */}
+              {images.length > 1 && (
+                <div className="flex justify-center gap-3 overflow-x-auto py-4 hide-scrollbar">
+                  {images.map((img, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setSelectedImageIndex(i)}
+                      className={`relative w-20 h-14 md:w-24 md:h-16 rounded-xl overflow-hidden flex-shrink-0 transition-all ${
+                        selectedImageIndex === i 
+                          ? 'ring-4 ring-brand-brown ring-offset-2 scale-105' 
+                          : 'opacity-40 hover:opacity-100'
+                      }`}
+                    >
+                      <img src={img} className="w-full h-full object-cover" alt={`Thumbnail ${i}`} />
+                    </button>
+                  ))}
+                </div>
+              )}
+            </div>
 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4">
               <div className="bg-white p-4 md:p-6 rounded-3xl text-center border border-brand-brown/5 shadow-sm">
@@ -55,6 +122,22 @@ export default function TourDetail() {
                 <ShieldCheck className="mx-auto text-brand-brown mb-2" size={24} />
                 <span className="block text-[10px] text-brand-black/40 uppercase font-bold tracking-widest">{t('common.private')}</span>
                 <span className="font-bold text-brand-black text-sm md:text-base">100%</span>
+              </div>
+            </div>
+
+            <div className="bg-white p-8 rounded-[2rem] border border-brand-brown/5 shadow-sm">
+              <span className="text-[10px] uppercase tracking-wider text-brand-black/40 font-bold mb-4 block">
+                {t('common.languages_available')}
+              </span>
+              <div className="flex flex-wrap gap-2">
+                {tour.languages.map((lang) => (
+                  <span 
+                    key={lang} 
+                    className="px-3 py-1 bg-brand-brown/5 text-brand-brown border border-brand-brown/10 rounded-lg text-xs font-bold uppercase tracking-wider"
+                  >
+                    {lang}
+                  </span>
+                ))}
               </div>
             </div>
 
@@ -126,6 +209,19 @@ export default function TourDetail() {
               </p>
             </div>
 
+            {includesMuseum && (
+              <motion.div 
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                className="p-4 bg-orange-50 border border-orange-200 rounded-2xl flex items-center gap-3 text-orange-900"
+              >
+                <AlertCircle className="shrink-0 text-orange-600" size={20} />
+                <p className="font-bold text-xs uppercase tracking-wide">
+                  {t('common.museum_closure_notice')}
+                </p>
+              </motion.div>
+            )}
+
             <div>
               <h3 className="text-2xl font-black text-brand-black mb-6 uppercase tracking-tight">O que inclui?</h3>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
@@ -137,7 +233,7 @@ export default function TourDetail() {
                 ))}
                 <li className="flex items-center gap-3 text-brand-black/60 font-medium">
                   <CheckCircle2 size={18} className="text-brand-brown shrink-0" />
-                  <span className="uppercase tracking-wide text-xs font-bold">Guia Privado (PT/EN/FR)</span>
+                  <span className="uppercase tracking-wide text-xs font-bold">Guia Privado</span>
                 </li>
                 <li className="flex items-center gap-3 text-brand-black/60 font-medium">
                   <CheckCircle2 size={18} className="text-brand-brown shrink-0" />

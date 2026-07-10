@@ -42,6 +42,18 @@ export default function BeforeBooking() {
     <div className="pt-20 pb-24">
       <section className="bg-gray-50 py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Museum Closure Alert */}
+          <motion.div 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="mb-12 p-6 bg-orange-50 border border-orange-200 rounded-3xl flex items-center gap-4 text-orange-900"
+          >
+            <AlertCircle className="shrink-0 text-orange-600" size={24} />
+            <p className="font-bold text-sm md:text-base">
+              {t('common.museum_closure_notice')}
+            </p>
+          </motion.div>
+
           <div className="text-center mb-12 md:mb-16">
             <h1 className="text-3xl md:text-5xl font-bold text-emerald-950 mb-6">{t('before_booking_page.title')}</h1>
             <p className="text-xl text-gray-600 max-w-2xl mx-auto">
