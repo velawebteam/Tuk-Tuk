@@ -61,7 +61,7 @@ export function SEO({
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           "name": "Tavira Roots",
-          "image": "https://taviraroots.com/logo.png",
+          "image": "https://lh3.googleusercontent.com/d/1nBgIFM_5E5vclRhVItfSWT8rdG_Xt_Ml",
           "@id": "https://taviraroots.com",
           "url": "https://taviraroots.com",
           "telephone": "+351912345678", // Example

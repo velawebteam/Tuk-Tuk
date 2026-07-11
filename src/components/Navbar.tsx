@@ -78,12 +78,9 @@ export function Navbar() {
           {/* Logo - Left */}
           <Link to="/" className="flex items-center group">
             <img 
-              src="https://lh3.googleusercontent.com/d/1_oz5jkibMRM3DtpxiwDJxKeBCRoqe1yo" 
+              src="https://lh3.googleusercontent.com/d/1nBgIFM_5E5vclRhVItfSWT8rdG_Xt_Ml" 
               alt="Tavira Roots Logo" 
-              className={cn(
-                "w-auto transition-all duration-300",
-                isScrolled ? "h-10 md:h-12" : "h-16 md:h-[90px]"
-              )}
+              className="w-[60px] h-[60px] object-contain transition-all duration-300"
             />
           </Link>
 

@@ -24,7 +24,7 @@ export function Footer() {
           <div className="space-y-4">
             <Link to="/" className="inline-block">
               <img 
-                src="https://lh3.googleusercontent.com/d/1_oz5jkibMRM3DtpxiwDJxKeBCRoqe1yo" 
+                src="https://lh3.googleusercontent.com/d/1nBgIFM_5E5vclRhVItfSWT8rdG_Xt_Ml" 
                 alt="Tavira Roots Logo" 
                 className="h-12 w-auto"
               />
