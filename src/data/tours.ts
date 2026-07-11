@@ -233,8 +233,15 @@ export const tukTukTours: Tour[] = [
     pax: '1-9',
     descriptionKey: 'tours.city_olive_factory.desc',
     features: ['Centro Histórico', 'Jardim do Castelo', 'Ponte Antiga', 'Rio Sequa e Rio Gilão', 'Parque Natural Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal)', 'Visita Igreja São Pedro ou São Sebastião', 'Visita à fábrica de azeitonas (Degustação)'],
-    image: TUK_TUK_GALLERY[7],
-    gallery: [...OLIVE_GALLERY, ...SALT_GALLERY, TUK_TUK_GALLERY[0]],
+    image: 'https://lh3.googleusercontent.com/d/1wTD2TV0vQFdnBtBj1Vw6CkjaHOl-U5S2',
+    gallery: [
+      'https://lh3.googleusercontent.com/d/1wTD2TV0vQFdnBtBj1Vw6CkjaHOl-U5S2',
+      OLIVE_GALLERY[0],
+      OLIVE_GALLERY[2],
+      OLIVE_GALLERY[3],
+      ...SALT_GALLERY,
+      TUK_TUK_GALLERY[0]
+    ],
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     itinerary: [
       { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },

@@ -20,7 +20,7 @@ export function TourCard({ tour }: TourCardProps) {
         <img 
           src={tour.image} 
           alt={t(tour.nameKey)} 
-          className="w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+          className={`w-full h-full object-cover transition-transform duration-500 hover:scale-110 ${tour.image.includes('1AgBECV3LgIOLdu520PZLGPzQNVrUFNbZ') ? 'object-left' : ''}`}
         />
         <div className="absolute top-4 left-4">
           <span className="px-3 py-1 bg-white/90 backdrop-blur shadow-sm rounded-full text-[10px] font-bold uppercase tracking-wider text-brand-black">
@@ -35,7 +35,7 @@ export function TourCard({ tour }: TourCardProps) {
       </div>
       
       <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-xl font-bold text-brand-black mb-2 line-clamp-1 uppercase tracking-tight">{t(tour.nameKey)}</h3>
+        <h3 className="text-xl font-bold text-brand-black mb-2 uppercase tracking-tight">{t(tour.nameKey)}</h3>
         <p className="text-brand-black/60 text-sm mb-6 line-clamp-2 leading-relaxed flex-grow font-medium">
           {t(tour.descriptionKey)}
         </p>

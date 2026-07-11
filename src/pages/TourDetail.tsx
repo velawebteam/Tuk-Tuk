@@ -1,7 +1,7 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { Clock, Users, ShieldCheck, MapPin, CheckCircle2, ChevronLeft, ChevronRight, Calendar, Backpack, Info, XCircle, Map, Star, AlertCircle } from 'lucide-react';
+import { Clock, Users, ShieldCheck, MapPin, CheckCircle2, ChevronLeft, ChevronRight, Calendar, Backpack, Info, XCircle, Map, Star, AlertCircle, Maximize2 } from 'lucide-react';
 import { allTours } from '@/src/data/tours';
 import { useTranslation } from 'react-i18next';
 
@@ -10,8 +10,38 @@ export default function TourDetail() {
   const { t } = useTranslation();
   const tour = allTours.find(t => t.id === id);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const thumbnailContainerRef = useRef<HTMLDivElement>(null);
 
   const images = tour?.gallery && tour.gallery.length > 0 ? tour.gallery : [tour?.image || ''];
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!isLightboxOpen) return;
+      if (e.key === 'ArrowRight') nextImage();
+      if (e.key === 'ArrowLeft') prevImage();
+      if (e.key === 'Escape') setIsLightboxOpen(false);
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [isLightboxOpen, selectedImageIndex]);
+
+  useEffect(() => {
+    if (thumbnailContainerRef.current) {
+      const container = thumbnailContainerRef.current;
+      const thumbnails = container.querySelectorAll('button');
+      const activeThumb = thumbnails[selectedImageIndex];
+      
+      if (activeThumb) {
+        // Use scrollIntoView with inline: 'center' for a more reliable centering across different screen sizes
+        activeThumb.scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest',
+          inline: 'center'
+        });
+      }
+    }
+  }, [selectedImageIndex]);
 
   const nextImage = () => {
     setSelectedImageIndex((prev) => (prev + 1) % images.length);
@@ -54,31 +84,46 @@ export default function TourDetail() {
           <div className="space-y-6">
             <div className="relative group">
               {/* Main Image Viewer */}
-              <div className="aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl bg-black relative">
+              <div 
+                className="aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl bg-black relative cursor-zoom-in"
+                onClick={() => setIsLightboxOpen(true)}
+              >
                 <AnimatePresence mode="wait">
-                  <motion.img
-                    key={selectedImageIndex}
-                    src={images[selectedImageIndex]}
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0 }}
-                    transition={{ duration: 0.4 }}
-                    className="w-full h-full object-cover"
-                    alt={`${tour?.nameKey} gallery ${selectedImageIndex}`}
-                  />
+                    <motion.img
+                      key={selectedImageIndex}
+                      src={images[selectedImageIndex]}
+                      initial={{ opacity: 0 }}
+                      animate={{ opacity: 1 }}
+                      exit={{ opacity: 0 }}
+                      transition={{ duration: 0.4 }}
+                      className={`w-full h-full object-cover ${images[selectedImageIndex].includes('1AgBECV3LgIOLdu520PZLGPzQNVrUFNbZ') ? 'object-left' : ''}`}
+                      alt={`${tour?.nameKey} gallery ${selectedImageIndex}`}
+                    />
                 </AnimatePresence>
+
+                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                  <div className="p-4 bg-white/20 backdrop-blur-md rounded-full text-white">
+                    <Maximize2 size={32} />
+                  </div>
+                </div>
 
                 {/* Navigation Arrows */}
                 {images.length > 1 && (
                   <>
                     <button 
-                      onClick={prevImage}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        prevImage();
+                      }}
                       className="absolute left-6 top-1/2 -translate-y-1/2 p-4 bg-white/20 backdrop-blur-md text-white rounded-full hover:bg-white hover:text-brand-black transition-all shadow-xl z-20 opacity-0 group-hover:opacity-100"
                     >
                       <ChevronLeft size={28} />
                     </button>
                     <button 
-                      onClick={nextImage}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        nextImage();
+                      }}
                       className="absolute right-6 top-1/2 -translate-y-1/2 p-4 bg-white/20 backdrop-blur-md text-white rounded-full hover:bg-white hover:text-brand-black transition-all shadow-xl z-20 opacity-0 group-hover:opacity-100"
                     >
                       <ChevronRight size={28} />
@@ -89,18 +134,26 @@ export default function TourDetail() {
 
               {/* Thumbnails */}
               {images.length > 1 && (
-                <div className="flex justify-center gap-3 overflow-x-auto py-4 hide-scrollbar">
+                <div 
+                  ref={thumbnailContainerRef}
+                  className="flex gap-4 overflow-x-auto py-6 hide-scrollbar scroll-smooth snap-x px-[calc(50%-40px)] md:px-[calc(50%-48px)]"
+                >
+                  
                   {images.map((img, i) => (
                     <button
                       key={i}
                       onClick={() => setSelectedImageIndex(i)}
-                      className={`relative w-20 h-14 md:w-24 md:h-16 rounded-xl overflow-hidden flex-shrink-0 transition-all ${
+                      className={`relative flex-shrink-0 transition-all snap-center group/thumb ${
                         selectedImageIndex === i 
-                          ? 'ring-4 ring-brand-brown ring-offset-2 scale-105' 
+                          ? 'scale-110 z-10' 
                           : 'opacity-40 hover:opacity-100'
                       }`}
                     >
-                      <img src={img} className="w-full h-full object-cover" alt={`Thumbnail ${i}`} />
+                      <div className={`w-20 h-14 md:w-24 md:h-16 rounded-xl overflow-hidden transition-all ${
+                        selectedImageIndex === i ? 'ring-4 ring-brand-brown ring-offset-2 shadow-lg' : 'hover:scale-105'
+                      }`}>
+                        <img src={img} className="w-full h-full object-cover" alt={`Thumbnail ${i}`} />
+                      </div>
                     </button>
                   ))}
                 </div>
@@ -324,6 +377,58 @@ export default function TourDetail() {
           </div>
         </div>
       </section>
+
+      {/* Lightbox Modal */}
+      <AnimatePresence>
+        {isLightboxOpen && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[100] bg-black/95 backdrop-blur-sm flex items-center justify-center p-4 md:p-12"
+            onClick={() => setIsLightboxOpen(false)}
+          >
+            <button 
+              className="absolute top-8 right-8 text-white/70 hover:text-white transition-colors p-2"
+              onClick={() => setIsLightboxOpen(false)}
+            >
+              <XCircle size={40} />
+            </button>
+
+            {images.length > 1 && (
+              <>
+                <button 
+                  onClick={(e) => { e.stopPropagation(); prevImage(); }}
+                  className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 p-4 text-white/50 hover:text-white transition-colors"
+                >
+                  <ChevronLeft size={48} />
+                </button>
+                <button 
+                  onClick={(e) => { e.stopPropagation(); nextImage(); }}
+                  className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 p-4 text-white/50 hover:text-white transition-colors"
+                >
+                  <ChevronRight size={48} />
+                </button>
+              </>
+            )}
+
+            <motion.img
+              key={selectedImageIndex}
+              src={images[selectedImageIndex]}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ duration: 0.3 }}
+              className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
+              onClick={(e) => e.stopPropagation()}
+            />
+
+            <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 font-medium">
+              {selectedImageIndex + 1} / {images.length}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }

@@ -121,7 +121,7 @@ export default function Home() {
                 <img 
                   src={tour.image} 
                   alt={t(tour.nameKey)} 
-                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className={`absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${tour.image.includes('1AgBECV3LgIOLdu520PZLGPzQNVrUFNbZ') ? 'object-left' : ''}`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/30 to-transparent opacity-90"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-8">
@@ -132,7 +132,7 @@ export default function Home() {
                       </span>
                       <h3 className="text-2xl font-bold mb-2 uppercase tracking-wide">{t(tour.nameKey)}</h3>
                       <p className="text-brand-cream/80 text-sm mb-4 line-clamp-2 font-medium">{t(tour.descriptionKey)}</p>
-                      <div className="flex gap-4 text-xs font-bold uppercase tracking-widest text-brand-brown">
+                      <div className="flex gap-4 text-xs font-bold uppercase tracking-widest text-brand-brown drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
                         <span>{tour.duration}</span>
                         <span>{tour.pax} {t('common.pax')}</span>
                       </div>
