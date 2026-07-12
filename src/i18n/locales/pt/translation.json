@@ -12,7 +12,7 @@
     "title_part1": "Tavira Roots | ",
     "title_highlight": "Passeios Privados",
     "title_part2": " em Tavira",
-    "subtitle": "Leve a sua família a conhecer a cidade de Tavira e visite salinas, fábricas de chocolate, azeite e as paisagens mais bonitas do Algarve",
+    "subtitle": "Leve a sua família a conhecer a cidade de Tavira e visite salinas, degustações de chocolate, azeite e azeitonas e as paisagens mais bonitas do Algarve",
     "cta_tuk": "Passeios Tuk Tuk",
     "cta_jeep": "Aventura em Jipe"
   },
@@ -36,9 +36,9 @@
     "faq_desc": "Os nossos Tuk Tuks são 100% elétricos ou de baixas emissões, ideais para as ruas estreitas do centro histórico. A capacidade máxima total é de 9 pessoas (distribuídas por dois veículos, um de 5 e outro de 4 lugares)."
   },
   "jeep_page": {
-    "title": "Aventura de Jipe em Tavira",
+    "title": "Aventuras de Jipe em Tavira",
     "subtitle_top": "Aventura & Barrocal",
-    "description": "Sinta a adrenalina do 4x4 enquanto exploramos o interior de Tavira. Visite fábricas tradicionais e paisagens de cortar a respiração.",
+    "description": "",
     "why_title": "Porquê escolher o Jipe?",
     "why_item1_title": "Acesso Off-Road",
     "why_item1_desc": "Chegamos a lugares inacessíveis a carros normais ou Tuk Tuks.",
@@ -86,7 +86,7 @@
       "desc": "Combine a cultura de Tavira com a gastronomia local num passeio que termina com um menu degustação."
     },
     "historical_wine": {
-      "name": "Historical & Wine Tasting",
+      "name": "Historical Center & Wine Tasting",
       "desc": "Viagem pela história de Tavira com uma prova exclusiva de vinhos da região do Algarve."
     },
     "city_chocolate": {

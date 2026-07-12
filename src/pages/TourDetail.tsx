@@ -136,14 +136,14 @@ export default function TourDetail() {
               {images.length > 1 && (
                 <div 
                   ref={thumbnailContainerRef}
-                  className="flex gap-4 overflow-x-auto py-6 hide-scrollbar scroll-smooth snap-x px-[calc(50%-40px)] md:px-[calc(50%-48px)]"
+                  className="flex gap-4 overflow-x-auto py-8 hide-scrollbar scroll-smooth snap-x px-8 -mx-8"
                 >
                   
                   {images.map((img, i) => (
                     <button
                       key={i}
                       onClick={() => setSelectedImageIndex(i)}
-                      className={`relative flex-shrink-0 transition-all snap-center group/thumb ${
+                      className={`relative flex-shrink-0 transition-all snap-start group/thumb py-2 ${
                         selectedImageIndex === i 
                           ? 'scale-110 z-10' 
                           : 'opacity-40 hover:opacity-100'

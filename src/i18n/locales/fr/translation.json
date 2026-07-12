@@ -12,7 +12,7 @@
     "title_part1": "Tavira Roots | ",
     "title_highlight": "Tours Privés",
     "title_part2": " à Tavira",
-    "subtitle": "Emmenez votre famille à la découverte de la ville de Tavira et visitez les salines, les usines de chocolat, d'huile d'olive et les plus beaux paysages de l'Algarve",
+    "subtitle": "Emmenez votre famille à la découverte de la ville de Tavira et visitez les salines, les dégustations de chocolat, d'huile d'olive et d'olives, et les plus beaux paysages de l'Algarve",
     "cta_tuk": "Tours en Tuk Tuk",
     "cta_jeep": "Aventure en Jeep"
   },
@@ -36,9 +36,9 @@
     "faq_desc": "Nos Tuk Tuks sont 100% électriques ou à faibles émissions, idéaux pour les rues étroites du centre historique. La capacité maximale totale est de 9 personnes (réparties sur deux véhicules, un de 5 places et un autre de 4 places)."
   },
   "jeep_page": {
-    "title": "Aventure en Jeep à Tavira",
+    "title": "Aventures en Jeep à Tavira",
     "subtitle_top": "Aventure & Barrocal",
-    "description": "Ressentez l'adrénaline du 4x4 en explorant l'arrière-pays de Tavira. Visitez des usines traditionnelles et des paysages à couper le souffle.",
+    "description": "",
     "why_title": "Pourquoi choisir la Jeep ?",
     "why_item1_title": "Accès Tout-Terrain",
     "why_item1_desc": "Nous atteignons des endroits inaccessibles aux voitures normales ou aux Tuk Tuks.",
@@ -84,6 +84,10 @@
     "tapas_vinhos": {
       "name": "Tapas et Vins",
       "desc": "Savourez le meilleur de l'Algarve. Un tour gastronomique privé avec des arrêts stratégiques pour déguster des vins et des tapas locaux."
+    },
+    "historical_wine": {
+      "name": "Historical Center & Wine Tasting",
+      "desc": "Un voyage à travers l'histoire de Tavira avec une dégustation exclusive de vins de la région de l'Algarve."
     },
     "cidade_chocolate": {
       "name": "Ville de Tavira et Chocolat",

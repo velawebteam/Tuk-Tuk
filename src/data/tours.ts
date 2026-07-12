@@ -75,6 +75,110 @@ const CLAY_GALLERY = [
   'https://lh3.googleusercontent.com/d/19Xxk-lcM9YKd-G-DvIcGq4xWZbS03TZu'
 ];
 
+const TAVIRA_TOTAL_GALLERY = [
+  'https://lh3.googleusercontent.com/d/1mZrBebXfXQAa6ICtxcT_dwy3TqO43N41',
+  'https://lh3.googleusercontent.com/d/1hJSBWD93EuGudO_Pf2HCneutv_UI0u3Q',
+  'https://lh3.googleusercontent.com/d/1dgt4p9qHIv2knEwBHD7KAL689YTlubjj',
+  'https://lh3.googleusercontent.com/d/1J_m0ImwYarXJcnvClJyZmE18i5rsyGzO',
+  'https://lh3.googleusercontent.com/d/1m0DB50LfAK6exHNSpadWkhWUGExcUTWs',
+  'https://lh3.googleusercontent.com/d/1csqAYTM0ZLPKm3y3LLYaYymaqdM58wQU',
+  'https://lh3.googleusercontent.com/d/1pTnGO2VtgLh02TooP4K9_l9OYECgUoqy',
+  'https://lh3.googleusercontent.com/d/1veTl9s2_65gXMOkCVbiQ1utjOaXCpFLW',
+  'https://lh3.googleusercontent.com/d/1404UusxfnE-GOWCqnunEnOaOF25pyWJJ',
+  'https://lh3.googleusercontent.com/d/1TRIfE3Jld8uhb-FoPAfjDMuC1Hu-LLPN',
+  'https://lh3.googleusercontent.com/d/1avOtooqer00vTPXi2lirsHDrhEz3lwRA',
+  'https://lh3.googleusercontent.com/d/1EbYqymcBIe8RJQRKorOdpuiwoAW1XN8R'
+];
+
+const TAVIRA_CITY_GALLERY = [
+  'https://lh3.googleusercontent.com/d/1E9_VO3VMcyrbAUgMT7v75x6mODcCJNCD',
+  'https://lh3.googleusercontent.com/d/13WLvxkYiZEGS5wg44UYSWkfDGgyD3TnJ',
+  'https://lh3.googleusercontent.com/d/1o1dkFnkv8j64FYAAq3D6E6U5YEEqf1xa',
+  'https://lh3.googleusercontent.com/d/1nPuswq-p4iCWzrepio6VpP88_H0ScviH',
+  'https://lh3.googleusercontent.com/d/1ZLweGoUsK8FPXu3JC4IMvhwdYODtafMG',
+  'https://lh3.googleusercontent.com/d/1TrqrDKMOgKJOm_a4nXRZAuhtCB7TTHNS',
+  'https://lh3.googleusercontent.com/d/1zo7jvVmcqyLN6ovrmZf25frTWJFIcSsh',
+  'https://lh3.googleusercontent.com/d/1BUP3_XN1OSCyMYaU_dauVleCSAExN58e',
+  'https://lh3.googleusercontent.com/d/1KQrCXa_PqiWor6UnFIkjdBUTpdf4pUC7',
+  'https://lh3.googleusercontent.com/d/1CUisceuu3U90fwTcC3FmIYBL3R2ZMF4e',
+  'https://lh3.googleusercontent.com/d/1hCY0StEOpATm17uSnrT8b2XCWfQ-Ia41',
+  'https://lh3.googleusercontent.com/d/1P5_JiQ00JxRWl-PbubKxhBOLnj1NkMf0',
+  'https://lh3.googleusercontent.com/d/1TxZb1OX48FKwbybieuaKA4bi940Czpuv',
+  'https://lh3.googleusercontent.com/d/11OJ4gBB5Q87QlD54zq0A5Kqog7nN0xAW'
+];
+
+const HISTORICAL_WINE_GALLERY = [
+  'https://lh3.googleusercontent.com/d/1LBRIwcWjm7c8b6idBz7E3ybjD55g0x67',
+  'https://lh3.googleusercontent.com/d/12-VPRQJofE1teTPqkoZwuTqwd8LOvzup',
+  'https://lh3.googleusercontent.com/d/12buEFCnM4dCp6Z0vf5zWQ_96r7ZeDGy9',
+  'https://lh3.googleusercontent.com/d/1sD3-b8aziHFZXxMa7-itYUhYmRfSnOgS',
+  'https://lh3.googleusercontent.com/d/1AF2-uywfFQ_MV_uq7nOHiKXOtiacrgC2',
+  'https://lh3.googleusercontent.com/d/16KwVi4dCq3g2xP89-Iq4vfK98kaCMxkB',
+  'https://lh3.googleusercontent.com/d/1EgxFMd4AEPROfygavk8ayZuCxd1T898z',
+  'https://lh3.googleusercontent.com/d/18xEo-VMQOkm1EaFBTtA2zaKJ1FP71G_Y',
+  'https://lh3.googleusercontent.com/d/1SsvxYfxQ0xHSTu31x2X7iZFbhEZ4vR4R',
+  'https://lh3.googleusercontent.com/d/1BhVnvss2yP1ml0ttibJKMRcVVVbxbML1',
+  'https://lh3.googleusercontent.com/d/1ivUSF8DqgA8QVpIBYrX-rkbgBz1J21Ux',
+  'https://lh3.googleusercontent.com/d/1p1_ySEDyjtV-WKKSjnFtc0vjgSrIko2T'
+];
+
+const CITY_CHOCOLATE_GALLERY = [
+  'https://lh3.googleusercontent.com/d/1sGsO3Iq0Z6QCg666qpWF5bTTRoAWzI_a',
+  'https://lh3.googleusercontent.com/d/1ePPKZ0_tGOHgAb1VEmDvVHMMHYWLDFme',
+  'https://lh3.googleusercontent.com/d/1Ve5Sv_Zgm1feidL6w_qmx_r69NrsB_Nf',
+  'https://lh3.googleusercontent.com/d/1P6hrjq7K-kkou_AJZEX0s5cfZCgRrQAz',
+  'https://lh3.googleusercontent.com/d/1uujxhkhDwfCxvhYOqGQNDLAkDqDZdepO',
+  'https://lh3.googleusercontent.com/d/1YSPwl9S1rOMDQcCXIpus1K2NHjjUnUyb',
+  'https://lh3.googleusercontent.com/d/1q9_FOeeplCaRhPdRpuoXUsrVonxPiaYU',
+  'https://lh3.googleusercontent.com/d/1m1iiwGj773h_zJvEd4Yi4QInwNe65E4E'
+];
+
+const TUKTUK_BOAT_GALLERY = [
+  'https://lh3.googleusercontent.com/d/1nKG5-o-r08dkLbFYqWBO_4gXxjfam1WP',
+  'https://lh3.googleusercontent.com/d/1mU1TRELc1_1Bhsj6aOrEhbwftHo9gBqQ',
+  'https://lh3.googleusercontent.com/d/1pE19py8IyGNo4J2OvDTnhgD7h6iSdkqu',
+  'https://lh3.googleusercontent.com/d/1LLzaZ_apPzD7JN1hSgLw09mrSxJef49-',
+  'https://lh3.googleusercontent.com/d/1MjjMy0owQWugdrNI-WoRfS8w2OOuHxO-',
+  'https://lh3.googleusercontent.com/d/1t90eZuZfsLIlaMRNsSFTCD1pFBl_Cn3A',
+  'https://lh3.googleusercontent.com/d/1z_-fZz171u_3LcyzZUuQQ3ZP02Hn_YYN',
+  'https://lh3.googleusercontent.com/d/1EsaoOIQuVIG5V4EzydBO5dXzRTgbrRl-',
+  'https://lh3.googleusercontent.com/d/1Ho0eiqthiUGUE0l4zSZBHZa13E7pd9TP',
+  'https://lh3.googleusercontent.com/d/1nFT3IfqGCfs1Qk2CSlNpV5o-ZaQZeHVA',
+  'https://lh3.googleusercontent.com/d/1zq5W7mx_iID-hmId0gqItHLvOmxNXaTE'
+];
+
+const CITY_ICE_CREAM_GALLERY = [
+  'https://lh3.googleusercontent.com/d/1EcGUhK3AKH7wMV8G5VcPGwPJBQVb5dX2',
+  'https://lh3.googleusercontent.com/d/14hvoqtZVKWNWiizcOSe96im0gdnvTzVo',
+  'https://lh3.googleusercontent.com/d/1VpuRgwZtMN4A_8Cf6uP-Pthm0ypZ7CZM',
+  'https://lh3.googleusercontent.com/d/1UKwdkHQmmO66478diVaMAB5SVuP3HlpF',
+  'https://lh3.googleusercontent.com/d/1rtQoUaoP3ZCoWx1jDi2Qpkq1CHccyqgH'
+];
+
+const CITY_OLIVE_GALLERY = [
+  'https://lh3.googleusercontent.com/d/1uHshrZlTsv3Yt2xSHRgUlPeKTxnAEFxz',
+  'https://lh3.googleusercontent.com/d/1aSuMV5nv7Kc_uTzfJ49YtCxvEYzbzDM1',
+  'https://lh3.googleusercontent.com/d/1fRdPAM9ShM1h8_4_MtmTeuNin2Ze3mjF',
+  'https://lh3.googleusercontent.com/d/1cQjYnbvA5xXwl74wZmxlzCrUPzBl8mW7',
+  'https://lh3.googleusercontent.com/d/1pvY9j6MZNmiuDmp8X2BGzbho2kn2CC9g',
+  'https://lh3.googleusercontent.com/d/1VDnK21RWs96fWdT6ovfVnrV9MqhsDqFi',
+  'https://lh3.googleusercontent.com/d/1eEUvcfV1TbCrpqa1Pq7nuaa7SrYGRE4X',
+  'https://lh3.googleusercontent.com/d/1KUCOGLOLYnPawGVF-3aIn28xjKCfWEZx'
+];
+
+const SANTA_LUZIA_GALLERY = [
+  'https://lh3.googleusercontent.com/d/1fR1c9SV650RWqz3w87qtPAKoSz2r_vJ4',
+  'https://lh3.googleusercontent.com/d/1sSSxQCRpgMLo40x7NxkhE4sCLt_9IPDF',
+  'https://lh3.googleusercontent.com/d/1zOCORzfaNeEOBDIf6EINf0kLfwpGfxuc',
+  'https://lh3.googleusercontent.com/d/1mxL6N5O4e7Nlyc7_V31woWwoMo4xbxyR',
+  'https://lh3.googleusercontent.com/d/1rDc2Rye4qJiAHXyv09lY9S7Ihx-fx7yg',
+  'https://lh3.googleusercontent.com/d/1jYxbI5yJ-ziwfd9LfcyqRtzzx56XkEBm',
+  'https://lh3.googleusercontent.com/d/1dqF8yLG-efzPAwDhxVcFpbDn04A-kcaw',
+  'https://lh3.googleusercontent.com/d/1XRlWZ44RKTb5Hd0NGAH7cSoQHuwlsEqP',
+  'https://lh3.googleusercontent.com/d/1XpkIxT5vAvRD1H5G0LnjQG4CWZTx8ZoI',
+  'https://lh3.googleusercontent.com/d/1DYdBB_fc6DS3WNIau3Ve25_5MpGqq_KY'
+];
+
 export const tukTukTours: Tour[] = [
   {
     id: 'tavira-city',
@@ -85,8 +189,8 @@ export const tukTukTours: Tour[] = [
     pax: '1-9',
     descriptionKey: 'tours.cidade_tavira.desc',
     features: ['Centro Histórico', 'Jardim do Castelo', 'Ponte Antiga', 'Rio Sequa e Rio Gilão', 'Parque Natural Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal)', 'Visita Igreja São Pedro ou São Sebastião'],
-    image: TUK_TUK_GALLERY[0],
-    gallery: [...SALT_GALLERY, TUK_TUK_GALLERY[1], TUK_TUK_GALLERY[2]],
+    image: TAVIRA_CITY_GALLERY[3],
+    gallery: TAVIRA_CITY_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     itinerary: [
       { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
@@ -105,8 +209,8 @@ export const tukTukTours: Tour[] = [
     pax: '1-9',
     descriptionKey: 'tours.tavira_total.desc',
     features: ['Centro Histórico', 'Jardim do Castelo', 'Ponte Antiga', 'Rio Sequa e Rio Gilão', 'Parque Natural Ria Formosa (Flora e Fauna)', 'Antiga Vila de pescadores de atum (museu do atum)', 'Salinas (Flor de Sal)', 'Visita Igreja São Pedro ou São Sebastião'],
-    image: TUK_TUK_GALLERY[1],
-    gallery: [...FISHING_GALLERY, ...SALT_GALLERY, TUK_TUK_GALLERY[0], TUK_TUK_GALLERY[2]],
+    image: TAVIRA_TOTAL_GALLERY[0],
+    gallery: TAVIRA_TOTAL_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     itinerary: [
       { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
@@ -148,8 +252,8 @@ export const tukTukTours: Tour[] = [
     pax: '1-9',
     descriptionKey: 'tours.historical_wine.desc',
     features: ['Centro Histórico', 'Jardim do Castelo', 'Ponte Antiga', 'Rio Sequa e Rio Gilão', 'Parque Natural Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal)', 'Visita ao Al-Lagar (Prova de Vinhos)'],
-    image: TUK_TUK_GALLERY[3],
-    gallery: [...WINE_GALLERY, ...SALT_GALLERY, TUK_TUK_GALLERY[0]],
+    image: HISTORICAL_WINE_GALLERY[0],
+    gallery: HISTORICAL_WINE_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     goodToKnow: ['Inclui prova de 3 vinhos (Tinto, Rosé e Branco)', 'Acompanhado com Pão e Azeite'],
     itinerary: [
@@ -169,8 +273,8 @@ export const tukTukTours: Tour[] = [
     pax: '1-9',
     descriptionKey: 'tours.city_chocolate.desc',
     features: ['Centro Histórico', 'Jardim do Castelo', 'Ponte Antiga', 'Rio Sequa e Rio Gilão', 'Parque Natural Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal)', 'Visita Igreja São Pedro ou São Sebastião', 'Chocolataria Ibelle (Degustação de chocolate)'],
-    image: TUK_TUK_GALLERY[4],
-    gallery: [...CHOCOLATE_GALLERY, ...SALT_GALLERY, TUK_TUK_GALLERY[0]],
+    image: CITY_CHOCOLATE_GALLERY[0],
+    gallery: CITY_CHOCOLATE_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     itinerary: [
       { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
@@ -190,8 +294,8 @@ export const tukTukTours: Tour[] = [
     pax: '1-9',
     descriptionKey: 'tours.tuk_tuk_boat.desc',
     features: ['Centro Histórico', 'Jardim do Castelo', 'Ponte Antiga', 'Rio Sequa e Rio Gilão', 'Parque Natural Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal)', 'Visita Igreja São Pedro ou São Sebastião', 'Passeio de barco na Ria Formosa (Fauna/Flora)'],
-    image: TUK_TUK_GALLERY[5],
-    gallery: [...SALT_GALLERY, TUK_TUK_GALLERY[0], TUK_TUK_GALLERY[1]],
+    image: TUKTUK_BOAT_GALLERY[0],
+    gallery: TUKTUK_BOAT_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     itinerary: [
       { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
@@ -211,8 +315,8 @@ export const tukTukTours: Tour[] = [
     pax: '1-9',
     descriptionKey: 'tours.city_ice_cream.desc',
     features: ['Centro Histórico', 'Jardim do Castelo', 'Ponte Antiga', 'Rio Sequa e Rio Gilão', 'Parque Natural Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal)', 'Visita Igreja São Pedro ou São Sebastião', 'Gelataria 100% Natural (1 bola por pessoa)'],
-    image: TUK_TUK_GALLERY[6],
-    gallery: [...SALT_GALLERY, TUK_TUK_GALLERY[0]],
+    image: CITY_ICE_CREAM_GALLERY[0],
+    gallery: CITY_ICE_CREAM_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     goodToKnow: ['Inclui 1 bola de gelado por pessoa (copo ou cone)'],
     itinerary: [
@@ -233,15 +337,8 @@ export const tukTukTours: Tour[] = [
     pax: '1-9',
     descriptionKey: 'tours.city_olive_factory.desc',
     features: ['Centro Histórico', 'Jardim do Castelo', 'Ponte Antiga', 'Rio Sequa e Rio Gilão', 'Parque Natural Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal)', 'Visita Igreja São Pedro ou São Sebastião', 'Visita à fábrica de azeitonas (Degustação)'],
-    image: 'https://lh3.googleusercontent.com/d/1wTD2TV0vQFdnBtBj1Vw6CkjaHOl-U5S2',
-    gallery: [
-      'https://lh3.googleusercontent.com/d/1wTD2TV0vQFdnBtBj1Vw6CkjaHOl-U5S2',
-      OLIVE_GALLERY[0],
-      OLIVE_GALLERY[2],
-      OLIVE_GALLERY[3],
-      ...SALT_GALLERY,
-      TUK_TUK_GALLERY[0]
-    ],
+    image: CITY_OLIVE_GALLERY[0],
+    gallery: CITY_OLIVE_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     itinerary: [
       { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
@@ -261,8 +358,8 @@ export const tukTukTours: Tour[] = [
     pax: '1-9',
     descriptionKey: 'tours.santa_luzia_tuk.desc',
     features: ['Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal e Sal Comercial)', 'Aves', 'Santa Luzia (Capital do Polvo)'],
-    image: TUK_TUK_GALLERY[8],
-    gallery: [...SALT_GALLERY, TUK_TUK_GALLERY[9]],
+    image: SANTA_LUZIA_GALLERY[0],
+    gallery: SANTA_LUZIA_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     itinerary: [
       { activity: 'Parque Natural Ria Formosa (Flora e Fauna)' },

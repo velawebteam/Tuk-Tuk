@@ -12,7 +12,7 @@
     "title_part1": "Tavira Roots | ",
     "title_highlight": "Private Tours",
     "title_part2": " in Tavira",
-    "subtitle": "Take your family to discover the city of Tavira and visit salt pans, chocolate and olive oil factories, and the most beautiful landscapes of the Algarve",
+    "subtitle": "Take your family to discover the city of Tavira and visit salt pans, chocolate, olive oil and olive tastings, and the most beautiful landscapes of the Algarve",
     "cta_tuk": "Tuk Tuk Tours",
     "cta_jeep": "Jeep Adventure"
   },
@@ -36,9 +36,9 @@
     "faq_desc": "Our Tuk Tuks are 100% electric or low-emission, ideal for the narrow streets of the historical center. Total maximum capacity is 9 people (spread across two vehicles, one with 5 seats and another with 4)."
   },
   "jeep_page": {
-    "title": "Jeep Adventure in Tavira",
+    "title": "Jeep Adventures in Tavira",
     "subtitle_top": "Adventure & Barrocal",
-    "description": "Feel the 4x4 adrenaline as we explore Tavira's inland. Visit traditional factories and breathtaking landscapes.",
+    "description": "",
     "why_title": "Why choose the Jeep?",
     "why_item1_title": "Off-Road Access",
     "why_item1_desc": "We reach places inaccessible to normal cars or Tuk Tuks.",
@@ -86,7 +86,7 @@
       "desc": "Combine Tavira's culture with local gastronomy on a tour that ends with a tasting menu."
     },
     "historical_wine": {
-      "name": "Historical & Wine Tasting",
+      "name": "Historical Center & Wine Tasting",
       "desc": "A journey through Tavira's history with an exclusive tasting of Algarve region wines."
     },
     "city_chocolate": {

@@ -1,5 +1,7 @@
 import { Helmet } from 'react-helmet-async';
 
+import { useTranslation } from 'react-i18next';
+
 interface SEOProps {
   title: string;
   description: string;
@@ -17,12 +19,13 @@ export function SEO({
   ogImage = 'https://taviraroots.com/og-image.jpg', // Placeholder
   schemaData 
 }: SEOProps) {
+  const { i18n } = useTranslation();
   const siteName = 'Tavira Roots';
   const fullTitle = `${title} | ${siteName}`;
   const siteUrl = 'https://taviraroots.com'; // Change to actual domain when known
 
   return (
-    <Helmet>
+    <Helmet htmlAttributes={{ lang: i18n.language.split('-')[0] }}>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
