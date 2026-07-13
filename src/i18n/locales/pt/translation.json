@@ -10,9 +10,9 @@
   },
   "hero": {
     "title_part1": "Tavira Roots | ",
-    "title_highlight": "Passeios Privados",
-    "title_part2": " em Tavira",
-    "subtitle": "Leve a sua família a conhecer a cidade de Tavira e visite salinas, degustações de chocolate, azeite e azeitonas e as paisagens mais bonitas do Algarve",
+    "title_highlight": "Experiências Privadas",
+    "title_part2": " e Autênticas",
+    "subtitle": "Em família ou com amigos, viva a essência de Tavira. Da pesca e do sal marinho aos vinhos locais, ao chocolate, ao azeite e à gastronomia local, cada experiência revela a alma da nossa terra.",
     "cta_tuk": "Passeios Tuk Tuk",
     "cta_jeep": "Aventura em Jipe"
   },
@@ -210,7 +210,7 @@
   "before_booking_page": {
     "title": "Antes de Reservar",
     "subtitle": "Tudo o que precisa de saber para garantir que a sua experiência com a Tavira Roots seja perfeita.",
-    "item1_title": "Passeios Privados",
+    "item1_title": "Experiências Privadas",
     "item1_desc": "Todos os nossos tours são 100% privados. O preço indicado é por veículo ou por pessoa conforme a tour, mas o veículo será sempre exclusivo para o seu grupo.",
     "item2_title": "Reservas e Horários",
     "item2_desc": "Recomendamos a reserva com pelo menos 24h de antecedência. Em épocas altas, a disponibilidade pode ser limitada.",
