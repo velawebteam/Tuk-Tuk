@@ -179,6 +179,59 @@ const SANTA_LUZIA_GALLERY = [
   'https://lh3.googleusercontent.com/d/1DYdBB_fc6DS3WNIau3Ve25_5MpGqq_KY'
 ];
 
+const TAVIRA_GOLD_GALLERY = [
+  'https://lh3.googleusercontent.com/d/1Xv_Udx1GW2dpsVBUZ8r6zjSDLAWPsYIE',
+  'https://lh3.googleusercontent.com/d/1DrDh1fVFc5Jwa618IBqzxs_sViJ6EcGH',
+  'https://lh3.googleusercontent.com/d/1-QZtxmgq7e5AareN71jPK1Xs3k8W7uXI',
+  'https://lh3.googleusercontent.com/d/1Z9YfcxylqAPCZ0RqN_YJrGRdke1kC1Dj',
+  'https://lh3.googleusercontent.com/d/1z-Au5RVoHCsipOwtu84MLnOJYOVpoTSU',
+  'https://lh3.googleusercontent.com/d/166zqvYO2YixjlGUZtdLWbxiIcEDKT0Dd',
+  'https://lh3.googleusercontent.com/d/1Wvgwj3OvD922yWxcmDLbBOO58MUHU2lx',
+  'https://lh3.googleusercontent.com/d/1i38H2-z1A04b4d7AikfT8NI2YgRPOHgo',
+  'https://lh3.googleusercontent.com/d/1xPHo9TzlF0FqAK2iBW9NSVtgSEQ7eMd3'
+];
+
+const TAVIRA_ROOTS_WINE_GALLERY = [
+  'https://lh3.googleusercontent.com/d/1odvyRA9vQ99MCQbtYO0_dFBcT4vzg5Lx',
+  'https://lh3.googleusercontent.com/d/1xFIEPNrDSihXbfYg3i3ACw993hqkTFEG',
+  'https://lh3.googleusercontent.com/d/13hU8uzTEJ3YjJcmH6VxrS-KgxJ__C-mr',
+  'https://lh3.googleusercontent.com/d/1GxDCfEQHs93BazBlc1gMeb9ycN0ywhV7',
+  'https://lh3.googleusercontent.com/d/16ipkjtymv0FQ6rjv3miCd891_MYHXe9U',
+  'https://lh3.googleusercontent.com/d/17hdIDuksEBM3hrp4sp8a0oGpXEwjQsNI',
+  'https://lh3.googleusercontent.com/d/1M4kz_QIz-0fYZiHWCGxcpDpghnk6aabb',
+  'https://lh3.googleusercontent.com/d/1ESBJgPgPx14KzudGwDAthmFfSGxnU26o',
+  'https://lh3.googleusercontent.com/d/1SA40OQ7u3l-17LxmiYtd-ZkeZo0lsDe9',
+  'https://lh3.googleusercontent.com/d/1ujAL58-BfP5iZSar70tVDsdcKsggfLtu',
+  'https://lh3.googleusercontent.com/d/1sRm_jOJomnYEwiviRejuxDeTuCwSXYh-',
+  'https://lh3.googleusercontent.com/d/11WV3kVY0cXC8M7tBU-ceWsdylBSD22Lp',
+  'https://lh3.googleusercontent.com/d/1gigQP9s97h9ufhHnTnDej-QZOo8af006'
+];
+
+const JEEP_BOAT_HISTORY_GALLERY = [
+  'https://lh3.googleusercontent.com/d/1ko387XjugTI-bk47Sodf5MkXixhZtGao',
+  'https://lh3.googleusercontent.com/d/1kwJdCplg_sK2Zh45fZSGo886L2psaTpQ',
+  'https://lh3.googleusercontent.com/d/19iYIJQuJLmC4Sc-z-U0xSS6DL7NEQNAZ',
+  'https://lh3.googleusercontent.com/d/1buRoNS3ZXbvGLgF2nIfrUZMBI6CQx695',
+  'https://lh3.googleusercontent.com/d/1IfQKK_nBvZexI-4m2VM56SOqCBm9nMIt',
+  'https://lh3.googleusercontent.com/d/1yWE5dpe3ATS1nEhLQZuVbtCaZWg3OIF8'
+];
+
+const JEEP_BOAT_ANCHOR_GALLERY = [
+  'https://lh3.googleusercontent.com/d/1SxJ999YFAee9ZLsj-rFnFkqDStmjIiAe',
+  'https://lh3.googleusercontent.com/d/1A-wtbFGQS_xbzEJRpmQNHiR-uThKHYF_',
+  'https://lh3.googleusercontent.com/d/1C7UP35_VThhxloXRN3vFc0hSmEp2FxiZ',
+  'https://lh3.googleusercontent.com/d/1g-7NnrSGolYgLKN49fRFGV6z2LuPyujk',
+  'https://lh3.googleusercontent.com/d/1u-h3PWoTClhpAajcrsYWi_EnxFYzNzwk',
+  'https://lh3.googleusercontent.com/d/13rpypMm1tm72TVRMRovtoRsHG21Q17Os',
+  'https://lh3.googleusercontent.com/d/1Kohld4D3GykM5bbSeFBcSkW-BybsKOHL',
+  'https://lh3.googleusercontent.com/d/1H73iEIoHm_Hle9NkwYKtHh9NWcltQ1mK',
+  'https://lh3.googleusercontent.com/d/1UV68ChII3jp1dWW6ql-g_wx74o2hi_qd',
+  'https://lh3.googleusercontent.com/d/1XpCxXpamX_954g02-wHr1IxA6JsFXUXp',
+  'https://lh3.googleusercontent.com/d/19uVJZydqaDcNzyUK0YaYzYG9UWKh_D3q',
+  'https://lh3.googleusercontent.com/d/1YFRxMeUHR20Ny0BP2xmqzmKDhH_-QzWB',
+  'https://lh3.googleusercontent.com/d/1TmeYXno2q2MHv-6Y8jwLMAjA_IU0hRfM'
+];
+
 export const tukTukTours: Tour[] = [
   {
     id: 'tavira-city',
@@ -380,8 +433,8 @@ export const jeepTours: Tour[] = [
     pax: '2-5',
     descriptionKey: 'tours.tavira_gold.desc',
     features: ['Centro Histórico', 'jardim castelo', 'Ponte Antiga', 'Ria Formosa', 'Salinas', 'Flora e Fauna', 'Aves', 'Antiga Vila pescadores de atum (museu atum)', 'Olive tasting', 'Santa Luzia (capital do polvo)'],
-    image: JEEP_GALLERY[0],
-    gallery: [...FISHING_GALLERY, ...OLIVE_GALLERY, JEEP_GALLERY[1]],
+    image: TAVIRA_GOLD_GALLERY[0],
+    gallery: TAVIRA_GOLD_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     itinerary: [
       { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
@@ -476,8 +529,8 @@ export const jeepTours: Tour[] = [
     pax: '2-5',
     descriptionKey: 'tours.jeep_boat_anchors.desc',
     features: ['Centro Histórico', 'jardim castelo', 'Ponte Antiga', 'Ria Formosa', 'Salinas', 'Flora e Fauna', 'Aves', 'Antiga Vila pescadores de atum (museu atum)', 'Olive tasting', 'Santa Luzia (capital do polvo)', 'Passeio barco Ria Formosa', 'cemitério ancoras', 'Regresso Tavira'],
-    image: JEEP_GALLERY[5],
-    gallery: [...FISHING_GALLERY, ...OLIVE_GALLERY, JEEP_GALLERY[4]],
+    image: JEEP_BOAT_ANCHOR_GALLERY[0],
+    gallery: JEEP_BOAT_ANCHOR_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     itinerary: [
       { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
@@ -496,8 +549,8 @@ export const jeepTours: Tour[] = [
     pax: '2-5',
     descriptionKey: 'tours.tavira_roots_wine.desc',
     features: ['Centro Histórico', 'jardim castelo', 'Ponte Antiga', 'Ria Formosa', 'Salinas', 'Flora e Fauna', 'Aves', 'Antiga Vila pescadores de atum (museu atum)', 'Olive tasting', 'Santa Luzia (capital do polvo)', 'Al-Lagar (inclui 1 copo de vinho / tapas)'],
-    image: JEEP_GALLERY[6],
-    gallery: [...WINE_GALLERY, ...FISHING_GALLERY, ...OLIVE_GALLERY, JEEP_GALLERY[7]],
+    image: TAVIRA_ROOTS_WINE_GALLERY[0],
+    gallery: TAVIRA_ROOTS_WINE_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     itinerary: [
       { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
@@ -516,8 +569,8 @@ export const jeepTours: Tour[] = [
     pax: '2-5',
     descriptionKey: 'tours.jeep_boat_history.desc',
     features: ['Centro Histórico', 'jardim castelo', 'Ponte Antiga', 'Ria Formosa', 'Salinas', 'Flora e Fauna', 'Aves', 'Antiga Vila pescadores de atum (museu atum)', 'Olive tasting', 'Santa Luzia (capital do polvo)', 'Passeio barco Ria Formosa', 'Regresso Tavira'],
-    image: JEEP_GALLERY[7],
-    gallery: [...FISHING_GALLERY, ...OLIVE_GALLERY, JEEP_GALLERY[6]],
+    image: JEEP_BOAT_HISTORY_GALLERY[0],
+    gallery: JEEP_BOAT_HISTORY_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     itinerary: [
       { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
