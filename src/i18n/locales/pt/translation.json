@@ -10,8 +10,8 @@
   },
   "hero": {
     "title_part1": "Tavira Roots | ",
-    "title_highlight": "Experiências Privadas",
-    "title_part2": " e Autênticas",
+    "title_highlight": "Passeios Exclusivos",
+    "title_part2": " em Tavira",
     "subtitle": "Em família ou com amigos, viva a essência de Tavira. Da pesca e do sal marinho aos vinhos locais, ao chocolate, ao azeite e à gastronomia local, cada experiência revela a alma da nossa terra.",
     "cta_tuk": "Passeios Tuk Tuk",
     "cta_jeep": "Aventura em Jipe"
@@ -31,7 +31,7 @@
   "tuk_tuk_page": {
     "title": "Passeios de Tuk Tuk em Tavira",
     "subtitle_top": "Exploração Urbana & Tradicional",
-    "description": "Agéis, ecológicos e charmosos. Os nossos Tuk Tuks levam-no onde os outros não chegam, sempre com a privacidade que nos caracteriza.",
+    "description": "",
     "faq_title": "Dúvidas sobre o Tuk Tuk?",
     "faq_desc": "Os nossos Tuk Tuks são 100% elétricos ou de baixas emissões, ideais para as ruas estreitas do centro histórico. A capacidade máxima total é de 9 pessoas (distribuídas por dois veículos, um de 5 e outro de 4 lugares)."
   },
@@ -68,13 +68,17 @@
     "chocolate": "Chocolate",
     "olives": "Azeitonas",
     "salt": "Salinas",
-    "pottery": "Paredes de Barro",
+    "pottery": "Barro",
+    "wine": "Vinhos",
+    "tapas": "Tapas",
+    "city": "Cidade",
+    "octopus_tuna": "Polvo e Atum",
     "cta_box_title": "Pronto para a sua aventura privada?",
     "cta_box_subtitle": "Reserve agora e garanta a sua vaga na melhor tour de Tavira. Exclusividade e diversão garantidas."
   },
   "tours": {
     "cidade_tavira": {
-      "name": "Tavira City",
+      "name": "Tavira Cidade",
       "desc": "Descubra o coração de Tavira num passeio que percorre a história, os rios e o Parque Natural."
     },
     "tavira_total": {
@@ -82,27 +86,27 @@
       "desc": "Uma experiência completa por Tavira, incluindo a herança do atum e as salinas tradicionais."
     },
     "city_tapas": {
-      "name": "City & Tapas",
+      "name": "Cidade & Tapas",
       "desc": "Combine a cultura de Tavira com a gastronomia local num passeio que termina com um menu degustação."
     },
     "historical_wine": {
-      "name": "Historical Center & Wine Tasting",
+      "name": "Centro Histórico & Prova de Vinhos",
       "desc": "Viagem pela história de Tavira com uma prova exclusiva de vinhos da região do Algarve."
     },
     "city_chocolate": {
-      "name": "Tavira City & Chocolate",
+      "name": "Cidade & Chocolate",
       "desc": "Explore a cidade e adoce o seu dia com uma degustação de chocolate artesanal."
     },
     "tuk_tuk_boat": {
-      "name": "Tuk Tuk & Boat",
+      "name": "Tuk Tuk & Barco",
       "desc": "A melhor forma de conhecer Tavira: por terra num Tuk Tuk e por mar num passeio de barco pela Ria Formosa."
     },
     "city_ice_cream": {
-      "name": "City & Ice Cream",
+      "name": "Cidade & Gelado",
       "desc": "Um passeio refrescante pela cidade com paragem para um gelado 100% natural."
     },
     "city_olive_factory": {
-      "name": "City & Olive Factory",
+      "name": "Cidade & Lagar",
       "desc": "Conheça a tradição da azeitona em Tavira com visita a fábrica e degustação de produtos locais."
     },
     "santa_luzia_tuk": {
@@ -122,39 +126,39 @@
       "desc": "Explore Tavira e as suas redondezas com o conforto e a versatilidade de um Jipe privado. Salinas, história e mar num só tour."
     },
     "tavira_gold": {
-      "name": "Tavira´s Gold: From Tuna, Salt and Olives to Octopus Capital",
+      "name": "Atum, Sal, Azeitonas e a Capital do Polvo",
       "desc": "Um passeio completo que liga o ouro branco das salinas ao ouro líquido do azeite e à capital do polvo."
     },
     "ria_formosa_jeep": {
-      "name": "Ria Formosa JeepTour: Tuna, Salt Pans, Cacela Velha & Lunch",
+      "name": "Tavira Roots: Ria Formosa & Gastronomia",
       "desc": "Explore a beleza da Ria Formosa com paragem em Cacela Velha e um almoço regional incluído."
     },
     "fuzeta_olhao_bath": {
-      "name": "JeepTour - Fuzeta, Olhão & Mud and Salt Bath",
+      "name": "Santa Luzia, Fuseta, Olhão, Salinas (Mar Morto) e Banho de Lama",
       "desc": "Aventura 4x4 com paragem em Olhão e uma experiência única de banhos de lama e sal."
     },
     "santa_luzia_clay": {
-      "name": "Santa Luzia, Fuseta & Clay Factory",
+      "name": "Santa Luzia, Fuseta & Olaria",
       "desc": "Descubra a tradição pescatória e a arte da olaria manual neste tour exclusivo."
     },
     "liquid_gold_route": {
-      "name": "The Liquid Gold Route Jeep & Olive Grove 2,000-Year History",
+      "name": "Olival, Prova de azeite e azeitonas, oliveira com 2000 anos de história",
       "desc": "Visite oliveiras milenares e prove o melhor azeite da região num cenário histórico."
     },
     "jeep_boat_anchors": {
-      "name": "Tavira: Jeep & Boat – Anchorgraveyard",
+      "name": "Jeep & Barco - Cemitério das Âncoras",
       "desc": "A combinação perfeita entre terra e mar, com visita ao icónico cemitério das âncoras."
     },
     "tavira_roots_wine": {
-      "name": "Tavira Roots: Salt Pans, Octopus, Tuna Heritage Wine & Tapas",
+      "name": "Tavira Roots - Salinas, Polvo, Atum, Vinho e Tapas",
       "desc": "A essência de Tavira num passeio que termina com vinhos e tapas locais."
     },
     "jeep_boat_history": {
-      "name": "Jeep & Boat History & Nature",
+      "name": "Jeep & Barco - História e Natureza",
       "desc": "Uma jornada pela história e natureza de Tavira, explorando a Ria Formosa de barco e jipe."
     },
     "full_day_sotavento": {
-      "name": "Full day in Sotavento W/Lunch",
+      "name": "Dia Completo no Sotavento Algarvia C/Almoço",
       "desc": "O dia inteiro para descobrir o Sotavento Algarvio com almoço incluído e experiências autênticas."
     }
   },
@@ -199,7 +203,7 @@
     "q3": "As tours incluem visitas às fábricas?",
     "a3": "Sim, dependendo da tour escolhida. Temos parcerias com fábricas de chocolate, azeitonas, salinas e cerâmica. O tempo de visita e degustações variam conforme o itinerário.",
     "q4": "O guia fala que línguas?",
-    "a4": "Os nossos guias são fluentes em Português e Inglês. Mediante solicitação prévia e disponibilidade, poderemos ter guias que falem Francês ou Espanhol.",
+    "a4": "Os nossos guias dos tuk tuk's falam português, inglês, espanhol e francês. Os nossos guias do jeep falam português, espanhol e inglês.",
     "q5": "As crianças pagam o mesmo valor?",
     "a5": "Crianças até aos 3 anos viajam gratuitamente (no colo). Para crianças entre os 4 e 12 anos, temos preços especiais em determinadas tours. Consulte os detalhes em cada tour.",
     "q6": "Podemos personalizar o roteiro?",

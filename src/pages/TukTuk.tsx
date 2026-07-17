@@ -41,7 +41,7 @@ export default function TukTuk() {
         }}
       />
       {/* Header */}
-      <section className="relative h-[500px] md:h-[800px] overflow-hidden flex items-center justify-center text-white pt-16 md:pt-0">
+      <section className="relative h-[500px] md:h-[800px] overflow-hidden flex items-center justify-center text-white pt-24 md:pt-0">
         {/* Video Background Overlay */}
         <div className="absolute inset-0 z-0 pointer-events-none">
           <div className="absolute inset-0 bg-brand-black/60 z-10" />
@@ -53,7 +53,7 @@ export default function TukTuk() {
           />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-16 md:pt-0 relative z-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-24 md:pt-0 relative z-20">
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

@@ -10,8 +10,8 @@
   },
   "hero": {
     "title_part1": "Tavira Roots | ",
-    "title_highlight": "Private & Authentic",
-    "title_part2": " Experiences",
+    "title_highlight": "Exclusive Tours",
+    "title_part2": " in Tavira",
     "subtitle": "With family or friends, experience the essence of Tavira. From fishing and sea salt to local wines, chocolate, olive oil, and local gastronomy, each experience reveals the soul of our land.",
     "cta_tuk": "Tuk Tuk Tours",
     "cta_jeep": "Jeep Adventure"
@@ -31,7 +31,7 @@
   "tuk_tuk_page": {
     "title": "Tuk Tuk Tours in Tavira",
     "subtitle_top": "Urban & Traditional Exploration",
-    "description": "Agile, eco-friendly, and charming. Our Tuk Tuks take you where others can't reach, always with the privacy that defines us.",
+    "description": "",
     "faq_title": "Questions about Tuk Tuk?",
     "faq_desc": "Our Tuk Tuks are 100% electric or low-emission, ideal for the narrow streets of the historical center. Total maximum capacity is 9 people (spread across two vehicles, one with 5 seats and another with 4)."
   },
@@ -69,6 +69,10 @@
     "olives": "Olives",
     "salt": "Salt Pans",
     "pottery": "Clay Walls",
+    "wine": "Wine",
+    "tapas": "Tapas",
+    "city": "City",
+    "octopus_tuna": "Octopus & Tuna",
     "cta_box_title": "Ready for your private adventure?",
     "cta_box_subtitle": "Book now and secure your spot on the best tour in Tavira. Exclusivity and fun guaranteed."
   },
@@ -126,11 +130,11 @@
       "desc": "A complete tour connecting the white gold of salt pans to the liquid gold of olive oil and the octopus capital."
     },
     "ria_formosa_jeep": {
-      "name": "Ria Formosa JeepTour: Tuna, Salt Pans, Cacela Velha & Lunch",
+      "name": "Tavira Roots: Ria Formosa & Gastronomia",
       "desc": "Explore the beauty of Ria Formosa with a stop in Cacela Velha and a regional lunch included."
     },
     "fuzeta_olhao_bath": {
-      "name": "JeepTour - Fuzeta, Olhão & Mud and Salt Bath",
+      "name": "Santa Luzia, Fuseta, Olhão, Salt Pans (Dead Sea) & Mud Bath",
       "desc": "4x4 adventure with a stop in Olhão and a unique experience of mud and salt baths."
     },
     "santa_luzia_clay": {
@@ -138,7 +142,7 @@
       "desc": "Discover the fishing tradition and the art of manual pottery in this exclusive tour."
     },
     "liquid_gold_route": {
-      "name": "The Liquid Gold Route Jeep & Olive Grove 2,000-Year History",
+      "name": "Olive Grove, Olive Oil Tasting & 2,000-Year-Old Olive Tree History",
       "desc": "Visit millennial olive trees and taste the best olive oil in the region in a historical setting."
     },
     "jeep_boat_anchors": {
@@ -154,7 +158,7 @@
       "desc": "A journey through the history and nature of Tavira, exploring Ria Formosa by boat and jeep."
     },
     "full_day_sotavento": {
-      "name": "Full day in Sotavento W/Lunch",
+      "name": "Full Day in Eastern Algarve (Sotavento) w/ Lunch",
       "desc": "A full day to discover the Eastern Algarve with lunch included and authentic experiences."
     }
   },

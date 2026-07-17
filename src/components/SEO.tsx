@@ -21,7 +21,7 @@ export function SEO({
 }: SEOProps) {
   const { i18n } = useTranslation();
   const siteName = 'Tavira Roots';
-  const fullTitle = `${title} | ${siteName}`;
+  const fullTitle = title?.includes?.(siteName) ? title : `${title} | ${siteName}`;
   const siteUrl = 'https://taviraroots.com'; // Change to actual domain when known
 
   return (

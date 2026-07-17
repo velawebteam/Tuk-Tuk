@@ -1,5 +1,5 @@
 import { motion } from 'motion/react';
-import { Users, Map, Star, ChevronRight, Camera, Coffee, Leaf } from 'lucide-react';
+import { Users, Map, Star, ChevronRight, Camera, Coffee, Leaf, Building2, Wine, UtensilsCrossed, Fish } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { tukTukTours, jeepTours } from '@/src/data/tours';
 import { useTranslation } from 'react-i18next';
@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <div>
       <SEO 
-        title={t('hero.title_part1') + t('hero.title_highlight')}
+        title={t('hero.title_part1') + t('hero.title_highlight') + t('hero.title_part2')}
         description={t('hero.subtitle')}
         canonical="/"
       />
@@ -27,7 +27,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white text-center pt-20 md:pt-0">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white text-center pt-32 md:pt-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -121,7 +121,7 @@ export default function Home() {
                 <img 
                   src={tour.image} 
                   alt={t(tour.nameKey)} 
-                  className={`absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${tour.image.includes('1AgBECV3LgIOLdu520PZLGPzQNVrUFNbZ') ? 'object-left' : ''}`}
+                  className={`absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${tour.image?.includes?.('1AgBECV3LgIOLdu520PZLGPzQNVrUFNbZ') ? 'object-left' : ''}`}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/30 to-transparent opacity-90"></div>
                 <div className="absolute top-0 left-0 p-8 z-20">
@@ -166,17 +166,26 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
+              { icon: <Building2 size={32} />, name: t('home.city') },
               { icon: <Coffee size={32} />, name: t('home.chocolate') },
               { icon: <Leaf size={32} />, name: t('home.olives') },
+              { icon: <Wine size={32} />, name: t('home.wine') },
+              { icon: <UtensilsCrossed size={32} />, name: t('home.tapas') },
               { icon: <Map size={32} />, name: t('home.salt') },
               { icon: <Camera size={32} />, name: t('home.pottery') },
+              { icon: <Fish size={32} />, name: t('home.octopus_tuna') },
             ].map((attr, i) => (
-              <div key={i} className="flex flex-col items-center gap-4">
+              <motion.div 
+                key={i} 
+                className="flex flex-col items-center gap-4"
+                whileHover={{ y: -10 }}
+                transition={{ type: "spring", stiffness: 400, damping: 25 }}
+              >
                 <div className="w-20 h-20 bg-white rounded-full shadow-md flex items-center justify-center text-brand-brown border border-brand-brown/10">
                   {attr.icon}
                 </div>
-                <span className="font-bold text-brand-black uppercase tracking-widest text-sm">{attr.name}</span>
-              </div>
+                <span className="font-bold text-brand-black uppercase tracking-widest text-sm text-center">{attr.name}</span>
+              </motion.div>
             ))}
           </div>
         </div>

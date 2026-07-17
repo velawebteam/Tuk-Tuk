@@ -51,12 +51,12 @@ export default function TourDetail() {
     setSelectedImageIndex((prev) => (prev - 1 + images.length) % images.length);
   };
 
-  const includesMuseum = tour?.features.some(f => 
-    f.toLowerCase().includes('museu do atum') || 
-    f.toLowerCase().includes('museu atum')
+  const includesMuseum = tour?.features?.some(f => 
+    f?.toLowerCase()?.includes('museu do atum') || 
+    f?.toLowerCase()?.includes('museu atum')
   ) || tour?.itinerary?.some(i => 
-    i.activity.toLowerCase().includes('museu do atum') || 
-    i.activity.toLowerCase().includes('museu atum')
+    i?.activity?.toLowerCase()?.includes('museu do atum') || 
+    i?.activity?.toLowerCase()?.includes('museu atum')
   );
 
   if (!tour) {
@@ -71,7 +71,7 @@ export default function TourDetail() {
   return (
     <div className="pb-24 bg-brand-cream min-h-screen">
       {/* Navigation Breadcrumb */}
-      <div className="max-w-7xl mx-auto px-4 pt-32 pb-8">
+      <div className="max-w-7xl mx-auto px-4 pt-40 pb-8">
         <Link to={tour.type === 'tuk-tuk' ? '/tuk-tuk' : '/jipe'} className="flex items-center gap-2 text-brand-black/40 hover:text-brand-brown transition-all font-bold uppercase tracking-widest text-xs group">
           <ChevronLeft size={16} className="transition-transform group-hover:-translate-x-1" />
           <span>{t('nav.home')} / {tour.type === 'tuk-tuk' ? t('nav.tuk_tuk') : t('nav.jeep')}</span>
@@ -96,7 +96,7 @@ export default function TourDetail() {
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.4 }}
-                      className={`w-full h-full object-cover ${images[selectedImageIndex].includes('1AgBECV3LgIOLdu520PZLGPzQNVrUFNbZ') ? 'object-left' : ''}`}
+                      className={`w-full h-full object-cover ${images[selectedImageIndex]?.includes?.('1AgBECV3LgIOLdu520PZLGPzQNVrUFNbZ') ? 'object-left' : ''}`}
                       alt={`${tour?.nameKey} gallery ${selectedImageIndex}`}
                     />
                 </AnimatePresence>

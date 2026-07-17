@@ -41,7 +41,7 @@ export default function Jeep() {
         }}
       />
       {/* Header */}
-      <section className="relative min-h-[70vh] md:min-h-[85vh] flex items-center text-white overflow-hidden bg-brand-black pt-16 md:pt-0">
+      <section className="relative min-h-[70vh] md:min-h-[85vh] flex items-center text-white overflow-hidden bg-brand-black pt-24 md:pt-0">
         <div className="absolute inset-0 z-0">
           <iframe
             className="w-[300%] h-[300%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
@@ -53,7 +53,7 @@ export default function Jeep() {
           ></iframe>
           <div className="absolute inset-0 bg-brand-black/70 backdrop-blur-[1px]"></div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full pt-16 md:pt-0">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full pt-24 md:pt-0">
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

@@ -73,14 +73,17 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className={cn(
           "flex justify-between items-center transition-all duration-300 w-full",
-          isScrolled ? "h-16" : "h-24"
+          isScrolled ? "h-20" : "h-32"
         )}>
           {/* Logo - Left */}
           <Link to="/" className="flex items-center group">
             <img 
               src="https://lh3.googleusercontent.com/d/1nBgIFM_5E5vclRhVItfSWT8rdG_Xt_Ml" 
               alt="Tavira Roots Logo" 
-              className="w-[60px] h-[60px] object-contain transition-all duration-300"
+              className={cn(
+                "object-contain transition-all duration-300",
+                isScrolled ? "w-[70px] h-[70px]" : "w-[100px] h-[100px]"
+              )}
             />
           </Link>
 
@@ -91,7 +94,7 @@ export function Navbar() {
                 key={link.href}
                 to={link.href}
                 className={cn(
-                  "text-sm font-bold uppercase tracking-widest transition-all duration-300 hover:text-brand-brown relative group font-display",
+                  "text-base font-bold uppercase tracking-widest transition-all duration-300 hover:text-brand-brown relative group font-display",
                   isSolid ? "text-brand-black" : "text-white",
                   location.pathname === link.href && (isSolid ? "text-brand-brown" : "text-brand-cream")
                 )}
@@ -110,11 +113,11 @@ export function Navbar() {
               <button
                 onClick={() => setIsLangOpen(!isLangOpen)}
                 className={cn(
-                  "flex items-center gap-1 text-sm font-bold transition-colors uppercase font-display",
+                  "flex items-center gap-1 text-base font-bold transition-colors uppercase font-display",
                   isSolid ? "text-brand-black hover:text-brand-brown" : "text-white hover:text-brand-cream"
                 )}
               >
-                <Languages size={18} />
+                <Languages size={20} />
                 {i18n.language.split('-')[0]}
               </button>
               

@@ -107,6 +107,21 @@ const TAVIRA_CITY_GALLERY = [
   'https://lh3.googleusercontent.com/d/11OJ4gBB5Q87QlD54zq0A5Kqog7nN0xAW'
 ];
 
+const CITY_TAPAS_GALLERY = [
+  'https://lh3.googleusercontent.com/d/1I0UjlxC6E4FVxRPCDLNsD12pZNt9q9eN',
+  'https://lh3.googleusercontent.com/d/1umY5Tqgr73IuneejlR0Lz7okRDr9hGqJ',
+  'https://lh3.googleusercontent.com/d/1WJpn3aVV6RrV4RfULdSe488uJC_q5fY6',
+  'https://lh3.googleusercontent.com/d/1ycC1xAwXlXgxT0qZQWxk4LY3lK62JUei',
+  'https://lh3.googleusercontent.com/d/1fxGbQEc4ypylLl7ogLX10vKUo85IPuZk',
+  'https://lh3.googleusercontent.com/d/1oAYRlltIb23cI8I462TR884xLnvnM9fw',
+  'https://lh3.googleusercontent.com/d/1kPhHZs3BG54YxUrJQksZjfsv3llkeiAx',
+  'https://lh3.googleusercontent.com/d/1mq5tqz9XJeFAF3Q1AH3T-Af7CSm0ChgQ',
+  'https://lh3.googleusercontent.com/d/1ICMKjHBCHMKFq7Ai49mK3oN5-t6CF8f6',
+  'https://lh3.googleusercontent.com/d/1GMDBrW2FBUHi4XH_0oViGX3l0Iae8CDR',
+  'https://lh3.googleusercontent.com/d/1ZNqQp_6sW_wMWfw36iYCxdBlfpHsGviS',
+  'https://lh3.googleusercontent.com/d/114T8Vj7T_xT4yU1oUedWhp1gLRQN-x7Z'
+];
+
 const HISTORICAL_WINE_GALLERY = [
   'https://lh3.googleusercontent.com/d/1LBRIwcWjm7c8b6idBz7E3ybjD55g0x67',
   'https://lh3.googleusercontent.com/d/12-VPRQJofE1teTPqkoZwuTqwd8LOvzup',
@@ -119,7 +134,8 @@ const HISTORICAL_WINE_GALLERY = [
   'https://lh3.googleusercontent.com/d/1SsvxYfxQ0xHSTu31x2X7iZFbhEZ4vR4R',
   'https://lh3.googleusercontent.com/d/1BhVnvss2yP1ml0ttibJKMRcVVVbxbML1',
   'https://lh3.googleusercontent.com/d/1ivUSF8DqgA8QVpIBYrX-rkbgBz1J21Ux',
-  'https://lh3.googleusercontent.com/d/1p1_ySEDyjtV-WKKSjnFtc0vjgSrIko2T'
+  'https://lh3.googleusercontent.com/d/1p1_ySEDyjtV-WKKSjnFtc0vjgSrIko2T',
+  'https://lh3.googleusercontent.com/d/1xiqk2ZgfMDdz5e2cUV06DlF3Uzp-9_4t'
 ];
 
 const CITY_CHOCOLATE_GALLERY = [
@@ -144,7 +160,8 @@ const TUKTUK_BOAT_GALLERY = [
   'https://lh3.googleusercontent.com/d/1EsaoOIQuVIG5V4EzydBO5dXzRTgbrRl-',
   'https://lh3.googleusercontent.com/d/1Ho0eiqthiUGUE0l4zSZBHZa13E7pd9TP',
   'https://lh3.googleusercontent.com/d/1nFT3IfqGCfs1Qk2CSlNpV5o-ZaQZeHVA',
-  'https://lh3.googleusercontent.com/d/1zq5W7mx_iID-hmId0gqItHLvOmxNXaTE'
+  'https://lh3.googleusercontent.com/d/1zq5W7mx_iID-hmId0gqItHLvOmxNXaTE',
+  'https://lh3.googleusercontent.com/d/1qKDLWupvJUosN4qAZfkj2SFWNTWgcB3S'
 ];
 
 const CITY_ICE_CREAM_GALLERY = [
@@ -163,7 +180,8 @@ const CITY_OLIVE_GALLERY = [
   'https://lh3.googleusercontent.com/d/1pvY9j6MZNmiuDmp8X2BGzbho2kn2CC9g',
   'https://lh3.googleusercontent.com/d/1VDnK21RWs96fWdT6ovfVnrV9MqhsDqFi',
   'https://lh3.googleusercontent.com/d/1eEUvcfV1TbCrpqa1Pq7nuaa7SrYGRE4X',
-  'https://lh3.googleusercontent.com/d/1KUCOGLOLYnPawGVF-3aIn28xjKCfWEZx'
+  'https://lh3.googleusercontent.com/d/1KUCOGLOLYnPawGVF-3aIn28xjKCfWEZx',
+  'https://lh3.googleusercontent.com/d/1cB45-Rj3Ow1AtBNQbi7zewuctOWhLVBT'
 ];
 
 const SANTA_LUZIA_GALLERY = [
@@ -232,6 +250,113 @@ const JEEP_BOAT_ANCHOR_GALLERY = [
   'https://lh3.googleusercontent.com/d/1TmeYXno2q2MHv-6Y8jwLMAjA_IU0hRfM'
 ];
 
+const SANTA_LUZIA_CLAY_GALLERY = [
+  'https://lh3.googleusercontent.com/d/1xZgL-uqR6t2FWNZU1YlOSxBa391OdnU2',
+  'https://lh3.googleusercontent.com/d/1rmQkI_Bbwbs8EMFjFIV-w4kCvVzQcHZv',
+  'https://lh3.googleusercontent.com/d/1FCi-O346K-7pbdCpHaZG44WYEo5K9zt9',
+  'https://lh3.googleusercontent.com/d/1ocYtE1b_5neWNWE8l5mN94wUeSrKD05G',
+  'https://lh3.googleusercontent.com/d/1g_h7jhrC5MXBuBufXvz4wMi3lVjs0JMi',
+  'https://lh3.googleusercontent.com/d/1uC4cY7wQZHFJjDuVVGVl8oiiIDUHZK5T',
+  'https://lh3.googleusercontent.com/d/1FdEqs_Qxl_eFwdXsdMkQZOp2BVqwsdaW',
+  'https://lh3.googleusercontent.com/d/16TLjfPlQh_jRmPNxx2yumbVtsvDvCsuZ',
+  'https://lh3.googleusercontent.com/d/1FDQpJTHR8FkFSL40SkqzbDO3Joym1NMF',
+  'https://lh3.googleusercontent.com/d/1B7qXj0chH5siZM-UrcKT9uKOFGrVK0v9',
+  'https://lh3.googleusercontent.com/d/1WNo8-G1PV-qOqQyrPmNVBZ9ugUjpZcog'
+];
+
+const RIA_FORMOSA_GASTRONOMIA_GALLERY = [
+  'https://lh3.googleusercontent.com/d/1-mazhmCVnrveAAnsb8a89t_fXt2owlbo',
+  'https://lh3.googleusercontent.com/d/1oyU97FEN5epEYX220Ft4MPDmQFdOWowO',
+  'https://lh3.googleusercontent.com/d/1AWLtGPL_5Zo7ffH3j7X94jcIPrqFQe6F',
+  'https://lh3.googleusercontent.com/d/1PLUP8XxLedQ-f-jhZzPukc7I6j9Gix8A',
+  'https://lh3.googleusercontent.com/d/1ax5lUEfqXZCzqrWpmAaBjGSBwiXLqjNp',
+  'https://lh3.googleusercontent.com/d/1HuSVEQI1Bp64p8oFgmT1lP3ZtQH9jdbG',
+  'https://lh3.googleusercontent.com/d/1bcjhbSbVIIj4HXyOrecF0-duimDnSQ-v',
+  'https://lh3.googleusercontent.com/d/1Xh-8JvNm4n66e94k-DgSsSWo6R0ouXmv',
+  'https://lh3.googleusercontent.com/d/1SChWPoh-yXTN0CyJv_uI3QKUH9HhmOrp',
+  'https://lh3.googleusercontent.com/d/1oMcxJbwY05d9TBgOEyN4McOLj1anQ5Pz',
+  'https://lh3.googleusercontent.com/d/1YeDIUV253c70XEGkI9_J5bfhClBCjwVP',
+  'https://lh3.googleusercontent.com/d/1YjvdFu06ZUUtW69hswGJpTCZ-RAtbjNU',
+  'https://lh3.googleusercontent.com/d/1VFNyYllUarirUUFbDJNcmJ3AHMgdFcrB',
+  'https://lh3.googleusercontent.com/d/10Xb3fBiRqDQKlgJT_nU7p-EoddQpdy9s'
+];
+
+const OLIVAL_AZEITE_GALLERY = [
+  'https://lh3.googleusercontent.com/d/1PxQY9BeiTXOBNciU33Cdk2NY_Y3GQYqD',
+  'https://lh3.googleusercontent.com/d/1-n2l_HB-PEl06l-u0pMBJ5xGDJclqtyO',
+  'https://lh3.googleusercontent.com/d/1KAHavpEvBlFOCiwjkn3FNOf0qnRS7UA5',
+  'https://lh3.googleusercontent.com/d/1IEAt0rglYO5yJKBMtdKUHMiWLTOEBgSu',
+  'https://lh3.googleusercontent.com/d/16zsFBiQxiV8-XVkTzQvl1zx6iFyLgx7H',
+  'https://lh3.googleusercontent.com/d/1jbH9ruMRoJdevRrb1lFE7_zu9dgd2YQI',
+  'https://lh3.googleusercontent.com/d/1vTeLqTLyLSerq6H2IxoKr49oCVBvA0G4',
+  'https://lh3.googleusercontent.com/d/1Sx7LDA92suLiiibqzNiNzN6uWD8F3BEq',
+  'https://lh3.googleusercontent.com/d/1ZdK_fJA30lZbmhTSsEE7fkZAg2aOBhBp',
+  'https://lh3.googleusercontent.com/d/1ruXeCoMj2x0ztqHCOP2lj0o37atSFSSF',
+  'https://lh3.googleusercontent.com/d/1NPVAkRJLnaedRm36tY6lfHEp5XXxWQOl'
+];
+
+const SANTA_LUZIA_FUSETA_OLHAO_GALLERY = [
+  'https://lh3.googleusercontent.com/d/1IjWuEtOXYzME38xRrIVq8dr40xfCdSEU',
+  'https://lh3.googleusercontent.com/d/1jtxtDi2__OB_QMT9BriwcMc_xm9AY1Om',
+  'https://lh3.googleusercontent.com/d/1chGjmYLnidu9LvU_RWb8Oer1aGDMf2mY',
+  'https://lh3.googleusercontent.com/d/17G9xUP3BfNbUU3PAFXN73sCWxQ0i4oMn',
+  'https://lh3.googleusercontent.com/d/1DlWg4lh44VopyaeZfZ5si8xJrNfdDjn9',
+  'https://lh3.googleusercontent.com/d/1KkWZ1MEgguecMB2L73j-W-3cuGcf_LP-',
+  'https://lh3.googleusercontent.com/d/1cpCfSkXvZ9pkJ1zee61b8ZIzm2VhTOyS',
+  'https://lh3.googleusercontent.com/d/1oU3OU3vRksBvlokZUMdXd-XDkMXbWXmm',
+  'https://lh3.googleusercontent.com/d/1kJQY5NvoH1Y4d-h0kSn99kg1DB7Ed21j',
+  'https://lh3.googleusercontent.com/d/1PmFlAVJOlROil2l1H3Hz00U1RJnCUFW1',
+  'https://lh3.googleusercontent.com/d/1YR1ZkK9tKZBJHaOtq7qdngzJzFZDuKbX',
+  'https://lh3.googleusercontent.com/d/1zPYH7JaFYgiLI8ZJCk5laniidBBQXQY3'
+];
+
+const CERAMICA_TRADICIONAL_GALLERY = [
+  'https://lh3.googleusercontent.com/d/1L5lqVzpeocVwiDMeflCIkU7HWVa3h8Hc',
+  'https://lh3.googleusercontent.com/d/1AzNtX95bEfJiT2Sn_r4NKdKumHkmtHUD',
+  'https://lh3.googleusercontent.com/d/1zHmjC0VoYEiwJ6TwgeMKF7f4F1ccSdKp',
+  'https://lh3.googleusercontent.com/d/1oSoecwdHxrdJc5w67FGjevyPYq5zSrOb',
+  'https://lh3.googleusercontent.com/d/1N9G2sAjpUFAEZk22ingIb2GBBBaplw51',
+  'https://lh3.googleusercontent.com/d/1up7Qwyi0qBa7H8Auj69uedQaIlWKLsaW',
+  'https://lh3.googleusercontent.com/d/1u6x5wIynIrvPkbmgu4GGX63DY1NwJc_f',
+  'https://lh3.googleusercontent.com/d/19SD3fC-ZU5llOVWLPcBunE1RmlYsiKZD',
+  'https://lh3.googleusercontent.com/d/1248w03sfSO9IL5JsP9nOpuj24DE3McPb'
+];
+
+const DIA_COMPLETO_SOTAVENTO_GALLERY = [
+  'https://lh3.googleusercontent.com/d/1vUQJRA0Rs2jGMNmhTs4LVA8zKyBrkcDK',
+  'https://lh3.googleusercontent.com/d/1HT_FvNOtVGvf10-wuleUAv8gA0SkfjwE',
+  'https://lh3.googleusercontent.com/d/1HC24nivgm8LSYMR5ooB_2IjyilbO5K4g',
+  'https://lh3.googleusercontent.com/d/1JHRLXcrTTY7Fh1Tq8UWnii-5ncxYNIQB',
+  'https://lh3.googleusercontent.com/d/1a-pLBrHs1wnlwFQBvyz4cvdAcslX6HW0',
+  'https://lh3.googleusercontent.com/d/1C4RS_n_YqOlH_17QhCTOBLeYzG_trved',
+  'https://lh3.googleusercontent.com/d/1xxCw2baApxSuNklzIYW135U6Lqqr1Ds2',
+  'https://lh3.googleusercontent.com/d/1_Ag-MSggNNRQa21RazkuGFHLhDUBxxhw',
+  'https://lh3.googleusercontent.com/d/11D7NT7fQMDT2VVd_07aZTGjuBf1GSIvk',
+  'https://lh3.googleusercontent.com/d/13LCv3AxoO1q_6kHNuQHo6alJiXigErIy',
+  'https://lh3.googleusercontent.com/d/13vUaxgKwjC51MsoJo7CViXfdgiEKFP97',
+  'https://lh3.googleusercontent.com/d/1p72nQBbIW_4c35Q389v3A2WDeiHSCjOs',
+  'https://lh3.googleusercontent.com/d/1q533uJKW2V-ymdSgtt1X5Y3ouGgwiZFW',
+  'https://lh3.googleusercontent.com/d/1hKUCg2RC-4egSqNT1crXCfyDeptbUgqp',
+  'https://lh3.googleusercontent.com/d/1eR4MLw10cCgV0piZwoC4El6QBR-ZcJs3',
+  'https://lh3.googleusercontent.com/d/1VQh5aoXSUVoIf4b7oSjVn4P63utGLN2T',
+  'https://lh3.googleusercontent.com/d/1JOH7VyRcnrtmt5K8nAD4E6QNTIMPrj4r',
+  'https://lh3.googleusercontent.com/d/1tF0zaoEIqeti-zT-PfAoLGxlqbpdxkB-',
+  'https://lh3.googleusercontent.com/d/1jjnKGC2BQFu11Py7vAVhF_KwZ3SfM3es',
+  'https://lh3.googleusercontent.com/d/1O0GB5sMiVvLM1UPT7NvXHbX-bMB4tncN',
+  'https://lh3.googleusercontent.com/d/108vlZ-gVb3a2ESNDUJxBf7PJOmBQ8ye0',
+  'https://lh3.googleusercontent.com/d/1d50RgFBpBRYqpOGp1TOgeJnc13ctjP5M',
+  'https://lh3.googleusercontent.com/d/1-orWjragYoAGqVC2bzaE3lfO8zhSBNhK',
+  'https://lh3.googleusercontent.com/d/1Xc7CYlWEOXDSi1gN4C-194eKZGDwj7qC',
+  'https://lh3.googleusercontent.com/d/1vAtA9C9C4I-e3OEDxJC8r4yXSLE0ITAo',
+  'https://lh3.googleusercontent.com/d/15Ldz-dhK-MqxR6qn-oRBlFfht4CQyTWM',
+  'https://lh3.googleusercontent.com/d/1iD7Oi3EvFt7KRk_AHGruegBCmyaSZHFG',
+  'https://lh3.googleusercontent.com/d/1Fi0qiacwhYlnesjhmunQR43UudXahIWM',
+  'https://lh3.googleusercontent.com/d/1Q-NMm3CRtahnW_e1GRcxbUMAgzF9Gnhr',
+  'https://lh3.googleusercontent.com/d/1dAsknTtwXGv7w0hlv76s66BUWpj-UDtN',
+  'https://lh3.googleusercontent.com/d/1dd6o3sE_VObeXigt_4n2R9n8FGqNUmaC',
+  'https://lh3.googleusercontent.com/d/1suSJxh4n_5-e2DF93EaB37MuuYt5wtQR'
+];
+
 export const tukTukTours: Tour[] = [
   {
     id: 'tavira-city',
@@ -242,7 +367,7 @@ export const tukTukTours: Tour[] = [
     pax: '1-9',
     descriptionKey: 'tours.cidade_tavira.desc',
     features: ['Centro Histórico', 'Jardim do Castelo', 'Ponte Antiga', 'Rio Sequa e Rio Gilão', 'Parque Natural Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal)', 'Visita Igreja São Pedro ou São Sebastião'],
-    image: TAVIRA_CITY_GALLERY[3],
+    image: TAVIRA_CITY_GALLERY[6],
     gallery: TAVIRA_CITY_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     itinerary: [
@@ -283,8 +408,8 @@ export const tukTukTours: Tour[] = [
     pax: '1-9',
     descriptionKey: 'tours.city_tapas.desc',
     features: ['Centro Histórico', 'Jardim do Castelo', 'Ponte Antiga', 'Rio Sequa e Rio Gilão', 'Parque Natural Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal)', 'Visita Igreja São Pedro ou São Sebastião', 'Restaurante Ti Maria (Menu Refeição)'],
-    image: TUK_TUK_GALLERY[2],
-    gallery: [...SALT_GALLERY, TUK_TUK_GALLERY[0], TUK_TUK_GALLERY[1]],
+    image: CITY_TAPAS_GALLERY[0],
+    gallery: CITY_TAPAS_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     goodToKnow: ['O passeio termina no restaurante', 'Menu definido pelo restaurante (Ti Maria)', 'Não inclui serviço de recolha no restaurante'],
     itinerary: [
@@ -305,7 +430,7 @@ export const tukTukTours: Tour[] = [
     pax: '1-9',
     descriptionKey: 'tours.historical_wine.desc',
     features: ['Centro Histórico', 'Jardim do Castelo', 'Ponte Antiga', 'Rio Sequa e Rio Gilão', 'Parque Natural Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal)', 'Visita ao Al-Lagar (Prova de Vinhos)'],
-    image: HISTORICAL_WINE_GALLERY[0],
+    image: HISTORICAL_WINE_GALLERY[12],
     gallery: HISTORICAL_WINE_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     goodToKnow: ['Inclui prova de 3 vinhos (Tinto, Rosé e Branco)', 'Acompanhado com Pão e Azeite'],
@@ -326,7 +451,7 @@ export const tukTukTours: Tour[] = [
     pax: '1-9',
     descriptionKey: 'tours.city_chocolate.desc',
     features: ['Centro Histórico', 'Jardim do Castelo', 'Ponte Antiga', 'Rio Sequa e Rio Gilão', 'Parque Natural Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal)', 'Visita Igreja São Pedro ou São Sebastião', 'Chocolataria Ibelle (Degustação de chocolate)'],
-    image: CITY_CHOCOLATE_GALLERY[0],
+    image: CITY_CHOCOLATE_GALLERY[5],
     gallery: CITY_CHOCOLATE_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     itinerary: [
@@ -347,7 +472,7 @@ export const tukTukTours: Tour[] = [
     pax: '1-9',
     descriptionKey: 'tours.tuk_tuk_boat.desc',
     features: ['Centro Histórico', 'Jardim do Castelo', 'Ponte Antiga', 'Rio Sequa e Rio Gilão', 'Parque Natural Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal)', 'Visita Igreja São Pedro ou São Sebastião', 'Passeio de barco na Ria Formosa (Fauna/Flora)'],
-    image: TUKTUK_BOAT_GALLERY[0],
+    image: TUKTUK_BOAT_GALLERY[11],
     gallery: TUKTUK_BOAT_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     itinerary: [
@@ -368,7 +493,7 @@ export const tukTukTours: Tour[] = [
     pax: '1-9',
     descriptionKey: 'tours.city_ice_cream.desc',
     features: ['Centro Histórico', 'Jardim do Castelo', 'Ponte Antiga', 'Rio Sequa e Rio Gilão', 'Parque Natural Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal)', 'Visita Igreja São Pedro ou São Sebastião', 'Gelataria 100% Natural (1 bola por pessoa)'],
-    image: CITY_ICE_CREAM_GALLERY[0],
+    image: CITY_ICE_CREAM_GALLERY[3],
     gallery: CITY_ICE_CREAM_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     goodToKnow: ['Inclui 1 bola de gelado por pessoa (copo ou cone)'],
@@ -390,7 +515,7 @@ export const tukTukTours: Tour[] = [
     pax: '1-9',
     descriptionKey: 'tours.city_olive_factory.desc',
     features: ['Centro Histórico', 'Jardim do Castelo', 'Ponte Antiga', 'Rio Sequa e Rio Gilão', 'Parque Natural Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal)', 'Visita Igreja São Pedro ou São Sebastião', 'Visita à fábrica de azeitonas (Degustação)'],
-    image: CITY_OLIVE_GALLERY[0],
+    image: CITY_OLIVE_GALLERY[8],
     gallery: CITY_OLIVE_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     itinerary: [
@@ -411,7 +536,7 @@ export const tukTukTours: Tour[] = [
     pax: '1-9',
     descriptionKey: 'tours.santa_luzia_tuk.desc',
     features: ['Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal e Sal Comercial)', 'Aves', 'Santa Luzia (Capital do Polvo)'],
-    image: SANTA_LUZIA_GALLERY[0],
+    image: SANTA_LUZIA_GALLERY[9],
     gallery: SANTA_LUZIA_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     itinerary: [
@@ -453,8 +578,8 @@ export const jeepTours: Tour[] = [
     pax: '2-5',
     descriptionKey: 'tours.ria_formosa_jeep.desc',
     features: ['Ria Formosa', 'Salinas', 'Flora e Fauna', 'Aves', 'Antiga Vila pescadores de atum (museu atum)', 'Cacela Velha', 'Cabanas Tavira', 'Restaurante Alfama (inclui menu refeicao)'],
-    image: JEEP_GALLERY[1],
-    gallery: [...FISHING_GALLERY, JEEP_GALLERY[0]],
+    image: RIA_FORMOSA_GASTRONOMIA_GALLERY[0],
+    gallery: RIA_FORMOSA_GASTRONOMIA_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     itinerary: [
       { activity: 'Ria Formosa, Salinas, Flora e Fauna (Aves)' },
@@ -472,8 +597,8 @@ export const jeepTours: Tour[] = [
     pax: '2-5',
     descriptionKey: 'tours.fuzeta_olhao_bath.desc',
     features: ['Santa Luzia (capital do polvo)', 'Ria Formosa', 'Salinas', 'Flora e Fauna', 'Aves', 'Fuseta', 'Olhao', 'Salinas (inclui spa mar morto e argila para tratamento de pele)'],
-    image: JEEP_GALLERY[2],
-    gallery: [...CLAY_GALLERY, JEEP_GALLERY[3]],
+    image: SANTA_LUZIA_FUSETA_OLHAO_GALLERY[0],
+    gallery: SANTA_LUZIA_FUSETA_OLHAO_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     itinerary: [
       { activity: 'Santa Luzia (Capital do Polvo)' },
@@ -491,8 +616,8 @@ export const jeepTours: Tour[] = [
     pax: '2-5',
     descriptionKey: 'tours.santa_luzia_clay.desc',
     features: ['Santa Luzia (capital do polvo)', 'Ria Formosa', 'Salinas', 'Flora e Fauna', 'Aves', 'Fuseta', 'Olaria (visita e demonstração da olaria tradicional manual)'],
-    image: JEEP_GALLERY[3],
-    gallery: [...CLAY_GALLERY, JEEP_GALLERY[2]],
+    image: SANTA_LUZIA_CLAY_GALLERY[0],
+    gallery: SANTA_LUZIA_CLAY_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     itinerary: [
       { activity: 'Santa Luzia (Capital do Polvo)' },
@@ -510,8 +635,8 @@ export const jeepTours: Tour[] = [
     pax: '2-5',
     descriptionKey: 'tours.liquid_gold_route.desc',
     features: ['Moncapacho', 'Monterosa', 'Olive Grove', 'Olive Oil Tasting', 'Oliveira 2000 anos', 'Ria Formosa', 'Salinas', 'Santa Luzia (capital do polvo)'],
-    image: JEEP_GALLERY[4],
-    gallery: [...OLIVE_GALLERY, JEEP_GALLERY[5]],
+    image: OLIVAL_AZEITE_GALLERY[0],
+    gallery: OLIVAL_AZEITE_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     itinerary: [
       { activity: 'Moncarapacho e Monterosa' },
@@ -589,8 +714,8 @@ export const jeepTours: Tour[] = [
     pax: '2-5',
     descriptionKey: 'tours.ceramica.desc',
     features: ['Rio Sequa', 'Asseca', 'Barrocal', 'cascatas', 'Campo', 'Ceramica Tradicional', 'Terracota', 'fabrico manual'],
-    image: JEEP_GALLERY[8],
-    gallery: [...CLAY_GALLERY, JEEP_GALLERY[9]],
+    image: CERAMICA_TRADICIONAL_GALLERY[0],
+    gallery: CERAMICA_TRADICIONAL_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     itinerary: [
       { activity: 'Rio Sequa e Asseca' },
@@ -607,8 +732,8 @@ export const jeepTours: Tour[] = [
     pax: '2-5',
     descriptionKey: 'tours.full_day_sotavento.desc',
     features: ['Rio Sequa', 'Asseca', 'Barrocal', 'cascatas', 'Campo', 'Ceramica Tradicional', 'Terracota', 'fabrico manual', 'Olhao', 'Ria Formosa', 'Fuseta', 'Salinas', 'Oliveira 2000 anos', 'Santa Luzia', 'Tavira', 'Almoco Ti Maria', 'Antiga Vila pescadores de atum (museu atum)', 'Olive tasting', 'Cacela Velha'],
-    image: JEEP_GALLERY[9],
-    gallery: [...CLAY_GALLERY, ...FISHING_GALLERY, ...OLIVE_GALLERY, JEEP_GALLERY[10], JEEP_GALLERY[11]],
+    image: DIA_COMPLETO_SOTAVENTO_GALLERY[0],
+    gallery: DIA_COMPLETO_SOTAVENTO_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     itinerary: [
       { activity: 'Rio Sequa, Asseca, Barrocal e Cascatas' },

@@ -10,8 +10,8 @@
   },
   "hero": {
     "title_part1": "Tavira Roots | ",
-    "title_highlight": "Expériences Privées",
-    "title_part2": " et Authentiques",
+    "title_highlight": "Tours Exclusifs",
+    "title_part2": " à Tavira",
     "subtitle": "En famille ou entre amis, vivez l'essence de Tavira. De la pêche et du sel marin aux vins locaux, au chocolat, à l'huile d'olive et à la gastronomie locale, chaque expérience révèle l'âme de notre terre.",
     "cta_tuk": "Tours en Tuk Tuk",
     "cta_jeep": "Aventure en Jeep"
@@ -31,7 +31,7 @@
   "tuk_tuk_page": {
     "title": "Tours en Tuk Tuk à Tavira",
     "subtitle_top": "Exploration Urbaine & Traditionnelle",
-    "description": "Agiles, écologiques et charmants. Nos Tuk Tuks vous emmènent là où les autres ne peuvent pas aller, toujours avec l'intimité qui nous caractérise.",
+    "description": "",
     "faq_title": "Des questions sur le Tuk Tuk ?",
     "faq_desc": "Nos Tuk Tuks sont 100% électriques ou à faibles émissions, idéaux pour les rues étroites du centre historique. La capacité maximale totale est de 9 personnes (réparties sur deux véhicules, un de 5 places et un autre de 4 places)."
   },
@@ -69,6 +69,10 @@
     "olives": "Olives",
     "salt": "Marais Salants",
     "pottery": "Murs d'Argile",
+    "wine": "Vin",
+    "tapas": "Tapas",
+    "city": "Ville",
+    "octopus_tuna": "Poulpe & Thon",
     "cta_box_title": "Prêt pour votre aventure privée ?",
     "cta_box_subtitle": "Réservez maintenant et garantissez votre place pour le meilleur tour de Tavira. Exclusivité et plaisir garantis."
   },
@@ -108,6 +112,22 @@
     "centro_historico_salinas": {
       "name": "Vieille Ville, Marais Salants et Santa Luzia",
       "desc": "Explorez Tavira et ses environs avec le confort et la polyvalence d'une Jeep privée. Marais salants, histoire et mer en un seul tour."
+    },
+    "ria_formosa_jeep": {
+      "name": "Tavira Roots: Ria Formosa & Gastronomia",
+      "desc": "Explorez la beauté de la Ria Formosa avec un arrêt à Cacela Velha et um déjeuner régional inclus."
+    },
+    "liquid_gold_route": {
+      "name": "Oliveraie, dégustation d'huile d'olive et olivier de 2000 ans",
+      "desc": "Visitez des oliviers millénaires et dégustez la meilleure huile d'olive de la région dans un cadre historique."
+    },
+    "fuzeta_olhao_bath": {
+      "name": "Santa Luzia, Fuseta, Olhão, Marais Salants (Mer Morte) et Bain de Boue",
+      "desc": "Aventure 4x4 avec un arrêt à Olhão et une expérience unique de bains de boue et de sel."
+    },
+    "full_day_sotavento": {
+      "name": "Journée Complète à Sotavento Algarvia avec Déjeuner",
+      "desc": "Une journée entière pour découvrir le Sotavento Algarvio avec déjeuner inclus et expériences authentiques."
     }
   },
   "tour_detail": {

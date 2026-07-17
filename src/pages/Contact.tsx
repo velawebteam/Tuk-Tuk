@@ -3,7 +3,7 @@ import { SEO } from '../components/SEO';
 
 export default function Contact() {
   return (
-    <div className="pt-24 pb-24 bg-brand-cream min-h-screen">
+    <div className="pt-40 pb-24 bg-brand-cream min-h-screen">
       <SEO 
         title="Contactos | Fale Connosco"
         description="Tem alguma questão sobre as nossas tours privadas de Tuk Tuk ou Jipe? Entre em contacto connosco para planear a sua experiência perfeita em Tavira."
