@@ -11,7 +11,7 @@ export default function About() {
       <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-brand-black">
         <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1518173946687-a4c8a9833786?q=80&w=2000&auto=format&fit=crop" 
+            src="https://lh3.googleusercontent.com/d/1AgBECV3LgIOLdu520PZLGPzQNVrUFNbZ" 
             alt="Tavira Roots Team" 
             className="w-full h-full object-cover brightness-50"
           />
@@ -48,10 +48,10 @@ export default function About() {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4 md:gap-6">
-            <img src="https://images.unsplash.com/photo-1548907040-4baa42d10919?q=80&w=600&auto=format&fit=crop" className="rounded-3xl h-48 md:h-64 w-full object-cover shadow-lg border border-brand-brown/5" alt="Chocolate Factory" />
-            <img src="https://images.unsplash.com/photo-1528127269322-539801943592?q=80&w=600&auto=format&fit=crop" className="rounded-3xl h-48 md:h-64 w-full object-cover shadow-lg sm:mt-8 border border-brand-brown/5" alt="Tavira Views" />
-            <img src="https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?q=80&w=600&auto=format&fit=crop" className="rounded-3xl h-48 md:h-64 w-full object-cover shadow-lg sm:-mt-8 border border-brand-brown/5" alt="Wine Tasting" />
-            <img src="https://images.unsplash.com/photo-1520408222757-6f9f95d87d5d?q=80&w=600&auto=format&fit=crop" className="rounded-3xl h-48 md:h-64 w-full object-cover shadow-lg border border-brand-brown/5" alt="Pottery" />
+            <img src="https://lh3.googleusercontent.com/d/1sGsO3Iq0Z6QCg666qpWF5bTTRoAWzI_a" className="rounded-3xl h-48 md:h-64 w-full object-cover shadow-lg border border-brand-brown/5" alt="Chocolate Factory" />
+            <img src="https://lh3.googleusercontent.com/d/1nPuswq-p4iCWzrepio6VpP88_H0ScviH" className="rounded-3xl h-48 md:h-64 w-full object-cover shadow-lg sm:mt-8 border border-brand-brown/5" alt="Tavira Views" />
+            <img src="https://lh3.googleusercontent.com/d/1LBRIwcWjm7c8b6idBz7E3ybjD55g0x67" className="rounded-3xl h-48 md:h-64 w-full object-cover shadow-lg sm:-mt-8 border border-brand-brown/5" alt="Wine Tasting" />
+            <img src="https://lh3.googleusercontent.com/d/1Ubc8v8YYMo5tfRPo9leofWpMzbqvfmqv" className="rounded-3xl h-48 md:h-64 w-full object-cover shadow-lg border border-brand-brown/5" alt="Pottery" />
           </div>
         </div>
       </section>

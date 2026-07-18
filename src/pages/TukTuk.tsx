@@ -100,16 +100,16 @@ export default function TukTuk() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
             <div className="space-y-12">
-              <div className="rounded-3xl overflow-hidden shadow-2xl">
+              <div className="rounded-3xl overflow-hidden shadow-2xl h-[450px] md:h-[550px]">
                 <img 
-                  src="https://lh3.googleusercontent.com/d/14S6ou3WQn8B4Nbrugjn7UZ_O8jwWBq0-" 
+                  src="https://lh3.googleusercontent.com/d/1AjiBBg8TYYaCSnwPu7AA3Ses4lp9av0x" 
                   alt="Tuk Tuk Adventure" 
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover object-bottom"
                 />
               </div>
             </div>
             <div>
-              <h2 className="text-3xl md:text-4xl font-black text-brand-black mb-6 uppercase tracking-tight">{t('diff.title')}</h2>
+              <h2 className="text-3xl md:text-4xl font-black text-brand-black mb-6 uppercase tracking-tight">{t('tuk_tuk_page.diff_title')}</h2>
               <ul className="space-y-6">
                 {[
                   { title: t('diff.exclusivity_title'), desc: t('diff.exclusivity_desc') },
