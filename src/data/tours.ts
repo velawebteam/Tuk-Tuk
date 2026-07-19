@@ -591,6 +591,7 @@ export const jeepTours: Tour[] = [
     image: RIA_FORMOSA_GASTRONOMIA_GALLERY[0],
     gallery: RIA_FORMOSA_GASTRONOMIA_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
+    fareHarborProductId: 506791,
     itinerary: [
       { activity: 'Ria Formosa, Salinas, Flora e Fauna (Aves)' },
       { activity: 'Antiga Vila de pescadores de atum (Museu do Atum)' },
@@ -610,6 +611,7 @@ export const jeepTours: Tour[] = [
     image: SANTA_LUZIA_FUSETA_OLHAO_GALLERY[0],
     gallery: SANTA_LUZIA_FUSETA_OLHAO_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
+    fareHarborProductId: 506786,
     itinerary: [
       { activity: 'Santa Luzia (Capital do Polvo)' },
       { activity: 'Ria Formosa, Salinas, Flora e Fauna (Aves)' },
@@ -629,6 +631,7 @@ export const jeepTours: Tour[] = [
     image: SANTA_LUZIA_CLAY_GALLERY[0],
     gallery: SANTA_LUZIA_CLAY_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
+    fareHarborProductId: 506790,
     itinerary: [
       { activity: 'Santa Luzia (Capital do Polvo)' },
       { activity: 'Ria Formosa, Salinas, Flora e Fauna (Aves)' },
@@ -648,6 +651,7 @@ export const jeepTours: Tour[] = [
     image: OLIVAL_AZEITE_GALLERY[0],
     gallery: OLIVAL_AZEITE_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
+    fareHarborProductId: 506789,
     itinerary: [
       { activity: 'Moncarapacho e Monterosa' },
       { activity: 'Olive Grove e Olive Oil Tasting' },
@@ -667,6 +671,7 @@ export const jeepTours: Tour[] = [
     image: JEEP_BOAT_ANCHOR_GALLERY[0],
     gallery: JEEP_BOAT_ANCHOR_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
+    fareHarborProductId: 695527,
     itinerary: [
       { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
       { activity: 'Ria Formosa, Salinas e Flora/Fauna' },
@@ -707,6 +712,7 @@ export const jeepTours: Tour[] = [
     image: JEEP_BOAT_HISTORY_GALLERY[0],
     gallery: JEEP_BOAT_HISTORY_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
+    fareHarborProductId: 695531,
     itinerary: [
       { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
       { activity: 'Ria Formosa, Salinas e Flora/Fauna' },
@@ -727,6 +733,7 @@ export const jeepTours: Tour[] = [
     image: CERAMICA_TRADICIONAL_GALLERY[0],
     gallery: CERAMICA_TRADICIONAL_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
+    fareHarborProductId: 509205,
     itinerary: [
       { activity: 'Rio Sequa e Asseca' },
       { activity: 'Barrocal, Cascatas e Campo' },
@@ -745,6 +752,7 @@ export const jeepTours: Tour[] = [
     image: DIA_COMPLETO_SOTAVENTO_GALLERY[0],
     gallery: DIA_COMPLETO_SOTAVENTO_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
+    fareHarborProductId: 506785,
     itinerary: [
       { activity: 'Rio Sequa, Asseca, Barrocal e Cascatas' },
       { activity: 'Cerâmica Tradicional e fabrico manual' },
