@@ -222,8 +222,7 @@ const TAVIRA_ROOTS_WINE_GALLERY = [
   'https://lh3.googleusercontent.com/d/1SA40OQ7u3l-17LxmiYtd-ZkeZo0lsDe9',
   'https://lh3.googleusercontent.com/d/1ujAL58-BfP5iZSar70tVDsdcKsggfLtu',
   'https://lh3.googleusercontent.com/d/1sRm_jOJomnYEwiviRejuxDeTuCwSXYh-',
-  'https://lh3.googleusercontent.com/d/11WV3kVY0cXC8M7tBU-ceWsdylBSD22Lp',
-  'https://lh3.googleusercontent.com/d/1gigQP9s97h9ufhHnTnDej-QZOo8af006'
+  'https://lh3.googleusercontent.com/d/11WV3kVY0cXC8M7tBU-ceWsdylBSD22Lp'
 ];
 
 const JEEP_BOAT_HISTORY_GALLERY = [
