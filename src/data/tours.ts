@@ -14,6 +14,7 @@ export interface Tour {
   goodToKnow?: string[];
   notIncluded?: string[];
   itinerary?: { time?: string; activity: string }[];
+  fareHarborProductId?: number;
 }
 
 const TUK_TUK_GALLERY = [
@@ -370,6 +371,7 @@ export const tukTukTours: Tour[] = [
     image: TAVIRA_CITY_GALLERY[6],
     gallery: TAVIRA_CITY_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
+    fareHarborProductId: 480332,
     itinerary: [
       { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
       { activity: 'Rio Sequa e Rio Gilão' },

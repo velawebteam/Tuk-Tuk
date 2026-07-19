@@ -5,6 +5,12 @@ import { Clock, Users, ShieldCheck, MapPin, CheckCircle2, ChevronLeft, ChevronRi
 import { allTours } from '@/src/data/tours';
 import { useTranslation } from 'react-i18next';
 
+declare global {
+  interface Window {
+    FH: any;
+  }
+}
+
 export default function TourDetail() {
   const { id } = useParams();
   const { t } = useTranslation();
@@ -246,15 +252,44 @@ export default function TourDetail() {
                   <span className="text-[10px] text-brand-cream/40 block mb-1 uppercase tracking-widest font-bold">Preço Total</span>
                   <span className="text-5xl font-black text-brand-cream leading-none">{tour.price}</span>
                 </div>
-                <a 
-                  href={`https://wa.me/351968995275?text=${encodeURIComponent(`Olá! Gostaria de reservar o passeio: ${t(tour.nameKey)}`)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex-grow md:flex-none px-12 py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-2xl font-black uppercase tracking-widest text-sm transition-all transform hover:scale-105 shadow-lg shadow-brand-brown/20 flex items-center justify-center gap-3"
-                >
-                  <Calendar size={20} />
-                  {t('common.reserve_now')}
-                </a>
+                {tour.fareHarborProductId ? (
+                  <a 
+                    href={`https://fareharbor.com/embeds/book/mariastuktuk/items/${tour.fareHarborProductId}/?full-items=yes&flow=1007986`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => {
+                      if (window.FH) {
+                        try {
+                          e.preventDefault();
+                          window.FH.open({ 
+                            shortname: 'mariastuktuk', 
+                            fallback: 'simple', 
+                            fullItems: 'yes', 
+                            flow: 1007986, 
+                            view: { item: tour.fareHarborProductId } 
+                          });
+                        } catch (err) {
+                          console.error('FareHarbor error:', err);
+                          // Fallback to default link behavior if FH.open fails
+                        }
+                      }
+                    }}
+                    className="flex-grow md:flex-none px-12 py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-2xl font-black uppercase tracking-widest text-sm transition-all transform hover:scale-105 shadow-lg shadow-brand-brown/20 flex items-center justify-center gap-3"
+                  >
+                    <Calendar size={20} />
+                    {t('common.reserve_now')}
+                  </a>
+                ) : (
+                  <a 
+                    href={`https://wa.me/351968995275?text=${encodeURIComponent(`Olá! Gostaria de reservar o passeio: ${t(tour.nameKey)}`)}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex-grow md:flex-none px-12 py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-2xl font-black uppercase tracking-widest text-sm transition-all transform hover:scale-105 shadow-lg shadow-brand-brown/20 flex items-center justify-center gap-3"
+                  >
+                    <Calendar size={20} />
+                    {t('common.reserve_now')}
+                  </a>
+                )}
               </div>
               <p className="text-[10px] text-brand-cream/30 text-center uppercase tracking-widest font-bold flex items-center justify-center gap-2">
                 <ShieldCheck size={14} className="text-brand-brown" />
