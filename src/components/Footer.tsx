@@ -48,7 +48,6 @@ export function Footer() {
             <ul className="space-y-4 text-sm text-brand-black/60">
               <li><Link to="/tuk-tuk" className="hover:text-brand-brown transition-colors font-bold uppercase tracking-wider">{t('hero.cta_tuk')}</Link></li>
               <li><Link to="/jipe" className="hover:text-brand-brown transition-colors font-bold uppercase tracking-wider">{t('hero.cta_jeep')}</Link></li>
-              <li><Link to="/reservas" className="hover:text-brand-brown transition-colors font-bold uppercase tracking-wider">{t('nav.bookings')}</Link></li>
               <li><Link to="/sobre-nos" className="hover:text-brand-brown transition-colors font-bold uppercase tracking-wider">{t('nav.about')}</Link></li>
               <li><Link to="/faqs" className="hover:text-brand-brown transition-colors font-bold uppercase tracking-wider">{t('nav.faqs')}</Link></li>
             </ul>
