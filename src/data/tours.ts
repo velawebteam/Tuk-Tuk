@@ -392,6 +392,7 @@ export const tukTukTours: Tour[] = [
     image: TAVIRA_TOTAL_GALLERY[0],
     gallery: TAVIRA_TOTAL_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
+    fareHarborProductId: 480370,
     itinerary: [
       { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
       { activity: 'Rio Sequa e Rio Gilão' },
@@ -413,6 +414,7 @@ export const tukTukTours: Tour[] = [
     image: CITY_TAPAS_GALLERY[0],
     gallery: CITY_TAPAS_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
+    fareHarborProductId: 480337,
     goodToKnow: ['O passeio termina no restaurante', 'Menu definido pelo restaurante (Ti Maria)', 'Não inclui serviço de recolha no restaurante'],
     itinerary: [
       { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
@@ -435,6 +437,7 @@ export const tukTukTours: Tour[] = [
     image: HISTORICAL_WINE_GALLERY[12],
     gallery: HISTORICAL_WINE_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
+    fareHarborProductId: 505334,
     goodToKnow: ['Inclui prova de 3 vinhos (Tinto, Rosé e Branco)', 'Acompanhado com Pão e Azeite'],
     itinerary: [
       { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
@@ -456,6 +459,7 @@ export const tukTukTours: Tour[] = [
     image: CITY_CHOCOLATE_GALLERY[5],
     gallery: CITY_CHOCOLATE_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
+    fareHarborProductId: 480393,
     itinerary: [
       { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
       { activity: 'Rio Sequa e Rio Gilão' },
@@ -477,6 +481,7 @@ export const tukTukTours: Tour[] = [
     image: TUKTUK_BOAT_GALLERY[11],
     gallery: TUKTUK_BOAT_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
+    fareHarborProductId: 695490,
     itinerary: [
       { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
       { activity: 'Rio Sequa e Rio Gilão' },
@@ -498,6 +503,7 @@ export const tukTukTours: Tour[] = [
     image: CITY_ICE_CREAM_GALLERY[3],
     gallery: CITY_ICE_CREAM_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
+    fareHarborProductId: 602449,
     goodToKnow: ['Inclui 1 bola de gelado por pessoa (copo ou cone)'],
     itinerary: [
       { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
@@ -520,6 +526,7 @@ export const tukTukTours: Tour[] = [
     image: CITY_OLIVE_GALLERY[8],
     gallery: CITY_OLIVE_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
+    fareHarborProductId: 535407,
     itinerary: [
       { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
       { activity: 'Rio Sequa e Rio Gilão' },
@@ -541,6 +548,7 @@ export const tukTukTours: Tour[] = [
     image: SANTA_LUZIA_GALLERY[9],
     gallery: SANTA_LUZIA_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
+    fareHarborProductId: 480973,
     itinerary: [
       { activity: 'Parque Natural Ria Formosa (Flora e Fauna)' },
       { activity: 'Salinas (Flor de Sal e Sal Comercial)' },

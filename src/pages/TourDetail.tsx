@@ -3,7 +3,6 @@ import { useParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import { Clock, Users, ShieldCheck, MapPin, CheckCircle2, ChevronLeft, ChevronRight, Calendar, Backpack, Info, XCircle, Map, Star, AlertCircle, Maximize2 } from 'lucide-react';
 import { allTours } from '@/src/data/tours';
-import { FareHarborCalendar } from '@/src/components/FareHarborCalendar';
 import { useTranslation } from 'react-i18next';
 
 declare global {
@@ -19,7 +18,6 @@ export default function TourDetail() {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const thumbnailContainerRef = useRef<HTMLDivElement>(null);
-  const bookingRef = useRef<HTMLDivElement>(null);
 
   const images = tour?.gallery && tour.gallery.length > 0 ? tour.gallery : [tour?.image || ''];
 
@@ -255,15 +253,32 @@ export default function TourDetail() {
                   <span className="text-5xl font-black text-brand-cream leading-none">{tour.price}</span>
                 </div>
                 {tour.fareHarborProductId ? (
-                  <button 
-                    onClick={() => {
-                      bookingRef.current?.scrollIntoView({ behavior: 'smooth' });
+                  <a 
+                    href={`https://fareharbor.com/embeds/book/mariastuktuk/items/${tour.fareHarborProductId}/?full-items=yes&flow=1007986`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => {
+                      if (window.FH) {
+                        try {
+                          e.preventDefault();
+                          window.FH.open({ 
+                            shortname: 'mariastuktuk', 
+                            fallback: 'simple', 
+                            fullItems: 'yes', 
+                            flow: 1007986, 
+                            view: { item: tour.fareHarborProductId } 
+                          });
+                        } catch (err) {
+                          console.error('FareHarbor error:', err);
+                          // Fallback to default link behavior if FH.open fails
+                        }
+                      }
                     }}
                     className="flex-grow md:flex-none px-12 py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-2xl font-black uppercase tracking-widest text-sm transition-all transform hover:scale-105 shadow-lg shadow-brand-brown/20 flex items-center justify-center gap-3"
                   >
                     <Calendar size={20} />
                     {t('common.reserve_now')}
-                  </button>
+                  </a>
                 ) : (
                   <a 
                     href={`https://wa.me/351968995275?text=${encodeURIComponent(`Olá! Gostaria de reservar o passeio: ${t(tour.nameKey)}`)}`}
@@ -397,19 +412,6 @@ export default function TourDetail() {
           </div>
         </div>
       </section>
-
-      {/* Booking Calendar Section */}
-      {tour.fareHarborProductId && (
-        <section ref={bookingRef} className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-24">
-          <div className="mb-12 text-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-brown/10 text-brand-brown text-[10px] font-bold uppercase tracking-widest mb-4">
-              {t('common.reserve_now')}
-            </div>
-            <h2 className="text-3xl md:text-5xl font-black text-brand-black uppercase tracking-tight">Disponibilidade em Tempo Real</h2>
-          </div>
-          <FareHarborCalendar itemId={tour.fareHarborProductId} />
-        </section>
-      )}
 
       {/* Lightbox Modal */}
       <AnimatePresence>
