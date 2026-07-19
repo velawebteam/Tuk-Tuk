@@ -201,9 +201,30 @@ export default function Home() {
               <p className="text-brand-cream/80 text-lg mb-10 font-medium">
                 {t('home.cta_box_subtitle')}
               </p>
-              <Link to="/tuk-tuk" className="px-10 py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-full font-black uppercase tracking-[0.2em] text-lg shadow-xl shadow-brand-brown/20 transition-all transform hover:scale-105 inline-block">
+              <a 
+                href="https://fareharbor.com/embeds/book/mariastuktuk/items/?full-items=yes&flow=1006571"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => {
+                  if (window.FH) {
+                    try {
+                      e.preventDefault();
+                      window.FH.open({ 
+                        shortname: 'mariastuktuk', 
+                        fallback: 'simple', 
+                        fullItems: 'yes', 
+                        flow: 1006571, 
+                        view: 'items'
+                      });
+                    } catch (err) {
+                      console.error('FareHarbor error:', err);
+                    }
+                  }
+                }}
+                className="px-10 py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-full font-black uppercase tracking-[0.2em] text-lg shadow-xl shadow-brand-brown/20 transition-all transform hover:scale-105 inline-block"
+              >
                 {t('common.reserve_now')}
-              </Link>
+              </a>
             </div>
           </div>
         </div>

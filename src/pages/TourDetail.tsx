@@ -270,7 +270,6 @@ export default function TourDetail() {
                           });
                         } catch (err) {
                           console.error('FareHarbor error:', err);
-                          // Fallback to default link behavior if FH.open fails
                         }
                       }
                     }}
@@ -281,9 +280,25 @@ export default function TourDetail() {
                   </a>
                 ) : (
                   <a 
-                    href={`https://wa.me/351968995275?text=${encodeURIComponent(`Olá! Gostaria de reservar o passeio: ${t(tour.nameKey)}`)}`}
+                    href="https://fareharbor.com/embeds/book/mariastuktuk/items/?full-items=yes&flow=1006571"
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={(e) => {
+                      if (window.FH) {
+                        try {
+                          e.preventDefault();
+                          window.FH.open({ 
+                            shortname: 'mariastuktuk', 
+                            fallback: 'simple', 
+                            fullItems: 'yes', 
+                            flow: 1006571, 
+                            view: 'items'
+                          });
+                        } catch (err) {
+                          console.error('FareHarbor error:', err);
+                        }
+                      }
+                    }}
                     className="flex-grow md:flex-none px-12 py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-2xl font-black uppercase tracking-widest text-sm transition-all transform hover:scale-105 shadow-lg shadow-brand-brown/20 flex items-center justify-center gap-3"
                   >
                     <Calendar size={20} />

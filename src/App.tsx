@@ -16,6 +16,7 @@ import FAQs from './pages/FAQs';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import TourDetail from './pages/TourDetail';
+import Bookings from './pages/Bookings';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 
@@ -43,6 +44,7 @@ export default function App() {
             <Route path="/faqs" element={<FAQs />} />
             <Route path="/sobre-nos" element={<About />} />
             <Route path="/contactos" element={<Contact />} />
+            <Route path="/reservas" element={<Bookings />} />
             <Route path="/tour/:id" element={<TourDetail />} />
             <Route path="/privacidade" element={<Privacy />} />
             <Route path="/termos" element={<Terms />} />

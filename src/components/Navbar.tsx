@@ -31,6 +31,7 @@ export function Navbar() {
     { name: t('nav.home'), href: '/' },
     { name: t('nav.tuk_tuk'), href: '/tuk-tuk' },
     { name: t('nav.jeep'), href: '/jipe' },
+    { name: t('nav.bookings'), href: '/reservas' },
     { name: t('nav.before_booking'), href: '/before-booking' },
     { name: t('nav.faqs'), href: '/faqs' },
     { name: t('nav.about'), href: '/sobre-nos' },

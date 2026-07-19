@@ -139,9 +139,30 @@ export default function TukTuk() {
           <p className="text-brand-black/60 mb-8 font-medium">
             {t('tuk_tuk_page.faq_desc')}
           </p>
-          <button className="px-10 py-4 bg-brand-brown text-white rounded-full font-bold uppercase tracking-widest hover:bg-brand-brown-light transition-all shadow-lg shadow-brand-brown/20 transform hover:scale-105">
-            {t('common.contact_whatsapp')}
-          </button>
+          <a 
+            href="https://fareharbor.com/embeds/book/mariastuktuk/items/?full-items=yes&flow=1006571"
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => {
+              if (window.FH) {
+                try {
+                  e.preventDefault();
+                  window.FH.open({ 
+                    shortname: 'mariastuktuk', 
+                    fallback: 'simple', 
+                    fullItems: 'yes', 
+                    flow: 1006571, 
+                    view: 'items'
+                  });
+                } catch (err) {
+                  console.error('FareHarbor error:', err);
+                }
+              }
+            }}
+            className="px-10 py-4 bg-brand-brown text-white rounded-full font-bold uppercase tracking-widest hover:bg-brand-brown-light transition-all shadow-lg shadow-brand-brown/20 transform hover:scale-105 inline-block"
+          >
+            {t('common.reserve_now')}
+          </a>
         </div>
       </section>
     </div>
