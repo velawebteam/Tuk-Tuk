@@ -102,7 +102,7 @@ export default function TourDetail() {
                       animate={{ opacity: 1 }}
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.4 }}
-                      className={`w-full h-full object-cover ${images[selectedImageIndex]?.includes?.('1AgBECV3LgIOLdu520PZLGPzQNVrUFNbZ') ? 'object-left' : ''}`}
+                      className={`w-full h-full object-cover ${selectedImageIndex === 0 && tour.imagePosition ? tour.imagePosition : ''} ${images[selectedImageIndex]?.includes?.('1AgBECV3LgIOLdu520PZLGPzQNVrUFNbZ') ? 'object-left' : ''}`}
                       alt={`${tour?.nameKey} gallery ${selectedImageIndex}`}
                     />
                 </AnimatePresence>

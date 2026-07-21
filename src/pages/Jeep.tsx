@@ -102,7 +102,7 @@ export default function Jeep() {
             <div className="space-y-12">
               <div className="rounded-3xl overflow-hidden shadow-2xl">
                 <img 
-                  src="https://lh3.googleusercontent.com/d/14S6ou3WQn8B4Nbrugjn7UZ_O8jwWBq0-" 
+                  src="https://lh3.googleusercontent.com/d/1Ncwvz_oWrkuDPri7G_KB1ZSQ0MhdftcH" 
                   alt="Jeep Adventure" 
                   className="w-full h-full object-cover"
                 />

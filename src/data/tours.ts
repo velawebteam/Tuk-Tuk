@@ -8,6 +8,7 @@ export interface Tour {
   descriptionKey: string;
   features: string[];
   image: string;
+  imagePosition?: string;
   gallery?: string[];
   languages: string[];
   toBring?: string[];
@@ -473,8 +474,8 @@ export const tukTukTours: Tour[] = [
     type: 'tuk-tuk',
     nameKey: 'tours.tuk_tuk_boat.name',
     price: 'Sob Consulta',
-    duration: '3h',
-    pax: '1-9',
+    duration: '2h30',
+    pax: '2-5',
     descriptionKey: 'tours.tuk_tuk_boat.desc',
     features: ['Centro Histórico', 'Jardim do Castelo', 'Ponte Antiga', 'Rio Sequa e Rio Gilão', 'Parque Natural Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal)', 'Visita Igreja São Pedro ou São Sebastião', 'Passeio de barco na Ria Formosa (Fauna/Flora)'],
     image: TUKTUK_BOAT_GALLERY[11],
@@ -568,6 +569,7 @@ export const jeepTours: Tour[] = [
     descriptionKey: 'tours.tavira_gold.desc',
     features: ['Centro Histórico', 'jardim castelo', 'Ponte Antiga', 'Ria Formosa', 'Salinas', 'Flora e Fauna', 'Aves', 'Antiga Vila pescadores de atum (museu atum)', 'Olive tasting', 'Santa Luzia (capital do polvo)'],
     image: TAVIRA_GOLD_GALLERY[0],
+    imagePosition: 'object-[50%_28%]',
     gallery: TAVIRA_GOLD_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     itinerary: [
@@ -663,7 +665,7 @@ export const jeepTours: Tour[] = [
     type: 'jeep',
     nameKey: 'tours.jeep_boat_anchors.name',
     price: 'Sob Consulta',
-    duration: '4h',
+    duration: '3h',
     pax: '2-5',
     descriptionKey: 'tours.jeep_boat_anchors.desc',
     features: ['Centro Histórico', 'jardim castelo', 'Ponte Antiga', 'Ria Formosa', 'Salinas', 'Flora e Fauna', 'Aves', 'Antiga Vila pescadores de atum (museu atum)', 'Olive tasting', 'Santa Luzia (capital do polvo)', 'Passeio barco Ria Formosa', 'cemitério ancoras', 'Regresso Tavira'],
@@ -704,7 +706,7 @@ export const jeepTours: Tour[] = [
     type: 'jeep',
     nameKey: 'tours.jeep_boat_history.name',
     price: 'Sob Consulta',
-    duration: '4h',
+    duration: '3h',
     pax: '2-5',
     descriptionKey: 'tours.jeep_boat_history.desc',
     features: ['Centro Histórico', 'jardim castelo', 'Ponte Antiga', 'Ria Formosa', 'Salinas', 'Flora e Fauna', 'Aves', 'Antiga Vila pescadores de atum (museu atum)', 'Olive tasting', 'Santa Luzia (capital do polvo)', 'Passeio barco Ria Formosa', 'Regresso Tavira'],
@@ -744,7 +746,7 @@ export const jeepTours: Tour[] = [
     type: 'jeep',
     nameKey: 'tours.full_day_sotavento.name',
     price: 'Sob Consulta',
-    duration: '7h',
+    duration: '6h30',
     pax: '2-5',
     descriptionKey: 'tours.full_day_sotavento.desc',
     features: ['Rio Sequa', 'Asseca', 'Barrocal', 'cascatas', 'Campo', 'Ceramica Tradicional', 'Terracota', 'fabrico manual', 'Olhao', 'Ria Formosa', 'Fuseta', 'Salinas', 'Oliveira 2000 anos', 'Santa Luzia', 'Tavira', 'Almoco Ti Maria', 'Antiga Vila pescadores de atum (museu atum)', 'Olive tasting', 'Cacela Velha'],
