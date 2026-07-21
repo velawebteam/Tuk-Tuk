@@ -79,7 +79,7 @@ const CLAY_GALLERY = [
 ];
 
 const TAVIRA_TOTAL_GALLERY = [
-  'https://lh3.googleusercontent.com/d/1dGvb9OiCh04Txt26IfDFSUAB0KUoeP0X', // Capa
+  'https://lh3.googleusercontent.com/d/1XyujsHOg-t0He6FiQBep9_8XYAuNPlfU', // Capa
   'https://lh3.googleusercontent.com/d/1HMhDrBTKeM9PWqZtsfpG4lSkT1UiFecb',
   'https://lh3.googleusercontent.com/d/1c9oTsvw4PAW2tpldLRpHTmSstwyzOdd9',
   'https://lh3.googleusercontent.com/d/1lULkQbgV9Sb9-7b1utqLhDN7w4GuGqNd',
@@ -92,7 +92,7 @@ const TAVIRA_TOTAL_GALLERY = [
 ];
 
 const TAVIRA_CITY_GALLERY = [
-  'https://lh3.googleusercontent.com/d/1aAcpY7wXxW83e9CGikosS0uNFPAP0AQt', // Capa
+  'https://lh3.googleusercontent.com/d/1FqhQHx1YqXBg5UynpMk2h5W1Fl_RlMxq', // Capa
   'https://lh3.googleusercontent.com/d/1n8Poe0b4yAX5TgO0Y0l0IEkj2JmcLxyp',
   'https://lh3.googleusercontent.com/d/18iAf9-Ht0CEFYnnt8kBFKjBHQizy1INH',
   'https://lh3.googleusercontent.com/d/1kHDfNHJfWDSqnc-YSRSynsfPUm9FENgf',
@@ -143,18 +143,16 @@ const CITY_CHOCOLATE_GALLERY = [
 ];
 
 const TUKTUK_BOAT_GALLERY = [
-  'https://lh3.googleusercontent.com/d/1nKG5-o-r08dkLbFYqWBO_4gXxjfam1WP',
-  'https://lh3.googleusercontent.com/d/1mU1TRELc1_1Bhsj6aOrEhbwftHo9gBqQ',
-  'https://lh3.googleusercontent.com/d/1pE19py8IyGNo4J2OvDTnhgD7h6iSdkqu',
-  'https://lh3.googleusercontent.com/d/1LLzaZ_apPzD7JN1hSgLw09mrSxJef49-',
-  'https://lh3.googleusercontent.com/d/1MjjMy0owQWugdrNI-WoRfS8w2OOuHxO-',
-  'https://lh3.googleusercontent.com/d/1t90eZuZfsLIlaMRNsSFTCD1pFBl_Cn3A',
-  'https://lh3.googleusercontent.com/d/1z_-fZz171u_3LcyzZUuQQ3ZP02Hn_YYN',
-  'https://lh3.googleusercontent.com/d/1EsaoOIQuVIG5V4EzydBO5dXzRTgbrRl-',
-  'https://lh3.googleusercontent.com/d/1Ho0eiqthiUGUE0l4zSZBHZa13E7pd9TP',
-  'https://lh3.googleusercontent.com/d/1nFT3IfqGCfs1Qk2CSlNpV5o-ZaQZeHVA',
-  'https://lh3.googleusercontent.com/d/1zq5W7mx_iID-hmId0gqItHLvOmxNXaTE',
-  'https://lh3.googleusercontent.com/d/1qKDLWupvJUosN4qAZfkj2SFWNTWgcB3S'
+  'https://lh3.googleusercontent.com/d/1rFDBmNaF9YJLEagftx25yNcnhGtaqy3B', // Capa
+  'https://lh3.googleusercontent.com/d/1Zzp1GzTuUTpAzKBx82KY_jkBtT9Y1N4f',
+  'https://lh3.googleusercontent.com/d/13zknqU2q6etzv0i3Va23eQscHVVTs0QX',
+  'https://lh3.googleusercontent.com/d/1sROBxkak1rCpA_jsqGH7Iz8LZinv8ZRP',
+  'https://lh3.googleusercontent.com/d/1zATOzAQZqCXpHfr8QZrBncmrzxNtcRjD',
+  'https://lh3.googleusercontent.com/d/1X9sSP45lf77TcDrzIGmq-KO0dLsDouwz',
+  'https://lh3.googleusercontent.com/d/1ruVzhrZtpUV01kmMUucCPJmsOCHdCJGA',
+  'https://lh3.googleusercontent.com/d/18-MAVL1XNRdBaz-O1ck6FhJxvQAGd16X',
+  'https://lh3.googleusercontent.com/d/1hZ0VBLp9ZBdw8-lNG596KoZ5FgszfFRA',
+  'https://lh3.googleusercontent.com/d/1q1arrgtkQQIyY9P_HrMlXwYbolVcu8pu'
 ];
 
 const CITY_ICE_CREAM_GALLERY = [
@@ -171,15 +169,16 @@ const CITY_ICE_CREAM_GALLERY = [
 ];
 
 const CITY_OLIVE_GALLERY = [
-  'https://lh3.googleusercontent.com/d/1uHshrZlTsv3Yt2xSHRgUlPeKTxnAEFxz',
-  'https://lh3.googleusercontent.com/d/1aSuMV5nv7Kc_uTzfJ49YtCxvEYzbzDM1',
-  'https://lh3.googleusercontent.com/d/1fRdPAM9ShM1h8_4_MtmTeuNin2Ze3mjF',
-  'https://lh3.googleusercontent.com/d/1cQjYnbvA5xXwl74wZmxlzCrUPzBl8mW7',
-  'https://lh3.googleusercontent.com/d/1pvY9j6MZNmiuDmp8X2BGzbho2kn2CC9g',
-  'https://lh3.googleusercontent.com/d/1VDnK21RWs96fWdT6ovfVnrV9MqhsDqFi',
-  'https://lh3.googleusercontent.com/d/1eEUvcfV1TbCrpqa1Pq7nuaa7SrYGRE4X',
-  'https://lh3.googleusercontent.com/d/1KUCOGLOLYnPawGVF-3aIn28xjKCfWEZx',
-  'https://lh3.googleusercontent.com/d/1cB45-Rj3Ow1AtBNQbi7zewuctOWhLVBT'
+  'https://lh3.googleusercontent.com/d/15tuVT64cliAbzFNtZ69Pr-WqAxw_sfXL', // Capa
+  'https://lh3.googleusercontent.com/d/1-9AuwCQPmyOCSuRXCAZH7MkIMld-irlN',
+  'https://lh3.googleusercontent.com/d/1-gRQG_ZLaLN8UJNf0QiO3XT07w5jynkb',
+  'https://lh3.googleusercontent.com/d/1U6sg6LapY8QUFyqiBlDhDcnAMgr9zK5Q',
+  'https://lh3.googleusercontent.com/d/1ULjR_R-iz9w1BR36G-s8nRK-UOnaRX_e',
+  'https://lh3.googleusercontent.com/d/16viKpX5_Fz_jTR5tr7PJgjnK2Mt7GCSU',
+  'https://lh3.googleusercontent.com/d/11BgjDvtxwlJQ6I1wGOvbgZRA6dQjGKhn',
+  'https://lh3.googleusercontent.com/d/18AEVxih9srPA4xAwWVbJf9gqQf7ZzYeT',
+  'https://lh3.googleusercontent.com/d/16Fzp4njiqQ5UbtU2lE7p4OPsyb43GEUK',
+  'https://lh3.googleusercontent.com/d/10Wvy6nKXCzYCiJzJ0XBu8pwCLtbDaXxl'
 ];
 
 const SANTA_LUZIA_GALLERY = [
@@ -474,7 +473,7 @@ export const tukTukTours: Tour[] = [
     pax: '2-5',
     descriptionKey: 'tours.tuk_tuk_boat.desc',
     features: ['Centro Histórico', 'Jardim do Castelo', 'Ponte Antiga', 'Rio Sequa e Rio Gilão', 'Parque Natural Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal)', 'Visita Igreja São Pedro ou São Sebastião', 'Passeio de barco na Ria Formosa (Fauna/Flora)'],
-    image: TUKTUK_BOAT_GALLERY[11],
+    image: TUKTUK_BOAT_GALLERY[0],
     gallery: TUKTUK_BOAT_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     fareHarborProductId: 695490,
@@ -519,7 +518,7 @@ export const tukTukTours: Tour[] = [
     pax: '1-9',
     descriptionKey: 'tours.city_olive_factory.desc',
     features: ['Centro Histórico', 'Jardim do Castelo', 'Ponte Antiga', 'Rio Sequa e Rio Gilão', 'Parque Natural Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal)', 'Visita Igreja São Pedro ou São Sebastião', 'Visita à fábrica de azeitonas (Degustação)'],
-    image: CITY_OLIVE_GALLERY[8],
+    image: CITY_OLIVE_GALLERY[0],
     gallery: CITY_OLIVE_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     fareHarborProductId: 535407,

@@ -36,7 +36,7 @@ export default function FAQs() {
   ];
 
   return (
-    <div className="pt-40 pb-24 bg-brand-cream min-h-screen">
+    <div className="pt-28 md:pt-40 pb-24 bg-brand-cream min-h-screen">
       <SEO 
         title={t('nav.faqs')}
         description={t('faqs_page.subtitle')}

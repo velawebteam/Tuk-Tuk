@@ -3,7 +3,7 @@ import { SEO } from '../components/SEO';
 
 export default function Contact() {
   return (
-    <div className="pt-40 pb-24 bg-brand-cream min-h-screen">
+    <div className="pt-28 md:pt-40 pb-24 bg-brand-cream min-h-screen">
       <SEO 
         title="Contactos | Fale Connosco"
         description="Tem alguma questão sobre as nossas tours privadas de Tuk Tuk ou Jipe? Entre em contacto connosco para planear a sua experiência perfeita em Tavira."
@@ -35,7 +35,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <h3 className="text-lg font-bold text-brand-black uppercase tracking-tight">E-mail</h3>
-                  <p className="text-brand-black/60 font-medium">info@taviraroots.com</p>
+                  <p className="text-brand-black/60 font-medium">info@mariastuktuk.com</p>
                 </div>
               </div>
 
@@ -72,20 +72,20 @@ export default function Contact() {
 
           <div className="bg-white rounded-[2rem] shadow-xl p-8 md:p-12 border border-brand-brown/5">
             <h2 className="text-2xl font-black text-brand-black mb-8 uppercase tracking-tight">Envie uma mensagem</h2>
-            <form className="space-y-6">
+            <form action="mailto:info@mariastuktuk.com" method="POST" encType="text/plain" className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-brand-black/40 uppercase tracking-widest">Nome</label>
-                  <input type="text" className="w-full px-4 py-3 rounded-xl bg-brand-cream/50 border-brand-brown/10 focus:bg-white focus:border-brand-brown focus:ring-0 transition-all font-medium" placeholder="O seu nome" />
+                  <input name="Nome" type="text" className="w-full px-4 py-3 rounded-xl bg-brand-cream/50 border-brand-brown/10 focus:bg-white focus:border-brand-brown focus:ring-0 transition-all font-medium" placeholder="O seu nome" />
                 </div>
                 <div className="space-y-2">
                   <label className="text-xs font-bold text-brand-black/40 uppercase tracking-widest">E-mail</label>
-                  <input type="email" className="w-full px-4 py-3 rounded-xl bg-brand-cream/50 border-brand-brown/10 focus:bg-white focus:border-brand-brown focus:ring-0 transition-all font-medium" placeholder="o-seu@email.com" />
+                  <input name="Email" type="email" className="w-full px-4 py-3 rounded-xl bg-brand-cream/50 border-brand-brown/10 focus:bg-white focus:border-brand-brown focus:ring-0 transition-all font-medium" placeholder="o-seu@email.com" />
                 </div>
               </div>
               <div className="space-y-2">
                 <label className="text-xs font-bold text-brand-black/40 uppercase tracking-widest">Assunto</label>
-                <select className="w-full px-4 py-3 rounded-xl bg-brand-cream/50 border-brand-brown/10 focus:bg-white focus:border-brand-brown focus:ring-0 transition-all font-medium">
+                <select name="Assunto" className="w-full px-4 py-3 rounded-xl bg-brand-cream/50 border-brand-brown/10 focus:bg-white focus:border-brand-brown focus:ring-0 transition-all font-medium">
                   <option>Informações sobre Tours</option>
                   <option>Reserva de Grupo Grande</option>
                   <option>Pedido Especial</option>
@@ -94,7 +94,7 @@ export default function Contact() {
               </div>
               <div className="space-y-2">
                 <label className="text-xs font-bold text-brand-black/40 uppercase tracking-widest">Mensagem</label>
-                <textarea rows={5} className="w-full px-4 py-3 rounded-xl bg-brand-cream/50 border-brand-brown/10 focus:bg-white focus:border-brand-brown focus:ring-0 transition-all font-medium" placeholder="Como podemos ajudar?"></textarea>
+                <textarea name="Mensagem" rows={5} className="w-full px-4 py-3 rounded-xl bg-brand-cream/50 border-brand-brown/10 focus:bg-white focus:border-brand-brown focus:ring-0 transition-all font-medium" placeholder="Como podemos ajudar?"></textarea>
               </div>
               <button className="w-full py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-xl font-black uppercase tracking-[0.2em] text-sm transition-all shadow-lg shadow-brand-brown/20">
                 Enviar Mensagem

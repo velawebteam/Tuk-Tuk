@@ -39,7 +39,7 @@ export default function BeforeBooking() {
   ];
 
   return (
-    <div className="pt-40 pb-24">
+    <div className="pt-28 md:pt-40 pb-24">
       <section className="bg-gray-50 py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Museum Closure Alert */}

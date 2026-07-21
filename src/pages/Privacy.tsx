@@ -1,6 +1,6 @@
 export default function Privacy() {
   return (
-    <div className="pt-40 pb-24 max-w-4xl mx-auto px-4">
+    <div className="pt-28 md:pt-40 pb-24 max-w-4xl mx-auto px-4">
       <h1 className="text-4xl font-bold text-emerald-950 mb-8">Política de Privacidade</h1>
       <div className="prose prose-emerald lg:prose-lg max-w-none text-gray-600 space-y-6">
         <p>A Tavira Roots respeita a sua privacidade e está empenhada em proteger os seus dados pessoais. Esta política de privacidade irá informá-lo sobre como cuidamos dos seus dados pessoais quando visita o nosso site e falar-lhe-á sobre os seus direitos de privacidade e como a lei o protege.</p>

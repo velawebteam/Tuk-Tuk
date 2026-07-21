@@ -73,7 +73,7 @@ export function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className={cn(
           "flex justify-between items-center transition-all duration-300 w-full",
-          isScrolled ? "h-20" : "h-32"
+          isScrolled ? "h-14 md:h-20" : "h-20 md:h-32"
         )}>
           {/* Logo - Left */}
           <Link to="/" className="flex items-center group">
@@ -82,7 +82,7 @@ export function Navbar() {
               alt="Tavira Roots Logo" 
               className={cn(
                 "object-contain transition-all duration-300",
-                isScrolled ? "w-[70px] h-[70px]" : "w-[100px] h-[100px]"
+                isScrolled ? "w-[45px] h-[45px] md:w-[70px] md:h-[70px]" : "w-[65px] h-[65px] md:w-[100px] md:h-[100px]"
               )}
             />
           </Link>

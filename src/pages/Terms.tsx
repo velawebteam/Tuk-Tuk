@@ -1,6 +1,6 @@
 export default function Terms() {
   return (
-    <div className="pt-40 pb-24 max-w-4xl mx-auto px-4">
+    <div className="pt-28 md:pt-40 pb-24 max-w-4xl mx-auto px-4">
       <h1 className="text-4xl font-bold text-emerald-950 mb-8">Termos e Condições</h1>
       <div className="prose prose-emerald lg:prose-lg max-w-none text-gray-600 space-y-6">
         <p>Bem-vindo à Tavira Roots. Ao reservar as nossas experiências, concorda com os seguintes termos e condições.</p>

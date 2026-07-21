@@ -8,7 +8,7 @@ export default function About() {
   return (
     <div className="pb-24">
       {/* Hero */}
-      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-brand-black">
+      <section className="relative h-[60vh] flex items-center justify-center overflow-hidden bg-brand-black pt-28 md:pt-0">
         <div className="absolute inset-0">
           <img 
             src="https://lh3.googleusercontent.com/d/1AgBECV3LgIOLdu520PZLGPzQNVrUFNbZ" 
@@ -17,7 +17,7 @@ export default function About() {
           />
           <div className="absolute inset-0 bg-brand-black/40"></div>
         </div>
-        <div className="relative z-10 text-center text-white px-4">
+        <div className="relative z-10 text-center text-white px-4 pt-20 md:pt-0">
           <h1 className="text-5xl md:text-7xl font-black mb-4 uppercase tracking-tight">{t('nav.about')}</h1>
           <p className="text-xl md:text-2xl text-brand-brown font-bold uppercase tracking-[0.2em]">{t('about_page.hero_subtitle')}</p>
         </div>

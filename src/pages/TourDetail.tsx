@@ -77,7 +77,7 @@ export default function TourDetail() {
   return (
     <div className="pb-24 bg-brand-cream min-h-screen">
       {/* Navigation Breadcrumb */}
-      <div className="max-w-7xl mx-auto px-4 pt-40 pb-8">
+      <div className="max-w-7xl mx-auto px-4 pt-28 md:pt-40 pb-8">
         <Link to={tour.type === 'tuk-tuk' ? '/tuk-tuk' : '/jipe'} className="flex items-center gap-2 text-brand-black/40 hover:text-brand-brown transition-all font-bold uppercase tracking-widest text-xs group">
           <ChevronLeft size={16} className="transition-transform group-hover:-translate-x-1" />
           <span>{t('nav.home')} / {tour.type === 'tuk-tuk' ? t('nav.tuk_tuk') : t('nav.jeep')}</span>

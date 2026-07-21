@@ -27,17 +27,17 @@ export default function Home() {
           <div className="absolute inset-0 bg-black/50"></div>
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white text-center pt-32 md:pt-0">
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white text-center pt-28 md:pt-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-bold tracking-tight mb-6">
+            <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold tracking-tight mb-4">
               {t('hero.title_part1')}<span className="text-white">{t('hero.title_highlight')}</span>{t('hero.title_part2')}
             </h1>
-            <p className="text-lg md:text-2xl text-brand-cream mb-10 leading-relaxed max-w-3xl mx-auto px-4">
+            <p className="text-base md:text-2xl text-brand-cream mb-6 leading-relaxed max-w-3xl mx-auto px-4 opacity-90">
               {t('hero.subtitle')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center px-6">
