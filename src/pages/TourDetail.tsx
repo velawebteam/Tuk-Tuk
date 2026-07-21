@@ -249,7 +249,7 @@ export default function TourDetail() {
               <div className="absolute top-0 right-0 w-32 h-32 bg-brand-brown/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
               <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
                 <div>
-                  <span className="text-[10px] text-brand-cream/40 block mb-1 uppercase tracking-widest font-bold">Preço Total</span>
+                  <span className="text-[10px] text-brand-cream/40 block mb-1 uppercase tracking-widest font-bold">{t('common.from')}</span>
                   <span className="text-5xl font-black text-brand-cream leading-none">{tour.price}</span>
                 </div>
                 {tour.fareHarborProductId ? (
