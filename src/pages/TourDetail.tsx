@@ -254,7 +254,7 @@ export default function TourDetail() {
                 </div>
                 {tour.fareHarborProductId ? (
                   <a 
-                    href={`https://fareharbor.com/embeds/book/mariastuktuk/items/${tour.fareHarborProductId}/?full-items=yes&flow=1007986`}
+                    href={`https://fareharbor.com/embeds/book/mariastuktuk/items/${tour.fareHarborProductId}/?full-items=yes&flow=${tour.fareHarborFlowId || 1007986}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(e) => {
@@ -265,7 +265,7 @@ export default function TourDetail() {
                             shortname: 'mariastuktuk', 
                             fallback: 'simple', 
                             fullItems: 'yes', 
-                            flow: 1007986, 
+                            flow: tour.fareHarborFlowId || 1007986, 
                             view: { item: tour.fareHarborProductId } 
                           });
                         } catch (err) {

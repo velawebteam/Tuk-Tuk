@@ -16,6 +16,7 @@ export interface Tour {
   notIncluded?: string[];
   itinerary?: { time?: string; activity: string }[];
   fareHarborProductId?: number;
+  fareHarborFlowId?: number;
 }
 
 const TUK_TUK_GALLERY = [
@@ -572,6 +573,8 @@ export const jeepTours: Tour[] = [
     imagePosition: 'object-[50%_28%]',
     gallery: TAVIRA_GOLD_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
+    fareHarborProductId: 657100,
+    fareHarborFlowId: 1006571,
     itinerary: [
       { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
       { activity: 'Ria Formosa, Salinas, Flora e Fauna (Aves)' },
@@ -693,6 +696,8 @@ export const jeepTours: Tour[] = [
     image: TAVIRA_ROOTS_WINE_GALLERY[0],
     gallery: TAVIRA_ROOTS_WINE_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
+    fareHarborProductId: 611701,
+    fareHarborFlowId: 1006571,
     itinerary: [
       { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
       { activity: 'Ria Formosa, Salinas e Flora/Fauna' },
