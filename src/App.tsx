@@ -30,11 +30,11 @@ function ScrollToTop() {
 export default function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-brand-cream font-sans text-brand-black">
+      <div className="min-h-screen bg-brand-cream font-sans text-brand-black overflow-x-hidden w-full max-w-full relative">
         <ScrollToTop />
         <VideoPreloader />
         <Navbar />
-        <main>
+        <main className="overflow-x-hidden w-full max-w-full">
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/tuk-tuk" element={<TukTuk />} />

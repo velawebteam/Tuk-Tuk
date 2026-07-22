@@ -36,14 +36,17 @@ export default function TourDetail() {
     if (thumbnailContainerRef.current) {
       const container = thumbnailContainerRef.current;
       const thumbnails = container.querySelectorAll('button');
-      const activeThumb = thumbnails[selectedImageIndex];
+      const activeThumb = thumbnails[selectedImageIndex] as HTMLElement;
       
       if (activeThumb) {
-        // Use scrollIntoView with inline: 'center' for a more reliable centering across different screen sizes
-        activeThumb.scrollIntoView({
-          behavior: 'smooth',
-          block: 'nearest',
-          inline: 'center'
+        const containerWidth = container.clientWidth;
+        const thumbOffsetLeft = activeThumb.offsetLeft;
+        const thumbWidth = activeThumb.offsetWidth;
+        const targetScrollLeft = thumbOffsetLeft - (containerWidth / 2) + (thumbWidth / 2);
+        
+        container.scrollTo({
+          left: targetScrollLeft,
+          behavior: 'smooth'
         });
       }
     }
@@ -142,7 +145,7 @@ export default function TourDetail() {
               {images.length > 1 && (
                 <div 
                   ref={thumbnailContainerRef}
-                  className="flex gap-4 overflow-x-auto py-8 hide-scrollbar scroll-smooth snap-x px-8 -mx-8"
+                  className="flex gap-4 overflow-x-auto py-4 hide-scrollbar scroll-smooth snap-x w-full max-w-full px-2"
                 >
                   
                   {images.map((img, i) => (

@@ -98,13 +98,13 @@ export default function BeforeBooking() {
                   {t('before_booking_page.subtitle')}
                 </p>
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 flex-1">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 flex-1 min-w-0">
                 {whatToBringItems.map((item, index) => (
-                  <div key={index} className="flex items-center gap-3 bg-gray-50 px-6 py-4 rounded-2xl border border-gray-100/50">
+                  <div key={index} className="flex items-center gap-3 bg-gray-50 px-6 py-4 rounded-2xl border border-gray-100/50 min-w-0">
                     <div className="shrink-0 w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center">
                       <Check size={14} className="text-emerald-600" />
                     </div>
-                    <span className="font-bold text-emerald-900 text-sm leading-tight">{item}</span>
+                    <span className="font-bold text-emerald-900 text-sm leading-tight break-words">{item}</span>
                   </div>
                 ))}
               </div>

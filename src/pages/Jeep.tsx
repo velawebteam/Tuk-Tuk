@@ -41,10 +41,10 @@ export default function Jeep() {
         }}
       />
       {/* Header */}
-      <section className="relative min-h-[70vh] md:min-h-[85vh] flex items-center text-white overflow-hidden bg-black pt-28 md:pt-0">
-        <div className="absolute inset-0 z-0">
+      <section className="relative min-h-[70vh] md:min-h-[85vh] flex items-center text-white overflow-hidden bg-black pt-28 md:pt-0 w-full max-w-full">
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <iframe
-            className="absolute top-1/2 left-1/2 w-[150%] h-[150%] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+            className="absolute top-1/2 left-1/2 w-[500%] h-[120%] md:w-[150%] md:h-[150%] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
             src="https://www.youtube.com/embed/SMnjhz8hjaY?autoplay=1&mute=1&loop=1&playlist=SMnjhz8hjaY&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&hd=1"
             allow="autoplay; encrypted-media"
             style={{ border: 'none', filter: 'contrast(1.1) brightness(0.9)' }}
