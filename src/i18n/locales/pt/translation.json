@@ -228,6 +228,14 @@
     "item6_title": "Pagamentos",
     "item6_desc": "Aceitamos pagamentos via FareHarbor (online), cartões ou dinheiro no local (mediante reserva confirmada).",
     "special_needs_title": "Tem alguma necessidade especial?",
-    "special_needs_desc": "Se viaja com crianças pequenas (cadeirinhas), animais de estimação ou tem dificuldades de mobilidade, por favor informe-nos no momento da reserva para podermos adaptar a experiência."
+    "special_needs_desc": "Se viaja com crianças pequenas (cadeirinhas), animais de estimação ou tem dificuldades de mobilidade, por favor informe-nos no momento da reserva para podermos adaptar a experiência.",
+    "what_to_bring": {
+      "title": "O que levar",
+      "items": [
+        "Protetor Solar",
+        "Água",
+        "Toalha de Praia (Para alguns passeios)"
+      ]
+    }
   }
 }

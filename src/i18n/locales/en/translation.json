@@ -228,6 +228,14 @@
     "item6_title": "Payments",
     "item6_desc": "We accept payments via FareHarbor (online), cards, or cash on-site (upon confirmed booking).",
     "special_needs_title": "Do you have any special needs?",
-    "special_needs_desc": "If you are traveling with small children (car seats), pets, or have mobility difficulties, please inform us at the time of booking so we can adapt the experience."
+    "special_needs_desc": "If you are traveling with small children (car seats), pets, or have mobility difficulties, please inform us at the time of booking so we can adapt the experience.",
+    "what_to_bring": {
+      "title": "What to bring",
+      "items": [
+        "Sunscreen",
+        "Water",
+        "Beach Towel (For some tours)"
+      ]
+    }
   }
 }

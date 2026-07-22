@@ -196,6 +196,14 @@
     "item6_title": "Paiements",
     "item6_desc": "Nous acceptons les paiements via FareHarbor (en ligne), par carte ou en espèces sur place (sur réservation confirmée).",
     "special_needs_title": "Avez-vous des besoins particuliers ?",
-    "special_needs_desc": "Si vous voyagez avec de jeunes enfants (sièges auto), des animaux domestiques ou si vous avez des difficultés de mobilité, veuillez nous en informer au moment de la réservation afin que nous puissions adapter l'expérience."
+    "special_needs_desc": "Si vous voyagez avec de jeunes enfants (sièges auto), des animaux domestiques ou si vous avez des difficultés de mobilité, veuillez nous en informer au moment de la réservation afin que nous puissions adapter l'expérience.",
+    "what_to_bring": {
+      "title": "Ce qu'il faut apporter",
+      "items": [
+        "Écran Solaire",
+        "Eau",
+        "Serviette de Plage (Pour certaines visites)"
+      ]
+    }
   }
 }

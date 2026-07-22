@@ -25,7 +25,7 @@ export function VideoPreloader() {
     >
       {/* Tuk Tuk Video Preload */}
       <iframe
-        src="https://www.youtube.com/embed/G4qOa_eTe6A?autoplay=0&mute=1&controls=0"
+        src="https://www.youtube.com/embed/8ZDu00ylXKY?autoplay=0&mute=1&controls=0"
         title="preload-tuktuk"
       />
       {/* Jeep Video Preload */}

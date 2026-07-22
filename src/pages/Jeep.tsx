@@ -41,17 +41,17 @@ export default function Jeep() {
         }}
       />
       {/* Header */}
-      <section className="relative min-h-[70vh] md:min-h-[85vh] flex items-center text-white overflow-hidden bg-brand-black pt-28 md:pt-0">
+      <section className="relative min-h-[70vh] md:min-h-[85vh] flex items-center text-white overflow-hidden bg-black pt-28 md:pt-0">
         <div className="absolute inset-0 z-0">
           <iframe
-            className="w-[300%] h-[300%] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-            src="https://www.youtube.com/embed/SMnjhz8hjaY?autoplay=1&mute=1&loop=1&playlist=SMnjhz8hjaY&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&vq=hd720"
+            className="absolute top-1/2 left-1/2 w-[150%] h-[150%] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+            src="https://www.youtube.com/embed/SMnjhz8hjaY?autoplay=1&mute=1&loop=1&playlist=SMnjhz8hjaY&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&hd=1"
             allow="autoplay; encrypted-media"
-            style={{ border: 'none' }}
+            style={{ border: 'none', filter: 'contrast(1.1) brightness(0.9)' }}
             loading="eager"
             title="Jeep Adventure Background"
           ></iframe>
-          <div className="absolute inset-0 bg-brand-black/70 backdrop-blur-[1px]"></div>
+          <div className="absolute inset-0 bg-black/40"></div>
         </div>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full pt-20 md:pt-0">
           <motion.span

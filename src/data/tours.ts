@@ -385,6 +385,7 @@ export const tukTukTours: Tour[] = [
     descriptionKey: 'tours.tavira_total.desc',
     features: ['Centro Histórico', 'Jardim do Castelo', 'Ponte Antiga', 'Rio Sequa e Rio Gilão', 'Parque Natural Ria Formosa (Flora e Fauna)', 'Antiga Vila de pescadores de atum (museu do atum)', 'Salinas (Flor de Sal)', 'Visita Igreja São Pedro ou São Sebastião'],
     image: TAVIRA_TOTAL_GALLERY[0],
+    imagePosition: 'object-bottom',
     gallery: TAVIRA_TOTAL_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     fareHarborProductId: 480370,
