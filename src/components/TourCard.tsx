@@ -74,23 +74,20 @@ export function TourCard({ tour }: TourCardProps) {
             </div>
           </div>
   
-          <div className="flex items-center justify-between gap-4">
-            <div className="flex flex-col min-w-0">
+          <div className="flex items-center justify-between">
+            <div className="flex flex-col">
               <span className="text-[10px] uppercase tracking-wider text-brand-black/40 font-bold">{t('common.from')}</span>
-              <div className="flex items-baseline gap-2 flex-wrap">
-                <span className="text-xl font-black text-brand-brown leading-none">{tour.price}</span>
-                <div className="flex flex-col">
-                  <span className="text-[10px] font-bold text-brand-black/40 lowercase leading-none">/ pax</span>
-                  {tour.priceWithFee && (
-                    <span className="text-[8px] text-brand-black/40 font-bold leading-none mt-1 whitespace-nowrap">
-                      ({tour.priceWithFee} total)
-                    </span>
-                  )}
-                </div>
+              <div className="flex flex-col">
+                <span className="text-xl font-black text-brand-brown">{tour.price}</span>
+                {tour.priceWithFee && (
+                  <span className="text-[10px] text-brand-black/40 font-bold -mt-1">
+                    ({tour.priceWithFee} total)
+                  </span>
+                )}
               </div>
             </div>
             <div 
-              className="w-12 h-12 bg-brand-black text-white rounded-full flex items-center justify-center group-hover:bg-brand-brown transition-all shadow-lg shadow-brand-black/10 shrink-0"
+              className="w-12 h-12 bg-brand-black text-white rounded-full flex items-center justify-center group-hover:bg-brand-brown transition-all shadow-lg shadow-brand-black/10"
             >
               <ChevronRight size={20} />
             </div>
