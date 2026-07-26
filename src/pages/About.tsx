@@ -46,6 +46,11 @@ export default function About() {
                 <p className="text-xs text-brand-black/40 uppercase tracking-widest font-bold mt-1">{t('about_page.stat2')}</p>
               </div>
             </div>
+            <div className="pt-4 border-t border-brand-brown/10 inline-block">
+              <span className="text-sm font-black text-brand-brown uppercase tracking-widest bg-brand-brown/5 px-4 py-2 rounded-lg">
+                {t('about_page.license')}
+              </span>
+            </div>
           </div>
           <div className="grid grid-cols-2 gap-4 md:gap-6">
             <img src="https://lh3.googleusercontent.com/d/1sGsO3Iq0Z6QCg666qpWF5bTTRoAWzI_a" className="rounded-3xl h-48 md:h-64 w-full object-cover shadow-lg border border-brand-brown/5" alt="Chocolate Factory" />

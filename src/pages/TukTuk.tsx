@@ -140,7 +140,7 @@ export default function TukTuk() {
           <p className="text-brand-black/60 mb-8 font-medium">
             {t('tuk_tuk_page.faq_desc')}
           </p>
-          <button className="px-10 py-4 bg-brand-brown text-white rounded-full font-bold uppercase tracking-widest hover:bg-brand-brown-light transition-all shadow-lg shadow-brand-brown/20 transform hover:scale-105">
+          <button className="px-6 md:px-10 py-4 bg-brand-brown text-white rounded-full font-bold uppercase tracking-widest hover:bg-brand-brown-light transition-all shadow-lg shadow-brand-brown/20 transform hover:scale-105">
             {t('common.contact_whatsapp')}
           </button>
         </div>

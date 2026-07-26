@@ -178,7 +178,6 @@ const CITY_OLIVE_GALLERY = [
   'https://lh3.googleusercontent.com/d/16viKpX5_Fz_jTR5tr7PJgjnK2Mt7GCSU',
   'https://lh3.googleusercontent.com/d/11BgjDvtxwlJQ6I1wGOvbgZRA6dQjGKhn',
   'https://lh3.googleusercontent.com/d/18AEVxih9srPA4xAwWVbJf9gqQf7ZzYeT',
-  'https://lh3.googleusercontent.com/d/16Fzp4njiqQ5UbtU2lE7p4OPsyb43GEUK',
   'https://lh3.googleusercontent.com/d/10Wvy6nKXCzYCiJzJ0XBu8pwCLtbDaXxl'
 ];
 
@@ -188,7 +187,6 @@ const SANTA_LUZIA_GALLERY = [
   'https://lh3.googleusercontent.com/d/1zOCORzfaNeEOBDIf6EINf0kLfwpGfxuc',
   'https://lh3.googleusercontent.com/d/1mxL6N5O4e7Nlyc7_V31woWwoMo4xbxyR',
   'https://lh3.googleusercontent.com/d/1rDc2Rye4qJiAHXyv09lY9S7Ihx-fx7yg',
-  'https://lh3.googleusercontent.com/d/1jYxbI5yJ-ziwfd9LfcyqRtzzx56XkEBm',
   'https://lh3.googleusercontent.com/d/1dqF8yLG-efzPAwDhxVcFpbDn04A-kcaw',
   'https://lh3.googleusercontent.com/d/1XRlWZ44RKTb5Hd0NGAH7cSoQHuwlsEqP',
   'https://lh3.googleusercontent.com/d/1XpkIxT5vAvRD1H5G0LnjQG4CWZTx8ZoI',

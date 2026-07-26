@@ -201,7 +201,7 @@ export default function Home() {
               <p className="text-brand-cream/80 text-lg mb-10 font-medium">
                 {t('home.cta_box_subtitle')}
               </p>
-              <Link to="/tuk-tuk" className="px-10 py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-full font-black uppercase tracking-[0.2em] text-lg shadow-xl shadow-brand-brown/20 transition-all transform hover:scale-105 inline-block">
+              <Link to="/tuk-tuk" className="px-6 md:px-10 py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-full font-black uppercase tracking-widest text-lg shadow-xl shadow-brand-brown/20 transition-all transform hover:scale-105 inline-block">
                 {t('common.reserve_now')}
               </Link>
             </div>

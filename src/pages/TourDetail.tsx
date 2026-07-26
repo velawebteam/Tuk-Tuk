@@ -250,13 +250,13 @@ export default function TourDetail() {
 
             <div className="bg-brand-black rounded-3xl p-8 shadow-xl relative overflow-hidden text-white">
               <div className="absolute top-0 right-0 w-32 h-32 bg-brand-brown/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
-              <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-8">
-                <div className="flex flex-col">
-                  <span className="text-[10px] text-brand-cream/40 block mb-1 uppercase tracking-widest font-bold">{t('common.from')}</span>
-                  <div className="flex items-baseline gap-3">
-                    <span className="text-5xl font-black text-brand-cream leading-none">{tour.price}</span>
+              <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-8">
+                <div className="flex flex-col gap-1">
+                  <span className="text-[10px] text-brand-cream/40 block uppercase tracking-widest font-bold">{t('common.from')}</span>
+                  <div className="flex flex-wrap items-baseline gap-x-3">
+                    <span className="text-4xl md:text-5xl font-black text-brand-cream leading-none">{tour.price}</span>
                     {tour.priceWithFee && (
-                      <span className="text-lg font-bold text-brand-cream/40">
+                      <span className="text-base md:text-lg font-bold text-brand-cream/40 whitespace-nowrap">
                         ({tour.priceWithFee} total)
                       </span>
                     )}
@@ -284,7 +284,7 @@ export default function TourDetail() {
                         }
                       }
                     }}
-                    className="flex-grow md:flex-none px-12 py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-2xl font-black uppercase tracking-widest text-sm transition-all transform hover:scale-105 shadow-lg shadow-brand-brown/20 flex items-center justify-center gap-3"
+                    className="flex-grow lg:flex-none px-6 lg:px-10 py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-2xl font-black uppercase tracking-wide text-sm transition-all transform hover:scale-[1.02] shadow-lg shadow-brand-brown/20 flex items-center justify-center gap-3 shrink-0"
                   >
                     <Calendar size={20} />
                     {t('common.reserve_now')}
@@ -294,7 +294,7 @@ export default function TourDetail() {
                     href={`https://wa.me/351968995275?text=${encodeURIComponent(`Olá! Gostaria de reservar o passeio: ${t(tour.nameKey)}`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex-grow md:flex-none px-12 py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-2xl font-black uppercase tracking-widest text-sm transition-all transform hover:scale-105 shadow-lg shadow-brand-brown/20 flex items-center justify-center gap-3"
+                    className="flex-grow lg:flex-none px-6 lg:px-10 py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-2xl font-black uppercase tracking-wide text-sm transition-all transform hover:scale-[1.02] shadow-lg shadow-brand-brown/20 flex items-center justify-center gap-3 shrink-0"
                   >
                     <Calendar size={20} />
                     {t('common.reserve_now')}
