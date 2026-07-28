@@ -170,7 +170,8 @@ const CITY_ICE_CREAM_GALLERY = [
 ];
 
 const CITY_OLIVE_GALLERY = [
-  'https://lh3.googleusercontent.com/d/15tuVT64cliAbzFNtZ69Pr-WqAxw_sfXL', // Capa
+  'https://lh3.googleusercontent.com/d/1bN6jWcPxyU0tmRPprfb0X7rSqGcWV8Vy', // Nova Capa
+  'https://lh3.googleusercontent.com/d/15tuVT64cliAbzFNtZ69Pr-WqAxw_sfXL',
   'https://lh3.googleusercontent.com/d/1-9AuwCQPmyOCSuRXCAZH7MkIMld-irlN',
   'https://lh3.googleusercontent.com/d/1-gRQG_ZLaLN8UJNf0QiO3XT07w5jynkb',
   'https://lh3.googleusercontent.com/d/1U6sg6LapY8QUFyqiBlDhDcnAMgr9zK5Q',
@@ -182,6 +183,7 @@ const CITY_OLIVE_GALLERY = [
 ];
 
 const SANTA_LUZIA_GALLERY = [
+  'https://lh3.googleusercontent.com/d/1DYdBB_fc6DS3WNIau3Ve25_5MpGqq_KY',
   'https://lh3.googleusercontent.com/d/1fR1c9SV650RWqz3w87qtPAKoSz2r_vJ4',
   'https://lh3.googleusercontent.com/d/1sSSxQCRpgMLo40x7NxkhE4sCLt_9IPDF',
   'https://lh3.googleusercontent.com/d/1zOCORzfaNeEOBDIf6EINf0kLfwpGfxuc',
@@ -189,8 +191,7 @@ const SANTA_LUZIA_GALLERY = [
   'https://lh3.googleusercontent.com/d/1rDc2Rye4qJiAHXyv09lY9S7Ihx-fx7yg',
   'https://lh3.googleusercontent.com/d/1dqF8yLG-efzPAwDhxVcFpbDn04A-kcaw',
   'https://lh3.googleusercontent.com/d/1XRlWZ44RKTb5Hd0NGAH7cSoQHuwlsEqP',
-  'https://lh3.googleusercontent.com/d/1XpkIxT5vAvRD1H5G0LnjQG4CWZTx8ZoI',
-  'https://lh3.googleusercontent.com/d/1DYdBB_fc6DS3WNIau3Ve25_5MpGqq_KY'
+  'https://lh3.googleusercontent.com/d/1XpkIxT5vAvRD1H5G0LnjQG4CWZTx8ZoI'
 ];
 
 const TAVIRA_GOLD_GALLERY = [
@@ -548,7 +549,7 @@ export const tukTukTours: Tour[] = [
     pax: '1-9',
     descriptionKey: 'tours.santa_luzia_tuk.desc',
     features: ['Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal e Sal Comercial)', 'Aves', 'Santa Luzia (Capital do Polvo)'],
-    image: SANTA_LUZIA_GALLERY[9],
+    image: SANTA_LUZIA_GALLERY[0],
     gallery: SANTA_LUZIA_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     fareHarborProductId: 480973,
