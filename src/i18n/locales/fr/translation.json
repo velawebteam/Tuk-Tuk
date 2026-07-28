@@ -52,24 +52,117 @@
   },
   "diff": {
     "title": "Notre Différence",
-    "subtitle": "Contrairement à la concurrence, chez Tavira Roots, toutes nos visites sont strictement privées.",
+    "subtitle": "Chez Tavira Roots, découvrez la ville de Tavira et le meilleur de l'Est de l'Algarve lors d'une expérience totalement privée !",
     "exclusivity_title": "Exclusivité Totale",
     "exclusivity_desc": "Votre groupe part seul avec le guide. Pas d'étrangers, pas de précipitation, à votre rythme.",
     "authentic_title": "Itinéraires Authentiques",
     "authentic_desc": "Nous visitons ce que Tavira a de plus authentique : salines, usines de terre cuite, d'olives et de chocolat.",
     "guides_title": "Guides Passionnés",
-    "guides_desc": "Notre équipe connaît chaque recoin et chaque história de Tavira, garantissant une expérience riche et mémorable."
+    "guides_desc": "Notre équipe connaît chaque recoin et chaque histoire de Tavira, garantissant une expérience riche et mémorable."
+  },
+  "tour_detail": {
+    "departure": "Point de Départ",
+    "departure_desc": "Nous nous retrouvons au centre-ville de Tavira ou à votre hôtel (sous réserve de confirmation).",
+    "why_us": "Pourquoi réserver avec nous ?",
+    "real_experience": "Véritable Expérience Locale",
+    "real_experience_desc": "Des guides passionnés qui connaissent tous les secrets de Tavira.",
+    "private_exclusive": "Privé et Exclusif",
+    "private_exclusive_desc": "Pas de grands groupes. Juste vous, vos amis ou votre famille.",
+    "flexible_booking": "Réservation Flexible",
+    "flexible_booking_desc": "Assistance complète via WhatsApp pour planifier votre expérience.",
+    "whats_included": "Ce qui est inclus ?",
+    "not_included": "Non inclus",
+    "what_to_bring": "Ce qu'il faut apporter",
+    "good_to_know": "Bon à savoir",
+    "itinerary": "Itinéraire",
+    "secure_booking": "Réservation sécurisée via WhatsApp / FareHarbor",
+    "gtk": {
+      "ends_restaurant": "Le tour se termine au restaurant",
+      "menu_ti_maria": "Menu défini par le restaurant (Ti Maria)",
+      "no_pickup_restaurant": "N'inclut pas le service de prise en charge au restaurant",
+      "wine_tasting_3": "Inclut la dégustation de 3 vins (Rouge, Rosé et Blanc)",
+      "bread_olive_oil": "Accompagné de Pain et d'Huile d'Olive",
+      "ice_cream_pax": "Inclut 1 boule de glace par personne (coupe ou cornet)"
+    }
+  },
+  "contact_page": {
+    "title": "Contactez-nous",
+    "subtitle": "Vous avez une question sur nos tours privés ? Nous sommes là pour vous aider à planifier votre expérience parfaite à Tavira.",
+    "phone_whatsapp": "Téléphone / WhatsApp",
+    "call_network_notice": "(Appel vers le réseau mobile national)",
+    "email": "E-mail",
+    "location": "Localisation",
+    "working_hours": "Heures d'Ouverture",
+    "everyday": "Tous les jours",
+    "send_message": "Envoyez un message",
+    "name_label": "Nom",
+    "email_label": "E-mail",
+    "name_placeholder": "Votre nom",
+    "email_placeholder": "votre@email.com",
+    "subject_label": "Sujet",
+    "subject_options": {
+      "info": "Informations sur les Tours",
+      "group": "Réservation de Grand Groupe",
+      "special": "Demande Spéciale",
+      "other": "Autre"
+    },
+    "message_label": "Message",
+    "message_placeholder": "Comment pouvons-nous vous aider ?",
+    "send_button": "Envoyer le Message"
+  },
+  "features": {
+    "historical_center": "Centre Historique",
+    "castle_garden": "Jardin du Château",
+    "old_bridge": "Pont Romain",
+    "sequa_gilao_rivers": "Rivières Sequa et Gilão",
+    "ria_formosa_fauna_flora": "Parc Naturel de la Ria Formosa (Flore et Faune)",
+    "ria_formosa": "Ria Formosa",
+    "salt_pans": "Marais Salants (Fleur de Sel)",
+    "church_visit": "Visite de l'Église São Pedro ou São Sebastião",
+    "tuna_museum": "Ancien Village de Pêcheurs de Thon (Musée du Thon)",
+    "ti_maria_menu": "Restaurant Ti Maria (Menu Repas)",
+    "al_lagar_wine": "Visite d'Al-Lagar (Dégustation de Vins)",
+    "chocolate_tasting": "Chocolaterie Ibelle (Dégustation de Chocolat)",
+    "boat_tour": "Balade en Bateau dans la Ria Formosa",
+    "ice_cream": "Glacier 100% Naturel",
+    "olive_factory": "Visite de l'usine d'olives (Dégustation)",
+    "bird_watching": "Observation des Oiseaux",
+    "santa_luzia_octopus": "Santa Luzia (Capitale du Poulpe)",
+    "olive_tasting": "Dégustation d'Huile d'Olive",
+    "cacela_velha": "Cacela Velha",
+    "cabanas_tavira": "Cabanas Tavira",
+    "alfama_restaurant": "Restaurant Alfama (Menu Repas Inclus)",
+    "fuseta": "Fuseta",
+    "olhao": "Olhão",
+    "mud_bath": "Marais Salants (Inclut Spa Mer Morte et Bain de Boue)",
+    "pottery_demo": "Poterie (Visite et Démonstration Manuelle)",
+    "moncarapacho": "Moncarapacho",
+    "monterosa": "Monterosa",
+    "olive_grove": "Oliveraie",
+    "olive_tree_2000": "Olivier de 2000 ans",
+    "anchor_graveyard": "Cimetière des Ancres",
+    "al_lagar_tapas": "Al-Lagar (Inclut Vin et Tapas)",
+    "sequa_river": "Rivière Sequa",
+    "asseca": "Asseca",
+    "barrocal": "Barrocal",
+    "waterfalls": "Cascades",
+    "countryside": "Campagne",
+    "traditional_ceramics": "Céramique Traditionnelle",
+    "terracotta": "Terre Cuite",
+    "manual_production": "Fabrication Manuelle",
+    "private_guide": "Guide Privé",
+    "insurance": "Assurance Responsabilité Civile"
   },
   "home": {
     "featured_title": "Expériences à la Une",
-    "featured_subtitle": "Choisissez entre le charme agile du Tuk Tuk ou la robustez aventureuse de la Jeep. Toutes nos visites sont personnalisables.",
+    "featured_subtitle": "Choisissez entre le charme agile du Tuk Tuk ou la robustesse aventureuse de la Jeep. Toutes nos visites sont personnalisables.",
     "view_all": "Voir toutes les visites",
     "attractions_title": "Que visiterez-vous ?",
     "attractions_subtitle": "Bien plus qu'une simple promenade, une immersion dans la culture de Tavira.",
     "chocolate": "Chocolat",
     "olives": "Olives",
     "salt": "Marais Salants",
-    "pottery": "Murs d'Argile",
+    "pottery": "argile",
     "wine": "Vin",
     "tapas": "Tapas",
     "city": "Ville",
@@ -80,27 +173,39 @@
   "tours": {
     "cidade_tavira": {
       "name": "Ville de Tavira",
-      "desc": "Explorez le charme historique de Tavira lors d'une balade privée en Tuk Tuk. Découvrez les églises, les rues pittoresques et les secrets de la ville."
+      "desc": "Découvrez le cœur de Tavira lors d'une balade qui parcourt l'histoire, les rivières et le Parc Naturel."
     },
     "tavira_total": {
       "name": "Tavira Total",
-      "desc": "Une expérience complète de Tavira. Nous visitons les lieux les plus emblématiques et les environs dans un parcours privé et exclusif."
+      "desc": "Une expérience complète de Tavira, incluant l'héritage du thon et les marais salants traditionnels."
     },
-    "tapas_vinhos": {
-      "name": "Tapas et Vins",
-      "desc": "Savourez le meilleur de l'Algarve. Un tour gastronomique privé avec des arrêts stratégiques pour déguster des vins et des tapas locaux."
+    "city_tapas": {
+      "name": "Ville & Tapas",
+      "desc": "Combinez la culture de Tavira avec la gastronomie locale lors d'un tour qui se termine par un menu dégustation."
     },
     "historical_wine": {
-      "name": "Historical Center & Wine Tasting",
+      "name": "Centre Historique & Dégustation de Vin",
       "desc": "Un voyage à travers l'histoire de Tavira avec une dégustation exclusive de vins de la région de l'Algarve."
     },
-    "cidade_chocolate": {
-      "name": "Ville de Tavira et Chocolat",
-      "desc": "Le tour idéal pour les amateurs de douceurs. Nous visitons la ville et terminons par une délicieuse visite d'une usine de chocolat."
+    "city_chocolate": {
+      "name": "Ville & Chocolat",
+      "desc": "Explorez la ville et sucrez votre journée avec une dégustation de chocolat artisanal."
     },
-    "santa_luzia": {
+    "tuk_tuk_boat": {
+      "name": "Tuk Tuk & Bateau",
+      "desc": "La meilleure façon de voir Tavira : par terre en Tuk Tuk et par mer lors d'un tour en bateau dans la Ria Formosa."
+    },
+    "city_ice_cream": {
+      "name": "Ville & Glace",
+      "desc": "Un tour rafraîchissant à travers la ville avec un arrêt pour une glace 100% naturelle."
+    },
+    "city_olive_factory": {
+      "name": "Ville & Usine d'Olives",
+      "desc": "Découvrez la tradition de l'olive à Tavira avec une visite d'usine et une dégustation de produits locaux."
+    },
+    "santa_luzia_tuk": {
       "name": "Santa Luzia",
-      "desc": "Visitez la capitale du poulpe. Une balade privée jusqu'au pittoresque village de Santa Luzia, en passant par les célèbres marais salants."
+      "desc": "Visitez la capitale du poulpe et les marais salants traditionnels lors d'un tour axé sur la nature et la culture locale."
     },
     "jeep_vinho": {
       "name": "Tavira, Santa Luzia et Dégustation de Vin",
@@ -114,26 +219,42 @@
       "name": "Vieille Ville, Marais Salants et Santa Luzia",
       "desc": "Explorez Tavira et ses environs avec le confort et la polyvalence d'une Jeep privée. Marais salants, histoire et mer en un seul tour."
     },
-    "ria_formosa_jeep": {
-      "name": "Tavira Roots: Ria Formosa & Gastronomia",
-      "desc": "Explorez la beauté de la Ria Formosa avec un arrêt à Cacela Velha et um déjeuner régional inclus."
+    "tavira_gold": {
+      "name": "L'Or de Tavira : Du Thon, Sel et Olives à la Capitale du Poulpe",
+      "desc": "Un tour complet reliant l'or blanc des marais salants à l'or liquide de l'huile d'olive et à la capitale du poulpe."
     },
-    "liquid_gold_route": {
-      "name": "Oliveraie, dégustation d'huile d'olive et olivier de 2000 ans",
-      "desc": "Visitez des oliviers millénaires et dégustez la meilleure huile d'olive de la région dans un cadre historique."
+    "ria_formosa_jeep": {
+      "name": "Tavira Roots : Ria Formosa & Gastronomie",
+      "desc": "Explorez la beauté de la Ria Formosa avec un arrêt à Cacela Velha et un déjeuner régional inclus."
     },
     "fuzeta_olhao_bath": {
-      "name": "Santa Luzia, Fuseta, Olhão, Marais Salants (Mer Morte) et Bain de Boue",
+      "name": "Santa Luzia, Fuseta, Olhão, Marais Salants (Mer Morte) & Bain de Boue",
       "desc": "Aventure 4x4 avec un arrêt à Olhão et une expérience unique de bains de boue et de sel."
     },
+    "santa_luzia_clay": {
+      "name": "Santa Luzia, Fuseta & Poterie",
+      "desc": "Découvrez la tradition de la pêche et l'art de la poterie manuelle lors de ce tour exclusif."
+    },
+    "liquid_gold_route": {
+      "name": "Oliveraie, Dégustation d'Huile d'Olive & Histoire de l'Olivier Millénaire",
+      "desc": "Visitez des oliviers millénaires et dégustez la meilleure huile d'olive de la région dans un cadre historique."
+    },
+    "jeep_boat_anchors": {
+      "name": "Jeep & Bateau - Cimetière des Ancres",
+      "desc": "La combinaison parfaite entre terre et mer, avec une visite au cimetière d'ancres emblématique."
+    },
+    "tavira_roots_wine": {
+      "name": "Tavira Roots - Marais Salants, Poulpe, Thon, Vin et Tapas",
+      "desc": "L'essence de Tavira dans une balade qui se termine par des vins et des tapas locaux."
+    },
+    "jeep_boat_history": {
+      "name": "Jeep & Bateau - Histoire et Nature",
+      "desc": "Un voyage à travers l'histoire et la nature de Tavira, explorant la Ria Formosa en bateau et en jeep."
+    },
     "full_day_sotavento": {
-      "name": "Journée Complète à Sotavento Algarvia avec Déjeuner",
-      "desc": "Une journée entière pour découvrir le Sotavento Algarvio avec déjeuner inclus et expériences authentiques."
+      "name": "Journée Complète dans l'Est de l'Algarve Avec Déjeuner",
+      "desc": "Une journée entière pour découvrir l'Est de l'Algarve avec déjeuner inclus et expériences authentiques."
     }
-  },
-  "tour_detail": {
-    "departure": "Point de Départ",
-    "departure_desc": "Nous nous retrouvons au centre-ville de Tavira ou à votre hôtel (sous réserve de confirmation)."
   },
   "footer": {
     "mission": "Expériences privées et exclusives à Tavira. Découvrez l'âme de l'Algarve avec nous, dans des visites en Tuk Tuk et en Jeep conçues pour ceux qui apprécient l'authenticité et le confort.",
@@ -154,6 +275,7 @@
     "stat2": "Tours Privés",
     "values_title": "Nos Valeurs",
     "values_subtitle": "Ce qui nous guide chaque jour.",
+    "license": "RNAAT: 535/2026",
     "value1_title": "Exclusivité",
     "value1_desc": "Visites toujours privées, sans exception.",
     "value2_title": "Passion",
@@ -172,11 +294,11 @@
     "q3": "Les tours incluent-ils des visites d'usines ?",
     "a3": "Oui, selon le tour choisi. Nous avons des partenariats avec des usines de chocolat, d'olives, des marais salants et des poteries. Le temps de visite et les dégustations varient selon l'itinéraire.",
     "q4": "Quelles langues parle le guide ?",
-    "a4": "Nos guides parlent couramment le portugais et l'anglais. Sur demande préalable et selon disponibilité, nous pouvons avoir des guides parlant français ou espagnol.",
+    "a4": "Nos guides parlent couramment le portugais, l'anglais, l'espagnol et le français (selon le guide).",
     "q5": "Les enfants paient-ils le même prix ?",
-    "a5": "Les enfants jusqu'à 3 ans voyagent gratuitement (sur les genoux). Para les enfants entre 4 et 12 ans, nous avons des tarifs spéciaux sur certains tours. Consultez les détails pour chaque tour.",
+    "a5": "Les enfants jusqu'à 3 ans voyagent gratuitement (sur les genoux). Pour les enfants entre 4 et 12 ans, nous avons des tarifs spéciaux sur certains tours. Consultez les détails pour chaque tour.",
     "q6": "Pouvons-nous personnaliser l'itinéraire ?",
-    "a6": "Puisque les visites sont privées, nous avons une certaine flexibilité. S'il y a um point spécifique à Tavira que vous voulez absolument voir, parlez-en à votre guide au début du tour et nous essaierons d'adapter l'itinéraire.",
+    "a6": "Puisque les visites sont privées, nous avons une certaine flexibilité. S'il y a un point spécifique à Tavira que vous voulez absolument voir, parlez-en à votre guide au début du tour et nous essaierons d'adapter l'itinéraire.",
     "still_doubts": "Vous avez encore des questions ?",
     "contact_us": "Contactez-nous Directement"
   },

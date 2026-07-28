@@ -178,7 +178,6 @@ const CITY_OLIVE_GALLERY = [
   'https://lh3.googleusercontent.com/d/1ULjR_R-iz9w1BR36G-s8nRK-UOnaRX_e',
   'https://lh3.googleusercontent.com/d/16viKpX5_Fz_jTR5tr7PJgjnK2Mt7GCSU',
   'https://lh3.googleusercontent.com/d/11BgjDvtxwlJQ6I1wGOvbgZRA6dQjGKhn',
-  'https://lh3.googleusercontent.com/d/18AEVxih9srPA4xAwWVbJf9gqQf7ZzYeT',
   'https://lh3.googleusercontent.com/d/10Wvy6nKXCzYCiJzJ0XBu8pwCLtbDaXxl'
 ];
 
@@ -188,7 +187,6 @@ const SANTA_LUZIA_GALLERY = [
   'https://lh3.googleusercontent.com/d/1sSSxQCRpgMLo40x7NxkhE4sCLt_9IPDF',
   'https://lh3.googleusercontent.com/d/1zOCORzfaNeEOBDIf6EINf0kLfwpGfxuc',
   'https://lh3.googleusercontent.com/d/1mxL6N5O4e7Nlyc7_V31woWwoMo4xbxyR',
-  'https://lh3.googleusercontent.com/d/1rDc2Rye4qJiAHXyv09lY9S7Ihx-fx7yg',
   'https://lh3.googleusercontent.com/d/1dqF8yLG-efzPAwDhxVcFpbDn04A-kcaw',
   'https://lh3.googleusercontent.com/d/1XRlWZ44RKTb5Hd0NGAH7cSoQHuwlsEqP',
   'https://lh3.googleusercontent.com/d/1XpkIxT5vAvRD1H5G0LnjQG4CWZTx8ZoI'
@@ -363,17 +361,17 @@ export const tukTukTours: Tour[] = [
     duration: '1h15',
     pax: '1-9',
     descriptionKey: 'tours.cidade_tavira.desc',
-    features: ['Centro Histórico', 'Jardim do Castelo', 'Ponte Antiga', 'Rio Sequa e Rio Gilão', 'Parque Natural Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal)', 'Visita Igreja São Pedro ou São Sebastião'],
+    features: ['features.historical_center', 'features.castle_garden', 'features.old_bridge', 'features.sequa_gilao_rivers', 'features.ria_formosa_fauna_flora', 'features.salt_pans', 'features.church_visit'],
     image: TAVIRA_CITY_GALLERY[0],
     gallery: TAVIRA_CITY_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     fareHarborProductId: 480332,
     itinerary: [
-      { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
-      { activity: 'Rio Sequa e Rio Gilão' },
-      { activity: 'Parque Natural Ria Formosa (Flora e Fauna)' },
-      { activity: 'Salinas (Flor de Sal)' },
-      { activity: 'Visita à Igreja de São Pedro ou São Sebastião' }
+      { activity: 'features.historical_center' },
+      { activity: 'features.sequa_gilao_rivers' },
+      { activity: 'features.ria_formosa_fauna_flora' },
+      { activity: 'features.salt_pans' },
+      { activity: 'features.church_visit' }
     ]
   },
   {
@@ -385,19 +383,19 @@ export const tukTukTours: Tour[] = [
     duration: '2h',
     pax: '1-9',
     descriptionKey: 'tours.tavira_total.desc',
-    features: ['Centro Histórico', 'Jardim do Castelo', 'Ponte Antiga', 'Rio Sequa e Rio Gilão', 'Parque Natural Ria Formosa (Flora e Fauna)', 'Antiga Vila de pescadores de atum (museu do atum)', 'Salinas (Flor de Sal)', 'Visita Igreja São Pedro ou São Sebastião'],
+    features: ['features.historical_center', 'features.castle_garden', 'features.old_bridge', 'features.sequa_gilao_rivers', 'features.ria_formosa_fauna_flora', 'features.tuna_museum', 'features.salt_pans', 'features.church_visit'],
     image: TAVIRA_TOTAL_GALLERY[0],
     imagePosition: 'object-bottom md:object-[50%_calc(100%+40px)]',
     gallery: TAVIRA_TOTAL_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     fareHarborProductId: 480370,
     itinerary: [
-      { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
-      { activity: 'Rio Sequa e Rio Gilão' },
-      { activity: 'Parque Natural Ria Formosa (Flora e Fauna)' },
-      { activity: 'Antiga Vila de pescadores de atum (museu do atum)' },
-      { activity: 'Salinas (Flor de Sal)' },
-      { activity: 'Visita à Igreja de São Pedro ou São Sebastião' }
+      { activity: 'features.historical_center' },
+      { activity: 'features.sequa_gilao_rivers' },
+      { activity: 'features.ria_formosa_fauna_flora' },
+      { activity: 'features.tuna_museum' },
+      { activity: 'features.salt_pans' },
+      { activity: 'features.church_visit' }
     ]
   },
   {
@@ -409,19 +407,19 @@ export const tukTukTours: Tour[] = [
     duration: '1h30',
     pax: '1-9',
     descriptionKey: 'tours.city_tapas.desc',
-    features: ['Centro Histórico', 'Jardim do Castelo', 'Ponte Antiga', 'Rio Sequa e Rio Gilão', 'Parque Natural Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal)', 'Visita Igreja São Pedro ou São Sebastião', 'Restaurante Ti Maria (Menu Refeição)'],
+    features: ['features.historical_center', 'features.castle_garden', 'features.old_bridge', 'features.sequa_gilao_rivers', 'features.ria_formosa_fauna_flora', 'features.salt_pans', 'features.church_visit', 'features.ti_maria_menu'],
     image: CITY_TAPAS_GALLERY[0],
     gallery: CITY_TAPAS_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     fareHarborProductId: 480337,
-    goodToKnow: ['O passeio termina no restaurante', 'Menu definido pelo restaurante (Ti Maria)', 'Não inclui serviço de recolha no restaurante'],
+    goodToKnow: ['tour_detail.gtk.ends_restaurant', 'tour_detail.gtk.menu_ti_maria', 'tour_detail.gtk.no_pickup_restaurant'],
     itinerary: [
-      { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
-      { activity: 'Rio Sequa e Rio Gilão' },
-      { activity: 'Parque Natural Ria Formosa (Flora e Fauna)' },
-      { activity: 'Salinas (Flor de Sal)' },
-      { activity: 'Visita à Igreja de São Pedro ou São Sebastião' },
-      { activity: 'Restaurante Ti Maria (Menu refeição)' }
+      { activity: 'features.historical_center' },
+      { activity: 'features.sequa_gilao_rivers' },
+      { activity: 'features.ria_formosa_fauna_flora' },
+      { activity: 'features.salt_pans' },
+      { activity: 'features.church_visit' },
+      { activity: 'features.ti_maria_menu' }
     ]
   },
   {
@@ -433,18 +431,18 @@ export const tukTukTours: Tour[] = [
     duration: '2h30',
     pax: '1-9',
     descriptionKey: 'tours.historical_wine.desc',
-    features: ['Centro Histórico', 'Jardim do Castelo', 'Ponte Antiga', 'Rio Sequa e Rio Gilão', 'Parque Natural Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal)', 'Visita ao Al-Lagar (Prova de Vinhos)'],
+    features: ['features.historical_center', 'features.castle_garden', 'features.old_bridge', 'features.sequa_gilao_rivers', 'features.ria_formosa_fauna_flora', 'features.salt_pans', 'features.al_lagar_wine'],
     image: HISTORICAL_WINE_GALLERY[0],
     gallery: HISTORICAL_WINE_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     fareHarborProductId: 505334,
-    goodToKnow: ['Inclui prova de 3 vinhos (Tinto, Rosé e Branco)', 'Acompanhado com Pão e Azeite'],
+    goodToKnow: ['tour_detail.gtk.wine_tasting_3', 'tour_detail.gtk.bread_olive_oil'],
     itinerary: [
-      { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
-      { activity: 'Rio Sequa e Rio Gilão' },
-      { activity: 'Parque Natural Ria Formosa (Flora e Fauna)' },
-      { activity: 'Salinas (Flor de Sal)' },
-      { activity: 'Visita ao Al-Lagar (Prova de vinhos)' }
+      { activity: 'features.historical_center' },
+      { activity: 'features.sequa_gilao_rivers' },
+      { activity: 'features.ria_formosa_fauna_flora' },
+      { activity: 'features.salt_pans' },
+      { activity: 'features.al_lagar_wine' }
     ]
   },
   {
@@ -456,18 +454,18 @@ export const tukTukTours: Tour[] = [
     duration: '1h30',
     pax: '1-9',
     descriptionKey: 'tours.city_chocolate.desc',
-    features: ['Centro Histórico', 'Jardim do Castelo', 'Ponte Antiga', 'Rio Sequa e Rio Gilão', 'Parque Natural Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal)', 'Visita Igreja São Pedro ou São Sebastião', 'Chocolataria Ibelle (Degustação de chocolate)'],
+    features: ['features.historical_center', 'features.castle_garden', 'features.old_bridge', 'features.sequa_gilao_rivers', 'features.ria_formosa_fauna_flora', 'features.salt_pans', 'features.church_visit', 'features.chocolate_tasting'],
     image: CITY_CHOCOLATE_GALLERY[0],
     gallery: CITY_CHOCOLATE_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     fareHarborProductId: 480393,
     itinerary: [
-      { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
-      { activity: 'Rio Sequa e Rio Gilão' },
-      { activity: 'Parque Natural Ria Formosa (Flora e Fauna)' },
-      { activity: 'Salinas (Flor de Sal)' },
-      { activity: 'Visita à Igreja de São Pedro ou São Sebastião' },
-      { activity: 'Chocolataria Ibelle (Degustação de chocolate)' }
+      { activity: 'features.historical_center' },
+      { activity: 'features.sequa_gilao_rivers' },
+      { activity: 'features.ria_formosa_fauna_flora' },
+      { activity: 'features.salt_pans' },
+      { activity: 'features.church_visit' },
+      { activity: 'features.chocolate_tasting' }
     ]
   },
   {
@@ -479,18 +477,18 @@ export const tukTukTours: Tour[] = [
     duration: '2h30',
     pax: '2-5',
     descriptionKey: 'tours.tuk_tuk_boat.desc',
-    features: ['Centro Histórico', 'Jardim do Castelo', 'Ponte Antiga', 'Rio Sequa e Rio Gilão', 'Parque Natural Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal)', 'Visita Igreja São Pedro ou São Sebastião', 'Passeio de barco na Ria Formosa (Fauna/Flora)'],
+    features: ['features.historical_center', 'features.castle_garden', 'features.old_bridge', 'features.sequa_gilao_rivers', 'features.ria_formosa_fauna_flora', 'features.salt_pans', 'features.church_visit', 'features.boat_tour'],
     image: TUKTUK_BOAT_GALLERY[0],
     gallery: TUKTUK_BOAT_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     fareHarborProductId: 695490,
     itinerary: [
-      { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
-      { activity: 'Rio Sequa e Rio Gilão' },
-      { activity: 'Parque Natural Ria Formosa (Flora e Fauna)' },
-      { activity: 'Salinas (Flor de Sal)' },
-      { activity: 'Visita à Igreja de São Pedro ou São Sebastião' },
-      { activity: 'Passeio de barco na Ria Formosa (Fauna/Flora)' }
+      { activity: 'features.historical_center' },
+      { activity: 'features.sequa_gilao_rivers' },
+      { activity: 'features.ria_formosa_fauna_flora' },
+      { activity: 'features.salt_pans' },
+      { activity: 'features.church_visit' },
+      { activity: 'features.boat_tour' }
     ]
   },
   {
@@ -502,19 +500,19 @@ export const tukTukTours: Tour[] = [
     duration: '1h30',
     pax: '1-9',
     descriptionKey: 'tours.city_ice_cream.desc',
-    features: ['Centro Histórico', 'Jardim do Castelo', 'Ponte Antiga', 'Rio Sequa e Rio Gilão', 'Parque Natural Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal)', 'Visita Igreja São Pedro ou São Sebastião', 'Gelataria 100% Natural (1 bola por pessoa)'],
+    features: ['features.historical_center', 'features.castle_garden', 'features.old_bridge', 'features.sequa_gilao_rivers', 'features.ria_formosa_fauna_flora', 'features.salt_pans', 'features.church_visit', 'features.ice_cream'],
     image: CITY_ICE_CREAM_GALLERY[0],
     gallery: CITY_ICE_CREAM_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     fareHarborProductId: 602449,
-    goodToKnow: ['Inclui 1 bola de gelado por pessoa (copo ou cone)'],
+    goodToKnow: ['tour_detail.gtk.ice_cream_pax'],
     itinerary: [
-      { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
-      { activity: 'Rio Sequa e Rio Gilão' },
-      { activity: 'Parque Natural Ria Formosa (Flora e Fauna)' },
-      { activity: 'Salinas (Flor de Sal)' },
-      { activity: 'Visita à Igreja de São Pedro ou São Sebastião' },
-      { activity: 'Gelataria 100% Natural (Inclui 1 bola por pessoa)' }
+      { activity: 'features.historical_center' },
+      { activity: 'features.sequa_gilao_rivers' },
+      { activity: 'features.ria_formosa_fauna_flora' },
+      { activity: 'features.salt_pans' },
+      { activity: 'features.church_visit' },
+      { activity: 'features.ice_cream' }
     ]
   },
   {
@@ -526,18 +524,18 @@ export const tukTukTours: Tour[] = [
     duration: '2h',
     pax: '1-9',
     descriptionKey: 'tours.city_olive_factory.desc',
-    features: ['Centro Histórico', 'Jardim do Castelo', 'Ponte Antiga', 'Rio Sequa e Rio Gilão', 'Parque Natural Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal)', 'Visita Igreja São Pedro ou São Sebastião', 'Visita à fábrica de azeitonas (Degustação)'],
+    features: ['features.historical_center', 'features.castle_garden', 'features.old_bridge', 'features.sequa_gilao_rivers', 'features.ria_formosa_fauna_flora', 'features.salt_pans', 'features.church_visit', 'features.olive_factory'],
     image: CITY_OLIVE_GALLERY[0],
     gallery: CITY_OLIVE_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     fareHarborProductId: 535407,
     itinerary: [
-      { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
-      { activity: 'Rio Sequa e Rio Gilão' },
-      { activity: 'Parque Natural Ria Formosa (Flora e Fauna)' },
-      { activity: 'Salinas (Flor de Sal)' },
-      { activity: 'Visita à Igreja de São Pedro ou São Sebastião' },
-      { activity: 'Visita à fábrica de azeitonas (Inclui degustação)' }
+      { activity: 'features.historical_center' },
+      { activity: 'features.sequa_gilao_rivers' },
+      { activity: 'features.ria_formosa_fauna_flora' },
+      { activity: 'features.salt_pans' },
+      { activity: 'features.church_visit' },
+      { activity: 'features.olive_factory' }
     ]
   },
   {
@@ -548,16 +546,16 @@ export const tukTukTours: Tour[] = [
     duration: '1h45',
     pax: '1-9',
     descriptionKey: 'tours.santa_luzia_tuk.desc',
-    features: ['Ria Formosa (Flora e Fauna)', 'Salinas (Flor de Sal e Sal Comercial)', 'Aves', 'Santa Luzia (Capital do Polvo)'],
+    features: ['features.ria_formosa_fauna_flora', 'features.salt_pans', 'features.bird_watching', 'features.santa_luzia_octopus'],
     image: SANTA_LUZIA_GALLERY[0],
     gallery: SANTA_LUZIA_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     fareHarborProductId: 480973,
     itinerary: [
-      { activity: 'Parque Natural Ria Formosa (Flora e Fauna)' },
-      { activity: 'Salinas (Flor de Sal e Sal Comercial)' },
-      { activity: 'Observação de Aves' },
-      { activity: 'Santa Luzia (Capital do Polvo)' }
+      { activity: 'features.ria_formosa_fauna_flora' },
+      { activity: 'features.salt_pans' },
+      { activity: 'features.bird_watching' },
+      { activity: 'features.santa_luzia_octopus' }
     ]
   }
 ];
@@ -572,7 +570,7 @@ export const jeepTours: Tour[] = [
     duration: '2h30',
     pax: '2-5',
     descriptionKey: 'tours.tavira_gold.desc',
-    features: ['Centro Histórico', 'jardim castelo', 'Ponte Antiga', 'Ria Formosa', 'Salinas', 'Flora e Fauna', 'Aves', 'Antiga Vila pescadores de atum (museu atum)', 'Olive tasting', 'Santa Luzia (capital do polvo)'],
+    features: ['features.historical_center', 'features.castle_garden', 'features.old_bridge', 'features.ria_formosa', 'features.salt_pans', 'features.ria_formosa_fauna_flora', 'features.bird_watching', 'features.tuna_museum', 'features.olive_tasting', 'features.santa_luzia_octopus'],
     image: TAVIRA_GOLD_GALLERY[0],
     imagePosition: 'object-[50%_28%]',
     gallery: TAVIRA_GOLD_GALLERY,
@@ -580,11 +578,11 @@ export const jeepTours: Tour[] = [
     fareHarborProductId: 657100,
     fareHarborFlowId: 1006571,
     itinerary: [
-      { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
-      { activity: 'Ria Formosa, Salinas, Flora e Fauna (Aves)' },
-      { activity: 'Antiga Vila de pescadores de atum (Museu do Atum)' },
-      { activity: 'Olive tasting (Prova de Azeite)' },
-      { activity: 'Santa Luzia (Capital do Polvo)' }
+      { activity: 'features.historical_center' },
+      { activity: 'features.ria_formosa_fauna_flora' },
+      { activity: 'features.tuna_museum' },
+      { activity: 'features.olive_tasting' },
+      { activity: 'features.santa_luzia_octopus' }
     ]
   },
   {
@@ -596,16 +594,16 @@ export const jeepTours: Tour[] = [
     duration: '3h',
     pax: '2-5',
     descriptionKey: 'tours.ria_formosa_jeep.desc',
-    features: ['Ria Formosa', 'Salinas', 'Flora e Fauna', 'Aves', 'Antiga Vila pescadores de atum (museu atum)', 'Cacela Velha', 'Cabanas Tavira', 'Restaurante Alfama (inclui menu refeicao)'],
+    features: ['features.ria_formosa', 'features.salt_pans', 'features.ria_formosa_fauna_flora', 'features.bird_watching', 'features.tuna_museum', 'features.cacela_velha', 'features.cabanas_tavira', 'features.alfama_restaurant'],
     image: RIA_FORMOSA_GASTRONOMIA_GALLERY[0],
     gallery: RIA_FORMOSA_GASTRONOMIA_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     fareHarborProductId: 506791,
     itinerary: [
-      { activity: 'Ria Formosa, Salinas, Flora e Fauna (Aves)' },
-      { activity: 'Antiga Vila de pescadores de atum (Museu do Atum)' },
-      { activity: 'Cacela Velha e Cabanas de Tavira' },
-      { activity: 'Restaurante Alfama (inclui menu refeição)' }
+      { activity: 'features.ria_formosa_fauna_flora' },
+      { activity: 'features.tuna_museum' },
+      { activity: 'features.cacela_velha' },
+      { activity: 'features.alfama_restaurant' }
     ]
   },
   {
@@ -617,16 +615,16 @@ export const jeepTours: Tour[] = [
     duration: '3h',
     pax: '2-5',
     descriptionKey: 'tours.fuzeta_olhao_bath.desc',
-    features: ['Santa Luzia (capital do polvo)', 'Ria Formosa', 'Salinas', 'Flora e Fauna', 'Aves', 'Fuseta', 'Olhao', 'Salinas (inclui spa mar morto e argila para tratamento de pele)'],
+    features: ['features.santa_luzia_octopus', 'features.ria_formosa', 'features.salt_pans', 'features.ria_formosa_fauna_flora', 'features.bird_watching', 'features.fuseta', 'features.olhao', 'features.mud_bath'],
     image: SANTA_LUZIA_FUSETA_OLHAO_GALLERY[0],
     gallery: SANTA_LUZIA_FUSETA_OLHAO_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     fareHarborProductId: 506786,
     itinerary: [
-      { activity: 'Santa Luzia (Capital do Polvo)' },
-      { activity: 'Ria Formosa, Salinas, Flora e Fauna (Aves)' },
-      { activity: 'Fuzeta e Olhão' },
-      { activity: 'Salinas (inclui spa mar morto e argila para tratamento de pele)' }
+      { activity: 'features.santa_luzia_octopus' },
+      { activity: 'features.ria_formosa_fauna_flora' },
+      { activity: 'features.fuseta' },
+      { activity: 'features.mud_bath' }
     ]
   },
   {
@@ -638,16 +636,16 @@ export const jeepTours: Tour[] = [
     duration: '3h',
     pax: '2-5',
     descriptionKey: 'tours.santa_luzia_clay.desc',
-    features: ['Santa Luzia (capital do polvo)', 'Ria Formosa', 'Salinas', 'Flora e Fauna', 'Aves', 'Fuseta', 'Olaria (visita e demonstração da olaria tradicional manual)'],
+    features: ['features.santa_luzia_octopus', 'features.ria_formosa', 'features.salt_pans', 'features.ria_formosa_fauna_flora', 'features.bird_watching', 'features.fuseta', 'features.pottery_demo'],
     image: SANTA_LUZIA_CLAY_GALLERY[0],
     gallery: SANTA_LUZIA_CLAY_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     fareHarborProductId: 506790,
     itinerary: [
-      { activity: 'Santa Luzia (Capital do Polvo)' },
-      { activity: 'Ria Formosa, Salinas, Flora e Fauna (Aves)' },
-      { activity: 'Fuzeta' },
-      { activity: 'Olaria (visita e demonstração da olaria tradicional manual)' }
+      { activity: 'features.santa_luzia_octopus' },
+      { activity: 'features.ria_formosa_fauna_flora' },
+      { activity: 'features.fuseta' },
+      { activity: 'features.pottery_demo' }
     ]
   },
   {
@@ -659,16 +657,16 @@ export const jeepTours: Tour[] = [
     duration: '3h',
     pax: '2-5',
     descriptionKey: 'tours.liquid_gold_route.desc',
-    features: ['Moncapacho', 'Monterosa', 'Olive Grove', 'Olive Oil Tasting', 'Oliveira 2000 anos', 'Ria Formosa', 'Salinas', 'Santa Luzia (capital do polvo)'],
+    features: ['features.moncarapacho', 'features.monterosa', 'features.olive_grove', 'features.olive_tasting', 'features.olive_tree_2000', 'features.ria_formosa', 'features.salt_pans', 'features.santa_luzia_octopus'],
     image: OLIVAL_AZEITE_GALLERY[0],
     gallery: OLIVAL_AZEITE_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     fareHarborProductId: 506789,
     itinerary: [
-      { activity: 'Moncarapacho e Monterosa' },
-      { activity: 'Olive Grove e Olive Oil Tasting' },
-      { activity: 'Oliveira de 2000 anos' },
-      { activity: 'Ria Formosa, Salinas e Santa Luzia' }
+      { activity: 'features.moncarapacho' },
+      { activity: 'features.olive_grove' },
+      { activity: 'features.olive_tree_2000' },
+      { activity: 'features.ria_formosa' }
     ]
   },
   {
@@ -680,17 +678,17 @@ export const jeepTours: Tour[] = [
     duration: '3h',
     pax: '2-5',
     descriptionKey: 'tours.jeep_boat_anchors.desc',
-    features: ['Centro Histórico', 'jardim castelo', 'Ponte Antiga', 'Ria Formosa', 'Salinas', 'Flora e Fauna', 'Aves', 'Antiga Vila pescadores de atum (museu atum)', 'Olive tasting', 'Santa Luzia (capital do polvo)', 'Passeio barco Ria Formosa', 'cemitério ancoras', 'Regresso Tavira'],
+    features: ['features.historical_center', 'features.castle_garden', 'features.old_bridge', 'features.ria_formosa', 'features.salt_pans', 'features.ria_formosa_fauna_flora', 'features.bird_watching', 'features.tuna_museum', 'features.olive_tasting', 'features.santa_luzia_octopus', 'features.boat_tour', 'features.anchor_graveyard'],
     image: JEEP_BOAT_ANCHOR_GALLERY[0],
     gallery: JEEP_BOAT_ANCHOR_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     fareHarborProductId: 695527,
     itinerary: [
-      { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
-      { activity: 'Ria Formosa, Salinas e Flora/Fauna' },
-      { activity: 'Antiga Vila de pescadores de atum e Olive tasting' },
-      { activity: 'Santa Luzia (Capital do Polvo)' },
-      { activity: 'Passeio de barco pela Ria Formosa e Cemitério das Âncoras' }
+      { activity: 'features.historical_center' },
+      { activity: 'features.ria_formosa_fauna_flora' },
+      { activity: 'features.tuna_museum' },
+      { activity: 'features.santa_luzia_octopus' },
+      { activity: 'features.anchor_graveyard' }
     ]
   },
   {
@@ -702,18 +700,18 @@ export const jeepTours: Tour[] = [
     duration: '3h',
     pax: '2-5',
     descriptionKey: 'tours.tavira_roots_wine.desc',
-    features: ['Centro Histórico', 'jardim castelo', 'Ponte Antiga', 'Ria Formosa', 'Salinas', 'Flora e Fauna', 'Aves', 'Antiga Vila pescadores de atum (museu atum)', 'Olive tasting', 'Santa Luzia (capital do polvo)', 'Al-Lagar (inclui 1 copo de vinho / tapas)'],
+    features: ['features.historical_center', 'features.castle_garden', 'features.old_bridge', 'features.ria_formosa', 'features.salt_pans', 'features.ria_formosa_fauna_flora', 'features.bird_watching', 'features.tuna_museum', 'features.olive_tasting', 'features.santa_luzia_octopus', 'features.al_lagar_tapas'],
     image: TAVIRA_ROOTS_WINE_GALLERY[0],
     gallery: TAVIRA_ROOTS_WINE_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     fareHarborProductId: 611701,
     fareHarborFlowId: 1006571,
     itinerary: [
-      { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
-      { activity: 'Ria Formosa, Salinas e Flora/Fauna' },
-      { activity: 'Antiga Vila de pescadores de atum e Olive tasting' },
-      { activity: 'Santa Luzia (Capital do Polvo)' },
-      { activity: 'Al-Lagar (inclui 1 copo de vinho e tapas)' }
+      { activity: 'features.historical_center' },
+      { activity: 'features.ria_formosa_fauna_flora' },
+      { activity: 'features.tuna_museum' },
+      { activity: 'features.santa_luzia_octopus' },
+      { activity: 'features.al_lagar_tapas' }
     ]
   },
   {
@@ -725,17 +723,17 @@ export const jeepTours: Tour[] = [
     duration: '3h',
     pax: '2-5',
     descriptionKey: 'tours.jeep_boat_history.desc',
-    features: ['Centro Histórico', 'jardim castelo', 'Ponte Antiga', 'Ria Formosa', 'Salinas', 'Flora e Fauna', 'Aves', 'Antiga Vila pescadores de atum (museu atum)', 'Olive tasting', 'Santa Luzia (capital do polvo)', 'Passeio barco Ria Formosa', 'Regresso Tavira'],
+    features: ['features.historical_center', 'features.castle_garden', 'features.old_bridge', 'features.ria_formosa', 'features.salt_pans', 'features.ria_formosa_fauna_flora', 'features.bird_watching', 'features.tuna_museum', 'features.olive_tasting', 'features.santa_luzia_octopus', 'features.boat_tour'],
     image: JEEP_BOAT_HISTORY_GALLERY[0],
     gallery: JEEP_BOAT_HISTORY_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     fareHarborProductId: 695531,
     itinerary: [
-      { activity: 'Centro Histórico, Jardim do Castelo e Ponte Antiga' },
-      { activity: 'Ria Formosa, Salinas e Flora/Fauna' },
-      { activity: 'Antiga Vila de pescadores de atum e Olive tasting' },
-      { activity: 'Santa Luzia (Capital do Polvo)' },
-      { activity: 'Passeio de barco pela Ria Formosa e regresso a Tavira' }
+      { activity: 'features.historical_center' },
+      { activity: 'features.ria_formosa_fauna_flora' },
+      { activity: 'features.tuna_museum' },
+      { activity: 'features.santa_luzia_octopus' },
+      { activity: 'features.boat_tour' }
     ]
   },
   {
@@ -747,15 +745,15 @@ export const jeepTours: Tour[] = [
     duration: '3h',
     pax: '2-5',
     descriptionKey: 'tours.ceramica.desc',
-    features: ['Rio Sequa', 'Asseca', 'Barrocal', 'cascatas', 'Campo', 'Ceramica Tradicional', 'Terracota', 'fabrico manual'],
+    features: ['features.sequa_river', 'features.asseca', 'features.barrocal', 'features.waterfalls', 'features.countryside', 'features.traditional_ceramics', 'features.terracotta', 'features.manual_production'],
     image: CERAMICA_TRADICIONAL_GALLERY[0],
     gallery: CERAMICA_TRADICIONAL_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     fareHarborProductId: 509205,
     itinerary: [
-      { activity: 'Rio Sequa e Asseca' },
-      { activity: 'Barrocal, Cascatas e Campo' },
-      { activity: 'Cerâmica Tradicional (Terracota) e fabrico manual' }
+      { activity: 'features.sequa_river' },
+      { activity: 'features.barrocal' },
+      { activity: 'features.traditional_ceramics' }
     ]
   },
   {
@@ -767,19 +765,19 @@ export const jeepTours: Tour[] = [
     duration: '6h30',
     pax: '2-5',
     descriptionKey: 'tours.full_day_sotavento.desc',
-    features: ['Rio Sequa', 'Asseca', 'Barrocal', 'cascatas', 'Campo', 'Ceramica Tradicional', 'Terracota', 'fabrico manual', 'Olhao', 'Ria Formosa', 'Fuseta', 'Salinas', 'Oliveira 2000 anos', 'Santa Luzia', 'Tavira', 'Almoco Ti Maria', 'Antiga Vila pescadores de atum (museu atum)', 'Olive tasting', 'Cacela Velha'],
+    features: ['features.sequa_river', 'features.asseca', 'features.barrocal', 'features.waterfalls', 'features.countryside', 'features.traditional_ceramics', 'features.terracotta', 'features.manual_production', 'features.olhao', 'features.ria_formosa', 'features.fuseta', 'features.salt_pans', 'features.olive_tree_2000', 'features.santa_luzia_octopus', 'features.historical_center', 'features.ti_maria_menu', 'features.tuna_museum', 'features.olive_tasting', 'features.cacela_velha'],
     image: DIA_COMPLETO_SOTAVENTO_GALLERY[0],
     gallery: DIA_COMPLETO_SOTAVENTO_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     fareHarborProductId: 506785,
     itinerary: [
-      { activity: 'Rio Sequa, Asseca, Barrocal e Cascatas' },
-      { activity: 'Cerâmica Tradicional e fabrico manual' },
-      { activity: 'Olhão, Ria Formosa, Fuzeta e Salinas' },
-      { activity: 'Oliveira de 2000 anos e Santa Luzia' },
-      { activity: 'Almoço no Ti Maria' },
-      { activity: 'Antiga Vila de pescadores de atum e Olive tasting' },
-      { activity: 'Cacela Velha' }
+      { activity: 'features.sequa_river' },
+      { activity: 'features.traditional_ceramics' },
+      { activity: 'features.olhao' },
+      { activity: 'features.olive_tree_2000' },
+      { activity: 'features.ti_maria_menu' },
+      { activity: 'features.olive_tasting' },
+      { activity: 'features.cacela_velha' }
     ]
   }
 ];

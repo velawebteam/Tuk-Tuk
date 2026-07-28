@@ -71,8 +71,8 @@ export default function TourDetail() {
   if (!tour) {
     return (
       <div className="pt-40 pb-20 text-center">
-        <h1 className="text-2xl font-bold">Tour não encontrada</h1>
-        <Link to="/" className="text-orange-600 mt-4 inline-block underline">Voltar ao início</Link>
+        <h1 className="text-2xl font-bold">Tour not found</h1>
+        <Link to="/" className="text-orange-600 mt-4 inline-block underline">{t('nav.home')}</Link>
       </div>
     );
   }
@@ -205,15 +205,15 @@ export default function TourDetail() {
 
             {/* Why Book With Us Section */}
             <div className="bg-white p-8 rounded-[2rem] border border-brand-brown/5 shadow-sm space-y-6">
-              <h3 className="text-xl font-black text-brand-black uppercase tracking-tight">Porquê reservar connosco?</h3>
+              <h3 className="text-xl font-black text-brand-black uppercase tracking-tight">{t('tour_detail.why_us')}</h3>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="w-10 h-10 bg-brand-brown/10 rounded-xl flex items-center justify-center text-brand-brown shrink-0">
                     <Star size={20} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-brand-black uppercase tracking-tight text-sm">Experiência Local Real</h4>
-                    <p className="text-xs text-brand-black/60 font-medium leading-relaxed mt-1">Guias apaixonados que conhecem todos os segredos de Tavira.</p>
+                    <h4 className="font-bold text-brand-black uppercase tracking-tight text-sm">{t('tour_detail.real_experience')}</h4>
+                    <p className="text-xs text-brand-black/60 font-medium leading-relaxed mt-1">{t('tour_detail.real_experience_desc')}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -221,8 +221,8 @@ export default function TourDetail() {
                     <ShieldCheck size={20} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-brand-black uppercase tracking-tight text-sm">Privado e Exclusivo</h4>
-                    <p className="text-xs text-brand-black/60 font-medium leading-relaxed mt-1">Sem grupos grandes. Apenas você, os seus amigos ou família.</p>
+                    <h4 className="font-bold text-brand-black uppercase tracking-tight text-sm">{t('tour_detail.private_exclusive')}</h4>
+                    <p className="text-xs text-brand-black/60 font-medium leading-relaxed mt-1">{t('tour_detail.private_exclusive_desc')}</p>
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
@@ -230,8 +230,8 @@ export default function TourDetail() {
                     <Calendar size={20} />
                   </div>
                   <div>
-                    <h4 className="font-bold text-brand-black uppercase tracking-tight text-sm">Reserva Flexível</h4>
-                    <p className="text-xs text-brand-black/60 font-medium leading-relaxed mt-1">Apoio total via WhatsApp para planear a sua experiência.</p>
+                    <h4 className="font-bold text-brand-black uppercase tracking-tight text-sm">{t('tour_detail.flexible_booking')}</h4>
+                    <p className="text-xs text-brand-black/60 font-medium leading-relaxed mt-1">{t('tour_detail.flexible_booking_desc')}</p>
                   </div>
                 </div>
               </div>
@@ -303,7 +303,7 @@ export default function TourDetail() {
               </div>
               <p className="text-[10px] text-brand-cream/30 text-center uppercase tracking-widest font-bold flex items-center justify-center gap-2">
                 <ShieldCheck size={14} className="text-brand-brown" />
-                Reserva segura via WhatsApp / FareHarbor
+                {t('tour_detail.secure_booking')}
               </p>
             </div>
 
@@ -321,32 +321,32 @@ export default function TourDetail() {
             )}
 
             <div>
-              <h3 className="text-2xl font-black text-brand-black mb-6 uppercase tracking-tight">O que inclui?</h3>
+              <h3 className="text-2xl font-black text-brand-black mb-6 uppercase tracking-tight">{t('tour_detail.whats_included')}</h3>
               <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
                 {tour.features.map((feature, i) => (
                   <li key={i} className="flex items-center gap-3 text-brand-black/60 font-medium">
                     <CheckCircle2 size={18} className="text-brand-brown shrink-0" />
-                    <span className="uppercase tracking-wide text-xs font-bold">{feature}</span>
+                    <span className="uppercase tracking-wide text-xs font-bold">{t(feature)}</span>
                   </li>
                 ))}
                 <li className="flex items-center gap-3 text-brand-black/60 font-medium">
                   <CheckCircle2 size={18} className="text-brand-brown shrink-0" />
-                  <span className="uppercase tracking-wide text-xs font-bold">Guia Privado</span>
+                  <span className="uppercase tracking-wide text-xs font-bold">{t('features.private_guide')}</span>
                 </li>
                 <li className="flex items-center gap-3 text-brand-black/60 font-medium">
                   <CheckCircle2 size={18} className="text-brand-brown shrink-0" />
-                  <span className="uppercase tracking-wide text-xs font-bold">Seguro de Responsabilidade</span>
+                  <span className="uppercase tracking-wide text-xs font-bold">{t('features.insurance')}</span>
                 </li>
               </ul>
 
               {tour.notIncluded && (
                 <>
-                  <h3 className="text-2xl font-black text-brand-black mb-6 uppercase tracking-tight">Não inclui</h3>
+                  <h3 className="text-2xl font-black text-brand-black mb-6 uppercase tracking-tight">{t('tour_detail.not_included')}</h3>
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
                     {tour.notIncluded.map((item, i) => (
                       <li key={i} className="flex items-center gap-3 text-brand-black/60 font-medium">
                         <XCircle size={18} className="text-brand-brown shrink-0" />
-                        <span className="uppercase tracking-wide text-xs font-bold">{item}</span>
+                        <span className="uppercase tracking-wide text-xs font-bold">{t(item)}</span>
                       </li>
                     ))}
                   </ul>
@@ -359,13 +359,13 @@ export default function TourDetail() {
                 <div className="bg-white p-6 rounded-3xl border border-brand-brown/5 shadow-sm">
                   <div className="flex items-center gap-3 mb-4">
                     <Backpack className="text-brand-brown" size={20} />
-                    <h4 className="font-black text-brand-black uppercase tracking-tight">O que trazer</h4>
+                    <h4 className="font-black text-brand-black uppercase tracking-tight">{t('tour_detail.what_to_bring')}</h4>
                   </div>
                   <ul className="space-y-2">
                     {tour.toBring.map((item, i) => (
                       <li key={i} className="text-xs text-brand-black/60 font-bold uppercase tracking-wide flex items-center gap-2">
                         <div className="w-1 h-1 bg-brand-brown rounded-full" />
-                        {item}
+                        {t(item)}
                       </li>
                     ))}
                   </ul>
@@ -376,13 +376,13 @@ export default function TourDetail() {
                 <div className="bg-white p-6 rounded-3xl border border-brand-brown/5 shadow-sm">
                   <div className="flex items-center gap-3 mb-4">
                     <Info className="text-brand-brown" size={20} />
-                    <h4 className="font-black text-brand-black uppercase tracking-tight">Bom saber</h4>
+                    <h4 className="font-black text-brand-black uppercase tracking-tight">{t('tour_detail.good_to_know')}</h4>
                   </div>
                   <ul className="space-y-2">
                     {tour.goodToKnow.map((item, i) => (
                       <li key={i} className="text-xs text-brand-black/60 font-bold uppercase tracking-wide flex items-center gap-2">
                         <div className="w-1 h-1 bg-brand-brown rounded-full" />
-                        {item}
+                        {t(item)}
                       </li>
                     ))}
                   </ul>
@@ -394,7 +394,7 @@ export default function TourDetail() {
               <div className="bg-brand-cream-dark/20 p-8 rounded-[2rem] border border-brand-brown/5">
                 <div className="flex items-center gap-3 mb-8">
                   <Map className="text-brand-brown" size={24} />
-                  <h3 className="text-2xl font-black text-brand-black uppercase tracking-tight">Itinerário</h3>
+                  <h3 className="text-2xl font-black text-brand-black uppercase tracking-tight">{t('tour_detail.itinerary')}</h3>
                 </div>
                 <div className="space-y-6 relative before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[2px] before:bg-brand-brown/20">
                   {tour.itinerary.map((step, i) => (
@@ -403,7 +403,7 @@ export default function TourDetail() {
                       {step.time && (
                         <span className="text-[10px] font-black text-brand-brown uppercase tracking-widest block mb-1">{step.time}</span>
                       )}
-                      <p className="text-sm text-brand-black font-bold uppercase tracking-wide">{step.activity}</p>
+                      <p className="text-sm text-brand-black font-bold uppercase tracking-wide">{t(step.activity)}</p>
                     </div>
                   ))}
                 </div>

@@ -1,20 +1,23 @@
 import { Mail, Phone, MapPin, Instagram, Facebook, Clock } from 'lucide-react';
 import { SEO } from '../components/SEO';
+import { useTranslation } from 'react-i18next';
 
 export default function Contact() {
+  const { t } = useTranslation();
+  
   return (
     <div className="pt-28 md:pt-40 pb-24 bg-brand-cream min-h-screen">
       <SEO 
-        title="Contactos | Fale Connosco"
-        description="Tem alguma questão sobre as nossas tours privadas de Tuk Tuk ou Jipe? Entre em contacto connosco para planear a sua experiência perfeita em Tavira."
+        title={`${t('contact_page.title')} | Tavira Roots`}
+        description={t('contact_page.subtitle')}
         canonical="/contactos"
       />
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20">
           <div>
-            <h1 className="text-3xl md:text-5xl font-black text-brand-black mb-8 uppercase tracking-tight">Fale Connosco</h1>
+            <h1 className="text-3xl md:text-5xl font-black text-brand-black mb-8 uppercase tracking-tight">{t('contact_page.title')}</h1>
             <p className="text-xl text-brand-black/60 mb-12 font-medium leading-relaxed">
-              Tem alguma questão sobre as nossas tours privadas? Estamos aqui para ajudar a planear a sua experiência perfeita em Tavira.
+              {t('contact_page.subtitle')}
             </p>
 
             <div className="space-y-8">
@@ -23,9 +26,9 @@ export default function Contact() {
                   <Phone size={24} />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-brand-black uppercase tracking-tight">Telefone / WhatsApp</h3>
+                  <h3 className="text-lg font-bold text-brand-black uppercase tracking-tight">{t('contact_page.phone_whatsapp')}</h3>
                   <p className="text-brand-black/60 font-medium">+351 968 995 275</p>
-                  <p className="text-[10px] text-brand-black/30 font-bold uppercase tracking-widest mt-1">(Chamada para rede móvel nacional)</p>
+                  <p className="text-[10px] text-brand-black/30 font-bold uppercase tracking-widest mt-1">{t('contact_page.call_network_notice')}</p>
                 </div>
               </div>
 
@@ -34,7 +37,7 @@ export default function Contact() {
                   <Mail size={24} />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-brand-black uppercase tracking-tight">E-mail</h3>
+                  <h3 className="text-lg font-bold text-brand-black uppercase tracking-tight">{t('contact_page.email')}</h3>
                   <p className="text-brand-black/60 font-medium">info@mariastuktuk.com</p>
                 </div>
               </div>
@@ -44,7 +47,7 @@ export default function Contact() {
                   <MapPin size={24} />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-brand-black uppercase tracking-tight">Localização</h3>
+                  <h3 className="text-lg font-bold text-brand-black uppercase tracking-tight">{t('contact_page.location')}</h3>
                   <p className="text-brand-black/60 font-medium">Tavira, Algarve, Portugal</p>
                 </div>
               </div>
@@ -54,8 +57,8 @@ export default function Contact() {
                   <Clock size={24} />
                 </div>
                 <div>
-                  <h3 className="text-lg font-bold text-brand-black uppercase tracking-tight">Horário de Funcionamento</h3>
-                  <p className="text-brand-black/60 font-medium">Todos os dias: 09:00 - 19:00</p>
+                  <h3 className="text-lg font-bold text-brand-black uppercase tracking-tight">{t('contact_page.working_hours')}</h3>
+                  <p className="text-brand-black/60 font-medium">{t('contact_page.everyday')}: 09:00 - 19:00</p>
                 </div>
               </div>
             </div>
@@ -71,33 +74,33 @@ export default function Contact() {
           </div>
 
           <div className="bg-white rounded-[2rem] shadow-xl p-8 md:p-12 border border-brand-brown/5">
-            <h2 className="text-2xl font-black text-brand-black mb-8 uppercase tracking-tight">Envie uma mensagem</h2>
+            <h2 className="text-2xl font-black text-brand-black mb-8 uppercase tracking-tight">{t('contact_page.send_message')}</h2>
             <form action="mailto:info@mariastuktuk.com" method="POST" encType="text/plain" className="space-y-6">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div className="space-y-2">
-                  <label className="text-xs font-bold text-brand-black/40 uppercase tracking-widest">Nome</label>
-                  <input name="Nome" type="text" className="w-full px-4 py-3 rounded-xl bg-brand-cream/50 border-brand-brown/10 focus:bg-white focus:border-brand-brown focus:ring-0 transition-all font-medium" placeholder="O seu nome" />
+                  <label className="text-xs font-bold text-brand-black/40 uppercase tracking-widest">{t('contact_page.name_label')}</label>
+                  <input name="Nome" type="text" className="w-full px-4 py-3 rounded-xl bg-brand-cream/50 border-brand-brown/10 focus:bg-white focus:border-brand-brown focus:ring-0 transition-all font-medium" placeholder={t('contact_page.name_placeholder')} />
                 </div>
                 <div className="space-y-2">
-                  <label className="text-xs font-bold text-brand-black/40 uppercase tracking-widest">E-mail</label>
-                  <input name="Email" type="email" className="w-full px-4 py-3 rounded-xl bg-brand-cream/50 border-brand-brown/10 focus:bg-white focus:border-brand-brown focus:ring-0 transition-all font-medium" placeholder="o-seu@email.com" />
+                  <label className="text-xs font-bold text-brand-black/40 uppercase tracking-widest">{t('contact_page.email_label')}</label>
+                  <input name="Email" type="email" className="w-full px-4 py-3 rounded-xl bg-brand-cream/50 border-brand-brown/10 focus:bg-white focus:border-brand-brown focus:ring-0 transition-all font-medium" placeholder={t('contact_page.email_placeholder')} />
                 </div>
               </div>
               <div className="space-y-2">
-                <label className="text-xs font-bold text-brand-black/40 uppercase tracking-widest">Assunto</label>
+                <label className="text-xs font-bold text-brand-black/40 uppercase tracking-widest">{t('contact_page.subject_label')}</label>
                 <select name="Assunto" className="w-full px-4 py-3 rounded-xl bg-brand-cream/50 border-brand-brown/10 focus:bg-white focus:border-brand-brown focus:ring-0 transition-all font-medium">
-                  <option>Informações sobre Tours</option>
-                  <option>Reserva de Grupo Grande</option>
-                  <option>Pedido Especial</option>
-                  <option>Outro</option>
+                  <option>{t('contact_page.subject_options.info')}</option>
+                  <option>{t('contact_page.subject_options.group')}</option>
+                  <option>{t('contact_page.subject_options.special')}</option>
+                  <option>{t('contact_page.subject_options.other')}</option>
                 </select>
               </div>
               <div className="space-y-2">
-                <label className="text-xs font-bold text-brand-black/40 uppercase tracking-widest">Mensagem</label>
-                <textarea name="Mensagem" rows={5} className="w-full px-4 py-3 rounded-xl bg-brand-cream/50 border-brand-brown/10 focus:bg-white focus:border-brand-brown focus:ring-0 transition-all font-medium" placeholder="Como podemos ajudar?"></textarea>
+                <label className="text-xs font-bold text-brand-black/40 uppercase tracking-widest">{t('contact_page.message_label')}</label>
+                <textarea name="Mensagem" rows={5} className="w-full px-4 py-3 rounded-xl bg-brand-cream/50 border-brand-brown/10 focus:bg-white focus:border-brand-brown focus:ring-0 transition-all font-medium" placeholder={t('contact_page.message_placeholder')}></textarea>
               </div>
               <button className="w-full py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-xl font-black uppercase tracking-[0.2em] text-sm transition-all shadow-lg shadow-brand-brown/20">
-                Enviar Mensagem
+                {t('contact_page.send_button')}
               </button>
             </form>
           </div>

@@ -60,6 +60,99 @@
     "guides_title": "Passionate Guides",
     "guides_desc": "Our team knows every corner and story of Tavira, ensuring a rich and memorable experience."
   },
+  "tour_detail": {
+    "departure": "Departure Point",
+    "departure_desc": "We meet in Tavira city center or at your hotel (subject to confirmation).",
+    "why_us": "Why book with us?",
+    "real_experience": "Real Local Experience",
+    "real_experience_desc": "Passionate guides who know all the secrets of Tavira.",
+    "private_exclusive": "Private & Exclusive",
+    "private_exclusive_desc": "No large groups. Just you, your friends, or family.",
+    "flexible_booking": "Flexible Booking",
+    "flexible_booking_desc": "Full support via WhatsApp to plan your experience.",
+    "whats_included": "What's included?",
+    "not_included": "Not included",
+    "what_to_bring": "What to bring",
+    "good_to_know": "Good to know",
+    "itinerary": "Itinerary",
+    "secure_booking": "Secure booking via WhatsApp / FareHarbor",
+    "gtk": {
+      "ends_restaurant": "The tour ends at the restaurant",
+      "menu_ti_maria": "Menu defined by the restaurant (Ti Maria)",
+      "no_pickup_restaurant": "Does not include pick-up service from the restaurant",
+      "wine_tasting_3": "Includes tasting of 3 wines (Red, Rosé, and White)",
+      "bread_olive_oil": "Served with Bread and Olive Oil",
+      "ice_cream_pax": "Includes 1 scoop of ice cream per person (cup or cone)"
+    }
+  },
+  "contact_page": {
+    "title": "Contact Us",
+    "subtitle": "Have a question about our private tours? We're here to help you plan your perfect experience in Tavira.",
+    "phone_whatsapp": "Phone / WhatsApp",
+    "call_network_notice": "(Call to national mobile network)",
+    "email": "E-mail",
+    "location": "Location",
+    "working_hours": "Working Hours",
+    "everyday": "Every day",
+    "send_message": "Send a Message",
+    "name_label": "Name",
+    "email_label": "E-mail",
+    "name_placeholder": "Your name",
+    "email_placeholder": "your@email.com",
+    "subject_label": "Subject",
+    "subject_options": {
+      "info": "Tour Information",
+      "group": "Large Group Booking",
+      "special": "Special Request",
+      "other": "Other"
+    },
+    "message_label": "Message",
+    "message_placeholder": "How can we help?",
+    "send_button": "Send Message"
+  },
+  "features": {
+    "historical_center": "Historical Center",
+    "castle_garden": "Castle Garden",
+    "old_bridge": "Old Bridge",
+    "sequa_gilao_rivers": "Sequa & Gilão Rivers",
+    "ria_formosa_fauna_flora": "Ria Formosa Natural Park (Fauna & Flora)",
+    "ria_formosa": "Ria Formosa",
+    "salt_pans": "Salt Pans (Sea Salt)",
+    "church_visit": "St. Peter or St. Sebastian Church Visit",
+    "tuna_museum": "Old Tuna Fishing Village (Tuna Museum)",
+    "ti_maria_menu": "Ti Maria Restaurant (Full Meal)",
+    "al_lagar_wine": "Visit to Al-Lagar (Wine Tasting)",
+    "chocolate_tasting": "Ibelle Chocolaterie (Chocolate Tasting)",
+    "boat_tour": "Boat Tour in Ria Formosa",
+    "ice_cream": "100% Natural Ice Cream Shop",
+    "olive_factory": "Visit to Olive Factory (Tasting)",
+    "bird_watching": "Bird Watching",
+    "santa_luzia_octopus": "Santa Luzia (Octopus Capital)",
+    "olive_tasting": "Olive Tasting",
+    "cacela_velha": "Cacela Velha",
+    "cabanas_tavira": "Cabanas Tavira",
+    "alfama_restaurant": "Alfama Restaurant (Lunch Included)",
+    "fuseta": "Fuseta",
+    "olhao": "Olhão",
+    "mud_bath": "Salt Pans (Includes Dead Sea Spa & Mud Bath)",
+    "pottery_demo": "Pottery Workshop (Visit & Manual Demo)",
+    "moncarapacho": "Moncarapacho",
+    "monterosa": "Monterosa",
+    "olive_grove": "Olive Grove",
+    "olive_tree_2000": "2,000-Year-Old Olive Tree",
+    "anchor_graveyard": "Anchor Graveyard",
+    "al_lagar_tapas": "Al-Lagar (Wine & Tapas Included)",
+    "sequa_river": "Sequa River",
+    "asseca": "Asseca",
+    "barrocal": "Barrocal",
+    "waterfalls": "Waterfalls",
+    "countryside": "Countryside",
+    "traditional_ceramics": "Traditional Ceramics",
+    "terracotta": "Terracotta",
+    "manual_production": "Manual Production",
+    "private_guide": "Private Guide",
+    "insurance": "Liability Insurance"
+  },
   "home": {
     "featured_title": "Featured Experiences",
     "featured_subtitle": "Choose between the agile charm of the Tuk Tuk or the adventurous robustness of the Jeep. All our tours are customizable.",
@@ -131,7 +224,7 @@
       "desc": "A complete tour connecting the white gold of salt pans to the liquid gold of olive oil and the octopus capital."
     },
     "ria_formosa_jeep": {
-      "name": "Tavira Roots: Ria Formosa & Gastronomia",
+      "name": "Tavira Roots: Ria Formosa & Gastronomy",
       "desc": "Explore the beauty of Ria Formosa with a stop in Cacela Velha and a regional lunch included."
     },
     "fuzeta_olhao_bath": {
@@ -162,10 +255,6 @@
       "name": "Full Day in Eastern Algarve (Sotavento) w/ Lunch",
       "desc": "A full day to discover the Eastern Algarve with lunch included and authentic experiences."
     }
-  },
-  "tour_detail": {
-    "departure": "Departure Point",
-    "departure_desc": "We meet in Tavira city center or at your hotel (subject to confirmation)."
   },
   "footer": {
     "mission": "Private and exclusive experiences in Tavira. Discover the soul of the Algarve with us, in Tuk Tuk and Jeep tours designed for those who value authenticity and comfort.",
