@@ -29,7 +29,7 @@ export default function Home() {
             style={{ filter: 'contrast(1.1) brightness(0.8)' }}
             loading="eager"
           />
-          <div className="absolute inset-0 bg-black/50 z-10"></div>
+          <div className="absolute inset-0 bg-black/30 z-10"></div>
         </div>
         
         <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white text-center pt-28 md:pt-0">
