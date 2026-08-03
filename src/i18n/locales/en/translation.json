@@ -355,5 +355,33 @@
         "Beach Towel (For some tours)"
       ]
     }
-  }
+  },
+  "legal": {
+      "privacy_title": "Privacy Policy",
+      "privacy_intro": "Tavira Roots (RNAAT 535/2026) respects your privacy and is committed to protecting your personal data. This policy informs you about how we treat your personal data and about your privacy rights, in compliance with the General Data Protection Regulation (GDPR).",
+      "privacy_section1_title": "1. Data Controller",
+      "privacy_section1_text": "The entity responsible for processing your data is Tavira Roots, based in Tavira, Portugal. For any questions related to data protection, you can contact us through the official email available on the website.",
+      "privacy_section2_title": "2. Data We Collect",
+      "privacy_section2_text": "We collect data necessary for providing tourism animation services: name, email, phone number, address (if needed for billing), and payment details (processed securely by external partners like FareHarbor).",
+      "privacy_section3_title": "3. Purpose and Legal Basis",
+      "privacy_section3_text": "We process your data for: (a) Execution of the service provision contract (bookings); (b) Compliance with legal obligations (billing and mandatory insurance); (c) Sending marketing communications, if you have given explicit consent.",
+      "privacy_section4_title": "4. Data Retention",
+      "privacy_section4_text": "We keep your data only for the period necessary for the purposes for which they were collected, or to comply with legal archiving obligations (such as invoices, which must be kept for 10 years).",
+      "privacy_section5_title": "5. Your Rights",
+      "privacy_section5_text": "Under the law, you have the right to request access, rectification, erasure, restriction of processing, opposition, and portability of your data. You can exercise these rights by contacting us in writing.",
+      "privacy_section6_title": "6. Cookies and Third Parties",
+      "privacy_section6_text": "We use cookies to improve navigation. Your booking data is shared with the FareHarbor platform for ticketing management and with insurance companies to guarantee the mandatory policies of the RNAAT activity.",
+      "terms_title": "Terms and Conditions",
+      "terms_intro": "By using our website and booking our experiences, you agree to these Terms and Conditions of use of Tavira Roots (RNAAT 535/2026).",
+      "terms_section1_title": "1. Bookings and Payments",
+      "terms_section1_text": "Bookings are made online or in person. Confirmation is subject to payment of the total amount or agreed deposit. Prices shown include VAT at the legal rate in force.",
+      "terms_section2_title": "2. Cancellation Policy",
+      "terms_section2_text": "Cancellations more than 48 hours in advance: full refund (deducted from any bank administrative fees). Between 48h and 24h: 50% refund. Less than 24h or no-show: no right to a refund.",
+      "terms_section3_title": "3. Insurance and Safety",
+      "terms_section3_text": "Tavira Roots holds all insurance required by law in Portugal for the tourism animation activity. Clients must follow all safety instructions given by the guides during the route.",
+      "terms_section4_title": "4. Responsibility",
+      "terms_section4_text": "We are not responsible for loss or damage to clients' personal objects during tours. We reserve the right to change itineraries for reasons of force majeure, such as adverse weather conditions.",
+      "terms_section5_title": "5. Dispute Resolution",
+      "terms_section5_text": "In case of dispute, the consumer can resort to an Alternative Dispute Resolution Entity (e.g., CIMAAL - Algarve Consumer Information, Mediation and Arbitration Center). We also have an Electronic Complaints Book."
+    }
 }

@@ -79,7 +79,7 @@ export function Footer() {
               <li><Link to="/privacidade" className="hover:text-brand-brown transition-colors font-bold uppercase tracking-wider">{t('footer.privacy')}</Link></li>
               <li><Link to="/termos" className="hover:text-brand-brown transition-colors font-bold uppercase tracking-wider">{t('footer.terms')}</Link></li>
               <li><a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-brown transition-colors font-bold uppercase tracking-wider">{t('footer.complaints')}</a></li>
-              <li><span className="text-xs opacity-40 text-brand-black/40">RNAAT nº XXXX/XXXX</span></li>
+              <li><span className="text-xs opacity-40 text-brand-black/40 font-bold uppercase tracking-wider">RNAAT: 535/2026</span></li>
             </ul>
           </div>
         </div>

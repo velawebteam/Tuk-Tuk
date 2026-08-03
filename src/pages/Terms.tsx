@@ -1,18 +1,53 @@
+import { useTranslation } from 'react-i18next';
+
 export default function Terms() {
+  const { t } = useTranslation();
+
   return (
     <div className="pt-28 md:pt-40 pb-24 max-w-4xl mx-auto px-4">
-      <h1 className="text-4xl font-bold text-emerald-950 mb-8">Termos e Condições</h1>
-      <div className="prose prose-emerald lg:prose-lg max-w-none text-gray-600 space-y-6">
-        <p>Bem-vindo à Tavira Roots. Ao reservar as nossas experiências, concorda com os seguintes termos e condições.</p>
+      <h1 className="text-4xl md:text-5xl font-black text-brand-black mb-12 uppercase tracking-tight">
+        {t('legal.terms_title')}
+      </h1>
+      
+      <div className="prose prose-lg max-w-none text-brand-black/70 space-y-12">
+        <p className="text-xl leading-relaxed font-medium text-brand-black">
+          {t('legal.terms_intro')}
+        </p>
         
-        <h2 className="text-2xl font-bold text-emerald-900 mt-12">1. Reservas e Pagamentos</h2>
-        <p>As reservas são confirmadas após o pagamento integral ou parcial através do nosso sistema FareHarbor. Os preços incluem IVA à taxa legal em vigor.</p>
+        <section>
+          <h2 className="text-2xl font-bold text-brand-black mb-4 uppercase tracking-wide">
+            {t('legal.terms_section1_title')}
+          </h2>
+          <p>{t('legal.terms_section1_text')}</p>
+        </section>
 
-        <h2 className="text-2xl font-bold text-emerald-900 mt-12">2. Cancelamentos e Reembolsos</h2>
-        <p>Cancelamentos efectuados com mais de 48 horas de antecedência terão direito a reembolso total. Cancelamentos efectuados com menos de 48 horas não serão reembolsáveis, salvo situações excepcionais analisadas caso a caso.</p>
+        <section>
+          <h2 className="text-2xl font-bold text-brand-black mb-4 uppercase tracking-wide">
+            {t('legal.terms_section2_title')}
+          </h2>
+          <p>{t('legal.terms_section2_text')}</p>
+        </section>
 
-        <h2 className="text-2xl font-bold text-emerald-900 mt-12">3. Responsabilidade</h2>
-        <p>A Tavira Roots dispõe de todos os seguros obrigatórios por lei para a actividade de animação turística (RNAAT). No entanto, não nos responsabilizamos por perdas de objectos pessoais durante as tours.</p>
+        <section>
+          <h2 className="text-2xl font-bold text-brand-black mb-4 uppercase tracking-wide">
+            {t('legal.terms_section3_title')}
+          </h2>
+          <p>{t('legal.terms_section3_text')}</p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-brand-black mb-4 uppercase tracking-wide">
+            {t('legal.terms_section4_title')}
+          </h2>
+          <p>{t('legal.terms_section4_text')}</p>
+        </section>
+
+        <section>
+          <h2 className="text-2xl font-bold text-brand-black mb-4 uppercase tracking-wide">
+            {t('legal.terms_section5_title')}
+          </h2>
+          <p>{t('legal.terms_section5_text')}</p>
+        </section>
       </div>
     </div>
   );

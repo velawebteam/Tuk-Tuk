@@ -355,5 +355,33 @@
         "Serviette de Plage (Pour certaines visites)"
       ]
     }
-  }
+  },
+  "legal": {
+      "privacy_title": "Politique de Confidentialité",
+      "privacy_intro": "Tavira Roots (RNAAT 535/2026) respecte votre vie privée et s'engage à protéger vos données personnelles. Cette politique vous informe sur la manière dont nous traitons vos données personnelles et sur vos droits à la vie privée, conformément ao Règlement Général sur la Protection des Données (RGPD).",
+      "privacy_section1_title": "1. Responsable du Traitement",
+      "privacy_section1_text": "L'entité responsable du traitement de vos données est Tavira Roots, basée à Tavira, Portugal. Pour toute question relative à la protection des données, vous pouvez nous contacter via l'e-mail officiel disponible sur le site.",
+      "privacy_section2_title": "2. Données que nous Collectons",
+      "privacy_section2_text": "Nous collectons les données nécessaires à la prestation de services d'animation touristique : nom, e-mail, téléphone, adresse (si nécessaire pour la facturation) et coordonnées de paiement (traitées en toute sécurité par des partenaires externes comme FareHarbor).",
+      "privacy_section3_title": "3. Finalité et Base Juridique",
+      "privacy_section3_text": "Nous traitons vos données pour : (a) L'exécution du contrat de prestation de services (réservations) ; (b) Le respect des obligations légales (facturation et assurances obligatoires) ; (c) L'envoi de communications marketing, si vous avez donné votre consentement explicite.",
+      "privacy_section4_title": "4. Conservation des Données",
+      "privacy_section4_text": "Nous conservons vos données uniquement pendant la durée nécessaire aux finalités pour lesquelles elles ont été collectées, ou pour respecter les obligations légales d'archivage (comme les factures, qui doivent être conservées 10 ans).",
+      "privacy_section5_title": "5. Vos Droits",
+      "privacy_section5_text": "En vertu de la loi, vous avez le droit de demander l'accès, la rectification, l'effacement, la limitation du traitement, l'opposition et la portabilité de vos données. Vous pouvez exercer ces droits en nous contactant par écrit.",
+      "privacy_section6_title": "6. Cookies et Tiers",
+      "privacy_section6_text": "Nous utilisons des cookies pour améliorer la navigation. Vos données de réservation sont partagées avec la plateforme FareHarbor pour la gestion de la billetterie et avec les compagnies d'assurance pour garantir les polices obligatoires de l'activité RNAAT.",
+      "terms_title": "Termos et Conditions",
+      "terms_intro": "En utilisant notre site web et en réservant nos expériences, vous acceptez les présents Termes et Conditions d'utilisation de Tavira Roots (RNAAT 535/2026).",
+      "terms_section1_title": "1. Réservations et Paiements",
+      "terms_section1_text": "Les réservations se font en ligne ou en personne. La confirmation est soumise au paiement du montant total ou de l'acompte convenu. Les prix indiqués incluent la TVA au taux légal en vigueur.",
+      "terms_section2_title": "2. Politique d'Annulation",
+      "terms_section2_text": "Annulations plus de 48 heures à l'avance : remboursement intégral (déduit des éventuels frais administratifs bancaires). Entre 48h et 24h : remboursement de 50%. Moins de 24h ou non-présentation : aucun droit au remboursement.",
+      "terms_section3_title": "3. Assurances et Sécurité",
+      "terms_section3_text": "Tavira Roots détient toutes les assurances requises par la loi au Portugal pour l'activité d'animation touristique. Les clients doivent suivre toutes les consignes de sécurité données par les guides pendant le parcours.",
+      "terms_section4_title": "4. Responsabilité",
+      "terms_section4_text": "Nous ne sommes pas responsables de la perte ou des dommages aux objets personnels des clients pendant les tours. Nous nous réservons le droit de modifier les itinéraires pour des raisons de force majeure, telles que des conditions météorologiques défavorables.",
+      "terms_section5_title": "5. Résolution des Litiges",
+      "terms_section5_text": "En cas de litige, le consommateur peut recourir à une entité de règlement alternatif des litiges de consommation (Ex : CIMAAL - Centre d'information, de médiation et d'arbitrage de la consommation de l'Algarve). Nous disposons également d'un livre de réclamations électronique."
+    }
 }
