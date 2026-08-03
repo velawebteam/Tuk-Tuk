@@ -4,10 +4,12 @@
  */
 
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import { AnimatePresence } from 'motion/react';
 import { Navbar } from './components/Navbar';
 import { Footer } from './components/Footer';
 import { VideoPreloader } from './components/VideoPreloader';
+import { LoadingScreen } from './components/LoadingScreen';
 import Home from './pages/Home';
 import TukTuk from './pages/TukTuk';
 import Jeep from './pages/Jeep';
@@ -28,8 +30,31 @@ function ScrollToTop() {
 }
 
 export default function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Show loading screen for at least 3 seconds for branding
+    // or until the window has finished loading everything
+    const minLoadingTime = new Promise(resolve => setTimeout(resolve, 3000));
+    const windowLoad = new Promise(resolve => {
+      if (document.readyState === 'complete') {
+        resolve(null);
+      } else {
+        window.addEventListener('load', resolve);
+      }
+    });
+
+    Promise.all([minLoadingTime, windowLoad]).then(() => {
+      setIsLoading(false);
+    });
+  }, []);
+
   return (
     <Router>
+      <AnimatePresence mode="wait">
+        {isLoading && <LoadingScreen key="loading" />}
+      </AnimatePresence>
+      
       <div className="min-h-screen bg-brand-cream font-sans text-brand-black overflow-x-hidden w-full max-w-full relative">
         <ScrollToTop />
         <VideoPreloader />

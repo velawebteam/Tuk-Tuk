@@ -167,6 +167,22 @@
     "tapas": "Tapas",
     "city": "City",
     "octopus_tuna": "Octopus & Tuna",
+    "city_tavira": {
+      "title": "The City of Tavira",
+      "subtitle": "A Gem of the Algarve",
+      "description": "Tavira is one of the most charming and authentic cities in the Algarve. Known for its 37 churches, the Roman Bridge over the Gilão River, and its preserved historic center, Tavira invites you on a journey through time. From ancestral salt pans to white sand beaches on Tavira Island, the city is a perfect balance between historical heritage and natural beauty.",
+      "highlight1": "Historical Heritage",
+      "highlight2": "Local Culture",
+      "highlight3": "Pure Nature"
+    },
+    "sotavento": {
+      "title": "The Eastern Algarve",
+      "subtitle": "Tranquility and Tradition",
+      "description": "The Sotavento is the most authentic and tranquil area of the Algarve. Stretching from Faro to the Spanish border, this region is characterized by warmer waters, the white sand islands of the Ria Formosa, and picturesque villages that maintain their essence. Here, the pace is calmer, the gastronomy is rich in sea flavors, and nature surrounds you at every corner.",
+      "highlight1": "Warmer Waters",
+      "highlight2": "Typical Villages",
+      "highlight3": "Ria Formosa"
+    },
     "cta_box_title": "Ready for your private adventure?",
     "cta_box_subtitle": "Book now and secure your spot on the best tour in Tavira. Exclusivity and fun guaranteed."
   },
@@ -299,6 +315,18 @@
     "a5": "Children up to 3 years old travel for free (on lap). For children between 4 and 12 years old, we have special prices on certain tours. Check the details for each tour.",
     "q6": "Can we customize the itinerary?",
     "a6": "Since the tours are private, we have some flexibility. If there's a specific point in Tavira you really want to see, talk to your guide at the start of the tour and we'll try to adapt the route.",
+    "q7": "What is the best Tuk Tuk tour in Tavira?",
+    "a7": "Our \"Tavira Total\" tour is the most popular, as it combines the history of the historic center, a visit to the traditional salt pans, and the Ria Formosa area in one complete private route.",
+    "q8": "What to do in Tavira in 1 day?",
+    "a8": "If you only have one day in Tavira, we recommend a Tuk Tuk tour in the morning to see the historic center and the 37 churches, lunch in Santa Luzia (the octopus capital), and a jeep or boat tour in the afternoon to explore the Ria Formosa.",
+    "q9": "Where to see the sunset in Tavira?",
+    "a9": "The best sunset in Tavira is from the top of the Castle or in Cacela Velha. Our late afternoon jeep tours usually include strategic stops at these panoramic spots for a magical experience.",
+    "q10": "Is Tavira Roots pet-friendly?",
+    "a10": "Yes! Since our tours are private, your pets are welcome in the Tuk Tuk or Jeep. We just ask that you inform us at the time of booking.",
+    "q11": "How long does a Tuk Tuk tour in Tavira last?",
+    "a11": "We have tours ranging from 45 minutes (city essentials) to full-day experiences of 7-8 hours that include lunch and boat trips.",
+    "q12": "Where are the Tavira salt pans located?",
+    "a12": "The Tavira salt pans are located in the heart of the Ria Formosa Natural Park. In our tours, we visit traditional salt pans where you can see the extraction of Fleur de Sel and observe flamingos in the wild.",
     "still_doubts": "Still have questions?",
     "contact_us": "Contact us Directly"
   },

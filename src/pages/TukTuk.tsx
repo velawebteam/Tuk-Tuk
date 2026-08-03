@@ -47,7 +47,7 @@ export default function TukTuk() {
           <div className="absolute inset-0 bg-black/40 z-10" />
           <iframe
             className="absolute top-1/2 left-1/2 w-[500%] h-[120%] md:w-[150%] md:h-[150%] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-            src="https://www.youtube.com/embed/8ZDu00ylXKY?autoplay=1&mute=1&loop=1&playlist=8ZDu00ylXKY&controls=0&showinfo=0&autohide=1&modestbranding=1&rel=0&hd=1"
+            src="https://www.youtube.com/embed/8ZDu00ylXKY?autoplay=1&mute=1&loop=1&playlist=8ZDu00ylXKY&controls=0&showinfo=0&autohide=1&modestbranding=1&rel=0&hd=1&vq=hd1080"
             allow="autoplay; encrypted-media"
             title="Background Video"
             style={{ filter: 'contrast(1.1) brightness(0.9)' }}

@@ -4,6 +4,7 @@
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Cinzel", serif;
+  --font-cinzel: "Cinzel", serif;
   
   --color-brand-cream: #FCFAF4;
   --color-brand-brown: #6A5636;
@@ -28,6 +29,15 @@
 
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
+  }
+
+  button {
+    font-family: var(--font-cinzel);
+  }
+
+  /* Target Link components styled as buttons or action elements */
+  a.px-8, a.px-6, a.px-10, a.py-4, a.py-5, .font-display {
+    font-family: var(--font-cinzel);
   }
   
   /* Hide scrollbar for Chrome, Safari and Opera */

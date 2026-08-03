@@ -12,7 +12,7 @@
     "title_part1": "Tavira Roots | ",
     "title_highlight": "Passeios Exclusivos",
     "title_part2": " em Tavira",
-    "subtitle": "Em família ou com amigos, viva a essência de Tavira. Da pesca e do sal marinho aos vinhos locais, ao chocolate, ao azeite e à gastronomia local, cada experiência revela a alma da nossa terra.",
+    "subtitle": "Em família ou com amigos, viva a essência de Tavira. Da pesca e do sal marinho aos vinhos locais, chocolate, azeite e à gastronomia local, cada experiência revela a alma da nossa terra.",
     "cta_tuk": "Passeios Tuk Tuk",
     "cta_jeep": "Aventura em Jipe"
   },
@@ -167,6 +167,22 @@
     "tapas": "Tapas",
     "city": "Cidade",
     "octopus_tuna": "Polvo e Atum",
+    "city_tavira": {
+      "title": "A Cidade de Tavira",
+      "subtitle": "Uma Joia do Algarve",
+      "description": "Tavira é uma das cidades mais charmosas e autênticas do Algarve. Conhecida pelas suas 37 igrejas, a Ponte Romana sobre o Rio Gilão e o seu centro histórico preservado, Tavira convida a uma viagem no tempo. Desde as salinas ancestrais até às praias de areia branca na Ilha de Tavira, a cidade é um equilíbrio perfeito entre património histórico e beleza natural.",
+      "highlight1": "Património Histórico",
+      "highlight2": "Cultura Local",
+      "highlight3": "Natureza Pura"
+    },
+    "sotavento": {
+      "title": "O Sotavento Algarvio",
+      "subtitle": "Tranquilidade e Tradição",
+      "description": "O Sotavento é a zona mais autêntica e tranquila do Algarve. Estendendo-se de Faro até à fronteira com Espanha, esta região é caracterizada pelas águas mais quentes, pelas ilhas de areia branca da Ria Formosa e por vilas pitorescas que mantêm a sua essência. Aqui, o ritmo é mais calmo, a gastronomia é rica em sabores do mar e a natureza envolve-nos em cada recanto.",
+      "highlight1": "Águas Quentes",
+      "highlight2": "Vilas Típicas",
+      "highlight3": "Ria Formosa"
+    },
     "cta_box_title": "Pronto para a sua aventura privada?",
     "cta_box_subtitle": "Reserve agora e garanta a sua vaga na melhor tour de Tavira. Exclusividade e diversão garantidas."
   },
@@ -240,7 +256,7 @@
       "desc": "Visite oliveiras milenares e prove o melhor azeite da região num cenário histórico."
     },
     "jeep_boat_anchors": {
-      "name": "Jeep & Barco - Cemitério das Âncoras",
+      "name": "Jipe & Barco - Cemitério das Âncoras",
       "desc": "A combinação perfeita entre terra e mar, com visita ao icónico cemitério das âncoras."
     },
     "tavira_roots_wine": {
@@ -248,7 +264,7 @@
       "desc": "A essência de Tavira num passeio que termina com vinhos e tapas locais."
     },
     "jeep_boat_history": {
-      "name": "Jeep & Barco - História e Natureza",
+      "name": "Jipe & Barco - História e Natureza",
       "desc": "Uma jornada pela história e natureza de Tavira, explorando a Ria Formosa de barco e jipe."
     },
     "full_day_sotavento": {
@@ -294,11 +310,23 @@
     "q3": "As tours incluem visitas às fábricas?",
     "a3": "Sim, dependendo da tour escolhida. Temos parcerias com fábricas de chocolate, azeitonas, salinas e cerâmica. O tempo de visita e degustações variam conforme o itinerário.",
     "q4": "O guia fala que línguas?",
-    "a4": "Os nossos guias dos tuk tuk's falam português, inglês, espanhol e francês. Os nossos guias do jeep falam português, espanhol e inglês.",
+    "a4": "Os nossos guias dos tuk tuk's falam português, inglês, espanhol e francês. Os nossos guias do jipe falam português, espanhol e inglês.",
     "q5": "As crianças pagam o mesmo valor?",
     "a5": "Crianças até aos 3 anos viajam gratuitamente (no colo). Para crianças entre os 4 e 12 anos, temos preços especiais em determinadas tours. Consulte os detalhes em cada tour.",
     "q6": "Podemos personalizar o roteiro?",
     "a6": "Como os passeios são privados, temos alguma flexibilidade. Se houver um ponto específico em Tavira que queira muito ver, fale com o seu guia no início da tour e tentaremos adaptar o percurso.",
+    "q7": "Qual o melhor passeio de Tuk Tuk em Tavira?",
+    "a7": "O nosso passeio \"Tavira Total\" é o mais popular, pois combina a história do centro histórico, a visita às salinas tradicionais e à zona da Ria Formosa num só percurso completo e privado.",
+    "q8": "O que fazer em Tavira em 1 dia?",
+    "a8": "Se só tem um dia em Tavira, recomendamos um passeio de Tuk Tuk de manhã para conhecer o centro histórico e as 37 igrejas, almoçar em Santa Luzia (a capital do polvo) e fazer um passeio de jipe ou barco à tarde para explorar a Ria Formosa.",
+    "q9": "Onde ver o pôr do sol em Tavira?",
+    "a9": "O melhor pôr do sol de Tavira é no topo do Castelo ou em Cacela Velha. Os nossos passeios de jipe de final de tarde costumam incluir paragens estratégicas nestes pontos panorâmicos para uma experiência mágica.",
+    "q10": "A Tavira Roots é pet-friendly?",
+    "a10": "Sim! Como os nossos passeios são privados, os seus animais de estimação são bem-vindos no Tuk Tuk ou no Jipe. Pedimos apenas que nos informe no momento da reserva.",
+    "q11": "Quanto tempo dura um tour de Tuk Tuk em Tavira?",
+    "a11": "Temos tours que variam entre os 45 minutos (essencial da cidade) até experiências de dia completo de 7-8 horas que incluem almoço e passeios de barco.",
+    "q12": "Onde ficam as salinas de Tavira?",
+    "a12": "As salinas de Tavira situam-se em pleno Parque Natural da Ria Formosa. Nos nossos passeios, visitamos salinas tradicionais onde pode ver a extração da Flor de Sal e observar flamingos em estado selvagem.",
     "still_doubts": "Ainda tem dúvidas?",
     "contact_us": "Contacte-nos Diretamente"
   },

@@ -167,6 +167,22 @@
     "tapas": "Tapas",
     "city": "Ville",
     "octopus_tuna": "Poulpe & Thon",
+    "city_tavira": {
+      "title": "La Ville de Tavira",
+      "subtitle": "Un Joyau de l'Algarve",
+      "description": "Tavira est l'une des villes les plus charmantes et authentiques de l'Algarve. Connue pour ses 37 églises, le pont romain sur la rivière Gilão et son centre historique préservé, Tavira vous invite à un voyage dans le temps. Des salines ancestrales aux plages de sable blanc de l'île de Tavira, la ville est un équilibre parfait entre patrimoine historique et beauté naturelle.",
+      "highlight1": "Patrimoine Historique",
+      "highlight2": "Culture Locale",
+      "highlight3": "Nature Pure"
+    },
+    "sotavento": {
+      "title": "Le Sotavento Algarvio",
+      "subtitle": "Tranquillité et Tradition",
+      "description": "Le Sotavento est la zone la plus authentique et la plus tranquille de l'Algarve. S'étendant de Faro jusqu'à la frontière espagnole, cette région se caractérise par des eaux plus chaudes, les îles de sable blanc de la Ria Formosa et des villages pittoresques qui conservent leur essence. Ici, le rythme est plus calme, la gastronomie est riche en saveurs de la mer et la nature vous entoure à chaque recoin.",
+      "highlight1": "Eaux Plus Chaudes",
+      "highlight2": "Villages Typiques",
+      "highlight3": "Ria Formosa"
+    },
     "cta_box_title": "Prêt pour votre aventure privée ?",
     "cta_box_subtitle": "Réservez maintenant et garantissez votre place pour le meilleur tour de Tavira. Exclusivité et plaisir garantis."
   },
@@ -299,6 +315,18 @@
     "a5": "Les enfants jusqu'à 3 ans voyagent gratuitement (sur les genoux). Pour les enfants entre 4 et 12 ans, nous avons des tarifs spéciaux sur certains tours. Consultez les détails pour chaque tour.",
     "q6": "Pouvons-nous personnaliser l'itinéraire ?",
     "a6": "Puisque les visites sont privées, nous avons une certaine flexibilité. S'il y a un point spécifique à Tavira que vous voulez absolument voir, parlez-en à votre guide au début du tour et nous essaierons d'adapter l'itinéraire.",
+    "q7": "Quel est le meilleur tour en Tuk Tuk à Tavira ?",
+    "a7": "Notre circuit \"Tavira Total\" est le plus populaire, car il combine l'histoire du centre historique, la visite des marais salants traditionnels et la zone de la Ria Formosa en un seul itinéraire privé complet.",
+    "q8": "Que faire à Tavira en 1 jour ?",
+    "a8": "Si vous n'avez qu'une journée à Tavira, nous vous recommandons un tour en Tuk Tuk le matin pour voir le centre historique et les 37 églises, un déjeuner à Santa Luzia (la capitale du poulpe) et un tour en jeep ou en bateau l'après-midi pour explorer la Ria Formosa.",
+    "q9": "Où voir le coucher du soleil à Tavira ?",
+    "a9": "Le meilleur coucher de soleil à Tavira se voit depuis le sommet du Château ou à Cacela Velha. Nos circuits en jeep de fin d'après-midi incluent généralement des arrêts stratégiques dans ces lieux panoramiques pour une expérience magique.",
+    "q10": "Est-ce que Tavira Roots accepte les animaux ?",
+    "a10": "Oui ! Comme nos circuits sont privés, vos animaux de compagnie sont les bienvenus dans le Tuk Tuk ou la Jeep. Nous vous demandons simplement de nous en informer au moment de la réservation.",
+    "q11": "Combien de temps dure un tour en Tuk Tuk à Tavira ?",
+    "a11": "Nous proposons des circuits allant de 45 minutes (essentiels de la ville) à des expériences d'une journée complète de 7-8 heures incluant le déjeuner et des balades en bateau.",
+    "q12": "Où se trouvent les marais salants de Tavira ?",
+    "a12": "Les marais salants de Tavira sont situés au cœur du parc naturel de la Ria Formosa. Lors de nos visites, nous nous rendons dans des marais salants traditionnels où vous pourrez voir l'extraction de la fleur de sel et observer des flamants roses à l'état sauvage.",
     "still_doubts": "Vous avez encore des questions ?",
     "contact_us": "Contactez-nous Directement"
   },

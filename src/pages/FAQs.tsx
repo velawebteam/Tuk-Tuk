@@ -32,6 +32,30 @@ export default function FAQs() {
     {
       question: t('faqs_page.q6'),
       answer: t('faqs_page.a6')
+    },
+    {
+      question: t('faqs_page.q7'),
+      answer: t('faqs_page.a7')
+    },
+    {
+      question: t('faqs_page.q8'),
+      answer: t('faqs_page.a8')
+    },
+    {
+      question: t('faqs_page.q9'),
+      answer: t('faqs_page.a9')
+    },
+    {
+      question: t('faqs_page.q10'),
+      answer: t('faqs_page.a10')
+    },
+    {
+      question: t('faqs_page.q11'),
+      answer: t('faqs_page.a11')
+    },
+    {
+      question: t('faqs_page.q12'),
+      answer: t('faqs_page.a12')
     }
   ];
 

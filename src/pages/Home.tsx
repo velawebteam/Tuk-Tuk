@@ -1,5 +1,6 @@
+import { useState } from 'react';
 import { motion } from 'motion/react';
-import { Users, Map, Star, ChevronRight, Camera, Coffee, Leaf, Building2, Wine, UtensilsCrossed, Fish } from 'lucide-react';
+import { Users, Map, Star, ChevronRight, Camera, Coffee, Leaf, Wine, UtensilsCrossed, Fish, Castle } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { tukTukTours, jeepTours } from '@/src/data/tours';
 import { useTranslation } from 'react-i18next';
@@ -7,6 +8,7 @@ import { SEO } from '../components/SEO';
 
 export default function Home() {
   const { t } = useTranslation();
+  const [showBookingOptions, setShowBookingOptions] = useState(false);
   const featuredTours = [...tukTukTours.slice(0, 2), ...jeepTours.slice(0, 1)];
 
   return (
@@ -17,17 +19,20 @@ export default function Home() {
         canonical="/"
       />
       {/* Hero Section */}
-      <section className="relative h-[85vh] min-h-[600px] flex items-center overflow-hidden bg-brand-black">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="https://lh3.googleusercontent.com/d/10h7VJYsdSK7Vg2-W28Es38EHUA3cHx1g" 
-            alt="Tavira Algarve" 
-            className="w-full h-full object-cover"
+      <section className="relative h-screen min-h-[600px] flex items-center overflow-hidden bg-brand-black w-full max-w-full">
+        <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+          <iframe
+            className="absolute top-1/2 left-1/2 w-[500%] h-[120%] md:w-[150%] md:h-[150%] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+            src="https://www.youtube.com/embed/kd1Y8XVpAvI?autoplay=1&mute=1&loop=1&playlist=kd1Y8XVpAvI&controls=0&showinfo=0&autohide=1&modestbranding=1&rel=0&hd=1&vq=hd1080"
+            allow="autoplay; encrypted-media"
+            title="Tavira Roots Background Video"
+            style={{ filter: 'contrast(1.1) brightness(0.8)' }}
+            loading="eager"
           />
-          <div className="absolute inset-0 bg-black/50"></div>
+          <div className="absolute inset-0 bg-black/50 z-10"></div>
         </div>
         
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white text-center pt-28 md:pt-0">
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white text-center pt-28 md:pt-0">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -166,7 +171,7 @@ export default function Home() {
           </div>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
             {[
-              { icon: <Building2 size={32} />, name: t('home.city') },
+              { icon: <Castle size={32} />, name: t('home.city') },
               { icon: <Coffee size={32} />, name: t('home.chocolate') },
               { icon: <Leaf size={32} />, name: t('home.olives') },
               { icon: <Wine size={32} />, name: t('home.wine') },
@@ -191,6 +196,111 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Tavira City Section */}
+      <section className="py-20 md:py-32 bg-brand-cream overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-4xl md:text-6xl font-bold text-brand-black mb-8 leading-tight">
+                {t('home.city_tavira.title')}
+              </h2>
+              <div className="prose prose-lg text-brand-black/70 mb-10 leading-relaxed font-medium">
+                <p>{t('home.city_tavira.description')}</p>
+              </div>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                {[
+                  t('home.city_tavira.highlight1'),
+                  t('home.city_tavira.highlight2'),
+                  t('home.city_tavira.highlight3')
+                ].map((highlight, idx) => (
+                  <div key={idx} className="flex items-center gap-3 bg-white p-4 rounded-2xl shadow-sm border border-brand-brown/5">
+                    <div className="w-2 h-2 rounded-full bg-brand-brown" />
+                    <span className="font-bold text-sm uppercase tracking-wider text-brand-black">{highlight}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              className="relative group"
+            >
+              <div className="absolute -inset-4 bg-brand-brown/5 rounded-[2rem] transform rotate-2 transition-transform group-hover:rotate-1" />
+              <div className="relative aspect-[4/5] md:aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl">
+                <img 
+                  src="https://lh3.googleusercontent.com/d/1Z3XlPZaBaW5Xfh8pz9hKm_HEKQEFbBu3" 
+                  alt="Cidade de Tavira" 
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-black/40 to-transparent" />
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Sotavento Section */}
+      <section className="py-20 md:py-32 bg-white overflow-hidden">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 md:gap-20 items-center">
+            <motion.div
+              initial={{ opacity: 0, scale: 0.95 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 1, ease: "easeOut" }}
+              className="relative group lg:order-1"
+            >
+              <div className="absolute -inset-4 bg-brand-brown/5 rounded-[2rem] transform -rotate-2 transition-transform group-hover:-rotate-1" />
+              <div className="relative aspect-[4/5] md:aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl">
+                <img 
+                  src="https://lh3.googleusercontent.com/d/1Zzp1GzTuUTpAzKBx82KY_jkBtT9Y1N4f" 
+                  alt="Sotavento Algarvio" 
+                  className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-brand-black/40 to-transparent" />
+              </div>
+            </motion.div>
+
+            <motion.div
+              initial={{ opacity: 0, x: 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.8 }}
+              className="lg:order-2"
+            >
+              <h2 className="text-4xl md:text-6xl font-bold text-brand-black mb-8 leading-tight">
+                {t('home.sotavento.title')}
+              </h2>
+              <div className="prose prose-lg text-brand-black/70 mb-10 leading-relaxed font-medium">
+                <p>{t('home.sotavento.description')}</p>
+              </div>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+                {[
+                  t('home.sotavento.highlight1'),
+                  t('home.sotavento.highlight2'),
+                  t('home.sotavento.highlight3')
+                ].map((highlight, idx) => (
+                  <div key={idx} className="flex items-center gap-3 bg-brand-cream p-4 rounded-2xl shadow-sm border border-brand-brown/5">
+                    <div className="w-2 h-2 rounded-full bg-brand-brown" />
+                    <span className="font-bold text-sm uppercase tracking-wider text-brand-black">{highlight}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-16 md:py-24 bg-white">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -201,9 +311,28 @@ export default function Home() {
               <p className="text-brand-cream/80 text-lg mb-10 font-medium">
                 {t('home.cta_box_subtitle')}
               </p>
-              <Link to="/tuk-tuk" className="px-6 md:px-10 py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-full font-black uppercase tracking-widest text-lg shadow-xl shadow-brand-brown/20 transition-all transform hover:scale-105 inline-block">
-                {t('common.reserve_now')}
-              </Link>
+              
+              {!showBookingOptions ? (
+                <button 
+                  onClick={() => setShowBookingOptions(true)}
+                  className="px-6 md:px-10 py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-full font-black uppercase tracking-widest text-lg shadow-xl shadow-brand-brown/20 transition-all transform hover:scale-105 inline-block cursor-pointer"
+                >
+                  {t('common.reserve_now')}
+                </button>
+              ) : (
+                <motion.div 
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  className="flex flex-col sm:flex-row items-center justify-center gap-4"
+                >
+                  <Link to="/tuk-tuk" className="w-full sm:w-auto px-10 py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-full font-black uppercase tracking-widest text-lg shadow-xl shadow-brand-brown/20 transition-all transform hover:scale-105">
+                    {t('nav.tuk_tuk')}
+                  </Link>
+                  <Link to="/jipe" className="w-full sm:w-auto px-10 py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-full font-black uppercase tracking-widest text-lg shadow-xl shadow-brand-brown/20 transition-all transform hover:scale-105">
+                    {t('nav.jeep')}
+                  </Link>
+                </motion.div>
+              )}
             </div>
           </div>
         </div>

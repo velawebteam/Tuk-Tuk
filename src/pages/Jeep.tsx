@@ -45,11 +45,11 @@ export default function Jeep() {
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <iframe
             className="absolute top-1/2 left-1/2 w-[500%] h-[120%] md:w-[150%] md:h-[150%] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
-            src="https://www.youtube.com/embed/SMnjhz8hjaY?autoplay=1&mute=1&loop=1&playlist=SMnjhz8hjaY&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&hd=1"
+            src="https://www.youtube.com/embed/SMnjhz8hjaY?autoplay=1&mute=1&loop=1&playlist=SMnjhz8hjaY&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&hd=1&vq=hd1080"
             allow="autoplay; encrypted-media"
             style={{ border: 'none', filter: 'contrast(1.1) brightness(0.9)' }}
             loading="eager"
-            title="Jeep Adventure Background"
+            title="Jipe Adventure Background"
           ></iframe>
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
@@ -95,7 +95,7 @@ export default function Jeep() {
         </div>
       </section>
 
-      {/* Why Jeep? */}
+      {/* Why Jipe? */}
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -103,7 +103,7 @@ export default function Jeep() {
               <div className="rounded-3xl overflow-hidden shadow-2xl">
                 <img 
                   src="https://lh3.googleusercontent.com/d/1Ncwvz_oWrkuDPri7G_KB1ZSQ0MhdftcH" 
-                  alt="Jeep Adventure" 
+                  alt="Jipe Adventure" 
                   className="w-full h-full object-cover"
                 />
               </div>

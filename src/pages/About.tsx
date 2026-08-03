@@ -19,7 +19,9 @@ export default function About() {
         </div>
         <div className="relative z-10 text-center text-white px-4 pt-20 md:pt-0">
           <h1 className="text-5xl md:text-7xl font-black mb-4 uppercase tracking-tight">{t('nav.about')}</h1>
-          <p className="text-xl md:text-2xl text-brand-brown font-bold uppercase tracking-[0.2em]">{t('about_page.hero_subtitle')}</p>
+          <p className="text-lg md:text-xl text-brand-cream font-black uppercase tracking-[0.3em] mb-4 bg-brand-brown/40 backdrop-blur-sm px-6 py-2 inline-block rounded-full border border-brand-cream/20">
+            {t('about_page.hero_subtitle')}
+          </p>
         </div>
       </section>
 
