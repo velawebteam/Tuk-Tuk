@@ -1,4 +1,5 @@
 import { motion } from 'motion/react';
+import loadingVideo from '../assets/loading-screen.mp4';
 
 export function LoadingScreen() {
   return (
@@ -14,9 +15,11 @@ export function LoadingScreen() {
             autoPlay
             muted
             playsInline
+            loop
+            preload="auto"
             className="w-full h-auto"
           >
-            <source src="/loading-screen.mp4" type="video/mp4" />
+            <source src={loadingVideo} type="video/mp4" />
             Your browser does not support the video tag.
           </video>
         </div>
