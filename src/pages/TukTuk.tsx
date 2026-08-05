@@ -41,20 +41,20 @@ export default function TukTuk() {
         }}
       />
       {/* Header */}
-      <section className="relative h-[600px] md:h-[800px] overflow-hidden flex items-center justify-center text-white pt-28 md:pt-0 bg-black w-full max-w-full">
+      <section className="relative h-[600px] md:h-[800px] overflow-hidden flex items-center justify-center text-white bg-black w-full max-w-full">
         {/* Video Background Overlay */}
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           <div className="absolute inset-0 bg-black/40 z-10" />
           <iframe
-            className="absolute top-1/2 left-1/2 w-[500%] h-[120%] md:w-[150%] md:h-[150%] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+            className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.78vh] scale-[1.35] -translate-x-1/2 -translate-y-1/2 pointer-events-none border-0 border-none outline-none object-cover"
             src="https://www.youtube.com/embed/8ZDu00ylXKY?autoplay=1&mute=1&loop=1&playlist=8ZDu00ylXKY&controls=0&showinfo=0&autohide=1&modestbranding=1&rel=0&hd=1&vq=hd1080"
             allow="autoplay; encrypted-media"
             title="Background Video"
-            style={{ filter: 'contrast(1.1) brightness(0.9)' }}
+            style={{ border: 'none', outline: 'none', filter: 'contrast(1.1) brightness(0.9)' }}
           />
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-20 md:pt-0 relative z-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center pt-28 md:pt-36 relative z-20">
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

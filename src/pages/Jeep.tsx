@@ -41,19 +41,19 @@ export default function Jeep() {
         }}
       />
       {/* Header */}
-      <section className="relative min-h-[70vh] md:min-h-[85vh] flex items-center text-white overflow-hidden bg-black pt-28 md:pt-0 w-full max-w-full">
+      <section className="relative min-h-[70vh] md:min-h-[85vh] flex items-center text-white overflow-hidden bg-black w-full max-w-full">
         <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
           <iframe
-            className="absolute top-1/2 left-1/2 w-[500%] h-[120%] md:w-[150%] md:h-[150%] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+            className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.78vh] scale-[1.35] -translate-x-1/2 -translate-y-1/2 pointer-events-none border-0 border-none outline-none object-cover"
             src="https://www.youtube.com/embed/SMnjhz8hjaY?autoplay=1&mute=1&loop=1&playlist=SMnjhz8hjaY&controls=0&showinfo=0&rel=0&iv_load_policy=3&modestbranding=1&hd=1&vq=hd1080"
             allow="autoplay; encrypted-media"
-            style={{ border: 'none', filter: 'contrast(1.1) brightness(0.9)' }}
+            style={{ border: 'none', outline: 'none', filter: 'contrast(1.1) brightness(0.9)' }}
             loading="eager"
             title="Jipe Adventure Background"
           ></iframe>
           <div className="absolute inset-0 bg-black/40"></div>
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full pt-20 md:pt-0">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 w-full pt-28 md:pt-36 pb-12">
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}

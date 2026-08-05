@@ -19,27 +19,27 @@ export default function Home() {
         canonical="/"
       />
       {/* Hero Section */}
-      <section className="relative h-screen min-h-[600px] flex items-center overflow-hidden bg-brand-black w-full max-w-full">
+      <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-black w-full max-w-full py-12">
         <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
           <iframe
-            className="absolute top-1/2 left-1/2 w-[500%] h-[120%] md:w-[150%] md:h-[150%] -translate-x-1/2 -translate-y-1/2 pointer-events-none"
+            className="absolute top-1/2 left-1/2 w-[100vw] h-[56.25vw] min-h-[100vh] min-w-[177.78vh] scale-[1.35] -translate-x-1/2 -translate-y-1/2 pointer-events-none border-0 border-none outline-none object-cover"
             src="https://www.youtube.com/embed/kd1Y8XVpAvI?autoplay=1&mute=1&loop=1&playlist=kd1Y8XVpAvI&controls=0&showinfo=0&autohide=1&modestbranding=1&rel=0&hd=1&vq=hd1080"
             allow="autoplay; encrypted-media"
             title="Tavira Roots Background Video"
-            style={{ filter: 'contrast(1.1) brightness(0.8)' }}
+            style={{ border: 'none', outline: 'none', filter: 'contrast(1.1) brightness(0.8)' }}
             loading="eager"
           />
           <div className="absolute inset-0 bg-black/30 z-10"></div>
         </div>
         
-        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white text-center pt-28 md:pt-0">
+        <div className="relative z-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-white text-center pt-28 md:pt-36 pb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto"
           >
-            <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold tracking-tight mb-4">
+            <h1 className="text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight mb-4">
               {t('hero.title_part1')}<span className="text-white">{t('hero.title_highlight')}</span>{t('hero.title_part2')}
             </h1>
             <p className="text-base md:text-2xl text-brand-cream mb-6 leading-relaxed max-w-3xl mx-auto px-4 opacity-90">

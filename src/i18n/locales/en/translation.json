@@ -10,7 +10,7 @@
   },
   "hero": {
     "title_part1": "Tavira Roots | ",
-    "title_highlight": "Exclusive Tours",
+    "title_highlight": "Authentic Private Tours",
     "title_part2": " in Tavira",
     "subtitle": "With family or friends, experience the essence of Tavira. From fishing and sea salt to local wines, chocolate, olive oil, and local gastronomy, each experience reveals the soul of our land.",
     "cta_tuk": "Tuk Tuk Tours",
@@ -170,17 +170,17 @@
     "city_tavira": {
       "title": "The City of Tavira",
       "subtitle": "A Gem of the Algarve",
-      "description": "Tavira is one of the most charming and authentic cities in the Algarve. Known for its 37 churches, the Roman Bridge over the Gilão River, and its preserved historic center, Tavira invites you on a journey through time. From ancestral salt pans to white sand beaches on Tavira Island, the city is a perfect balance between historical heritage and natural beauty.",
+      "description": "Tavira is one of the oldest and most authentic cities in the Algarve. Known as the \"City of Churches\", Tavira has 37 churches, chapels, and hermitages in its municipality, 21 of which are located in the city itself. In addition, the castle, the Old Bridge over the Gilão River, its nature with salt pans, countryside, and the best beaches of the eastern Algarve make Tavira the perfect balance between historical and natural heritage.",
       "highlight1": "Historical Heritage",
       "highlight2": "Local Culture",
-      "highlight3": "Pure Nature"
+      "highlight3": "Nature"
     },
     "sotavento": {
       "title": "The Eastern Algarve",
       "subtitle": "Tranquility and Tradition",
       "description": "The Sotavento is the most authentic and tranquil area of the Algarve. Stretching from Faro to the Spanish border, this region is characterized by warmer waters, the white sand islands of the Ria Formosa, and picturesque villages that maintain their essence. Here, the pace is calmer, the gastronomy is rich in sea flavors, and nature surrounds you at every corner.",
-      "highlight1": "Warmer Waters",
-      "highlight2": "Typical Villages",
+      "highlight1": "History",
+      "highlight2": "Traditions/Culture",
       "highlight3": "Ria Formosa"
     },
     "cta_box_title": "Ready for your private adventure?",
@@ -189,7 +189,7 @@
   "tours": {
     "cidade_tavira": {
       "name": "Tavira City",
-      "desc": "Discover the heart of Tavira on a tour that covers history, rivers, and the Natural Park."
+      "desc": "Discover the heart of Tavira on a tour that covers history, traditions, the Ria Formosa, and the Natural Park."
     },
     "tavira_total": {
       "name": "Tavira Total",
@@ -240,7 +240,7 @@
       "desc": "A complete tour connecting the white gold of salt pans to the liquid gold of olive oil and the octopus capital."
     },
     "ria_formosa_jeep": {
-      "name": "Tavira Roots: Ria Formosa & Gastronomy",
+      "name": "Ria Formosa & Gastronomy",
       "desc": "Explore the beauty of Ria Formosa with a stop in Cacela Velha and a regional lunch included."
     },
     "fuzeta_olhao_bath": {
@@ -260,7 +260,7 @@
       "desc": "The perfect combination of land and sea, with a visit to the iconic anchor graveyard."
     },
     "tavira_roots_wine": {
-      "name": "Tavira Roots: Salt Pans, Octopus, Tuna Heritage Wine & Tapas",
+      "name": "Salt Pans, Octopus, Tuna Heritage Wine & Tapas",
       "desc": "The essence of Tavira in a ride that ends with local wines and tapas."
     },
     "jeep_boat_history": {
@@ -308,7 +308,7 @@
     "q2": "What is the maximum capacity of each vehicle?",
     "a2": "Our Tuk Tuks take up to 9 people (across two vehicles with 5 and 4 seats). Jeeps have capacity for 5 people comfortably. If your group is larger, we can take multiple vehicles together.",
     "q3": "Do the tours include factory visits?",
-    "a3": "Yes, depending on the chosen tour. We have partnerships with chocolate, olive, salt pan, and ceramic factories. Visiting time and tastings vary according to the itinerary.",
+    "a3": "Yes, depending on the chosen tour. We have partnerships with chocolate, olive, salt pan, and ceramic shops. Visiting time and tastings vary according to the itinerary.",
     "q4": "What languages does the guide speak?",
     "a4": "Our guides are fluent in Portuguese and English. Upon prior request and availability, we may have guides who speak French or Spanish.",
     "q5": "Do children pay the same price?",
@@ -318,13 +318,13 @@
     "q7": "What is the best Tuk Tuk tour in Tavira?",
     "a7": "Our \"Tavira Total\" tour is the most popular, as it combines the history of the historic center, a visit to the traditional salt pans, and the Ria Formosa area in one complete private route.",
     "q8": "What to do in Tavira in 1 day?",
-    "a8": "If you only have one day in Tavira, we recommend a Tuk Tuk tour in the morning to see the historic center and the 37 churches, lunch in Santa Luzia (the octopus capital), and a jeep or boat tour in the afternoon to explore the Ria Formosa.",
+    "a8": "If you only have one day to visit Tavira, the best way to see the main points of interest is through an organized route combining the historic center, Santa Luzia, and the Ria Formosa, allowing you to make the most of your time.",
     "q9": "Where to see the sunset in Tavira?",
     "a9": "The best sunset in Tavira is from the top of the Castle or in Cacela Velha. Our late afternoon jeep tours usually include strategic stops at these panoramic spots for a magical experience.",
     "q10": "Is Tavira Roots pet-friendly?",
     "a10": "Yes! Since our tours are private, your pets are welcome in the Tuk Tuk or Jeep. We just ask that you inform us at the time of booking.",
     "q11": "How long does a Tuk Tuk tour in Tavira last?",
-    "a11": "We have tours ranging from 45 minutes (city essentials) to full-day experiences of 7-8 hours that include lunch and boat trips.",
+    "a11": "We have tours ranging from 1:15h (city essentials) to full-day experiences of 6:30 hours that include lunch and boat trips.",
     "q12": "Where are the Tavira salt pans located?",
     "a12": "The Tavira salt pans are located in the heart of the Ria Formosa Natural Park. In our tours, we visit traditional salt pans where you can see the extraction of Fleur de Sel and observe flamingos in the wild.",
     "still_doubts": "Still have questions?",

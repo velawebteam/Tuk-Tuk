@@ -96,8 +96,8 @@ export function SEO({
             "closes": "19:00"
           },
           "sameAs": [
-            "https://www.facebook.com/taviraroots",
-            "https://www.instagram.com/taviraroots"
+            "https://www.facebook.com/mariastuktuk",
+            "https://www.instagram.com/mariastuktuk"
           ]
         })}
       </script>

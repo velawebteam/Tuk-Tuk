@@ -10,7 +10,7 @@
   },
   "hero": {
     "title_part1": "Tavira Roots | ",
-    "title_highlight": "Tours Exclusifs",
+    "title_highlight": "Tours Privés Authentiques",
     "title_part2": " à Tavira",
     "subtitle": "En famille ou entre amis, vivez l'essence de Tavira. De la pêche et du sel marin aux vins locaux, au chocolat, à l'huile d'olive et à la gastronomie locale, chaque expérience révèle l'âme de notre terre.",
     "cta_tuk": "Tours en Tuk Tuk",
@@ -170,17 +170,17 @@
     "city_tavira": {
       "title": "La Ville de Tavira",
       "subtitle": "Un Joyau de l'Algarve",
-      "description": "Tavira est l'une des villes les plus charmantes et authentiques de l'Algarve. Connue pour ses 37 églises, le pont romain sur la rivière Gilão et son centre historique préservé, Tavira vous invite à un voyage dans le temps. Des salines ancestrales aux plages de sable blanc de l'île de Tavira, la ville est un équilibre parfait entre patrimoine historique et beauté naturelle.",
+      "description": "Tavira est l'une des villes les plus anciennes et authentiques de l'Algarve. Connue comme la « Ville des Églises », Tavira compte 37 églises, chapelles et ermitages dans sa municipalité, dont 21 sont situées dans la ville même. De plus, le château, le Vieux Pont sur la rivière Gilão, sa nature avec des salines, la campagne et les plus belles plages du Sotavento algarvio font de Tavira le parfait équilibre entre patrimoine historique et naturel.",
       "highlight1": "Patrimoine Historique",
       "highlight2": "Culture Locale",
-      "highlight3": "Nature Pure"
+      "highlight3": "Nature"
     },
     "sotavento": {
       "title": "Le Sotavento Algarvio",
       "subtitle": "Tranquillité et Tradition",
       "description": "Le Sotavento est la zone la plus authentique et la plus tranquille de l'Algarve. S'étendant de Faro jusqu'à la frontière espagnole, cette région se caractérise par des eaux plus chaudes, les îles de sable blanc de la Ria Formosa et des villages pittoresques qui conservent leur essence. Ici, le rythme est plus calme, la gastronomie est riche en saveurs de la mer et la nature vous entoure à chaque recoin.",
-      "highlight1": "Eaux Plus Chaudes",
-      "highlight2": "Villages Typiques",
+      "highlight1": "Histoire",
+      "highlight2": "Traditions/Culture",
       "highlight3": "Ria Formosa"
     },
     "cta_box_title": "Prêt pour votre aventure privée ?",
@@ -189,7 +189,7 @@
   "tours": {
     "cidade_tavira": {
       "name": "Ville de Tavira",
-      "desc": "Découvrez le cœur de Tavira lors d'une balade qui parcourt l'histoire, les rivières et le Parc Naturel."
+      "desc": "Découvrez le cœur de Tavira lors d'une balade qui parcourt l'histoire, les traditions, la Ria Formosa et le Parc Naturel."
     },
     "tavira_total": {
       "name": "Tavira Total",
@@ -240,7 +240,7 @@
       "desc": "Un tour complet reliant l'or blanc des marais salants à l'or liquide de l'huile d'olive et à la capitale du poulpe."
     },
     "ria_formosa_jeep": {
-      "name": "Tavira Roots : Ria Formosa & Gastronomie",
+      "name": "Ria Formosa & Gastronomie",
       "desc": "Explorez la beauté de la Ria Formosa avec un arrêt à Cacela Velha et un déjeuner régional inclus."
     },
     "fuzeta_olhao_bath": {
@@ -260,7 +260,7 @@
       "desc": "La combinaison parfaite entre terre et mer, avec une visite au cimetière d'ancres emblématique."
     },
     "tavira_roots_wine": {
-      "name": "Tavira Roots - Marais Salants, Poulpe, Thon, Vin et Tapas",
+      "name": "Marais Salants, Poulpe, Thon, Vin et Tapas",
       "desc": "L'essence de Tavira dans une balade qui se termine par des vins et des tapas locaux."
     },
     "jeep_boat_history": {
@@ -308,7 +308,7 @@
     "q2": "Quelle est la capacité maximale de chaque véhicule ?",
     "a2": "Nos Tuk Tuks peuvent accueillir jusqu'à 9 personnes (sur deux véhicules de 5 et 4 places). Les Jeeps ont une capacité de 5 personnes confortablement. Si votre groupe est plus nombreux, nous pouvons prendre plusieurs véhicules ensemble.",
     "q3": "Les tours incluent-ils des visites d'usines ?",
-    "a3": "Oui, selon le tour choisi. Nous avons des partenariats avec des usines de chocolat, d'olives, des marais salants et des poteries. Le temps de visite et les dégustations varient selon l'itinéraire.",
+    "a3": "Oui, selon le tour choisi. Nous avons des partenariats avec des boutiques de chocolat, d'olives, des marais salants et des poteries. Le temps de visite et les dégustations varient selon l'itinéraire.",
     "q4": "Quelles langues parle le guide ?",
     "a4": "Nos guides parlent couramment le portugais, l'anglais, l'espagnol et le français (selon le guide).",
     "q5": "Les enfants paient-ils le même prix ?",
@@ -318,13 +318,13 @@
     "q7": "Quel est le meilleur tour en Tuk Tuk à Tavira ?",
     "a7": "Notre circuit \"Tavira Total\" est le plus populaire, car il combine l'histoire du centre historique, la visite des marais salants traditionnels et la zone de la Ria Formosa en un seul itinéraire privé complet.",
     "q8": "Que faire à Tavira en 1 jour ?",
-    "a8": "Si vous n'avez qu'une journée à Tavira, nous vous recommandons un tour en Tuk Tuk le matin pour voir le centre historique et les 37 églises, un déjeuner à Santa Luzia (la capitale du poulpe) et un tour en jeep ou en bateau l'après-midi pour explorer la Ria Formosa.",
+    "a8": "Si vous ne disposez que d'une journée pour visiter Tavira, le meilleur moyen de découvrir les principaux points d'intérêt est un parcours organisé combinant le centre historique, Santa Luzia et la Ria Formosa, vous permettant de profiter au maximum de votre temps.",
     "q9": "Où voir le coucher du soleil à Tavira ?",
     "a9": "Le meilleur coucher de soleil à Tavira se voit depuis le sommet du Château ou à Cacela Velha. Nos circuits en jeep de fin d'après-midi incluent généralement des arrêts stratégiques dans ces lieux panoramiques pour une expérience magique.",
     "q10": "Est-ce que Tavira Roots accepte les animaux ?",
     "a10": "Oui ! Comme nos circuits sont privés, vos animaux de compagnie sont les bienvenus dans le Tuk Tuk ou la Jeep. Nous vous demandons simplement de nous en informer au moment de la réservation.",
     "q11": "Combien de temps dure un tour en Tuk Tuk à Tavira ?",
-    "a11": "Nous proposons des circuits allant de 45 minutes (essentiels de la ville) à des expériences d'une journée complète de 7-8 heures incluant le déjeuner et des balades en bateau.",
+    "a11": "Nous proposons des circuits allant de 1h15 (essentiels de la ville) à des expériences d'une journée complète de 6h30 incluant le déjeuner et des balades en bateau.",
     "q12": "Où se trouvent les marais salants de Tavira ?",
     "a12": "Les marais salants de Tavira sont situés au cœur du parc naturel de la Ria Formosa. Lors de nos visites, nous nous rendons dans des marais salants traditionnels où vous pourrez voir l'extraction de la fleur de sel et observer des flamants roses à l'état sauvage.",
     "still_doubts": "Vous avez encore des questions ?",

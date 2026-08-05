@@ -33,10 +33,24 @@ export function Footer() {
               {t('footer.mission')}
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-brand-brown hover:text-brand-brown-light transition-colors">
+              <a 
+                href="https://www.instagram.com/mariastuktuk" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-brand-brown hover:text-brand-brown-light transition-colors"
+                title="Instagram: @mariastuktuk"
+                aria-label="Instagram @mariastuktuk"
+              >
                 <Instagram size={24} />
               </a>
-              <a href="#" className="text-brand-brown hover:text-brand-brown-light transition-colors">
+              <a 
+                href="https://www.facebook.com/mariastuktuk" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                className="text-brand-brown hover:text-brand-brown-light transition-colors"
+                title="Facebook: Maria's Tuk Tuk"
+                aria-label="Facebook Maria's Tuk Tuk"
+              >
                 <Facebook size={24} />
               </a>
             </div>

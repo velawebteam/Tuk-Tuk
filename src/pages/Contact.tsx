@@ -63,13 +63,31 @@ export default function Contact() {
               </div>
             </div>
 
-            <div className="mt-12 flex gap-4">
-              <a href="#" className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-brand-black hover:bg-brand-brown hover:text-white transition-all shadow-sm border border-brand-brown/5">
+            <div className="mt-12 flex items-center gap-4 flex-wrap">
+              <a 
+                href="https://www.instagram.com/mariastuktuk" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Instagram @mariastuktuk"
+                title="Instagram: @mariastuktuk"
+                className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-brand-black hover:bg-brand-brown hover:text-white transition-all shadow-sm border border-brand-brown/5"
+              >
                 <Instagram size={24} />
               </a>
-              <a href="#" className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-brand-black hover:bg-brand-brown hover:text-white transition-all shadow-sm border border-brand-brown/5">
+              <a 
+                href="https://www.facebook.com/mariastuktuk" 
+                target="_blank" 
+                rel="noopener noreferrer" 
+                aria-label="Facebook Maria's Tuk Tuk"
+                title="Facebook: Maria's Tuk Tuk"
+                className="w-12 h-12 bg-white rounded-full flex items-center justify-center text-brand-black hover:bg-brand-brown hover:text-white transition-all shadow-sm border border-brand-brown/5"
+              >
                 <Facebook size={24} />
               </a>
+              <div className="text-xs font-bold text-brand-black/70 space-y-0.5 ml-2">
+                <p>Instagram: <a href="https://www.instagram.com/mariastuktuk" target="_blank" rel="noopener noreferrer" className="text-brand-brown hover:underline">@mariastuktuk</a></p>
+                <p>Facebook: <a href="https://www.facebook.com/mariastuktuk" target="_blank" rel="noopener noreferrer" className="text-brand-brown hover:underline">Maria's Tuk Tuk</a></p>
+              </div>
             </div>
           </div>
 
