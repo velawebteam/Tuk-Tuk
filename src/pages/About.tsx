@@ -55,10 +55,10 @@ export default function About() {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4 md:gap-6">
-            <img src="https://lh3.googleusercontent.com/d/1sGsO3Iq0Z6QCg666qpWF5bTTRoAWzI_a" className="rounded-3xl h-48 md:h-64 w-full object-cover shadow-lg border border-brand-brown/5" alt="Chocolate Factory" />
-            <img src="https://lh3.googleusercontent.com/d/1nPuswq-p4iCWzrepio6VpP88_H0ScviH" className="rounded-3xl h-48 md:h-64 w-full object-cover shadow-lg sm:mt-8 border border-brand-brown/5" alt="Tavira Views" />
-            <img src="https://lh3.googleusercontent.com/d/1LBRIwcWjm7c8b6idBz7E3ybjD55g0x67" className="rounded-3xl h-48 md:h-64 w-full object-cover shadow-lg sm:-mt-8 border border-brand-brown/5" alt="Wine Tasting" />
-            <img src="https://lh3.googleusercontent.com/d/1Ubc8v8YYMo5tfRPo9leofWpMzbqvfmqv" className="rounded-3xl h-48 md:h-64 w-full object-cover shadow-lg border border-brand-brown/5" alt="Pottery" />
+            <img src="https://lh3.googleusercontent.com/d/1Wy0aT0a4mtdFaDxq4empNdZyNh2HZsJg" className="rounded-3xl h-48 md:h-64 w-full object-cover shadow-lg border border-brand-brown/5" alt="Tavira Roots Experience 1" />
+            <img src="https://lh3.googleusercontent.com/d/15WLHahY6-fJCCA93SE6EoNE6h_VRGH91" className="rounded-3xl h-48 md:h-64 w-full object-cover shadow-lg sm:mt-8 border border-brand-brown/5" alt="Tavira Roots Experience 2" />
+            <img src="https://lh3.googleusercontent.com/d/1CLBrBQkVAm8hIuTENdVRSexKy4Os3dOl" className="rounded-3xl h-48 md:h-64 w-full object-cover shadow-lg sm:-mt-8 border border-brand-brown/5" alt="Tavira Roots Experience 3" />
+            <img src="https://lh3.googleusercontent.com/d/1jkbnjdQHR7wVhM-L1hq039OD5zIOTOjw" className="rounded-3xl h-48 md:h-64 w-full object-cover shadow-lg border border-brand-brown/5" alt="Tavira Roots Experience 4" />
           </div>
         </div>
       </section>

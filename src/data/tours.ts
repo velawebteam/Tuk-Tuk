@@ -594,7 +594,7 @@ export const jeepTours: Tour[] = [
     duration: '3h',
     pax: '2-5',
     descriptionKey: 'tours.ria_formosa_jeep.desc',
-    features: ['features.ria_formosa', 'features.salt_pans', 'features.ria_formosa_fauna_flora', 'features.bird_watching', 'features.tuna_museum', 'features.cacela_velha', 'features.cabanas_tavira', 'features.alfama_restaurant'],
+    features: ['features.ria_formosa', 'features.salt_pans', 'features.ria_formosa_fauna_flora', 'features.bird_watching', 'features.tuna_museum', 'features.cacela_velha', 'features.cabanas_tavira'],
     image: RIA_FORMOSA_GASTRONOMIA_GALLERY[0],
     gallery: RIA_FORMOSA_GASTRONOMIA_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
@@ -602,8 +602,7 @@ export const jeepTours: Tour[] = [
     itinerary: [
       { activity: 'features.ria_formosa_fauna_flora' },
       { activity: 'features.tuna_museum' },
-      { activity: 'features.cacela_velha' },
-      { activity: 'features.alfama_restaurant' }
+      { activity: 'features.cacela_velha' }
     ]
   },
   {
