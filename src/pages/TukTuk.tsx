@@ -106,6 +106,7 @@ export default function TukTuk() {
                   src="https://lh3.googleusercontent.com/d/1AjiBBg8TYYaCSnwPu7AA3Ses4lp9av0x" 
                   alt="Tuk Tuk Adventure" 
                   className="w-full h-full object-cover object-bottom"
+                  referrerPolicy="no-referrer"
                 />
               </div>
             </div>

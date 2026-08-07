@@ -26,7 +26,8 @@
     "view_details": "Voir Détails",
     "reserve_now": "Réserver Maintenant",
     "contact_whatsapp": "Parler au Guide via WhatsApp",
-    "museum_closure_notice": "Le musée du thon est fermé entre le 10 novembre et le 10 février."
+    "museum_closure_notice": "Le musée du thon est fermé entre le 10 novembre et le 10 février.",
+    "see_all_prices": "Consulter tous les prix ici"
   },
   "tuk_tuk_page": {
     "title": "Tours en Tuk Tuk à Tavira",
@@ -241,7 +242,7 @@
     },
     "ria_formosa_jeep": {
       "name": "Ria Formosa & Cacela Velha",
-      "desc": "Explorez la beauté de la Ria Formosa avec un arrêt à Cacela Velha et un déjeuner régional inclus."
+      "desc": "Explorez la beauté de la Ria Formosa avec un arrêt à Cacela Velha."
     },
     "fuzeta_olhao_bath": {
       "name": "Santa Luzia, Fuseta, Olhão, Marais Salants (Mer Morte) & Bain de Boue",

@@ -1,3 +1,9 @@
+export interface PriceOption {
+  price: string;
+  group: string;
+  details?: string;
+}
+
 export interface Tour {
   id: string;
   type: 'tuk-tuk' | 'jeep';
@@ -18,6 +24,7 @@ export interface Tour {
   fareHarborProductId?: number;
   fareHarborFlowId?: number;
   priceWithFee?: string;
+  priceOptions?: PriceOption[];
 }
 
 const TUK_TUK_GALLERY = [
@@ -260,8 +267,6 @@ const SANTA_LUZIA_CLAY_GALLERY = [
 
 const RIA_FORMOSA_GASTRONOMIA_GALLERY = [
   'https://lh3.googleusercontent.com/d/1-mazhmCVnrveAAnsb8a89t_fXt2owlbo',
-  'https://lh3.googleusercontent.com/d/1oyU97FEN5epEYX220Ft4MPDmQFdOWowO',
-  'https://lh3.googleusercontent.com/d/1AWLtGPL_5Zo7ffH3j7X94jcIPrqFQe6F',
   'https://lh3.googleusercontent.com/d/1PLUP8XxLedQ-f-jhZzPukc7I6j9Gix8A',
   'https://lh3.googleusercontent.com/d/1ax5lUEfqXZCzqrWpmAaBjGSBwiXLqjNp',
   'https://lh3.googleusercontent.com/d/1HuSVEQI1Bp64p8oFgmT1lP3ZtQH9jdbG',
@@ -356,8 +361,7 @@ export const tukTukTours: Tour[] = [
     id: 'tavira-city',
     type: 'tuk-tuk',
     nameKey: 'tours.cidade_tavira.name',
-    price: '55€',
-    priceWithFee: '58,30€',
+    price: '58,30€',
     duration: '1h15',
     pax: '1-9',
     descriptionKey: 'tours.cidade_tavira.desc',
@@ -366,6 +370,11 @@ export const tukTukTours: Tour[] = [
     gallery: TAVIRA_CITY_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     fareHarborProductId: 480332,
+    priceOptions: [
+      { price: '58,30€', group: 'De 1 ou 2 Pessoas', details: 'Para idades a partir dos 3 anos' },
+      { price: '74,20€', group: 'Grupo de 3 Pessoas', details: 'Para idades a partir dos 3 anos' },
+      { price: '90,10€', group: 'Grupo de 4 Pessoas', details: 'Para idades a partir dos 3 anos' }
+    ],
     itinerary: [
       { activity: 'features.historical_center' },
       { activity: 'features.sequa_gilao_rivers' },
@@ -378,8 +387,7 @@ export const tukTukTours: Tour[] = [
     id: 'tavira-total-tuk',
     type: 'tuk-tuk',
     nameKey: 'tours.tavira_total.name',
-    price: '90€',
-    priceWithFee: '95,40€',
+    price: '95,40€',
     duration: '2h',
     pax: '1-9',
     descriptionKey: 'tours.tavira_total.desc',
@@ -389,6 +397,11 @@ export const tukTukTours: Tour[] = [
     gallery: TAVIRA_TOTAL_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     fareHarborProductId: 480370,
+    priceOptions: [
+      { price: '95,40€', group: 'De 1 ou 2 Pessoas', details: 'Para idades a partir dos 3 anos' },
+      { price: '95,40€', group: 'Grupo de 3 Pessoas', details: 'Para idades a partir dos 3 anos' },
+      { price: '127,20€', group: 'Grupo de 4 Pessoas', details: 'Para idades a partir dos 3 anos' }
+    ],
     itinerary: [
       { activity: 'features.historical_center' },
       { activity: 'features.sequa_gilao_rivers' },
@@ -402,8 +415,7 @@ export const tukTukTours: Tour[] = [
     id: 'city-tapas',
     type: 'tuk-tuk',
     nameKey: 'tours.city_tapas.name',
-    price: '50€',
-    priceWithFee: '53€',
+    price: '53€',
     duration: '1h30',
     pax: '1-9',
     descriptionKey: 'tours.city_tapas.desc',
@@ -413,6 +425,9 @@ export const tukTukTours: Tour[] = [
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     fareHarborProductId: 480337,
     goodToKnow: ['tour_detail.gtk.ends_restaurant', 'tour_detail.gtk.menu_ti_maria', 'tour_detail.gtk.no_pickup_restaurant'],
+    priceOptions: [
+      { price: '53€', group: 'Pessoas', details: 'Para idades a partir dos 12 anos' }
+    ],
     itinerary: [
       { activity: 'features.historical_center' },
       { activity: 'features.sequa_gilao_rivers' },
@@ -426,8 +441,7 @@ export const tukTukTours: Tour[] = [
     id: 'historical-wine',
     type: 'tuk-tuk',
     nameKey: 'tours.historical_wine.name',
-    price: '65€',
-    priceWithFee: '68,90€',
+    price: '68,90€',
     duration: '2h30',
     pax: '1-9',
     descriptionKey: 'tours.historical_wine.desc',
@@ -437,6 +451,9 @@ export const tukTukTours: Tour[] = [
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     fareHarborProductId: 505334,
     goodToKnow: ['tour_detail.gtk.wine_tasting_3', 'tour_detail.gtk.bread_olive_oil'],
+    priceOptions: [
+      { price: '68,90€', group: 'Pessoas', details: 'Para idades a partir dos 18 anos' }
+    ],
     itinerary: [
       { activity: 'features.historical_center' },
       { activity: 'features.sequa_gilao_rivers' },
@@ -449,8 +466,7 @@ export const tukTukTours: Tour[] = [
     id: 'city-chocolate',
     type: 'tuk-tuk',
     nameKey: 'tours.city_chocolate.name',
-    price: '80€',
-    priceWithFee: '84,80€',
+    price: '84,80€',
     duration: '1h30',
     pax: '1-9',
     descriptionKey: 'tours.city_chocolate.desc',
@@ -459,6 +475,11 @@ export const tukTukTours: Tour[] = [
     gallery: CITY_CHOCOLATE_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     fareHarborProductId: 480393,
+    priceOptions: [
+      { price: '84,80€', group: 'De 1 ou 2 Pessoas', details: 'Para idades a partir dos 3 anos' },
+      { price: '84,80€', group: 'Grupo de 3 Pessoas', details: 'Para idades a partir dos 3 anos' },
+      { price: '116,60€', group: 'Grupo de 4 Pessoas', details: 'Para idades a partir dos 3 anos' }
+    ],
     itinerary: [
       { activity: 'features.historical_center' },
       { activity: 'features.sequa_gilao_rivers' },
@@ -472,8 +493,7 @@ export const tukTukTours: Tour[] = [
     id: 'tuk-tuk-boat',
     type: 'tuk-tuk',
     nameKey: 'tours.tuk_tuk_boat.name',
-    price: '52,50€',
-    priceWithFee: '55,65€',
+    price: '48,76€',
     duration: '2h30',
     pax: '2-5',
     descriptionKey: 'tours.tuk_tuk_boat.desc',
@@ -482,6 +502,12 @@ export const tukTukTours: Tour[] = [
     gallery: TUKTUK_BOAT_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     fareHarborProductId: 695490,
+    priceOptions: [
+      { price: '48,76€', group: 'Grupo de 5 Pessoas', details: 'Preço por pessoa' },
+      { price: '55,65€', group: 'Grupo de 2 Pessoas', details: 'Preço por pessoa' },
+      { price: '55,65€', group: 'Grupo de 4 Pessoas', details: 'Preço por pessoa' },
+      { price: '61,48€', group: 'Grupo de 3 Pessoas', details: 'Preço por pessoa' }
+    ],
     itinerary: [
       { activity: 'features.historical_center' },
       { activity: 'features.sequa_gilao_rivers' },
@@ -495,8 +521,7 @@ export const tukTukTours: Tour[] = [
     id: 'city-ice-cream',
     type: 'tuk-tuk',
     nameKey: 'tours.city_ice_cream.name',
-    price: '85€',
-    priceWithFee: '90,10€',
+    price: '90,10€',
     duration: '1h30',
     pax: '1-9',
     descriptionKey: 'tours.city_ice_cream.desc',
@@ -506,6 +531,10 @@ export const tukTukTours: Tour[] = [
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     fareHarborProductId: 602449,
     goodToKnow: ['tour_detail.gtk.ice_cream_pax'],
+    priceOptions: [
+      { price: '90,10€', group: 'Grupo de 1 a 3 Pessoas', details: 'Para idades a partir dos 3 anos' },
+      { price: '121,90€', group: 'Grupo de 4 Pessoas', details: 'Para idades a partir dos 3 anos' }
+    ],
     itinerary: [
       { activity: 'features.historical_center' },
       { activity: 'features.sequa_gilao_rivers' },
@@ -519,8 +548,7 @@ export const tukTukTours: Tour[] = [
     id: 'city-olive-factory',
     type: 'tuk-tuk',
     nameKey: 'tours.city_olive_factory.name',
-    price: '55€',
-    priceWithFee: '58,30€',
+    price: '58,30€',
     duration: '2h',
     pax: '1-9',
     descriptionKey: 'tours.city_olive_factory.desc',
@@ -529,6 +557,9 @@ export const tukTukTours: Tour[] = [
     gallery: CITY_OLIVE_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     fareHarborProductId: 535407,
+    priceOptions: [
+      { price: '58,30€', group: 'Pessoas', details: 'Para idades a partir dos 12 anos' }
+    ],
     itinerary: [
       { activity: 'features.historical_center' },
       { activity: 'features.sequa_gilao_rivers' },
@@ -565,8 +596,7 @@ export const jeepTours: Tour[] = [
     id: 'tavira-gold',
     type: 'jeep',
     nameKey: 'tours.tavira_gold.name',
-    price: '50€',
-    priceWithFee: '53€',
+    price: '39,22€',
     duration: '2h30',
     pax: '2-5',
     descriptionKey: 'tours.tavira_gold.desc',
@@ -577,6 +607,12 @@ export const jeepTours: Tour[] = [
     languages: ['Português', 'Espanhol', 'Inglês'],
     fareHarborProductId: 657100,
     fareHarborFlowId: 1006571,
+    priceOptions: [
+      { price: '39,22€', group: 'Grupo de 5 Pessoas' },
+      { price: '42,40€', group: 'Grupo de 4 Pessoas' },
+      { price: '47,70€', group: 'Grupo de 3 Pessoas' },
+      { price: '53€', group: 'Grupo de 2 Pessoas' }
+    ],
     itinerary: [
       { activity: 'features.historical_center' },
       { activity: 'features.ria_formosa_fauna_flora' },
@@ -589,8 +625,7 @@ export const jeepTours: Tour[] = [
     id: 'ria-formosa-jeep',
     type: 'jeep',
     nameKey: 'tours.ria_formosa_jeep.name',
-    price: '50€',
-    priceWithFee: '53€',
+    price: '53€',
     duration: '3h',
     pax: '2-5',
     descriptionKey: 'tours.ria_formosa_jeep.desc',
@@ -599,6 +634,12 @@ export const jeepTours: Tour[] = [
     gallery: RIA_FORMOSA_GASTRONOMIA_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     fareHarborProductId: 506791,
+    priceOptions: [
+      { price: '53€', group: 'Grupo de 5 Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' },
+      { price: '58,30€', group: 'Grupo de 4 Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' },
+      { price: '68,90€', group: 'Grupo de 3 Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' },
+      { price: '83,74€', group: 'Grupo de 2 Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' }
+    ],
     itinerary: [
       { activity: 'features.ria_formosa_fauna_flora' },
       { activity: 'features.tuna_museum' },
@@ -609,8 +650,7 @@ export const jeepTours: Tour[] = [
     id: 'fuzeta-olhao-bath',
     type: 'jeep',
     nameKey: 'tours.fuzeta_olhao_bath.name',
-    price: '95€',
-    priceWithFee: '100,70€',
+    price: '58,30€',
     duration: '3h',
     pax: '2-5',
     descriptionKey: 'tours.fuzeta_olhao_bath.desc',
@@ -619,6 +659,12 @@ export const jeepTours: Tour[] = [
     gallery: SANTA_LUZIA_FUSETA_OLHAO_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     fareHarborProductId: 506786,
+    priceOptions: [
+      { price: '58,30€', group: 'Grupo de 5 Pessoas', details: 'Preço por pessoa' },
+      { price: '66,25€', group: 'Grupo de 4 Pessoas', details: 'Preço por pessoa' },
+      { price: '71,02€', group: 'Grupo de 3 Pessoas', details: 'Preço por pessoa' },
+      { price: '100,70€', group: 'Grupo de 2 Pessoas', details: 'Preço por pessoa' }
+    ],
     itinerary: [
       { activity: 'features.santa_luzia_octopus' },
       { activity: 'features.ria_formosa_fauna_flora' },
@@ -630,8 +676,7 @@ export const jeepTours: Tour[] = [
     id: 'santa-luzia-clay',
     type: 'jeep',
     nameKey: 'tours.santa_luzia_clay.name',
-    price: '75€',
-    priceWithFee: '79,50€',
+    price: '47,70€',
     duration: '3h',
     pax: '2-5',
     descriptionKey: 'tours.santa_luzia_clay.desc',
@@ -640,6 +685,12 @@ export const jeepTours: Tour[] = [
     gallery: SANTA_LUZIA_CLAY_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     fareHarborProductId: 506790,
+    priceOptions: [
+      { price: '47,70€', group: 'Grupo de 5 Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' },
+      { price: '53€', group: 'Grupo de 4 Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' },
+      { price: '60,42€', group: 'Grupo de 3 Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' },
+      { price: '79,50€', group: 'Grupo de 2 Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' }
+    ],
     itinerary: [
       { activity: 'features.santa_luzia_octopus' },
       { activity: 'features.ria_formosa_fauna_flora' },
@@ -651,8 +702,7 @@ export const jeepTours: Tour[] = [
     id: 'liquid-gold-route',
     type: 'jeep',
     nameKey: 'tours.liquid_gold_route.name',
-    price: '80€',
-    priceWithFee: '84,80€',
+    price: '47,70€',
     duration: '3h',
     pax: '2-5',
     descriptionKey: 'tours.liquid_gold_route.desc',
@@ -661,6 +711,12 @@ export const jeepTours: Tour[] = [
     gallery: OLIVAL_AZEITE_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     fareHarborProductId: 506789,
+    priceOptions: [
+      { price: '47,70€', group: 'Grupo de 5 Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' },
+      { price: '53€', group: 'Grupo de 4 Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' },
+      { price: '63,60€', group: 'Grupo de 3 Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' },
+      { price: '84,80€', group: 'Grupo de 2 Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' }
+    ],
     itinerary: [
       { activity: 'features.moncarapacho' },
       { activity: 'features.olive_grove' },
@@ -672,8 +728,7 @@ export const jeepTours: Tour[] = [
     id: 'jeep-boat-anchors',
     type: 'jeep',
     nameKey: 'tours.jeep_boat_anchors.name',
-    price: '115€',
-    priceWithFee: '121,90€',
+    price: '68,90€',
     duration: '3h',
     pax: '2-5',
     descriptionKey: 'tours.jeep_boat_anchors.desc',
@@ -682,6 +737,12 @@ export const jeepTours: Tour[] = [
     gallery: JEEP_BOAT_ANCHOR_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     fareHarborProductId: 695527,
+    priceOptions: [
+      { price: '68,90€', group: 'Grupo de 5 Pessoas', details: 'Preço por pessoa' },
+      { price: '79,50€', group: 'Grupo de 4 Pessoas', details: 'Preço por pessoa' },
+      { price: '90,10€', group: 'Grupo de 3 Pessoas', details: 'Preço por pessoa' },
+      { price: '121,90€', group: 'Grupo de 2 Pessoas', details: 'Preço por pessoa' }
+    ],
     itinerary: [
       { activity: 'features.historical_center' },
       { activity: 'features.ria_formosa_fauna_flora' },
@@ -694,8 +755,7 @@ export const jeepTours: Tour[] = [
     id: 'tavira-roots-wine',
     type: 'jeep',
     nameKey: 'tours.tavira_roots_wine.name',
-    price: '69€',
-    priceWithFee: '73,14€',
+    price: '53€',
     duration: '3h',
     pax: '2-5',
     descriptionKey: 'tours.tavira_roots_wine.desc',
@@ -705,6 +765,12 @@ export const jeepTours: Tour[] = [
     languages: ['Português', 'Espanhol', 'Inglês'],
     fareHarborProductId: 611701,
     fareHarborFlowId: 1006571,
+    priceOptions: [
+      { price: '53€', group: 'Grupo de 5 Pessoas', details: 'Preço por pessoa' },
+      { price: '58,30€', group: 'Grupo de 4 Pessoas', details: 'Preço por pessoa' },
+      { price: '68,90€', group: 'Grupo de 3 Pessoas', details: 'Preço por pessoa' },
+      { price: '73,14€', group: 'Grupo de 2 Pessoas', details: 'Preço por pessoa' }
+    ],
     itinerary: [
       { activity: 'features.historical_center' },
       { activity: 'features.ria_formosa_fauna_flora' },
@@ -717,8 +783,7 @@ export const jeepTours: Tour[] = [
     id: 'jeep-boat-history',
     type: 'jeep',
     nameKey: 'tours.jeep_boat_history.name',
-    price: '70€',
-    priceWithFee: '74,20€',
+    price: '58,30€',
     duration: '3h',
     pax: '2-5',
     descriptionKey: 'tours.jeep_boat_history.desc',
@@ -727,6 +792,12 @@ export const jeepTours: Tour[] = [
     gallery: JEEP_BOAT_HISTORY_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     fareHarborProductId: 695531,
+    priceOptions: [
+      { price: '58,30€', group: 'Grupo de 5 Pessoas', details: 'Preço por pessoa' },
+      { price: '63,60€', group: 'Grupo de 4 Pessoas', details: 'Preço por pessoa' },
+      { price: '68,90€', group: 'Grupo de 3 Pessoas', details: 'Preço por pessoa' },
+      { price: '74,20€', group: 'Grupo de 2 Pessoas', details: 'Preço por pessoa' }
+    ],
     itinerary: [
       { activity: 'features.historical_center' },
       { activity: 'features.ria_formosa_fauna_flora' },
@@ -739,8 +810,7 @@ export const jeepTours: Tour[] = [
     id: 'ceramica-tradicional',
     type: 'jeep',
     nameKey: 'tours.ceramica.name',
-    price: '75€',
-    priceWithFee: '79,50€',
+    price: '48,76€',
     duration: '3h',
     pax: '2-5',
     descriptionKey: 'tours.ceramica.desc',
@@ -749,6 +819,12 @@ export const jeepTours: Tour[] = [
     gallery: CERAMICA_TRADICIONAL_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     fareHarborProductId: 509205,
+    priceOptions: [
+      { price: '48,76€', group: 'Grupo de 5 Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' },
+      { price: '55,65€', group: 'Grupo de 4 Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' },
+      { price: '63,60€', group: 'Grupo de 3 Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' },
+      { price: '79,50€', group: 'Grupo de 2 Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' }
+    ],
     itinerary: [
       { activity: 'features.sequa_river' },
       { activity: 'features.barrocal' },
@@ -759,8 +835,7 @@ export const jeepTours: Tour[] = [
     id: 'full-day-sotavento',
     type: 'jeep',
     nameKey: 'tours.full_day_sotavento.name',
-    price: '180€',
-    priceWithFee: '190,80€',
+    price: '95,40€',
     duration: '6h30',
     pax: '2-5',
     descriptionKey: 'tours.full_day_sotavento.desc',
@@ -769,6 +844,12 @@ export const jeepTours: Tour[] = [
     gallery: DIA_COMPLETO_SOTAVENTO_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     fareHarborProductId: 506785,
+    priceOptions: [
+      { price: '95,40€', group: 'Grupo de 5 Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' },
+      { price: '118,72€', group: 'Grupo de 4 Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' },
+      { price: '134,62€', group: 'Grupo de 3 Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' },
+      { price: '190,80€', group: 'Grupo de 2 Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' }
+    ],
     itinerary: [
       { activity: 'features.sequa_river' },
       { activity: 'features.traditional_ceramics' },

@@ -26,7 +26,8 @@
     "view_details": "Ver Detalhes",
     "reserve_now": "Reservar Agora",
     "contact_whatsapp": "Falar com Guia via WhatsApp",
-    "museum_closure_notice": "O Museu do Atum encontra-se encerrado entre 10 de novembro e 10 de fevereiro."
+    "museum_closure_notice": "O Museu do Atum encontra-se encerrado entre 10 de novembro e 10 de fevereiro.",
+    "see_all_prices": "Consulte todos os preços aqui"
   },
   "tuk_tuk_page": {
     "title": "Passeios de Tuk Tuk em Tavira",
@@ -241,7 +242,7 @@
     },
     "ria_formosa_jeep": {
       "name": "Ria Formosa & Cacela Velha",
-      "desc": "Explore a beleza da Ria Formosa com paragem em Cacela Velha e um almoço regional incluído."
+      "desc": "Explore a beleza da Ria Formosa com paragem em Cacela Velha."
     },
     "fuzeta_olhao_bath": {
       "name": "Santa Luzia, Fuseta, Olhão, Salinas (Mar Morto) e Banho de Lama",

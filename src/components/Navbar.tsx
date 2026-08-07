@@ -80,6 +80,7 @@ export function Navbar() {
             <img 
               src="https://lh3.googleusercontent.com/d/1nBgIFM_5E5vclRhVItfSWT8rdG_Xt_Ml" 
               alt="Tavira Roots Logo" 
+              referrerPolicy="no-referrer"
               className={cn(
                 "object-contain transition-all duration-300",
                 isScrolled ? "w-[45px] h-[45px] md:w-[60px] md:h-[60px]" : "w-[65px] h-[65px] md:w-[85px] md:h-[85px]"

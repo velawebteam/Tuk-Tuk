@@ -26,7 +26,8 @@
     "view_details": "View Details",
     "reserve_now": "Book Now",
     "contact_whatsapp": "Talk to Guide via WhatsApp",
-    "museum_closure_notice": "The Tuna Museum is closed between November 10th and February 10th."
+    "museum_closure_notice": "The Tuna Museum is closed between November 10th and February 10th.",
+    "see_all_prices": "See all prices here"
   },
   "tuk_tuk_page": {
     "title": "Tuk Tuk Tours in Tavira",
@@ -241,7 +242,7 @@
     },
     "ria_formosa_jeep": {
       "name": "Ria Formosa & Cacela Velha",
-      "desc": "Explore the beauty of Ria Formosa with a stop in Cacela Velha and a regional lunch included."
+      "desc": "Explore the beauty of Ria Formosa with a stop in Cacela Velha."
     },
     "fuzeta_olhao_bath": {
       "name": "Santa Luzia, Fuseta, Olhão, Salt Pans (Dead Sea) & Mud Bath",

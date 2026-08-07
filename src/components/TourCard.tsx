@@ -22,6 +22,7 @@ export function TourCard({ tour }: TourCardProps) {
             src={tour.image} 
             alt={t(tour.nameKey)} 
             className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ${tour.imagePosition || ''} ${tour.image?.includes?.('1AgBECV3LgIOLdu520PZLGPzQNVrUFNbZ') ? 'object-left' : ''}`}
+            referrerPolicy="no-referrer"
           />
           <div className="absolute top-4 left-4">
             <span className="px-3 py-1 bg-white/90 backdrop-blur shadow-sm rounded-full text-[10px] font-bold uppercase tracking-wider text-brand-black">
@@ -79,7 +80,7 @@ export function TourCard({ tour }: TourCardProps) {
               <span className="text-[10px] uppercase tracking-wider text-brand-black/40 font-bold">{t('common.from')}</span>
               <div className="flex flex-col">
                 <span className="text-xl font-black text-brand-brown">{tour.price}</span>
-                {tour.priceWithFee && (
+                {tour.priceWithFee && tour.priceWithFee !== tour.price && (
                   <span className="text-[10px] text-brand-black/40 font-bold -mt-1">
                     ({tour.priceWithFee} total)
                   </span>

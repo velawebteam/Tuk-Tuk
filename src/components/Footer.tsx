@@ -27,6 +27,7 @@ export function Footer() {
                 src="https://lh3.googleusercontent.com/d/1nBgIFM_5E5vclRhVItfSWT8rdG_Xt_Ml" 
                 alt="Tavira Roots Logo" 
                 className="h-12 w-auto"
+                referrerPolicy="no-referrer"
               />
             </Link>
             <p className="text-brand-black/80 text-sm leading-relaxed font-bold uppercase tracking-widest">

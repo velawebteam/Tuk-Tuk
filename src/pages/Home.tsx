@@ -127,6 +127,7 @@ export default function Home() {
                   src={tour.image} 
                   alt={t(tour.nameKey)} 
                   className={`absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 ${tour.image?.includes?.('1AgBECV3LgIOLdu520PZLGPzQNVrUFNbZ') ? 'object-left' : ''}`}
+                  referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/30 to-transparent opacity-90"></div>
                 <div className="absolute top-0 left-0 p-8 z-20">
@@ -213,15 +214,15 @@ export default function Home() {
                 <p>{t('home.city_tavira.description')}</p>
               </div>
               
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 items-stretch">
                 {[
                   t('home.city_tavira.highlight1'),
                   t('home.city_tavira.highlight2'),
                   t('home.city_tavira.highlight3')
                 ].map((highlight, idx) => (
-                  <div key={idx} className="flex items-center gap-3 bg-white p-4 rounded-2xl shadow-sm border border-brand-brown/5">
-                    <div className="w-2 h-2 rounded-full bg-brand-brown" />
-                    <span className="font-bold text-sm uppercase tracking-wider text-brand-black">{highlight}</span>
+                  <div key={idx} className="flex items-center gap-2.5 bg-white p-3.5 md:p-4 rounded-2xl shadow-sm border border-brand-brown/5 h-full">
+                    <div className="w-2 h-2 rounded-full bg-brand-brown shrink-0" />
+                    <span className="font-bold text-xs sm:text-sm uppercase tracking-wider text-brand-black leading-tight shrink min-w-0">{highlight}</span>
                   </div>
                 ))}
               </div>
@@ -240,6 +241,7 @@ export default function Home() {
                   src="https://lh3.googleusercontent.com/d/1Z3XlPZaBaW5Xfh8pz9hKm_HEKQEFbBu3" 
                   alt="Cidade de Tavira" 
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                  referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black/40 to-transparent" />
               </div>
@@ -265,6 +267,7 @@ export default function Home() {
                   src="https://lh3.googleusercontent.com/d/1Zzp1GzTuUTpAzKBx82KY_jkBtT9Y1N4f" 
                   alt="Sotavento Algarvio" 
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
+                  referrerPolicy="no-referrer"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black/40 to-transparent" />
               </div>
@@ -284,15 +287,15 @@ export default function Home() {
                 <p>{t('home.sotavento.description')}</p>
               </div>
               
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 items-stretch">
                 {[
                   t('home.sotavento.highlight1'),
                   t('home.sotavento.highlight2'),
                   t('home.sotavento.highlight3')
                 ].map((highlight, idx) => (
-                  <div key={idx} className="flex items-center gap-3 bg-brand-cream p-4 rounded-2xl shadow-sm border border-brand-brown/5">
-                    <div className="w-2 h-2 rounded-full bg-brand-brown" />
-                    <span className="font-bold text-sm uppercase tracking-wider text-brand-black">{highlight}</span>
+                  <div key={idx} className="flex items-center gap-2.5 bg-brand-cream p-3.5 md:p-4 rounded-2xl shadow-sm border border-brand-brown/5 h-full">
+                    <div className="w-2 h-2 rounded-full bg-brand-brown shrink-0" />
+                    <span className="font-bold text-xs sm:text-sm uppercase tracking-wider text-brand-black leading-tight shrink min-w-0">{highlight}</span>
                   </div>
                 ))}
               </div>

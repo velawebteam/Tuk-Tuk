@@ -105,6 +105,7 @@ export default function Jeep() {
                   src="https://lh3.googleusercontent.com/d/1Ncwvz_oWrkuDPri7G_KB1ZSQ0MhdftcH" 
                   alt="Jipe Adventure" 
                   className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
                 />
               </div>
             </div>

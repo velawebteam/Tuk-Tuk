@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { Clock, Users, ShieldCheck, MapPin, CheckCircle2, ChevronLeft, ChevronRight, Calendar, Backpack, Info, XCircle, Map, Star, AlertCircle, Maximize2 } from 'lucide-react';
+import { Clock, Users, ShieldCheck, MapPin, CheckCircle2, ChevronLeft, ChevronRight, Calendar, Backpack, Info, XCircle, Map, Star, AlertCircle, Maximize2, ChevronDown, Tag } from 'lucide-react';
 import { allTours } from '@/src/data/tours';
 import { useTranslation } from 'react-i18next';
 
@@ -17,6 +17,7 @@ export default function TourDetail() {
   const tour = allTours.find(t => t.id === id);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [showPrices, setShowPrices] = useState(false);
   const thumbnailContainerRef = useRef<HTMLDivElement>(null);
 
   const images = tour?.gallery && tour.gallery.length > 0 ? tour.gallery : [tour?.image || ''];
@@ -107,6 +108,7 @@ export default function TourDetail() {
                       transition={{ duration: 0.4 }}
                       className={`w-full h-full object-cover ${selectedImageIndex === 0 && tour.imagePosition ? tour.imagePosition : ''} ${images[selectedImageIndex]?.includes?.('1AgBECV3LgIOLdu520PZLGPzQNVrUFNbZ') ? 'object-left' : ''}`}
                       alt={`${tour?.nameKey} gallery ${selectedImageIndex}`}
+                      referrerPolicy="no-referrer"
                     />
                 </AnimatePresence>
 
@@ -161,7 +163,7 @@ export default function TourDetail() {
                       <div className={`w-20 h-14 md:w-24 md:h-16 rounded-xl overflow-hidden transition-all ${
                         selectedImageIndex === i ? 'ring-4 ring-brand-brown ring-offset-2 shadow-lg' : 'hover:scale-105'
                       }`}>
-                        <img src={img} className="w-full h-full object-cover" alt={`Thumbnail ${i}`} />
+                        <img src={img} className="w-full h-full object-cover" alt={`Thumbnail ${i}`} referrerPolicy="no-referrer" />
                       </div>
                     </button>
                   ))}
@@ -301,6 +303,53 @@ export default function TourDetail() {
                   </a>
                 )}
               </div>
+
+              {/* Expandable All Prices Section */}
+              {tour?.priceOptions && tour.priceOptions.length > 0 && (
+                <div className="mb-6 pt-4 border-t border-white/10">
+                  <button 
+                    onClick={() => setShowPrices(!showPrices)}
+                    type="button"
+                    className="w-full flex items-center justify-between py-3 px-4 rounded-2xl bg-white/10 hover:bg-white/15 transition-all text-brand-cream text-xs md:text-sm font-bold border border-white/10 group cursor-pointer"
+                  >
+                    <span className="flex items-center gap-2">
+                      <Tag size={16} className="text-brand-brown group-hover:scale-110 transition-transform" />
+                      {t('common.see_all_prices', 'Consulte todos os preços aqui')}
+                    </span>
+                    <ChevronDown size={18} className={`text-brand-cream/70 transition-transform duration-300 ${showPrices ? 'rotate-180' : ''}`} />
+                  </button>
+
+                  <AnimatePresence>
+                    {showPrices && (
+                      <motion.div
+                        initial={{ opacity: 0, height: 0 }}
+                        animate={{ opacity: 1, height: 'auto' }}
+                        exit={{ opacity: 0, height: 0 }}
+                        transition={{ duration: 0.25 }}
+                        className="overflow-hidden mt-3"
+                      >
+                        <div className="bg-white/5 backdrop-blur-md rounded-2xl p-3 md:p-4 border border-white/10 space-y-2">
+                          {tour.priceOptions.map((opt, idx) => (
+                            <div 
+                              key={idx} 
+                              className="flex flex-col sm:flex-row sm:items-center justify-between p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-colors gap-1 border border-white/5"
+                            >
+                              <div className="flex flex-col">
+                                <span className="font-bold text-sm text-white">{opt.group}</span>
+                                {opt.details && (
+                                  <span className="text-xs text-brand-cream/60">{opt.details}</span>
+                                )}
+                              </div>
+                              <span className="font-black text-base md:text-lg text-brand-brown self-start sm:self-center shrink-0 bg-brand-brown/10 px-2.5 py-1 rounded-lg border border-brand-brown/20">{opt.price}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </div>
+              )}
+
               <p className="text-[10px] text-brand-cream/30 text-center uppercase tracking-widest font-bold flex items-center justify-center gap-2">
                 <ShieldCheck size={14} className="text-brand-brown" />
                 {t('tour_detail.secure_booking')}
@@ -466,6 +515,7 @@ export default function TourDetail() {
               transition={{ duration: 0.3 }}
               className="max-w-full max-h-full object-contain rounded-lg shadow-2xl"
               onClick={(e) => e.stopPropagation()}
+              referrerPolicy="no-referrer"
             />
 
             <div className="absolute bottom-8 left-1/2 -translate-x-1/2 text-white/60 font-medium">

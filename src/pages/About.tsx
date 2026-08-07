@@ -14,6 +14,7 @@ export default function About() {
             src="https://lh3.googleusercontent.com/d/1AgBECV3LgIOLdu520PZLGPzQNVrUFNbZ" 
             alt="Tavira Roots Team" 
             className="w-full h-full object-cover object-center brightness-50"
+            referrerPolicy="no-referrer"
           />
           <div className="absolute inset-0 bg-brand-black/40"></div>
         </div>
@@ -55,10 +56,10 @@ export default function About() {
             </div>
           </div>
           <div className="grid grid-cols-2 gap-4 md:gap-6">
-            <img src="https://lh3.googleusercontent.com/d/1Wy0aT0a4mtdFaDxq4empNdZyNh2HZsJg" className="rounded-3xl h-48 md:h-64 w-full object-cover shadow-lg border border-brand-brown/5" alt="Tavira Roots Experience 1" />
-            <img src="https://lh3.googleusercontent.com/d/15WLHahY6-fJCCA93SE6EoNE6h_VRGH91" className="rounded-3xl h-48 md:h-64 w-full object-cover shadow-lg sm:mt-8 border border-brand-brown/5" alt="Tavira Roots Experience 2" />
-            <img src="https://lh3.googleusercontent.com/d/1CLBrBQkVAm8hIuTENdVRSexKy4Os3dOl" className="rounded-3xl h-48 md:h-64 w-full object-cover shadow-lg sm:-mt-8 border border-brand-brown/5" alt="Tavira Roots Experience 3" />
-            <img src="https://lh3.googleusercontent.com/d/1jkbnjdQHR7wVhM-L1hq039OD5zIOTOjw" className="rounded-3xl h-48 md:h-64 w-full object-cover shadow-lg border border-brand-brown/5" alt="Tavira Roots Experience 4" />
+            <img src="https://lh3.googleusercontent.com/d/1Wy0aT0a4mtdFaDxq4empNdZyNh2HZsJg" className="rounded-3xl h-48 md:h-64 w-full object-cover shadow-lg border border-brand-brown/5" alt="Tavira Roots Experience 1" referrerPolicy="no-referrer" />
+            <img src="https://lh3.googleusercontent.com/d/15WLHahY6-fJCCA93SE6EoNE6h_VRGH91" className="rounded-3xl h-48 md:h-64 w-full object-cover shadow-lg sm:mt-8 border border-brand-brown/5" alt="Tavira Roots Experience 2" referrerPolicy="no-referrer" />
+            <img src="https://lh3.googleusercontent.com/d/1CLBrBQkVAm8hIuTENdVRSexKy4Os3dOl" className="rounded-3xl h-48 md:h-64 w-full object-cover shadow-lg sm:-mt-8 border border-brand-brown/5" alt="Tavira Roots Experience 3" referrerPolicy="no-referrer" />
+            <img src="https://lh3.googleusercontent.com/d/1jkbnjdQHR7wVhM-L1hq039OD5zIOTOjw" className="rounded-3xl h-48 md:h-64 w-full object-cover shadow-lg border border-brand-brown/5" alt="Tavira Roots Experience 4" referrerPolicy="no-referrer" />
           </div>
         </div>
       </section>
