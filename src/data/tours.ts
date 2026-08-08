@@ -371,9 +371,9 @@ export const tukTukTours: Tour[] = [
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     fareHarborProductId: 480332,
     priceOptions: [
-      { price: '58,30€', group: 'De 1 ou 2 Pessoas', details: 'Para idades a partir dos 3 anos' },
+      { price: '90,10€', group: 'Grupo de 4/5 Pessoas', details: 'Para idades a partir dos 3 anos' },
       { price: '74,20€', group: 'Grupo de 3 Pessoas', details: 'Para idades a partir dos 3 anos' },
-      { price: '90,10€', group: 'Grupo de 4 Pessoas', details: 'Para idades a partir dos 3 anos' }
+      { price: '58,30€', group: 'De 1 ou 2 Pessoas', details: 'Para idades a partir dos 3 anos' }
     ],
     itinerary: [
       { activity: 'features.historical_center' },
@@ -398,9 +398,9 @@ export const tukTukTours: Tour[] = [
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     fareHarborProductId: 480370,
     priceOptions: [
-      { price: '95,40€', group: 'De 1 ou 2 Pessoas', details: 'Para idades a partir dos 3 anos' },
+      { price: '127,20€', group: 'Grupo de 4/5 Pessoas', details: 'Para idades a partir dos 3 anos' },
       { price: '95,40€', group: 'Grupo de 3 Pessoas', details: 'Para idades a partir dos 3 anos' },
-      { price: '127,20€', group: 'Grupo de 4 Pessoas', details: 'Para idades a partir dos 3 anos' }
+      { price: '95,40€', group: 'De 1 ou 2 Pessoas', details: 'Para idades a partir dos 3 anos' }
     ],
     itinerary: [
       { activity: 'features.historical_center' },
@@ -426,7 +426,7 @@ export const tukTukTours: Tour[] = [
     fareHarborProductId: 480337,
     goodToKnow: ['tour_detail.gtk.ends_restaurant', 'tour_detail.gtk.menu_ti_maria', 'tour_detail.gtk.no_pickup_restaurant'],
     priceOptions: [
-      { price: '53€', group: 'Pessoas', details: 'Para idades a partir dos 12 anos' }
+      { price: '53€', group: 'Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' }
     ],
     itinerary: [
       { activity: 'features.historical_center' },
@@ -452,7 +452,7 @@ export const tukTukTours: Tour[] = [
     fareHarborProductId: 505334,
     goodToKnow: ['tour_detail.gtk.wine_tasting_3', 'tour_detail.gtk.bread_olive_oil'],
     priceOptions: [
-      { price: '68,90€', group: 'Pessoas', details: 'Para idades a partir dos 18 anos' }
+      { price: '68,90€', group: 'Pessoas', details: 'Preço por pessoa | Para idades a partir dos 18 anos' }
     ],
     itinerary: [
       { activity: 'features.historical_center' },
@@ -476,9 +476,9 @@ export const tukTukTours: Tour[] = [
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     fareHarborProductId: 480393,
     priceOptions: [
-      { price: '84,80€', group: 'De 1 ou 2 Pessoas', details: 'Para idades a partir dos 3 anos' },
+      { price: '116,60€', group: 'Grupo de 4/5 Pessoas', details: 'Para idades a partir dos 3 anos' },
       { price: '84,80€', group: 'Grupo de 3 Pessoas', details: 'Para idades a partir dos 3 anos' },
-      { price: '116,60€', group: 'Grupo de 4 Pessoas', details: 'Para idades a partir dos 3 anos' }
+      { price: '84,80€', group: 'De 1 ou 2 Pessoas', details: 'Para idades a partir dos 3 anos' }
     ],
     itinerary: [
       { activity: 'features.historical_center' },
@@ -504,9 +504,9 @@ export const tukTukTours: Tour[] = [
     fareHarborProductId: 695490,
     priceOptions: [
       { price: '48,76€', group: 'Grupo de 5 Pessoas', details: 'Preço por pessoa' },
-      { price: '55,65€', group: 'Grupo de 2 Pessoas', details: 'Preço por pessoa' },
       { price: '55,65€', group: 'Grupo de 4 Pessoas', details: 'Preço por pessoa' },
-      { price: '61,48€', group: 'Grupo de 3 Pessoas', details: 'Preço por pessoa' }
+      { price: '61,48€', group: 'Grupo de 3 Pessoas', details: 'Preço por pessoa' },
+      { price: '55,65€', group: 'Grupo de 2 Pessoas', details: 'Preço por pessoa' }
     ],
     itinerary: [
       { activity: 'features.historical_center' },
@@ -532,8 +532,8 @@ export const tukTukTours: Tour[] = [
     fareHarborProductId: 602449,
     goodToKnow: ['tour_detail.gtk.ice_cream_pax'],
     priceOptions: [
-      { price: '90,10€', group: 'Grupo de 1 a 3 Pessoas', details: 'Para idades a partir dos 3 anos' },
-      { price: '121,90€', group: 'Grupo de 4 Pessoas', details: 'Para idades a partir dos 3 anos' }
+      { price: '121,90€', group: 'Grupo de 4/5 Pessoas', details: 'Para idades a partir dos 3 anos' },
+      { price: '90,10€', group: 'Grupo de 1 a 3 Pessoas', details: 'Para idades a partir dos 3 anos' }
     ],
     itinerary: [
       { activity: 'features.historical_center' },
@@ -558,7 +558,7 @@ export const tukTukTours: Tour[] = [
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     fareHarborProductId: 535407,
     priceOptions: [
-      { price: '58,30€', group: 'Pessoas', details: 'Para idades a partir dos 12 anos' }
+      { price: '58,30€', group: 'Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' }
     ],
     itinerary: [
       { activity: 'features.historical_center' },
@@ -608,10 +608,10 @@ export const jeepTours: Tour[] = [
     fareHarborProductId: 657100,
     fareHarborFlowId: 1006571,
     priceOptions: [
-      { price: '39,22€', group: 'Grupo de 5 Pessoas' },
-      { price: '42,40€', group: 'Grupo de 4 Pessoas' },
-      { price: '47,70€', group: 'Grupo de 3 Pessoas' },
-      { price: '53€', group: 'Grupo de 2 Pessoas' }
+      { price: '39,22€', group: 'Grupo de 5 Pessoas', details: 'Preço por pessoa' },
+      { price: '42,40€', group: 'Grupo de 4 Pessoas', details: 'Preço por pessoa' },
+      { price: '47,70€', group: 'Grupo de 3 Pessoas', details: 'Preço por pessoa' },
+      { price: '53€', group: 'Grupo de 2 Pessoas', details: 'Preço por pessoa' }
     ],
     itinerary: [
       { activity: 'features.historical_center' },
