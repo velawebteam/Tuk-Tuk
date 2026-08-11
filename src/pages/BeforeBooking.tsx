@@ -1,6 +1,7 @@
 import { motion } from 'motion/react';
 import { AlertCircle, Calendar, Users, MapPin, CreditCard, Info, Check } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { SEO } from '../components/SEO';
 
 export default function BeforeBooking() {
   const { t } = useTranslation();
@@ -42,6 +43,11 @@ export default function BeforeBooking() {
 
   return (
     <div className="pt-28 md:pt-40 pb-24">
+      <SEO 
+        title={t('seo.before_booking_title')}
+        description={t('seo.before_booking_desc')}
+        canonical="/before-booking"
+      />
       <section className="bg-gray-50 py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Museum Closure Alert */}

@@ -8,8 +8,8 @@ export default function Contact() {
   return (
     <div className="pt-28 md:pt-40 pb-24 bg-brand-cream min-h-screen">
       <SEO 
-        title={`${t('contact_page.title')} | Tavira Roots`}
-        description={t('contact_page.subtitle')}
+        title={t('seo.contact_title')}
+        description={t('seo.contact_desc')}
         canonical="/contactos"
       />
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20">

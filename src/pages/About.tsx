@@ -1,12 +1,18 @@
 import { motion } from 'motion/react';
 import { Heart, Shield, Map, Award } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
+import { SEO } from '../components/SEO';
 
 export default function About() {
   const { t } = useTranslation();
   
   return (
     <div className="pb-24">
+      <SEO 
+        title={t('seo.about_title')}
+        description={t('seo.about_desc')}
+        canonical="/sobre-nos"
+      />
       {/* Hero */}
       <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden bg-brand-black">
         <div className="absolute inset-0">
@@ -19,8 +25,8 @@ export default function About() {
           <div className="absolute inset-0 bg-brand-black/40"></div>
         </div>
         <div className="relative z-10 text-center text-white px-4 pt-28 md:pt-36 pb-12">
-          <h1 className="text-5xl md:text-7xl font-black mb-4 uppercase tracking-tight">{t('nav.about')}</h1>
-          <p className="text-lg md:text-xl text-brand-cream font-black uppercase tracking-[0.3em] mb-4 bg-brand-brown/40 backdrop-blur-sm px-6 py-2 inline-block rounded-full border border-brand-cream/20">
+          <h1 className="text-[48px] font-black mb-4 uppercase tracking-tight">{t('about_page.title')}</h1>
+          <p className="text-[17px] text-brand-cream font-black uppercase tracking-[0.3em] mb-4 bg-brand-brown/40 backdrop-blur-sm px-6 py-2 inline-block rounded-full border border-brand-cream/20">
             {t('about_page.hero_subtitle')}
           </p>
         </div>

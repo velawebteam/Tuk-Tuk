@@ -10,8 +10,9 @@ export default function Jeep() {
   return (
     <div className="pb-24">
       <SEO 
-        title={t('jeep_page.title')}
-        description={t('jeep_page.description')}
+        title={t('seo.jeep_title')}
+        description={t('seo.jeep_desc')}
+        keywords={t('seo.jeep_keywords')}
         canonical="/jipe"
         schemaData={{
           "@context": "https://schema.org",

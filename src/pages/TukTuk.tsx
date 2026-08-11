@@ -10,8 +10,9 @@ export default function TukTuk() {
   return (
     <div className="pb-24">
       <SEO 
-        title={t('tuk_tuk_page.title')}
-        description={t('tuk_tuk_page.description')}
+        title={t('seo.tuk_tuk_title')}
+        description={t('seo.tuk_tuk_desc')}
+        keywords={t('seo.tuk_tuk_keywords')}
         canonical="/tuk-tuk"
         schemaData={{
           "@context": "https://schema.org",

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from 'motion/react';
 import { Clock, Users, ShieldCheck, MapPin, CheckCircle2, ChevronLeft, ChevronRight, Calendar, Backpack, Info, XCircle, Map, Star, AlertCircle, Maximize2, ChevronDown, Tag } from 'lucide-react';
 import { allTours } from '@/src/data/tours';
 import { useTranslation } from 'react-i18next';
+import { SEO } from '../components/SEO';
 
 declare global {
   interface Window {
@@ -78,8 +79,38 @@ export default function TourDetail() {
     );
   }
 
+  const tourTitle = `${t(tour.nameKey)} | Passeios ${tour.type === 'tuk-tuk' ? 'Tuktuk' : 'Jipe'} Tavira`;
+  const tourDesc = `${t(tour.descriptionKey)} Passeio privado em Tavira e Sotavento Algarvio. Duração: ${tour.duration}.`;
+  const tourKeywords = `Passeios Tavira, Tuktuk Tavira, ${t(tour.nameKey)}, ${tour.type === 'tuk-tuk' ? 'Passeios de Tuktuk Tavira' : 'Passeios de Jipe Tavira'}, Passeios Algarve, Tavira Roots`;
+
   return (
     <div className="pb-24 bg-brand-cream min-h-screen">
+      <SEO 
+        title={`${tourTitle} | Tavira Roots`}
+        description={tourDesc}
+        keywords={tourKeywords}
+        canonical={`/tour/${tour.id}`}
+        ogImage={tour.image}
+        schemaData={{
+          "@context": "https://schema.org",
+          "@type": "TouristTrip",
+          "name": t(tour.nameKey),
+          "description": t(tour.descriptionKey),
+          "image": tour.image,
+          "touristType": tour.type === 'tuk-tuk' ? 'Tuk Tuk Sightseeing' : 'Jeep Safari Off-Road',
+          "provider": {
+            "@type": "TravelAgency",
+            "name": "Tavira Roots",
+            "url": "https://taviraroots.com"
+          },
+          "offers": {
+            "@type": "Offer",
+            "price": tour.price.replace('€', '').replace(',', '.').trim(),
+            "priceCurrency": "EUR",
+            "availability": "https://schema.org/InStock"
+          }
+        }}
+      />
       {/* Navigation Breadcrumb */}
       <div className="max-w-7xl mx-auto px-4 pt-28 md:pt-40 pb-8">
         <Link to={tour.type === 'tuk-tuk' ? '/tuk-tuk' : '/jipe'} className="flex items-center gap-2 text-brand-black/40 hover:text-brand-brown transition-all font-bold uppercase tracking-widest text-xs group">

@@ -62,8 +62,8 @@ export default function FAQs() {
   return (
     <div className="pt-28 md:pt-40 pb-24 bg-brand-cream min-h-screen">
       <SEO 
-        title={t('nav.faqs')}
-        description={t('faqs_page.subtitle')}
+        title={t('seo.faqs_title')}
+        description={t('seo.faqs_desc')}
         canonical="/faqs"
         schemaData={{
           "@context": "https://schema.org",
@@ -90,7 +90,7 @@ export default function FAQs() {
               {t('common.museum_closure_notice')}
             </p>
           </motion.div>
-          <h1 className="text-3xl md:text-5xl font-black text-brand-black mb-6 uppercase tracking-tight">{t('nav.faqs')}</h1>
+          <h1 className="text-3xl md:text-5xl font-black text-brand-black mb-6 uppercase tracking-tight">{t('faqs_page.title')}</h1>
           <p className="text-brand-black/60 font-medium">{t('faqs_page.subtitle')}</p>
         </div>
 

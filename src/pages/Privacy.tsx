@@ -1,10 +1,16 @@
 import { useTranslation } from 'react-i18next';
+import { SEO } from '../components/SEO';
 
 export default function Privacy() {
   const { t } = useTranslation();
 
   return (
     <div className="pt-28 md:pt-40 pb-24 max-w-4xl mx-auto px-4">
+      <SEO 
+        title={t('seo.privacy_title')}
+        description={t('seo.privacy_desc')}
+        canonical="/privacidade"
+      />
       <h1 className="text-4xl md:text-5xl font-black text-brand-black mb-12 uppercase tracking-tight">
         {t('legal.privacy_title')}
       </h1>

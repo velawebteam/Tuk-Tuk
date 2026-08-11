@@ -14,8 +14,9 @@ export default function Home() {
   return (
     <div>
       <SEO 
-        title={t('hero.title_part1') + t('hero.title_highlight') + t('hero.title_part2')}
-        description={t('hero.subtitle')}
+        title={t('seo.home_title')}
+        description={t('seo.home_desc')}
+        keywords={t('seo.home_keywords')}
         canonical="/"
       />
       {/* Hero Section */}
@@ -214,15 +215,15 @@ export default function Home() {
                 <p>{t('home.city_tavira.description')}</p>
               </div>
               
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 items-stretch">
+              <div className="flex flex-wrap gap-3 md:gap-4">
                 {[
                   t('home.city_tavira.highlight1'),
                   t('home.city_tavira.highlight2'),
                   t('home.city_tavira.highlight3')
                 ].map((highlight, idx) => (
-                  <div key={idx} className="flex items-center gap-2.5 bg-white p-3.5 md:p-4 rounded-2xl shadow-sm border border-brand-brown/5 h-full">
+                  <div key={idx} className="flex items-center gap-2.5 bg-white p-3.5 md:p-4 rounded-2xl shadow-sm border border-brand-brown/5">
                     <div className="w-2 h-2 rounded-full bg-brand-brown shrink-0" />
-                    <span className="font-bold text-xs sm:text-sm uppercase tracking-wider text-brand-black leading-tight shrink min-w-0">{highlight}</span>
+                    <span className="font-bold text-xs sm:text-sm uppercase tracking-wider text-brand-black leading-tight whitespace-nowrap">{highlight}</span>
                   </div>
                 ))}
               </div>
@@ -287,15 +288,15 @@ export default function Home() {
                 <p>{t('home.sotavento.description')}</p>
               </div>
               
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 md:gap-4 items-stretch">
+              <div className="flex flex-wrap gap-3 md:gap-4">
                 {[
                   t('home.sotavento.highlight1'),
                   t('home.sotavento.highlight2'),
                   t('home.sotavento.highlight3')
                 ].map((highlight, idx) => (
-                  <div key={idx} className="flex items-center gap-2.5 bg-brand-cream p-3.5 md:p-4 rounded-2xl shadow-sm border border-brand-brown/5 h-full">
+                  <div key={idx} className="flex items-center gap-2.5 bg-brand-cream p-3.5 md:p-4 rounded-2xl shadow-sm border border-brand-brown/5">
                     <div className="w-2 h-2 rounded-full bg-brand-brown shrink-0" />
-                    <span className="font-bold text-xs sm:text-sm uppercase tracking-wider text-brand-black leading-tight shrink min-w-0">{highlight}</span>
+                    <span className="font-bold text-xs sm:text-sm uppercase tracking-wider text-brand-black leading-tight whitespace-nowrap">{highlight}</span>
                   </div>
                 ))}
               </div>

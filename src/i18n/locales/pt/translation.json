@@ -1,4 +1,27 @@
 {
+  "seo": {
+    "home_title": "Tavira Roots | Tours e Passeios Privados em Tavira",
+    "home_desc": "Descubra os melhores tours e passeios privados em Tavira e Algarve. Explore salinas, provas de vinho, centro histórico e passeios de jipe com a Tavira Roots. Reserve já!",
+    "home_keywords": "Passeios Tavira, Tuktuk Tavira, Passeios Algarve, Tours Tavira, Passeios Privados Tavira, Passeios de Jipe Tavira, O que fazer em Tavira, Tavira Roots",
+    "tuk_tuk_title": "Tavira Roots | Passeios de Tuktuk em Tavira e Sotavento Algarvio",
+    "tuk_tuk_desc": "Passeios de Tuktuk ecológicos e privados em Tavira e Sotavento Algarvio. Visite o centro histórico, salinas, provas de vinho e degustação de tapas.",
+    "tuk_tuk_keywords": "Tuktuk Tavira, Passeios de Tuktuk Tavira, Tuk Tuk Tavira, Tours Tuktuk Algarve, Passeios Tavira, O que fazer em Tavira, Tavira Roots",
+    "jeep_title": "Tavira Roots | Passeios de Jipe em Tavira e Sotavento Algarvio",
+    "jeep_desc": "Aventuras e passeios de Jipe privados em Tavira e Sotavento Algarvio. Banhos em cascatas, rotas do azeite, serra do Barrocal e foz do Guadiana. Reserve já!",
+    "jeep_keywords": "Passeios de Jipe Tavira, Jipe Tavira, Passeios Algarve, Jeep Safari Tavira, Passeios Off Road Tavira, Sotavento Algarvio, Tavira Roots",
+    "about_title": "Tavira Roots | Sobre Nós - Tours e Passeios Privados em Tavira",
+    "about_desc": "Conheça a Tavira Roots e o nosso guia local apaixonado por Tavira. Oferecemos passeios e tours privados de Tuk Tuk e Jipe em Tavira e no Algarve.",
+    "contact_title": "Tavira Roots | Contactos e Reservas de Passeios em Tavira",
+    "contact_desc": "Fale com a Tavira Roots e reserve o seu passeio privado de Tuk Tuk ou Jipe em Tavira. Atendimento rápido via WhatsApp, email ou telefone.",
+    "before_booking_title": "Tavira Roots | Antes de Reservar - Informações dos Passeios",
+    "before_booking_desc": "Consulte informações essenciais antes de reservar o seu passeio em Tavira: horários, pontos de encontro, crianças e cancelamentos.",
+    "faqs_title": "Tavira Roots | Pergunta Frequentes (FAQs) - Passeios em Tavira",
+    "faqs_desc": "Respostas a todas as perguntas frequentes sobre os nossos passeios de Tuk Tuk e Jipe em Tavira e Algarve. Esclareça as suas dúvidas antes de reservar.",
+    "privacy_title": "Tavira Roots | Política de Privacidade",
+    "privacy_desc": "Política de privacidade da Tavira Roots relativa ao tratamento de dados dos nossos clientes de passeios e tours em Tavira.",
+    "terms_title": "Tavira Roots | Termos e Condições",
+    "terms_desc": "Termos e condições de reserva e utilização dos serviços de passeios turísticos da Tavira Roots em Tavira."
+  },
   "nav": {
     "home": "Início",
     "tuk_tuk": "Tuk Tuk",
@@ -30,7 +53,7 @@
     "see_all_prices": "Consulte todos os preços aqui"
   },
   "tuk_tuk_page": {
-    "title": "Passeios de Tuk Tuk em Tavira",
+    "title": "Passeios de Tuktuk Privados em Tavira",
     "subtitle_top": "",
     "description": "",
     "diff_title": "Porquê o Tuk Tuk?",
@@ -38,7 +61,7 @@
     "faq_desc": "Os nossos Tuk Tuks são 100% elétricos ou de baixas emissões, ideais para as ruas estreitas do centro histórico. A capacidade máxima total é de 9 pessoas (distribuídas por dois veículos, um de 5 e outro de 4 lugares)."
   },
   "jeep_page": {
-    "title": "Passeios de Jipe no Sotavento Algarvio",
+    "title": "Passeios de Jipe e Safari no Sotavento Algarvio",
     "subtitle_top": "",
     "description": "",
     "why_title": "Porquê escolher o Jipe?",
@@ -87,7 +110,7 @@
     }
   },
   "contact_page": {
-    "title": "Fale Connosco",
+    "title": "Contacte-nos acerca dos nossos passeios em Tavira",
     "subtitle": "Tem alguma questão sobre as nossas tours privadas? Estamos aqui para ajudar a planear a sua experiência perfeita em Tavira.",
     "phone_whatsapp": "Telefone / WhatsApp",
     "call_network_notice": "(Chamada para rede móvel nacional)",
@@ -283,6 +306,7 @@
     "rights": "Todos os direitos reservados"
   },
   "about_page": {
+    "title": "Conheça a Tavira Roots - Passeios Privados em Tavira",
     "hero_subtitle": "A Alma de Tavira em cada curva",
     "story_title_part1": "A",
     "story_title_part2": "nasceu da paixão pelas nossas raízes.",
@@ -303,6 +327,7 @@
     "value4_desc": "Serviço premium e veículos impecáveis."
   },
   "faqs_page": {
+    "title": "Esclareça as suas dúvidas acerca dos nossos passeios em Tavira",
     "subtitle": "Esclareça todas as suas dúvidas sobre os nossos passeios privados.",
     "q1": "Os passeios são realmente privados?",
     "a1": "Sim! Este é o nosso maior diferencial. Ao reservar com a Tavira Roots, o veículo (Tuk Tuk ou Jipe) e o guia estarão focados exclusivamente no seu grupo. Não juntamos pessoas de grupos diferentes.",
@@ -332,7 +357,7 @@
     "contact_us": "Contacte-nos Diretamente"
   },
   "before_booking_page": {
-    "title": "Antes de Reservar",
+    "title": "Informações úteis sobre os nossos passeios em Tavira",
     "subtitle": "Tudo o que precisa de saber para garantir que a sua experiência com a Tavira Roots seja perfeita.",
     "item1_title": "Experiências Privadas",
     "item1_desc": "Todos os nossos tours são 100% privados. O preço indicado é por veículo ou por pessoa conforme a tour, mas o veículo será sempre exclusivo para o seu grupo.",

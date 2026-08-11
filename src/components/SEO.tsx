@@ -6,6 +6,7 @@ interface SEOProps {
   title: string;
   description: string;
   canonical?: string;
+  keywords?: string;
   ogType?: string;
   ogImage?: string;
   schemaData?: object;
@@ -15,20 +16,22 @@ export function SEO({
   title, 
   description, 
   canonical, 
+  keywords = "Passeios Tavira, Tuktuk Tavira, Passeios Algarve, Tours Tavira, Passeios de Jipe Tavira, Passeios de Tuktuk Tavira, O que fazer em Tavira, Tavira Roots, Sotavento Algarvio",
   ogType = 'website', 
-  ogImage = 'https://taviraroots.com/og-image.jpg', // Placeholder
+  ogImage = 'https://lh3.googleusercontent.com/d/1nBgIFM_5E5vclRhVItfSWT8rdG_Xt_Ml',
   schemaData 
 }: SEOProps) {
   const { i18n } = useTranslation();
   const siteName = 'Tavira Roots';
   const fullTitle = title?.includes?.(siteName) ? title : `${title} | ${siteName}`;
-  const siteUrl = 'https://taviraroots.com'; // Change to actual domain when known
+  const siteUrl = 'https://taviraroots.com';
 
   return (
-    <Helmet htmlAttributes={{ lang: i18n.language.split('-')[0] }}>
+    <Helmet htmlAttributes={{ lang: i18n.language ? i18n.language.split('-')[0] : 'pt' }}>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
+      {keywords && <meta name="keywords" content={keywords} />}
       <link rel="canonical" href={canonical ? `${siteUrl}${canonical}` : siteUrl} />
 
       {/* Open Graph / Facebook */}
@@ -47,7 +50,7 @@ export function SEO({
 
       {/* GEO Tags for Local SEO */}
       <meta name="geo.region" content="PT-08" />
-      <meta name="geo.placename" content="Tavira" />
+      <meta name="geo.placename" content="Tavira, Algarve, Portugal" />
       <meta name="geo.position" content="37.1268;-7.6499" />
       <meta name="ICBM" content="37.1268, -7.6499" />
 
@@ -58,19 +61,21 @@ export function SEO({
         </script>
       )}
 
-      {/* Global LocalBusiness Schema (Always present) */}
+      {/* Global TravelAgency & LocalBusiness Schema */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "LocalBusiness",
+          "@type": "TravelAgency",
           "name": "Tavira Roots",
+          "description": "Passeios e tours privados de Tuk Tuk e Jipe em Tavira e Sotavento Algarvio.",
           "image": "https://lh3.googleusercontent.com/d/1nBgIFM_5E5vclRhVItfSWT8rdG_Xt_Ml",
           "@id": "https://taviraroots.com",
           "url": "https://taviraroots.com",
-          "telephone": "+351912345678", // Example
+          "telephone": "+351912345678",
+          "priceRange": "€€",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Tavira Center",
+            "streetAddress": "Tavira",
             "addressLocality": "Tavira",
             "postalCode": "8800",
             "addressRegion": "Algarve",

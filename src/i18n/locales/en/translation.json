@@ -1,4 +1,27 @@
 {
+  "seo": {
+    "home_title": "Tavira Roots | Private Tours & Sightseeing in Tavira & Algarve",
+    "home_desc": "Discover the best private Tuk Tuk and Jeep tours in Tavira and Algarve. Explore salt pans, wine tasting, historical center, and mountains with Tavira Roots. Book now!",
+    "home_keywords": "Tavira Tours, Tuk Tuk Tavira, Tavira Sightseeing, Private Tours Algarve, Jeep Tours Tavira, Things to do in Tavira, Tavira Roots",
+    "tuk_tuk_title": "Tavira Roots | Tuk Tuk Tours in Tavira & Eastern Algarve",
+    "tuk_tuk_desc": "Eco-friendly private Tuk Tuk tours in Tavira and Eastern Algarve. Visit the historic center, salt pans, wine tasting, and tapas.",
+    "tuk_tuk_keywords": "Tuk Tuk Tavira, Tuk Tuk Tours Tavira, Tavira Sightseeing, Private Tuk Tuk Algarve, Tavira Roots",
+    "jeep_title": "Tavira Roots | Jeep & 4x4 Off-Road Tours in Tavira & Eastern Algarve",
+    "jeep_desc": "Private Jeep safari and 4x4 off-road adventures in Tavira and Eastern Algarve. Waterfalls, olive oil routes, Barrocal mountains, and river tours. Book now!",
+    "jeep_keywords": "Jeep Tours Tavira, 4x4 Algarve, Off road Tavira, Tavira Jeep Safari, Tavira Roots",
+    "about_title": "Tavira Roots | About Us - Private Tours in Tavira",
+    "about_desc": "Learn more about Tavira Roots and our passionate local guide in Tavira. Offering top-rated private Tuk Tuk and Jeep tours in Tavira, Algarve.",
+    "contact_title": "Tavira Roots | Contacts & Tour Bookings in Tavira",
+    "contact_desc": "Contact Tavira Roots to book your private Tuk Tuk or Jeep tour in Tavira. Fast response via WhatsApp, email, or phone.",
+    "before_booking_title": "Tavira Roots | Before Booking - Tour Information",
+    "before_booking_desc": "Essential information before booking your tour in Tavira: schedules, meeting points, children, and cancellation policy.",
+    "faqs_title": "Tavira Roots | Frequently Asked Questions (FAQs) - Tours in Tavira",
+    "faqs_desc": "Answers to all frequently asked questions about our Tuk Tuk and Jeep tours in Tavira and Algarve. Clear your doubts before booking.",
+    "privacy_title": "Tavira Roots | Privacy Policy",
+    "privacy_desc": "Privacy policy of Tavira Roots regarding customer data protection for tours in Tavira.",
+    "terms_title": "Tavira Roots | Terms & Conditions",
+    "terms_desc": "Terms and conditions for tour bookings and services provided by Tavira Roots in Tavira."
+  },
   "nav": {
     "home": "Home",
     "tuk_tuk": "Tuk Tuk",
@@ -30,7 +53,7 @@
     "see_all_prices": "See all prices here"
   },
   "tuk_tuk_page": {
-    "title": "Tuk Tuk Tours in Tavira",
+    "title": "Private Tuk Tuk Tours in Tavira",
     "subtitle_top": "",
     "description": "",
     "diff_title": "Why the Tuk Tuk?",
@@ -38,7 +61,7 @@
     "faq_desc": "Our Tuk Tuks are 100% electric or low-emission, ideal for the narrow streets of the historical center. Total maximum capacity is 9 people (spread across two vehicles, one with 5 seats and another with 4)."
   },
   "jeep_page": {
-    "title": "Jeep Tours in Eastern Algarve",
+    "title": "Private Jeep & Safari Tours in Eastern Algarve",
     "subtitle_top": "",
     "description": "",
     "why_title": "Why choose the Jeep?",
@@ -87,7 +110,7 @@
     }
   },
   "contact_page": {
-    "title": "Contact Us",
+    "title": "Contact Us about our Tours in Tavira",
     "subtitle": "Have a question about our private tours? We're here to help you plan your perfect experience in Tavira.",
     "phone_whatsapp": "Phone / WhatsApp",
     "call_network_notice": "(Call to national mobile network)",
@@ -283,6 +306,7 @@
     "rights": "All rights reserved"
   },
   "about_page": {
+    "title": "Discover Tavira Roots - Private Tours in Tavira",
     "hero_subtitle": "The Soul of Tavira at every turn",
     "story_title_part1": "",
     "story_title_part2": "was born from a passion for our roots.",
@@ -303,6 +327,7 @@
     "value4_desc": "Premium service and impeccable vehicles."
   },
   "faqs_page": {
+    "title": "Frequently Asked Questions about our Tours in Tavira",
     "subtitle": "Get all your questions answered about our private tours.",
     "q1": "Are the tours really private?",
     "a1": "Yes! This is our main differentiator. When booking with Tavira Roots, the vehicle (Tuk Tuk or Jeep) and the guide will be exclusively focused on your group. We do not mix people from different groups.",
@@ -332,7 +357,7 @@
     "contact_us": "Contact us Directly"
   },
   "before_booking_page": {
-    "title": "Before Booking",
+    "title": "Useful Information about our Tours in Tavira",
     "subtitle": "Everything you need to know to ensure your experience with Tavira Roots is perfect.",
     "item1_title": "Private Experiences",
     "item1_desc": "All our tours are 100% private. The price indicated is per vehicle or per person depending on the tour, but the vehicle will always be exclusive to your group.",
