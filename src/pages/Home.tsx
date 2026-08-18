@@ -240,7 +240,7 @@ export default function Home() {
               <div className="relative aspect-[4/5] md:aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl">
                 <img 
                   src="https://lh3.googleusercontent.com/d/1Z3XlPZaBaW5Xfh8pz9hKm_HEKQEFbBu3" 
-                  alt="Cidade de Tavira" 
+                  alt="Centro Histórico de Tavira - Passeios e Tours em Tavira" 
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                   referrerPolicy="no-referrer"
                 />
@@ -266,7 +266,7 @@ export default function Home() {
               <div className="relative aspect-[4/5] md:aspect-[4/3] rounded-[2rem] overflow-hidden shadow-2xl">
                 <img 
                   src="https://lh3.googleusercontent.com/d/1Zzp1GzTuUTpAzKBx82KY_jkBtT9Y1N4f" 
-                  alt="Sotavento Algarvio" 
+                  alt="Paisagem do Sotavento Algarvio - Passeios de Jipe e Tuktuk Tavira" 
                   className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110"
                   referrerPolicy="no-referrer"
                 />

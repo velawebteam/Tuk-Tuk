@@ -104,7 +104,7 @@ export default function Jeep() {
               <div className="rounded-3xl overflow-hidden shadow-2xl">
                 <img 
                   src="https://lh3.googleusercontent.com/d/1Ncwvz_oWrkuDPri7G_KB1ZSQ0MhdftcH" 
-                  alt="Jipe Adventure" 
+                  alt="Jeep Safari Tavira - Passeios de Jipe 4x4 pelo Algarve e Barrocal" 
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"
                 />

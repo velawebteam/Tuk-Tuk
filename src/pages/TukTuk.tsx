@@ -105,7 +105,7 @@ export default function TukTuk() {
               <div className="rounded-3xl overflow-hidden shadow-2xl h-[450px] md:h-[550px]">
                 <img 
                   src="https://lh3.googleusercontent.com/d/1AjiBBg8TYYaCSnwPu7AA3Ses4lp9av0x" 
-                  alt="Tuk Tuk Adventure" 
+                  alt="Aventura de Tuktuk em Tavira - Tours Privadas pelo Centro Histórico" 
                   className="w-full h-full object-cover object-bottom"
                   referrerPolicy="no-referrer"
                 />
