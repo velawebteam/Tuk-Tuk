@@ -274,10 +274,7 @@ const RIA_FORMOSA_GASTRONOMIA_GALLERY = [
   'https://lh3.googleusercontent.com/d/1Xh-8JvNm4n66e94k-DgSsSWo6R0ouXmv',
   'https://lh3.googleusercontent.com/d/1SChWPoh-yXTN0CyJv_uI3QKUH9HhmOrp',
   'https://lh3.googleusercontent.com/d/1oMcxJbwY05d9TBgOEyN4McOLj1anQ5Pz',
-  'https://lh3.googleusercontent.com/d/1YeDIUV253c70XEGkI9_J5bfhClBCjwVP',
-  'https://lh3.googleusercontent.com/d/1YjvdFu06ZUUtW69hswGJpTCZ-RAtbjNU',
-  'https://lh3.googleusercontent.com/d/1VFNyYllUarirUUFbDJNcmJ3AHMgdFcrB',
-  'https://lh3.googleusercontent.com/d/10Xb3fBiRqDQKlgJT_nU7p-EoddQpdy9s'
+  'https://lh3.googleusercontent.com/d/1YeDIUV253c70XEGkI9_J5bfhClBCjwVP'
 ];
 
 const OLIVAL_AZEITE_GALLERY = [
