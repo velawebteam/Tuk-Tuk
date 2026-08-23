@@ -132,18 +132,18 @@ export function SEO({
           "@context": "https://schema.org",
           "@type": "TravelAgency",
           "name": "Tavira Roots",
-          "alternateName": "Tavira Roots - Tours & Experiences",
+          "alternateName": "Tavira Roots by Maria's Tuk Tuk",
           "description": "A Tavira Roots oferece os melhores passeios e tours privados de Tuk Tuk e Jipe em Tavira. Explore as salinas, o centro histórico e a Ria Formosa com guias locais.",
           "image": "https://lh3.googleusercontent.com/d/1nBgIFM_5E5vclRhVItfSWT8rdG_Xt_Ml",
           "@id": "https://taviraroots.com",
           "url": "https://taviraroots.com",
-          "telephone": "+351912345678",
+          "telephone": "+351968995275",
           "priceRange": "€€",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "Tavira",
+            "streetAddress": "R. Gonçalo Velho 7",
             "addressLocality": "Tavira",
-            "postalCode": "8800",
+            "postalCode": "8800-349",
             "addressRegion": "Algarve",
             "addressCountry": "PT"
           },
@@ -151,6 +151,13 @@ export function SEO({
             "@type": "GeoCoordinates",
             "latitude": 37.1268,
             "longitude": -7.6499
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "203",
+            "bestRating": "5",
+            "worstRating": "1"
           },
           "areaServed": [
             {

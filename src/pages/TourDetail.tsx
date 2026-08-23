@@ -98,9 +98,17 @@ export default function TourDetail() {
           "description": t(tour.descriptionKey),
           "image": tour.image,
           "touristType": tour.type === 'tuk-tuk' ? 'Tuk Tuk Sightseeing' : 'Jeep Safari Off-Road',
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "203",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
           "provider": {
             "@type": "TravelAgency",
             "name": "Tavira Roots",
+            "alternateName": "Tavira Roots by Maria's Tuk Tuk",
             "url": "https://taviraroots.com"
           },
           "offers": {
