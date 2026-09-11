@@ -725,7 +725,7 @@ export const jeepTours: Tour[] = [
     id: 'jeep-boat-anchors',
     type: 'jeep',
     nameKey: 'tours.jeep_boat_anchors.name',
-    price: '68,90€',
+    price: '60€',
     duration: '3h',
     pax: '2-5',
     descriptionKey: 'tours.jeep_boat_anchors.desc',
@@ -735,10 +735,10 @@ export const jeepTours: Tour[] = [
     languages: ['Português', 'Espanhol', 'Inglês'],
     fareHarborProductId: 695527,
     priceOptions: [
-      { price: '68,90€', group: 'Grupo de 5 Pessoas', details: 'Preço por pessoa' },
-      { price: '79,50€', group: 'Grupo de 4 Pessoas', details: 'Preço por pessoa' },
-      { price: '90,10€', group: 'Grupo de 3 Pessoas', details: 'Preço por pessoa' },
-      { price: '121,90€', group: 'Grupo de 2 Pessoas', details: 'Preço por pessoa' }
+      { price: '60€', group: 'Grupo de 5 Pessoas', details: 'Preço por pessoa' },
+      { price: '65€', group: 'Grupo de 4 Pessoas', details: 'Preço por pessoa' },
+      { price: '75€', group: 'Grupo de 3 Pessoas', details: 'Preço por pessoa' },
+      { price: '80€', group: 'Grupo de 2 Pessoas', details: 'Preço por pessoa' }
     ],
     itinerary: [
       { activity: 'features.historical_center' },
@@ -780,7 +780,7 @@ export const jeepTours: Tour[] = [
     id: 'jeep-boat-history',
     type: 'jeep',
     nameKey: 'tours.jeep_boat_history.name',
-    price: '58,30€',
+    price: '60€',
     duration: '3h',
     pax: '2-5',
     descriptionKey: 'tours.jeep_boat_history.desc',
@@ -790,10 +790,10 @@ export const jeepTours: Tour[] = [
     languages: ['Português', 'Espanhol', 'Inglês'],
     fareHarborProductId: 695531,
     priceOptions: [
-      { price: '58,30€', group: 'Grupo de 5 Pessoas', details: 'Preço por pessoa' },
-      { price: '63,60€', group: 'Grupo de 4 Pessoas', details: 'Preço por pessoa' },
-      { price: '68,90€', group: 'Grupo de 3 Pessoas', details: 'Preço por pessoa' },
-      { price: '74,20€', group: 'Grupo de 2 Pessoas', details: 'Preço por pessoa' }
+      { price: '60€', group: 'Grupo de 5 Pessoas', details: 'Preço por pessoa' },
+      { price: '65€', group: 'Grupo de 4 Pessoas', details: 'Preço por pessoa' },
+      { price: '75€', group: 'Grupo de 3 Pessoas', details: 'Preço por pessoa' },
+      { price: '80€', group: 'Grupo de 2 Pessoas', details: 'Preço por pessoa' }
     ],
     itinerary: [
       { activity: 'features.historical_center' },
