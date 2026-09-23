@@ -23,9 +23,18 @@ import Terms from './pages/Terms';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
+  
   useEffect(() => {
     window.scrollTo(0, 0);
+    
+    // Track pageview on route change for Google Ads
+    if (typeof (window as any).gtag === 'function') {
+      (window as any).gtag('config', 'AW-18443286620', {
+        page_path: pathname,
+      });
+    }
   }, [pathname]);
+  
   return null;
 }
 
