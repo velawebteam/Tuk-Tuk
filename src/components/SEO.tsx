@@ -82,7 +82,7 @@ export function SEO({
   };
 
   return (
-    <Helmet htmlAttributes={{ lang: i18n.language ? i18n.language.split('-')[0] : 'pt' }}>
+    <Helmet htmlAttributes={{ lang: i18n.language ? i18n.language.split('-')[0] : 'en' }}>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
@@ -133,7 +133,7 @@ export function SEO({
           "@type": "TravelAgency",
           "name": "Tavira Roots",
           "alternateName": "Tavira Roots by Maria's Tuk Tuk",
-          "description": "A Tavira Roots oferece os melhores passeios e tours privados de Tuk Tuk e Jipe em Tavira. Explore as salinas, o centro histórico e a Ria Formosa com guias locais.",
+          "description": "Tavira Roots offers the best private Tuk Tuk and Jeep tours in Tavira. Explore salt pans, the historic center, and Ria Formosa with local guides.",
           "image": "https://lh3.googleusercontent.com/d/1nBgIFM_5E5vclRhVItfSWT8rdG_Xt_Ml",
           "@id": "https://taviraroots.com",
           "url": "https://taviraroots.com",
@@ -182,20 +182,20 @@ export function SEO({
           ],
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
-            "name": "Passeios em Tavira",
+            "name": "Tours in Tavira",
             "itemListElement": [
               {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Passeios de Tuk Tuk Tavira"
+                  "name": "Tuk Tuk Tours Tavira"
                 }
               },
               {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Passeios de Jipe Tavira"
+                  "name": "Jeep Tours Tavira"
                 }
               }
             ]
