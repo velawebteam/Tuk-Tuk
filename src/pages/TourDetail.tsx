@@ -5,6 +5,7 @@ import { Clock, Users, ShieldCheck, MapPin, CheckCircle2, ChevronLeft, ChevronRi
 import { allTours } from '@/src/data/tours';
 import { useTranslation } from 'react-i18next';
 import { SEO } from '../components/SEO';
+import { trackEvent } from '../utils/analytics';
 
 declare global {
   interface Window {
@@ -309,6 +310,13 @@ export default function TourDetail() {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={(e) => {
+                      // Track click in Google Ads
+                      trackEvent('book_now_click', {
+                        tour_id: tour.id,
+                        tour_name: t(tour.nameKey),
+                        method: 'fareharbor'
+                      });
+
                       if (window.FH) {
                         try {
                           e.preventDefault();
@@ -335,6 +343,13 @@ export default function TourDetail() {
                     href={`https://wa.me/351968995275?text=${encodeURIComponent(`Olá! Gostaria de reservar o passeio: ${t(tour.nameKey)}`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
+                    onClick={() => {
+                      trackEvent('book_now_click', {
+                        tour_id: tour.id,
+                        tour_name: t(tour.nameKey),
+                        method: 'whatsapp'
+                      });
+                    }}
                     className="flex-grow lg:flex-none px-6 lg:px-10 py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-2xl font-black uppercase tracking-wide text-sm transition-all transform hover:scale-[1.02] shadow-lg shadow-brand-brown/20 flex items-center justify-center gap-3 shrink-0"
                   >
                     <Calendar size={20} />

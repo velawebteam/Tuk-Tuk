@@ -27,9 +27,12 @@ function ScrollToTop() {
   useEffect(() => {
     window.scrollTo(0, 0);
     
-    // Track pageview on route change for Google Ads
+    // Track pageview on route change for Google Ads and Analytics
     if (typeof (window as any).gtag === 'function') {
       (window as any).gtag('config', 'AW-18443286620', {
+        page_path: pathname,
+      });
+      (window as any).gtag('config', 'G-JJ1SWJFB11', {
         page_path: pathname,
       });
     }

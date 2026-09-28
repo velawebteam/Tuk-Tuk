@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import { tukTukTours, jeepTours } from '@/src/data/tours';
 import { useTranslation } from 'react-i18next';
 import { SEO } from '../components/SEO';
+import { trackEvent } from '../utils/analytics';
 
 export default function Home() {
   const { t } = useTranslation();
@@ -318,7 +319,10 @@ export default function Home() {
               
               {!showBookingOptions ? (
                 <button 
-                  onClick={() => setShowBookingOptions(true)}
+                  onClick={() => {
+                    setShowBookingOptions(true);
+                    trackEvent('book_now_click', { location: 'home_cta' });
+                  }}
                   className="px-6 md:px-10 py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-full font-black uppercase tracking-widest text-lg shadow-xl shadow-brand-brown/20 transition-all transform hover:scale-105 inline-block cursor-pointer"
                 >
                   {t('common.reserve_now')}

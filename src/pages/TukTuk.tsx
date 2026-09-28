@@ -3,6 +3,7 @@ import { tukTukTours } from '@/src/data/tours';
 import { TourCard } from '@/src/components/TourCard';
 import { useTranslation } from 'react-i18next';
 import { SEO } from '../components/SEO';
+import { trackEvent } from '../utils/analytics';
 
 export default function TukTuk() {
   const { t } = useTranslation();
@@ -149,7 +150,13 @@ export default function TukTuk() {
           <p className="text-brand-black/60 mb-8 font-medium">
             {t('tuk_tuk_page.faq_desc')}
           </p>
-          <button className="px-6 md:px-10 py-4 bg-brand-brown text-white rounded-full font-bold uppercase tracking-widest hover:bg-brand-brown-light transition-all shadow-lg shadow-brand-brown/20 transform hover:scale-105">
+          <button 
+            onClick={() => {
+              trackEvent('book_now_click', { location: 'tuk_tuk_page_bottom', method: 'whatsapp' });
+              window.open(`https://wa.me/351968995275?text=${encodeURIComponent('Olá! Gostaria de informações sobre os passeios de Tuk Tuk.')}`, '_blank');
+            }}
+            className="px-6 md:px-10 py-4 bg-brand-brown text-white rounded-full font-bold uppercase tracking-widest hover:bg-brand-brown-light transition-all shadow-lg shadow-brand-brown/20 transform hover:scale-105"
+          >
             {t('common.contact_whatsapp')}
           </button>
         </div>
