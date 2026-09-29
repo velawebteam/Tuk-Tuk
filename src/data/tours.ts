@@ -725,7 +725,7 @@ export const jeepTours: Tour[] = [
     id: 'jeep-boat-anchors',
     type: 'jeep',
     nameKey: 'tours.jeep_boat_anchors.name',
-    price: '60€',
+    price: '69€',
     duration: '3h',
     pax: '2-5',
     descriptionKey: 'tours.jeep_boat_anchors.desc',
@@ -735,10 +735,10 @@ export const jeepTours: Tour[] = [
     languages: ['Português', 'Espanhol', 'Inglês'],
     fareHarborProductId: 695527,
     priceOptions: [
-      { price: '60€', group: 'Grupo de 5 Pessoas', details: 'Preço por pessoa' },
-      { price: '65€', group: 'Grupo de 4 Pessoas', details: 'Preço por pessoa' },
+      { price: '69€', group: 'Grupo de 5 Pessoas', details: 'Preço por pessoa' },
+      { price: '72€', group: 'Grupo de 4 Pessoas', details: 'Preço por pessoa' },
       { price: '75€', group: 'Grupo de 3 Pessoas', details: 'Preço por pessoa' },
-      { price: '80€', group: 'Grupo de 2 Pessoas', details: 'Preço por pessoa' }
+      { price: '79€', group: 'Grupo de 2 Pessoas', details: 'Preço por pessoa' }
     ],
     itinerary: [
       { activity: 'features.historical_center' },
