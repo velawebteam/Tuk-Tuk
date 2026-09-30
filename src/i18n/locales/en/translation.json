@@ -20,12 +20,15 @@
     "privacy_title": "Tavira Roots | Privacy Policy",
     "privacy_desc": "Privacy policy of Tavira Roots regarding customer data protection for tours in Tavira.",
     "terms_title": "Tavira Roots | Terms & Conditions",
-    "terms_desc": "Terms and conditions for tour bookings and services provided by Tavira Roots in Tavira."
+    "terms_desc": "Terms and conditions for tour bookings and services provided by Tavira Roots in Tavira.",
+    "walking_title": "Walking Tours in Tavira | Historic Center Guided Tours | Tavira Roots",
+    "walking_desc": "Discover the secrets and history of Tavira on a guided walking tour through the historic center with photography museum entrance included."
   },
   "nav": {
     "home": "Home",
     "tuk_tuk": "Tuk Tuk",
     "jeep": "Jeep",
+    "walking": "Walking Tours",
     "before_booking": "Before Booking",
     "faqs": "FAQs",
     "about": "About Us",
@@ -106,7 +109,8 @@
       "no_pickup_restaurant": "Does not include pick-up service from the restaurant",
       "wine_tasting_3": "Includes tasting of 3 wines (Red, Rosé, and White)",
       "bread_olive_oil": "Served with Bread and Olive Oil",
-      "ice_cream_pax": "Includes 1 scoop of ice cream per person (cup or cone)"
+      "ice_cream_pax": "Includes 1 scoop of ice cream per person (cup or cone)",
+      "min_age_12": "Minimum age: 12 years old"
     }
   },
   "contact_page": {
@@ -165,6 +169,13 @@
     "olive_grove": "Olive Grove",
     "olive_tree_2000": "2,000-Year-Old Olive Tree",
     "anchor_graveyard": "Anchor Graveyard",
+    "fishing_villages": "Fishing Villages",
+    "anchor_graveyard_main": "Anchor Graveyard as the main highlight",
+    "salt_pans_clean": "Salt Pans",
+    "bird_watching_ria": "Birds of Ria Formosa",
+    "tuna_fishing_traditional": "Traditional tuna fishing",
+    "octopus_fishing_traditional": "Traditional octopus fishing",
+    "barril_train_ticket": "Barril train ticket included",
     "al_lagar_tapas": "Al-Lagar (Wine & Tapas Included)",
     "sequa_river": "Sequa River",
     "asseca": "Asseca",
@@ -178,8 +189,15 @@
     "insurance": "Liability Insurance"
   },
   "home": {
-    "featured_title": "Featured Experiences",
-    "featured_subtitle": "Choose between the agile charm of the Tuk Tuk or the adventurous robustness of the Jeep. All our tours are customizable.",
+    "featured_title": "The most Complete",
+    "featured_subtitle": "Choose between the agile charm of the Tuk Tuk or the adventurous robustness of the Jeep.",
+    "anchor_section": {
+      "title": "Our Highlight",
+      "badge": "Recommended Tour",
+      "subtitle": "Discover the iconic Anchor Graveyard, traditional salt pans, local fishing traditions, and Ria Formosa wildlife on an unforgettable private 4x4 jeep tour.",
+      "cta_details": "View Full Tour Details",
+      "cta_book": "Book via WhatsApp"
+    },
     "view_all": "View all tours",
     "attractions_title": "What will you visit?",
     "attractions_subtitle": "Much more than a simple ride, an immersion into Tavira's culture.",
@@ -280,8 +298,8 @@
       "desc": "Visit millennial olive trees and taste the best olive oil in the region in a historical setting."
     },
     "jeep_boat_anchors": {
-      "name": "Tavira: Jeep & Boat – Anchorgraveyard",
-      "desc": "The perfect combination of land and sea, with a visit to the iconic anchor graveyard."
+      "name": "Anchor Cemetery: Tavira 4x4 Through Ria Formosa",
+      "desc": "Discover the fishing traditions of Tavira on a private jeep tour through Ria Formosa, where the Anchor Graveyard is the highlight of the experience, along with the salt pans, birds, and local fishing traditions.\n\nThe main highlight of the tour is the Anchor Graveyard, one of the most unique places in the Tavira region. Hundreds of ancient anchors recall the importance of tuna fishing and the communities that lived off the sea for generations.\n\nWe will also visit Tavira's traditional salt pans, where you can learn about the sea salt production process and its importance to the region. Along the route, you will be able to observe some of the birds that inhabit and feed in Ria Formosa.\n\nThe experience also includes an introduction to the history of tuna fishing and traditional octopus fishing, discovering techniques, traditions, and stories that form part of the identity of Tavira's fishing communities.\n\nA private tour designed for those who want to discover a more authentic side of Tavira, exploring its connection to the sea, fishing, and Ria Formosa."
     },
     "tavira_roots_wine": {
       "name": "Salt Pans, Octopus, Tuna Heritage Wine & Tapas",

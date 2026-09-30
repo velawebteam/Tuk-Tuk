@@ -211,6 +211,126 @@ export default function TourDetail() {
               )}
             </div>
 
+            {/* Serpentine / Snake Flow Tour Itinerary Card directly below photographs */}
+            {tour.itinerary && tour.itinerary.length > 0 && (() => {
+              const itemsPerRow = 3;
+              const totalItems = tour.itinerary.length;
+              const numRows = Math.ceil(totalItems / itemsPerRow);
+
+              // Group items into rows with exact serpentine column placement
+              const rows = [];
+              for (let r = 0; r < numRows; r++) {
+                const rowItems = [];
+                for (let c = 0; c < itemsPerRow; c++) {
+                  const originalIndex = r % 2 === 0 ? r * itemsPerRow + c : r * itemsPerRow + (itemsPerRow - 1 - c);
+                  if (originalIndex < totalItems) {
+                    rowItems.push({
+                      step: tour.itinerary[originalIndex],
+                      originalIndex
+                    });
+                  } else {
+                    rowItems.push(null);
+                  }
+                }
+                rows.push(rowItems);
+              }
+
+              return (
+                <div className="bg-white p-6 sm:p-8 rounded-[2rem] border border-brand-brown/10 shadow-sm space-y-6">
+                  <div className="flex items-center gap-3 border-b border-brand-brown/10 pb-4">
+                    <div className="w-10 h-10 bg-brand-brown/10 rounded-2xl flex items-center justify-center text-brand-brown shrink-0">
+                      <Map size={22} />
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-black text-brand-black uppercase tracking-tight">
+                        {t('tour_detail.itinerary')}
+                      </h3>
+                    </div>
+                  </div>
+
+                  {/* Grid Snake Flow Container */}
+                  <div className="space-y-4 py-2">
+                    {rows.map((rowCells, r) => {
+                      const isEvenRow = r % 2 === 0;
+                      const isLastRow = r === numRows - 1;
+
+                      return (
+                        <div key={r} className="space-y-4">
+                          {/* Row Grid */}
+                          <div className="grid grid-cols-3 gap-2 sm:gap-4 items-start">
+                            {rowCells.map((cell, c) => {
+                              if (!cell) {
+                                return <div key={c} className="hidden sm:block" />;
+                              }
+
+                              const { step, originalIndex } = cell;
+                              const isNextStepInSameRow =
+                                isEvenRow
+                                  ? c < itemsPerRow - 1 && originalIndex + 1 < totalItems
+                                  : c > 0 && originalIndex + 1 < totalItems;
+
+                              return (
+                                <div key={originalIndex} className="flex items-center justify-between gap-1 relative">
+                                  {/* Step Item */}
+                                  <div className="flex flex-col items-center text-center w-full group">
+                                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-brand-brown text-white font-black text-xs sm:text-sm flex items-center justify-center shadow-md shadow-brand-brown/20 mb-2 border-2 border-white group-hover:scale-110 transition-transform">
+                                      {originalIndex + 1}
+                                    </div>
+                                    {step.time && (
+                                      <span className="text-[10px] font-black text-brand-brown uppercase tracking-wider block mb-1">
+                                        {step.time}
+                                      </span>
+                                    )}
+                                    <p className="text-xs sm:text-sm font-bold text-brand-black uppercase tracking-wide leading-snug">
+                                      {t(step.activity)}
+                                    </p>
+                                  </div>
+
+                                  {/* Arrow to Next Step in Row */}
+                                  {isNextStepInSameRow && (
+                                    <div className="shrink-0 flex items-center text-brand-brown/60 -mr-2 z-10">
+                                      {isEvenRow ? (
+                                        <ChevronRight size={18} className="text-brand-brown" />
+                                      ) : (
+                                        <ChevronLeft size={18} className="text-brand-brown" />
+                                      )}
+                                    </div>
+                                  )}
+                                </div>
+                              );
+                            })}
+                          </div>
+
+                          {/* Downward Connector Arrow between rows */}
+                          {!isLastRow && (
+                            <div className="grid grid-cols-3 gap-2 sm:gap-4 my-1">
+                              {isEvenRow ? (
+                                <>
+                                  <div />
+                                  <div />
+                                  <div className="flex justify-center items-center py-1">
+                                    <ChevronDown size={18} className="text-brand-brown" />
+                                  </div>
+                                </>
+                              ) : (
+                                <>
+                                  <div className="flex justify-center items-center py-1">
+                                    <ChevronDown size={18} className="text-brand-brown" />
+                                  </div>
+                                  <div />
+                                  <div />
+                                </>
+                              )}
+                            </div>
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
+                </div>
+              );
+            })()}
+
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4">
               <div className="bg-white p-4 md:p-6 rounded-3xl text-center border border-brand-brown/5 shadow-sm">
                 <Clock className="mx-auto text-brand-brown mb-2" size={24} />
@@ -245,38 +365,45 @@ export default function TourDetail() {
               </div>
             </div>
 
-            {/* Why Book With Us Section */}
+            {/* What's Included / Not Included Card */}
             <div className="bg-white p-8 rounded-[2rem] border border-brand-brown/5 shadow-sm space-y-6">
-              <h3 className="text-xl font-black text-brand-black uppercase tracking-tight">{t('tour_detail.why_us')}</h3>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-brand-brown/10 rounded-xl flex items-center justify-center text-brand-brown shrink-0">
-                    <Star size={20} />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-brand-black uppercase tracking-tight text-sm">{t('tour_detail.real_experience')}</h4>
-                    <p className="text-xs text-brand-black/60 font-medium leading-relaxed mt-1">{t('tour_detail.real_experience_desc')}</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-brand-brown/10 rounded-xl flex items-center justify-center text-brand-brown shrink-0">
-                    <ShieldCheck size={20} />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-brand-black uppercase tracking-tight text-sm">{t('tour_detail.private_exclusive')}</h4>
-                    <p className="text-xs text-brand-black/60 font-medium leading-relaxed mt-1">{t('tour_detail.private_exclusive_desc')}</p>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 bg-brand-brown/10 rounded-xl flex items-center justify-center text-brand-brown shrink-0">
-                    <Calendar size={20} />
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-brand-black uppercase tracking-tight text-sm">{t('tour_detail.flexible_booking')}</h4>
-                    <p className="text-xs text-brand-black/60 font-medium leading-relaxed mt-1">{t('tour_detail.flexible_booking_desc')}</p>
-                  </div>
-                </div>
+              <div>
+                <h3 className="text-xl font-black text-brand-black mb-6 uppercase tracking-tight">
+                  {t('tour_detail.whats_included')}
+                </h3>
+                <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {tour.features.map((feature, i) => (
+                    <li key={i} className="flex items-center gap-3 text-brand-black/70 font-medium">
+                      <CheckCircle2 size={18} className="text-brand-brown shrink-0" />
+                      <span className="uppercase tracking-wide text-xs font-bold">{t(feature)}</span>
+                    </li>
+                  ))}
+                  <li className="flex items-center gap-3 text-brand-black/70 font-medium">
+                    <CheckCircle2 size={18} className="text-brand-brown shrink-0" />
+                    <span className="uppercase tracking-wide text-xs font-bold">{t('features.private_guide')}</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-brand-black/70 font-medium">
+                    <CheckCircle2 size={18} className="text-brand-brown shrink-0" />
+                    <span className="uppercase tracking-wide text-xs font-bold">{t('features.insurance')}</span>
+                  </li>
+                </ul>
               </div>
+
+              {tour.notIncluded && (
+                <div className="pt-6 border-t border-brand-brown/10">
+                  <h3 className="text-xl font-black text-brand-black mb-6 uppercase tracking-tight">
+                    {t('tour_detail.not_included')}
+                  </h3>
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    {tour.notIncluded.map((item, i) => (
+                      <li key={i} className="flex items-center gap-3 text-brand-black/70 font-medium">
+                        <XCircle size={18} className="text-brand-brown shrink-0" />
+                        <span className="uppercase tracking-wide text-xs font-bold">{t(item)}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
             </div>
           </div>
 
@@ -287,7 +414,7 @@ export default function TourDetail() {
                 {t('common.private')} {tour.type === 'tuk-tuk' ? t('nav.tuk_tuk') : t('nav.jeep')}
               </div>
               <h1 className="text-3xl md:text-5xl font-black text-brand-black mb-6 leading-tight uppercase tracking-tight">{t(tour.nameKey)}</h1>
-              <p className="text-xl text-brand-black/60 font-medium leading-relaxed mb-8">{t(tour.descriptionKey)}</p>
+              <p className="text-lg md:text-xl text-brand-black/70 font-medium leading-relaxed mb-8 whitespace-pre-line">{t(tour.descriptionKey)}</p>
             </div>
 
             <div className="bg-brand-black rounded-3xl p-8 shadow-xl relative overflow-hidden text-white">
@@ -423,40 +550,6 @@ export default function TourDetail() {
               </motion.div>
             )}
 
-            <div>
-              <h3 className="text-2xl font-black text-brand-black mb-6 uppercase tracking-tight">{t('tour_detail.whats_included')}</h3>
-              <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
-                {tour.features.map((feature, i) => (
-                  <li key={i} className="flex items-center gap-3 text-brand-black/60 font-medium">
-                    <CheckCircle2 size={18} className="text-brand-brown shrink-0" />
-                    <span className="uppercase tracking-wide text-xs font-bold">{t(feature)}</span>
-                  </li>
-                ))}
-                <li className="flex items-center gap-3 text-brand-black/60 font-medium">
-                  <CheckCircle2 size={18} className="text-brand-brown shrink-0" />
-                  <span className="uppercase tracking-wide text-xs font-bold">{t('features.private_guide')}</span>
-                </li>
-                <li className="flex items-center gap-3 text-brand-black/60 font-medium">
-                  <CheckCircle2 size={18} className="text-brand-brown shrink-0" />
-                  <span className="uppercase tracking-wide text-xs font-bold">{t('features.insurance')}</span>
-                </li>
-              </ul>
-
-              {tour.notIncluded && (
-                <>
-                  <h3 className="text-2xl font-black text-brand-black mb-6 uppercase tracking-tight">{t('tour_detail.not_included')}</h3>
-                  <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-                    {tour.notIncluded.map((item, i) => (
-                      <li key={i} className="flex items-center gap-3 text-brand-black/60 font-medium">
-                        <XCircle size={18} className="text-brand-brown shrink-0" />
-                        <span className="uppercase tracking-wide text-xs font-bold">{t(item)}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              )}
-            </div>
-
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {tour.toBring && (
                 <div className="bg-white p-6 rounded-3xl border border-brand-brown/5 shadow-sm">
@@ -493,25 +586,39 @@ export default function TourDetail() {
               )}
             </div>
 
-            {tour.itinerary && (
-              <div className="bg-brand-cream-dark/20 p-8 rounded-[2rem] border border-brand-brown/5">
-                <div className="flex items-center gap-3 mb-8">
-                  <Map className="text-brand-brown" size={24} />
-                  <h3 className="text-2xl font-black text-brand-black uppercase tracking-tight">{t('tour_detail.itinerary')}</h3>
+            {/* Why Book With Us Section */}
+            <div className="bg-white p-8 rounded-[2rem] border border-brand-brown/5 shadow-sm space-y-6">
+              <h3 className="text-xl font-black text-brand-black uppercase tracking-tight">{t('tour_detail.why_us')}</h3>
+              <div className="space-y-6">
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-brand-brown/10 rounded-xl flex items-center justify-center text-brand-brown shrink-0">
+                    <Star size={20} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-brand-black uppercase tracking-tight text-sm">{t('tour_detail.real_experience')}</h4>
+                    <p className="text-xs text-brand-black/60 font-medium leading-relaxed mt-1">{t('tour_detail.real_experience_desc')}</p>
+                  </div>
                 </div>
-                <div className="space-y-6 relative before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-[2px] before:bg-brand-brown/20">
-                  {tour.itinerary.map((step, i) => (
-                    <div key={i} className="relative pl-10">
-                      <div className="absolute left-0 top-1 w-6 h-6 bg-brand-cream border-2 border-brand-brown rounded-full flex items-center justify-center z-10 shadow-sm" />
-                      {step.time && (
-                        <span className="text-[10px] font-black text-brand-brown uppercase tracking-widest block mb-1">{step.time}</span>
-                      )}
-                      <p className="text-sm text-brand-black font-bold uppercase tracking-wide">{t(step.activity)}</p>
-                    </div>
-                  ))}
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-brand-brown/10 rounded-xl flex items-center justify-center text-brand-brown shrink-0">
+                    <ShieldCheck size={20} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-brand-black uppercase tracking-tight text-sm">{t('tour_detail.private_exclusive')}</h4>
+                    <p className="text-xs text-brand-black/60 font-medium leading-relaxed mt-1">{t('tour_detail.private_exclusive_desc')}</p>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <div className="w-10 h-10 bg-brand-brown/10 rounded-xl flex items-center justify-center text-brand-brown shrink-0">
+                    <Calendar size={20} />
+                  </div>
+                  <div>
+                    <h4 className="font-bold text-brand-black uppercase tracking-tight text-sm">{t('tour_detail.flexible_booking')}</h4>
+                    <p className="text-xs text-brand-black/60 font-medium leading-relaxed mt-1">{t('tour_detail.flexible_booking_desc')}</p>
+                  </div>
                 </div>
               </div>
-            )}
+            </div>
 
             <div className="pt-8 border-t border-brand-brown/10 flex items-start gap-4">
               <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center text-brand-brown shrink-0 shadow-sm border border-brand-brown/5">

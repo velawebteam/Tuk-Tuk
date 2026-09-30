@@ -20,12 +20,15 @@
     "privacy_title": "Tavira Roots | Política de Privacidade",
     "privacy_desc": "Política de privacidade da Tavira Roots relativa ao tratamento de dados dos nossos clientes de passeios e tours em Tavira.",
     "terms_title": "Tavira Roots | Termos e Condições",
-    "terms_desc": "Termos e condições de reserva e utilização dos serviços de passeios turísticos da Tavira Roots em Tavira."
+    "terms_desc": "Termos e condições de reserva e utilização dos serviços de passeios turísticos da Tavira Roots em Tavira.",
+    "walking_title": "Walking Tours em Tavira | Passeios a Pé pelo Centro Histórico | Tavira Roots",
+    "walking_desc": "Descubra os segredos e a história de Tavira num walking tour guiado a pé pelo centro histórico com entrada no Museu da Fotografia incluída."
   },
   "nav": {
     "home": "Início",
     "tuk_tuk": "Tuk Tuk",
     "jeep": "Jipe",
+    "walking": "Walking Tours",
     "before_booking": "Antes de Reservar",
     "faqs": "FAQs",
     "about": "Sobre Nós",
@@ -106,7 +109,10 @@
       "no_pickup_restaurant": "Não inclui serviço de recolha no restaurante",
       "wine_tasting_3": "Inclui prova de 3 vinhos (Tinto, Rosé e Branco)",
       "bread_olive_oil": "Acompanhado com Pão e Azeite",
-      "ice_cream_pax": "Inclui 1 bola de gelado por pessoa (copo ou cone)"
+      "ice_cream_pax": "Inclui 1 bola de gelado por pessoa (copo ou cone)",
+      "min_age_12": "Idade mínima: 12 anos",
+      "meeting_point_padinha": "Ponto de encontro: Praça Dr. António Padinha (circuito a pé pelo centro histórico)",
+      "min_pax_2": "Lotação: Mínimo 2 pessoas, máximo 10 pessoas por grupo"
     }
   },
   "contact_page": {
@@ -165,6 +171,13 @@
     "olive_grove": "Olival (Olive Grove)",
     "olive_tree_2000": "Oliveira 2000 anos",
     "anchor_graveyard": "Cemitério das Âncoras",
+    "fishing_villages": "Aldeias piscatórias",
+    "anchor_graveyard_main": "Cemitério das Âncoras como destaque principal",
+    "salt_pans_clean": "Salinas",
+    "bird_watching_ria": "Aves da Ria Formosa",
+    "tuna_fishing_traditional": "Pesca tradicional do atum",
+    "octopus_fishing_traditional": "Pesca tradicional do polvo",
+    "barril_train_ticket": "Bilhete do comboio para o Barril incluído",
     "al_lagar_tapas": "Al-Lagar (inclui vinho e tapas)",
     "sequa_river": "Rio Sequa",
     "asseca": "Asseca",
@@ -175,11 +188,31 @@
     "terracotta": "Terracota",
     "manual_production": "Fabrico Manual",
     "private_guide": "Guia Privado",
-    "insurance": "Seguro de Responsabilidade"
+    "insurance": "Seguro de Responsabilidade",
+    "praca_padinha": "Ponto de Encontro: Praça Dr. António Padinha",
+    "historical_center_circuit": "Circuito a pé pelo Centro Histórico",
+    "photo_museum_ticket": "Entrada no Museu de Fotografia de Tavira",
+    "walking_itinerary_1": "Praça Dr. António Padinha",
+    "walking_itinerary_2": "Rio Gilão e Ponte Antiga",
+    "walking_itinerary_3": "Praça da República",
+    "walking_itinerary_4": "Antigo Mercado da Ribeira / Jardim do Coreto",
+    "walking_itinerary_5": "Tavira Islâmica / Palácio da Galeria",
+    "walking_itinerary_6": "Igreja da Misericórdia",
+    "walking_itinerary_7": "Arco e Muralhas",
+    "walking_itinerary_8": "Igreja de Santa Maria do Castelo",
+    "walking_itinerary_9": "Castelo de Tavira e Miradouro",
+    "walking_itinerary_10": "Museu da Fotografia de Tavira"
   },
   "home": {
-    "featured_title": "Experiências em Destaque",
-    "featured_subtitle": "Escolha entre o charme ágil do Tuk Tuk ou a robustez aventureira do Jipe. Todas as nossas tours são personalizáveis.",
+    "featured_title": "The most Complete",
+    "featured_subtitle": "Escolha entre o charme ágil do Tuk Tuk ou a robustez aventureira do Jipe.",
+    "anchor_section": {
+      "title": "O nosso Destaque",
+      "badge": "Passeio Recomendado",
+      "subtitle": "Conheça o icónico Cemitério das Âncoras, as salinas, as aves e as tradições da pesca local num passeio de Jipe 4x4 privado e inesquecível.",
+      "cta_details": "Ver Detalhes do Passeio",
+      "cta_book": "Reservar no WhatsApp"
+    },
     "view_all": "Ver todas as tours",
     "attractions_title": "O que vai visitar?",
     "attractions_subtitle": "Muito mais do que um simples passeio, uma imersão na cultura de Tavira.",
@@ -280,8 +313,8 @@
       "desc": "Visite oliveiras milenares e prove o melhor azeite da região num cenário histórico."
     },
     "jeep_boat_anchors": {
-      "name": "Jipe & Barco - Cemitério das Âncoras",
-      "desc": "A combinação perfeita entre terra e mar, com visita ao icónico cemitério das âncoras."
+      "name": "Cemitério das Âncoras: Tavira 4x4 Pela Ria Formosa",
+      "desc": "Descubra as tradições piscatórias de Tavira num passeio privado de jipe pela Ria Formosa, onde o Cemitério das Âncoras é o ponto alto da experiência, juntamente com as salinas, as aves e as tradições da pesca local.\n\nO ponto principal do passeio é o Cemitério das Âncoras, um dos lugares mais singulares da região de Tavira. Centenas de antigas âncoras recordam a importância da pesca do atum e das comunidades que durante gerações viveram do mar.\n\nVisitaremos também as salinas tradicionais de Tavira, onde poderá conhecer o processo de produção de sal marinho e a sua importância para a região. Ao longo do percurso, poderá observar algumas das aves que habitam e se alimentam na Ria Formosa.\n\nA experiência inclui ainda uma introdução à história da pesca do atum e da pesca tradicional do polvo, conhecendo técnicas, tradições e histórias que fazem parte da identidade das comunidades piscatórias de Tavira.\n\nUm passeio privado pensado para quem quer conhecer um lado mais autêntico de Tavira, descobrindo a sua ligação ao mar, à pesca e à Ria Formosa."
     },
     "tavira_roots_wine": {
       "name": "Salinas, Polvo, Atum, Vinho e Tapas",
@@ -294,6 +327,10 @@
     "full_day_sotavento": {
       "name": "Dia Completo no Sotavento Algarvio Com Almoço",
       "desc": "O dia inteiro para descobrir o Sotavento Algarvio com almoço incluído e experiências autênticas."
+    },
+    "walking": {
+      "name": "Tavira Walking Tour: History, Secrets & Memories",
+      "desc": "Passeio descontraído pelo coração histórico de Tavira, contando a evolução da cidade desde as raízes islâmicas, passando pela conquista cristã e época dos Descobrimentos, até à Tavira atual."
     }
   },
   "footer": {
@@ -409,5 +446,10 @@
       "terms_section4_text": "Não nos responsabilizamos por perdas ou danos em objetos pessoais dos clientes durante as tours. Reservamo-nos o direito de alterar itinerários por motivos de força maior, como condições meteorológicas adversas.",
       "terms_section5_title": "5. Resolução de Litígios",
       "terms_section5_text": "Em caso de litígio, o consumidor pode recorrer a uma Entidade de Resolução Alternativa de Litígios de Consumo (Ex: CIMAAL - Centro de Informação, Mediação e Arbitragem de Consumo do Algarve). Dispomos também de Livro de Reclamações Eletrónico."
+    },
+    "walking_page": {
+      "title": "Walking Tours em Tavira",
+      "subtitle": "Passeios a Pé Pelo Centro Histórico",
+      "description": "Explore os segredos, a história e as memórias do coração histórico de Tavira num passeio a pé guiado com bilhete individual."
     }
 }

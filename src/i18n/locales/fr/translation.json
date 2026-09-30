@@ -106,7 +106,8 @@
       "no_pickup_restaurant": "N'inclut pas le service de prise en charge au restaurant",
       "wine_tasting_3": "Inclut la dégustation de 3 vins (Rouge, Rosé et Blanc)",
       "bread_olive_oil": "Accompagné de Pain et d'Huile d'Olive",
-      "ice_cream_pax": "Inclut 1 boule de glace par personne (coupe ou cornet)"
+      "ice_cream_pax": "Inclut 1 boule de glace par personne (coupe ou cornet)",
+      "min_age_12": "Âge minimum: 12 ans"
     }
   },
   "contact_page": {
@@ -165,6 +166,13 @@
     "olive_grove": "Oliveraie",
     "olive_tree_2000": "Olivier de 2000 ans",
     "anchor_graveyard": "Cimetière des Ancres",
+    "fishing_villages": "Villages de pêcheurs",
+    "anchor_graveyard_main": "Cimetière des Ancres comme attraction principale",
+    "salt_pans_clean": "Marais Salants",
+    "bird_watching_ria": "Oiseaux de la Ria Formosa",
+    "tuna_fishing_traditional": "Pêche traditionnelle au thon",
+    "octopus_fishing_traditional": "Pêche traditionnelle au poulpe",
+    "barril_train_ticket": "Billet de train pour Barril inclus",
     "al_lagar_tapas": "Al-Lagar (Inclut Vin et Tapas)",
     "sequa_river": "Rivière Sequa",
     "asseca": "Asseca",
@@ -178,8 +186,15 @@
     "insurance": "Assurance Responsabilité Civile"
   },
   "home": {
-    "featured_title": "Expériences à la Une",
-    "featured_subtitle": "Choisissez entre le charme agile du Tuk Tuk ou la robustesse aventureuse de la Jeep. Toutes nos visites sont personnalisables.",
+    "featured_title": "The most Complete",
+    "featured_subtitle": "Choisissez entre le charme agile du Tuk Tuk ou la robustesse aventureuse de la Jeep.",
+    "anchor_section": {
+      "title": "Notre Coup de Cœur",
+      "badge": "Circuit Recommandé",
+      "subtitle": "Découvrez l'emblématique Cimetière des Ancres, les marais salants, les oiseaux et la pêche traditionnelle lors d'une excursion privée en jeep 4x4.",
+      "cta_details": "Voir tous les détails",
+      "cta_book": "Réserver via WhatsApp"
+    },
     "view_all": "Voir toutes les visites",
     "attractions_title": "Que visiterez-vous ?",
     "attractions_subtitle": "Bien plus qu'une simple promenade, une immersion dans la culture de Tavira.",
@@ -280,8 +295,8 @@
       "desc": "Visitez des oliviers millénaires et dégustez la meilleure huile d'olive de la région dans un cadre historique."
     },
     "jeep_boat_anchors": {
-      "name": "Jeep & Bateau - Cimetière des Ancres",
-      "desc": "La combinaison parfaite entre terre et mer, avec une visite au cimetière d'ancres emblématique."
+      "name": "Cimetière des Ancres: Tavira 4x4 à Travers la Ria Formosa",
+      "desc": "Découvrez les traditions de pêche de Tavira lors d'une excursion privée en jeep à travers la Ria Formosa, où le cimetière d'ancres est le point fort de l'expérience, aux côtés des marais salants, des oiseaux et des traditions locales de pêche.\n\nLe point fort de la visite est le Cimetière des Ancres, l'un des lieux les plus uniques de la région de Tavira. Des centaines d'anciennes ancres rappellent l'importance de la pêche au thon et des communautés qui vivaient de la mer depuis des générations.\n\nNous visiterons également les marais salants traditionnels de Tavira, où vous pourrez découvrir le processus de production du sel marin. Tout au long du parcours, vous pourrez observer certains des oiseaux qui vivent et se nourrissent dans la Ria Formosa.\n\nL'expérience comprend également une introduction à l'histoire de la pêche au thon et à la pêche traditionnelle au poulpe, en découvrant les techniques et histoires des communautés de pêcheurs de Tavira.\n\nUne visite privée conçue pour ceux qui souhaitent découvrir un côté plus authentique de Tavira."
     },
     "tavira_roots_wine": {
       "name": "Marais Salants, Poulpe, Thon, Vin et Tapas",

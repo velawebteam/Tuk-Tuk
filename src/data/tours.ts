@@ -6,7 +6,7 @@ export interface PriceOption {
 
 export interface Tour {
   id: string;
-  type: 'tuk-tuk' | 'jeep';
+  type: 'tuk-tuk' | 'jeep' | 'walking';
   nameKey: string;
   price: string;
   duration: string;
@@ -236,19 +236,18 @@ const JEEP_BOAT_HISTORY_GALLERY = [
 ];
 
 const JEEP_BOAT_ANCHOR_GALLERY = [
-  'https://lh3.googleusercontent.com/d/1SxJ999YFAee9ZLsj-rFnFkqDStmjIiAe',
-  'https://lh3.googleusercontent.com/d/1A-wtbFGQS_xbzEJRpmQNHiR-uThKHYF_',
-  'https://lh3.googleusercontent.com/d/1C7UP35_VThhxloXRN3vFc0hSmEp2FxiZ',
-  'https://lh3.googleusercontent.com/d/1g-7NnrSGolYgLKN49fRFGV6z2LuPyujk',
-  'https://lh3.googleusercontent.com/d/1u-h3PWoTClhpAajcrsYWi_EnxFYzNzwk',
-  'https://lh3.googleusercontent.com/d/13rpypMm1tm72TVRMRovtoRsHG21Q17Os',
-  'https://lh3.googleusercontent.com/d/1Kohld4D3GykM5bbSeFBcSkW-BybsKOHL',
-  'https://lh3.googleusercontent.com/d/1H73iEIoHm_Hle9NkwYKtHh9NWcltQ1mK',
-  'https://lh3.googleusercontent.com/d/1UV68ChII3jp1dWW6ql-g_wx74o2hi_qd',
-  'https://lh3.googleusercontent.com/d/1XpCxXpamX_954g02-wHr1IxA6JsFXUXp',
-  'https://lh3.googleusercontent.com/d/19uVJZydqaDcNzyUK0YaYzYG9UWKh_D3q',
-  'https://lh3.googleusercontent.com/d/1YFRxMeUHR20Ny0BP2xmqzmKDhH_-QzWB',
-  'https://lh3.googleusercontent.com/d/1TmeYXno2q2MHv-6Y8jwLMAjA_IU0hRfM'
+  'https://lh3.googleusercontent.com/d/15otIUDxV4RXZhamQQIwSdU61_G1LI6Fv',
+  'https://lh3.googleusercontent.com/d/1fB-JW8b8Gdd4Y6g4nm9QEmmccx7Ufb0J',
+  'https://lh3.googleusercontent.com/d/17mktHKcwqazKX_O-MXpZLsn55T5prxfd',
+  'https://lh3.googleusercontent.com/d/1E-3OVRJ2aiguEQtWT_huZvy3pChq-GXC',
+  'https://lh3.googleusercontent.com/d/1GJZO4LY7lwWFtATqJnvs6-Gz76nxXbtt',
+  'https://lh3.googleusercontent.com/d/1KTQ8d3SVLUAw9AhuKnBTC9GZubkw6IpK',
+  'https://lh3.googleusercontent.com/d/1LS7Fcne1HxDl0SjLdd9OmYYymgkldE2k',
+  'https://lh3.googleusercontent.com/d/1ThoMiGiqIcuonVhCNHgg9Hsuhwp8FAIx',
+  'https://lh3.googleusercontent.com/d/1bgCX-8MftWXpDlLgav6NhQzAztHMqU0D',
+  'https://lh3.googleusercontent.com/d/1jbu6CX5vKxeoA_rDFGHokMryI43vyy2D',
+  'https://lh3.googleusercontent.com/d/1mF8tgqY-50lQ3oEKdvEvFAsz13TcHiqE',
+  'https://lh3.googleusercontent.com/d/1xfWGZqIvQha0B80oCzoAMO8dbKrgP6Me'
 ];
 
 const SANTA_LUZIA_CLAY_GALLERY = [
@@ -726,25 +725,30 @@ export const jeepTours: Tour[] = [
     type: 'jeep',
     nameKey: 'tours.jeep_boat_anchors.name',
     price: '69€',
-    duration: '3h',
+    duration: '2h30',
     pax: '2-5',
     descriptionKey: 'tours.jeep_boat_anchors.desc',
-    features: ['features.historical_center', 'features.castle_garden', 'features.old_bridge', 'features.ria_formosa', 'features.salt_pans', 'features.ria_formosa_fauna_flora', 'features.bird_watching', 'features.tuna_museum', 'features.olive_tasting', 'features.santa_luzia_octopus', 'features.boat_tour', 'features.anchor_graveyard'],
+    features: [
+      'features.salt_pans_clean',
+      'features.ria_formosa',
+      'features.fishing_villages',
+      'features.anchor_graveyard'
+    ],
     image: JEEP_BOAT_ANCHOR_GALLERY[0],
     gallery: JEEP_BOAT_ANCHOR_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     fareHarborProductId: 695527,
+    goodToKnow: ['tour_detail.gtk.min_age_12'],
     priceOptions: [
-      { price: '69€', group: 'Grupo de 5 Pessoas', details: 'Preço por pessoa' },
-      { price: '72€', group: 'Grupo de 4 Pessoas', details: 'Preço por pessoa' },
-      { price: '75€', group: 'Grupo de 3 Pessoas', details: 'Preço por pessoa' },
-      { price: '79€', group: 'Grupo de 2 Pessoas', details: 'Preço por pessoa' }
+      { price: '69€', group: 'Grupo de 5 Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' },
+      { price: '72€', group: 'Grupo de 4 Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' },
+      { price: '75€', group: 'Grupo de 3 Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' },
+      { price: '79€', group: 'Grupo de 2 Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' }
     ],
     itinerary: [
-      { activity: 'features.historical_center' },
-      { activity: 'features.ria_formosa_fauna_flora' },
-      { activity: 'features.tuna_museum' },
-      { activity: 'features.santa_luzia_octopus' },
+      { activity: 'features.salt_pans_clean' },
+      { activity: 'features.ria_formosa' },
+      { activity: 'features.fishing_villages' },
       { activity: 'features.anchor_graveyard' }
     ]
   },
@@ -859,4 +863,59 @@ export const jeepTours: Tour[] = [
   }
 ];
 
-export const allTours = [...tukTukTours, ...jeepTours];
+const WALKING_TOUR_GALLERY = [
+  'https://lh3.googleusercontent.com/d/161LiIXSjLdw84RReCbtnfNZLoWX3Y4Nc',
+  'https://lh3.googleusercontent.com/d/16C5x0STQG97QLDT5LfF3HDfRnUoutc_2',
+  'https://lh3.googleusercontent.com/d/17npdfuVShG-NFUpKNQaMpau8kmwTgJaY',
+  'https://lh3.googleusercontent.com/d/1I30dZekyfFVsIwIjQ5aJUgrAB-NwOusV',
+  'https://lh3.googleusercontent.com/d/1IhlCQEU6PABnIzlUb6iZuZv0fPvinhLI',
+  'https://lh3.googleusercontent.com/d/1Jj6ShyS-YF_z68FX8LrqS4vJaAvtCPqj',
+  'https://lh3.googleusercontent.com/d/1NusTHCJVk3td1IhePHqDLLsq8ZTazR8q',
+  'https://lh3.googleusercontent.com/d/1ebDwpbumHtGBLJ23VB8xIFcDrU_ymyKd',
+  'https://lh3.googleusercontent.com/d/1jCX7VSgvn-9xJapv0YvKrsbQX1Cq82qr',
+  'https://lh3.googleusercontent.com/d/1o_Ne_vrF902Z-hUYUih6VyPLgz_j5w-G',
+  'https://lh3.googleusercontent.com/d/1velHZ9-vmJoOFhR7gPSQHOy5L-ZG9OWw',
+  'https://lh3.googleusercontent.com/d/1zvhpskK75_exVCKgu3iQhRYNNjYvAuEj'
+];
+
+export const walkingTours: Tour[] = [
+  {
+    id: 'tavira-walking-tour',
+    type: 'walking',
+    nameKey: 'tours.walking.name',
+    price: '27€',
+    duration: '2h',
+    pax: '2-10',
+    descriptionKey: 'tours.walking.desc',
+    features: [
+      'features.praca_padinha',
+      'features.historical_center_circuit',
+      'features.photo_museum_ticket',
+      'features.private_guide'
+    ],
+    image: WALKING_TOUR_GALLERY[0],
+    gallery: WALKING_TOUR_GALLERY,
+    languages: ['Português', 'Espanhol', 'Inglês'],
+    goodToKnow: [
+      'tour_detail.gtk.meeting_point_padinha',
+      'tour_detail.gtk.min_pax_2'
+    ],
+    priceOptions: [
+      { price: '27€', group: 'Bilhete Individual / Por Pessoa', details: 'Preço por pessoa | Mínimo 2, máximo 10 pessoas' }
+    ],
+    itinerary: [
+      { activity: 'features.walking_itinerary_1' },
+      { activity: 'features.walking_itinerary_2' },
+      { activity: 'features.walking_itinerary_3' },
+      { activity: 'features.walking_itinerary_4' },
+      { activity: 'features.walking_itinerary_5' },
+      { activity: 'features.walking_itinerary_6' },
+      { activity: 'features.walking_itinerary_7' },
+      { activity: 'features.walking_itinerary_8' },
+      { activity: 'features.walking_itinerary_9' },
+      { activity: 'features.walking_itinerary_10' }
+    ]
+  }
+];
+
+export const allTours = [...tukTukTours, ...jeepTours, ...walkingTours];

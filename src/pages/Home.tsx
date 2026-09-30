@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { motion } from 'motion/react';
-import { Users, Map, Star, ChevronRight, Camera, Coffee, Leaf, Wine, UtensilsCrossed, Fish, Castle } from 'lucide-react';
+import { motion, AnimatePresence } from 'motion/react';
+import { Users, Map, Star, ChevronRight, ChevronLeft, Camera, Coffee, Leaf, Wine, UtensilsCrossed, Fish, Castle, Clock, CheckCircle2, Anchor, Calendar, Compass, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { tukTukTours, jeepTours } from '@/src/data/tours';
 import { useTranslation } from 'react-i18next';
@@ -10,7 +10,21 @@ import { trackEvent } from '../utils/analytics';
 export default function Home() {
   const { t } = useTranslation();
   const [showBookingOptions, setShowBookingOptions] = useState(false);
+  const [anchorImgIndex, setAnchorImgIndex] = useState(0);
+  
   const featuredTours = [...tukTukTours.slice(0, 2), ...jeepTours.slice(0, 1)];
+  const anchorTour = jeepTours.find(t => t.id === 'jeep-boat-anchors') || jeepTours[0];
+  const anchorImages = anchorTour?.gallery && anchorTour.gallery.length > 0 ? anchorTour.gallery : [anchorTour.image];
+
+  const nextAnchorImg = (e?: React.MouseEvent) => {
+    e?.stopPropagation();
+    setAnchorImgIndex((prev) => (prev + 1) % anchorImages.length);
+  };
+
+  const prevAnchorImg = (e?: React.MouseEvent) => {
+    e?.stopPropagation();
+    setAnchorImgIndex((prev) => (prev - 1 + anchorImages.length) % anchorImages.length);
+  };
 
   return (
     <div>
@@ -58,6 +72,175 @@ export default function Home() {
           </motion.div>
         </div>
       </section>
+
+      {/* Featured Highlight: Anchor Cemetery Tour */}
+      {anchorTour && (
+        <section className="py-16 md:py-24 bg-gradient-to-br from-brand-cream via-white to-brand-cream border-y border-brand-brown/10 overflow-hidden relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="bg-brand-black rounded-[2.5rem] overflow-hidden text-white shadow-2xl relative border border-brand-brown/30">
+              <div className="absolute top-0 right-0 w-96 h-96 bg-brand-brown/25 rounded-full blur-3xl pointer-events-none"></div>
+              <div className="absolute bottom-0 left-0 w-96 h-96 bg-brand-brown/15 rounded-full blur-3xl pointer-events-none"></div>
+
+              {/* Prominent Header Banner Inside Card */}
+              <div className="pt-8 sm:pt-10 px-6 sm:px-8 md:px-12 text-center border-b border-white/10 pb-6 relative z-10 bg-brand-black">
+                <div className="flex items-center justify-center gap-4 sm:gap-6 max-w-full">
+                  <div className="hidden sm:block h-[2px] w-12 sm:w-20 bg-gradient-to-r from-transparent to-brand-brown/80 rounded-full"></div>
+                  <h2 className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-black text-brand-cream uppercase tracking-tight drop-shadow-md">
+                    {t('home.anchor_section.title')}
+                  </h2>
+                  <div className="hidden sm:block h-[2px] w-12 sm:w-20 bg-gradient-to-l from-transparent to-brand-brown/80 rounded-full"></div>
+                </div>
+                <div className="h-1.5 w-24 bg-brand-brown mx-auto rounded-full mt-3 shadow-sm"></div>
+              </div>
+
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center p-6 sm:p-8 md:p-12 lg:p-14">
+                {/* Left Column: Interactive Image Gallery */}
+                <motion.div 
+                  initial={{ opacity: 0, x: -30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8 }}
+                  className="lg:col-span-6 relative flex flex-col gap-3"
+                >
+                  <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl group border border-white/10 bg-black">
+                    <AnimatePresence mode="wait">
+                      <motion.img 
+                        key={anchorImgIndex}
+                        src={anchorImages[anchorImgIndex]} 
+                        alt={`${t(anchorTour.nameKey)} - ${anchorImgIndex + 1}`} 
+                        initial={{ opacity: 0, scale: 1.05 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        exit={{ opacity: 0 }}
+                        transition={{ duration: 0.3 }}
+                        className="w-full h-full object-cover"
+                        referrerPolicy="no-referrer"
+                      />
+                    </AnimatePresence>
+
+                    <div className="absolute inset-0 bg-gradient-to-t from-brand-black/90 via-transparent to-transparent pointer-events-none"></div>
+                    
+                    <div className="absolute top-4 left-4 flex flex-wrap gap-2 z-10">
+                      <span className="px-3.5 py-1.5 bg-brand-brown text-white rounded-full text-xs font-black uppercase tracking-widest shadow-md">
+                        {t('home.anchor_section.badge')}
+                      </span>
+                      <span className="px-3.5 py-1.5 bg-black/60 backdrop-blur-md text-white border border-white/20 rounded-full text-xs font-bold uppercase tracking-widest">
+                        {t('common.private')} 4x4
+                      </span>
+                    </div>
+
+                    {/* Navigation Arrows */}
+                    {anchorImages.length > 1 && (
+                      <>
+                        <button 
+                          onClick={prevAnchorImg}
+                          className="absolute left-3 top-1/2 -translate-y-1/2 p-3 bg-black/50 hover:bg-brand-brown backdrop-blur-md text-white rounded-full transition-all shadow-xl z-20 cursor-pointer"
+                          aria-label="Previous image"
+                        >
+                          <ChevronLeft size={22} />
+                        </button>
+                        <button 
+                          onClick={nextAnchorImg}
+                          className="absolute right-3 top-1/2 -translate-y-1/2 p-3 bg-black/50 hover:bg-brand-brown backdrop-blur-md text-white rounded-full transition-all shadow-xl z-20 cursor-pointer"
+                          aria-label="Next image"
+                        >
+                          <ChevronRight size={22} />
+                        </button>
+                      </>
+                    )}
+
+                    <div className="absolute bottom-4 left-4 right-4 flex justify-between items-end z-10 text-white">
+                      <div className="flex gap-2">
+                        <span className="bg-black/80 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-sm border border-white/10 flex items-center gap-1.5">
+                          <Clock size={14} className="text-brand-brown" />
+                          {anchorTour.duration}
+                        </span>
+                        <span className="bg-black/80 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-sm border border-white/10 flex items-center gap-1.5">
+                          <Users size={14} className="text-brand-brown" />
+                          {anchorTour.pax} {t('common.pax')}
+                        </span>
+                      </div>
+                      <span className="bg-black/80 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider backdrop-blur-sm border border-white/10 flex items-center gap-1.5">
+                        <Camera size={14} className="text-brand-brown" />
+                        {anchorImgIndex + 1} / {anchorImages.length}
+                      </span>
+                    </div>
+                  </div>
+
+                  {/* Thumbnail Strip */}
+                  {anchorImages.length > 1 && (
+                    <div className="flex gap-2.5 overflow-x-auto py-1 hide-scrollbar scroll-smooth w-full">
+                      {anchorImages.map((img, i) => (
+                        <button
+                          key={i}
+                          onClick={() => setAnchorImgIndex(i)}
+                          className={`relative flex-shrink-0 transition-all rounded-xl overflow-hidden border cursor-pointer ${
+                            anchorImgIndex === i 
+                              ? 'border-brand-brown ring-2 ring-brand-brown ring-offset-1 ring-offset-brand-black scale-105 z-10' 
+                              : 'border-white/10 opacity-50 hover:opacity-100'
+                          }`}
+                        >
+                          <img 
+                            src={img} 
+                            alt={`Thumbnail ${i + 1}`} 
+                            className="w-16 h-12 object-cover" 
+                            referrerPolicy="no-referrer" 
+                          />
+                        </button>
+                      ))}
+                    </div>
+                  )}
+                </motion.div>
+
+                {/* Right Column: Tour Info & Highlights */}
+                <motion.div 
+                  initial={{ opacity: 0, x: 30 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.8 }}
+                  className="lg:col-span-6 space-y-6"
+                >
+                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white uppercase tracking-tight leading-tight">
+                    {t(anchorTour.nameKey)}
+                  </h3>
+
+                  <p className="text-brand-cream/80 text-base font-medium leading-relaxed">
+                    {t('home.anchor_section.subtitle')}
+                  </p>
+
+                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2">
+                    {(anchorTour.itinerary || []).map((item, i) => (
+                      <li key={i} className="flex items-center gap-2.5 text-brand-cream/90 text-xs font-bold uppercase tracking-wide">
+                        <CheckCircle2 size={16} className="text-brand-brown shrink-0" />
+                        <span>{t(item.activity)}</span>
+                      </li>
+                    ))}
+                  </ul>
+
+                  <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-white/10">
+                    <Link 
+                      to={`/tour/${anchorTour.id}`}
+                      className="px-8 py-4 bg-brand-brown hover:bg-brand-brown-light text-white rounded-2xl font-black uppercase tracking-widest text-center transition-all shadow-lg shadow-brand-brown/20 flex items-center justify-center gap-2"
+                    >
+                      {t('home.anchor_section.cta_details')}
+                      <ChevronRight size={18} />
+                    </Link>
+                    <a 
+                      href={`https://wa.me/351968995275?text=${encodeURIComponent(`Olá! Gostaria de reservar o passeio: ${t(anchorTour.nameKey)}`)}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => trackEvent('book_now_click', { tour_id: anchorTour.id, location: 'home_anchor_section' })}
+                      className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-2xl font-black uppercase tracking-widest text-center transition-all flex items-center justify-center gap-2"
+                    >
+                      <Calendar size={18} className="text-brand-brown" />
+                      {t('home.anchor_section.cta_book')}
+                    </a>
+                  </div>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* Differentiator Section */}
       <section className="py-16 md:py-24 bg-white">
