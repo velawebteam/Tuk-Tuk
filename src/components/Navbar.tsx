@@ -22,7 +22,7 @@ export function Navbar() {
   }, []);
 
   // Determine if the current page has a dark hero section
-  const isHeroPage = ['/', '/jipe', '/tuk-tuk', '/sobre-nos'].includes(location.pathname);
+  const isHeroPage = ['/', '/jipe', '/tuk-tuk', '/walking-tours', '/sobre-nos'].includes(location.pathname);
   // Show transparent only on hero pages when not scrolled
   const isTransparent = isHeroPage && !isScrolled;
   const isSolid = !isTransparent;
@@ -31,6 +31,7 @@ export function Navbar() {
     { name: t('nav.home'), href: '/' },
     { name: t('nav.tuk_tuk'), href: '/tuk-tuk' },
     { name: t('nav.jeep'), href: '/jipe' },
+    { name: t('nav.walking_tours'), href: '/walking-tours' },
     { name: t('nav.before_booking'), href: '/before-booking' },
     { name: t('nav.faqs'), href: '/faqs' },
     { name: t('nav.about'), href: '/sobre-nos' },
@@ -82,20 +83,20 @@ export function Navbar() {
               alt="Tavira Roots Logo" 
               referrerPolicy="no-referrer"
               className={cn(
-                "object-contain transition-all duration-300",
-                isScrolled ? "w-[45px] h-[45px] md:w-[60px] md:h-[60px]" : "w-[65px] h-[65px] md:w-[85px] md:h-[85px]"
+                "object-contain transition-all duration-300 w-[85px] pl-0 mr-[20px] -ml-[20px] border-0",
+                isScrolled ? "h-[45px] md:h-[60px]" : "h-[65px] md:h-[85px]"
               )}
             />
           </Link>
 
           {/* Desktop Links - Right */}
-          <div className="hidden lg:flex items-center space-x-8">
+          <div className="hidden lg:flex items-center gap-3 xl:gap-5 2xl:gap-8">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 to={link.href}
                 className={cn(
-                  "text-base font-bold uppercase tracking-widest transition-all duration-300 hover:text-brand-brown relative group font-display",
+                  "text-xs xl:text-sm 2xl:text-base font-bold uppercase tracking-wider xl:tracking-widest transition-all duration-300 hover:text-brand-brown relative group font-display whitespace-nowrap shrink-0",
                   isSolid ? "text-brand-black" : "text-white",
                   location.pathname === link.href && (isSolid ? "text-brand-brown" : "text-brand-cream")
                 )}
@@ -110,15 +111,15 @@ export function Navbar() {
             ))}
 
             {/* Language Switcher Desktop */}
-            <div className="relative ml-4">
+            <div className="relative ml-2 xl:ml-4 shrink-0">
               <button
                 onClick={() => setIsLangOpen(!isLangOpen)}
                 className={cn(
-                  "flex items-center gap-1 text-base font-bold transition-colors uppercase font-display",
+                  "flex items-center gap-1 text-xs xl:text-sm 2xl:text-base font-bold transition-colors uppercase font-display whitespace-nowrap",
                   isSolid ? "text-brand-black hover:text-brand-brown" : "text-white hover:text-brand-cream"
                 )}
               >
-                <Languages size={20} />
+                <Languages size={18} className="shrink-0" />
                 {i18n.language.split('-')[0]}
               </button>
               

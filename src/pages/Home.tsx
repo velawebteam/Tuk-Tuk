@@ -61,12 +61,15 @@ export default function Home() {
             <p className="text-base md:text-2xl text-brand-cream mb-6 leading-relaxed max-w-3xl mx-auto px-4 opacity-90">
               {t('hero.subtitle')}
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center px-6">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center px-6">
               <Link to="/tuk-tuk" className="px-8 py-4 bg-brand-brown hover:bg-brand-brown-light text-white rounded-full font-bold text-lg transition-all transform hover:scale-105 text-center shadow-lg shadow-brand-brown/20">
                 {t('hero.cta_tuk')}
               </Link>
               <Link to="/jipe" className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 rounded-full font-bold text-lg transition-all transform hover:scale-105 text-center">
                 {t('hero.cta_jeep')}
+              </Link>
+              <Link to="/walking-tours" className="px-8 py-4 bg-white/10 hover:bg-white/20 backdrop-blur-md text-white border border-white/30 rounded-full font-bold text-lg transition-all transform hover:scale-105 text-center">
+                {t('nav.walking_tours')}
               </Link>
             </div>
           </motion.div>
@@ -216,23 +219,23 @@ export default function Home() {
                     ))}
                   </ul>
 
-                  <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-white/10">
+                  <div className="flex flex-row gap-2.5 sm:gap-4 pt-4 border-t border-white/10">
                     <Link 
                       to={`/tour/${anchorTour.id}`}
-                      className="px-8 py-4 bg-brand-brown hover:bg-brand-brown-light text-white rounded-2xl font-black uppercase tracking-widest text-center transition-all shadow-lg shadow-brand-brown/20 flex items-center justify-center gap-2"
+                      className="flex-1 px-3 sm:px-8 py-3.5 sm:py-4 bg-brand-brown hover:bg-brand-brown-light text-white rounded-xl sm:rounded-2xl font-black uppercase tracking-wider text-[11px] sm:text-xs md:text-sm text-center transition-all shadow-lg shadow-brand-brown/20 flex items-center justify-center gap-1.5 sm:gap-2"
                     >
-                      {t('home.anchor_section.cta_details')}
-                      <ChevronRight size={18} />
+                      <span className="truncate">{t('home.anchor_section.cta_details')}</span>
+                      <ChevronRight size={16} className="shrink-0" />
                     </Link>
                     <a 
                       href={`https://wa.me/351968995275?text=${encodeURIComponent(`Olá! Gostaria de reservar o passeio: ${t(anchorTour.nameKey)}`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => trackEvent('book_now_click', { tour_id: anchorTour.id, location: 'home_anchor_section' })}
-                      className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-2xl font-black uppercase tracking-widest text-center transition-all flex items-center justify-center gap-2"
+                      className="flex-1 px-3 sm:px-8 py-3.5 sm:py-4 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-xl sm:rounded-2xl font-black uppercase tracking-wider text-[11px] sm:text-xs md:text-sm text-center transition-all flex items-center justify-center gap-1.5 sm:gap-2"
                     >
-                      <Calendar size={18} className="text-brand-brown" />
-                      {t('home.anchor_section.cta_book')}
+                      <Calendar size={16} className="text-brand-brown shrink-0" />
+                      <span className="truncate">{t('home.anchor_section.cta_book')}</span>
                     </a>
                   </div>
                 </motion.div>
@@ -317,7 +320,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-brand-black via-brand-black/30 to-transparent opacity-90"></div>
                 <div className="absolute top-0 left-0 p-8 z-20">
                   <span className="inline-block px-3 py-1 rounded-full bg-brand-brown/20 backdrop-blur-md text-[10px] font-bold uppercase tracking-widest text-brand-cream border border-brand-brown/30">
-                    {tour.type === 'tuk-tuk' ? `${t('nav.tuk_tuk')} ${t('common.private')}` : `${t('nav.jeep')} ${t('common.private')}`}
+                    {tour.type === 'tuk-tuk' ? `${t('nav.tuk_tuk')} ${t('common.private')}` : tour.type === 'walking' ? t('nav.walking_tours') : `${t('nav.jeep')} ${t('common.private')}`}
                   </span>
                 </div>
                 <div className="absolute bottom-0 left-0 right-0 p-8">
@@ -514,13 +517,16 @@ export default function Home() {
                 <motion.div 
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="flex flex-col sm:flex-row items-center justify-center gap-4"
+                  className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4"
                 >
-                  <Link to="/tuk-tuk" className="w-full sm:w-auto px-10 py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-full font-black uppercase tracking-widest text-lg shadow-xl shadow-brand-brown/20 transition-all transform hover:scale-105">
+                  <Link to="/tuk-tuk" className="w-full sm:w-auto px-8 py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-full font-black uppercase tracking-widest text-base sm:text-lg shadow-xl shadow-brand-brown/20 transition-all transform hover:scale-105">
                     {t('nav.tuk_tuk')}
                   </Link>
-                  <Link to="/jipe" className="w-full sm:w-auto px-10 py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-full font-black uppercase tracking-widest text-lg shadow-xl shadow-brand-brown/20 transition-all transform hover:scale-105">
+                  <Link to="/jipe" className="w-full sm:w-auto px-8 py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-full font-black uppercase tracking-widest text-base sm:text-lg shadow-xl shadow-brand-brown/20 transition-all transform hover:scale-105">
                     {t('nav.jeep')}
+                  </Link>
+                  <Link to="/walking-tours" className="w-full sm:w-auto px-8 py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-full font-black uppercase tracking-widest text-base sm:text-lg shadow-xl shadow-brand-brown/20 transition-all transform hover:scale-105">
+                    {t('nav.walking_tours')}
                   </Link>
                 </motion.div>
               )}

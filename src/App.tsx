@@ -13,6 +13,7 @@ import { LoadingScreen } from './components/LoadingScreen';
 import Home from './pages/Home';
 import TukTuk from './pages/TukTuk';
 import Jeep from './pages/Jeep';
+import WalkingTours from './pages/WalkingTours';
 import BeforeBooking from './pages/BeforeBooking';
 import FAQs from './pages/FAQs';
 import About from './pages/About';
@@ -76,6 +77,7 @@ export default function App() {
             <Route path="/" element={<Home />} />
             <Route path="/tuk-tuk" element={<TukTuk />} />
             <Route path="/jipe" element={<Jeep />} />
+            <Route path="/walking-tours" element={<WalkingTours />} />
             <Route path="/before-booking" element={<BeforeBooking />} />
             <Route path="/faqs" element={<FAQs />} />
             <Route path="/sobre-nos" element={<About />} />

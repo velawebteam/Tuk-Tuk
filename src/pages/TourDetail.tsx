@@ -121,23 +121,24 @@ export default function TourDetail() {
         }}
       />
       {/* Navigation Breadcrumb */}
-      <div className="max-w-7xl mx-auto px-4 pt-28 md:pt-40 pb-8">
-        <Link to={tour.type === 'tuk-tuk' ? '/tuk-tuk' : '/jipe'} className="flex items-center gap-2 text-brand-black/40 hover:text-brand-brown transition-all font-bold uppercase tracking-widest text-xs group">
+      <div className="max-w-7xl xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 pt-28 md:pt-40 pb-6">
+        <Link to={tour.type === 'tuk-tuk' ? '/tuk-tuk' : tour.type === 'walking' ? '/walking-tours' : '/jipe'} className="flex items-center gap-2 text-brand-black/40 hover:text-brand-brown transition-all font-bold uppercase tracking-widest text-xs group">
           <ChevronLeft size={16} className="transition-transform group-hover:-translate-x-1" />
-          <span>{t('nav.home')} / {tour.type === 'tuk-tuk' ? t('nav.tuk_tuk') : t('nav.jeep')}</span>
+          <span>{t('nav.home')} / {tour.type === 'tuk-tuk' ? t('nav.tuk_tuk') : tour.type === 'walking' ? t('nav.walking_tours') : t('nav.jeep')}</span>
         </Link>
       </div>
 
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <section className="max-w-7xl xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-start">
           {/* Gallery Carousel (Hero Area) */}
-          <div className="space-y-6">
-            <div className="relative group">
-              {/* Main Image Viewer */}
-              <div 
-                className="aspect-[4/3] rounded-[2.5rem] overflow-hidden shadow-2xl bg-black relative cursor-zoom-in"
-                onClick={() => setIsLightboxOpen(true)}
-              >
+          <div className="lg:col-span-7 space-y-8">
+            <div className="space-y-6">
+              <div className="relative group">
+                {/* Main Image Viewer */}
+                <div 
+                  className="aspect-[16/10] rounded-[2.5rem] overflow-hidden shadow-2xl bg-black relative cursor-zoom-in"
+                  onClick={() => setIsLightboxOpen(true)}
+                >
                 <AnimatePresence mode="wait">
                     <motion.img
                       key={selectedImageIndex}
@@ -213,7 +214,7 @@ export default function TourDetail() {
 
             {/* Serpentine / Snake Flow Tour Itinerary Card directly below photographs */}
             {tour.itinerary && tour.itinerary.length > 0 && (() => {
-              const itemsPerRow = 3;
+              const itemsPerRow = 4;
               const totalItems = tour.itinerary.length;
               const numRows = Math.ceil(totalItems / itemsPerRow);
 
@@ -257,7 +258,7 @@ export default function TourDetail() {
                       return (
                         <div key={r} className="space-y-4">
                           {/* Row Grid */}
-                          <div className="grid grid-cols-3 gap-2 sm:gap-4 items-start">
+                          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 items-start">
                             {rowCells.map((cell, c) => {
                               if (!cell) {
                                 return <div key={c} className="hidden sm:block" />;
@@ -271,6 +272,13 @@ export default function TourDetail() {
 
                               return (
                                 <div key={originalIndex} className="flex items-center justify-between gap-1 relative">
+                                  {/* Arrow on LEFT for Odd Rows (pointing left to next step) */}
+                                  {!isEvenRow && isNextStepInSameRow && (
+                                    <div className="shrink-0 flex items-center text-brand-brown/60 -ml-2 z-10">
+                                      <ChevronLeft size={18} className="text-brand-brown" />
+                                    </div>
+                                  )}
+
                                   {/* Step Item */}
                                   <div className="flex flex-col items-center text-center w-full group">
                                     <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-brand-brown text-white font-black text-xs sm:text-sm flex items-center justify-center shadow-md shadow-brand-brown/20 mb-2 border-2 border-white group-hover:scale-110 transition-transform">
@@ -286,14 +294,10 @@ export default function TourDetail() {
                                     </p>
                                   </div>
 
-                                  {/* Arrow to Next Step in Row */}
-                                  {isNextStepInSameRow && (
+                                  {/* Arrow on RIGHT for Even Rows (pointing right to next step) */}
+                                  {isEvenRow && isNextStepInSameRow && (
                                     <div className="shrink-0 flex items-center text-brand-brown/60 -mr-2 z-10">
-                                      {isEvenRow ? (
-                                        <ChevronRight size={18} className="text-brand-brown" />
-                                      ) : (
-                                        <ChevronLeft size={18} className="text-brand-brown" />
-                                      )}
+                                      <ChevronRight size={18} className="text-brand-brown" />
                                     </div>
                                   )}
                                 </div>
@@ -303,11 +307,12 @@ export default function TourDetail() {
 
                           {/* Downward Connector Arrow between rows */}
                           {!isLastRow && (
-                            <div className="grid grid-cols-3 gap-2 sm:gap-4 my-1">
+                            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 my-1">
                               {isEvenRow ? (
                                 <>
-                                  <div />
-                                  <div />
+                                  <div className="hidden sm:block" />
+                                  <div className="hidden sm:block" />
+                                  <div className="hidden sm:block" />
                                   <div className="flex justify-center items-center py-1">
                                     <ChevronDown size={18} className="text-brand-brown" />
                                   </div>
@@ -317,8 +322,9 @@ export default function TourDetail() {
                                   <div className="flex justify-center items-center py-1">
                                     <ChevronDown size={18} className="text-brand-brown" />
                                   </div>
-                                  <div />
-                                  <div />
+                                  <div className="hidden sm:block" />
+                                  <div className="hidden sm:block" />
+                                  <div className="hidden sm:block" />
                                 </>
                               )}
                             </div>
@@ -406,12 +412,13 @@ export default function TourDetail() {
               )}
             </div>
           </div>
+        </div>
 
-          {/* Booking & Description */}
-          <div className="space-y-10">
+        {/* Booking & Description */}
+        <div className="lg:col-span-5 space-y-10">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-brown/10 text-brand-brown text-[10px] font-bold uppercase tracking-widest mb-4">
-                {t('common.private')} {tour.type === 'tuk-tuk' ? t('nav.tuk_tuk') : t('nav.jeep')}
+                {tour.type === 'walking' ? t('nav.walking_tours') : `${t('common.private')} ${tour.type === 'tuk-tuk' ? t('nav.tuk_tuk') : t('nav.jeep')}`}
               </div>
               <h1 className="text-3xl md:text-5xl font-black text-brand-black mb-6 leading-tight uppercase tracking-tight">{t(tour.nameKey)}</h1>
               <p className="text-lg md:text-xl text-brand-black/70 font-medium leading-relaxed mb-8 whitespace-pre-line">{t(tour.descriptionKey)}</p>

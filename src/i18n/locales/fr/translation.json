@@ -20,12 +20,16 @@
     "privacy_title": "Tavira Roots | Politique de Confidentialité",
     "privacy_desc": "Politique de confidentialité de Tavira Roots concernant la protection des données de nos clients.",
     "terms_title": "Tavira Roots | Conditions Générales",
-    "terms_desc": "Conditions générales de réservation et d'utilisation des services de visites touristiques de Tavira Roots."
+    "terms_desc": "Conditions générales de réservation et d'utilisation des services de visites touristiques de Tavira Roots.",
+    "walking_title": "Visites à Pied de Tavira - Visites Guidées à Pied | Tavira Roots",
+    "walking_desc": "Rejoignez nos Walking Tours à Tavira. Découvrez l'histoire, les secrets et les souvenirs du centre historique avec un guide local passionné.",
+    "walking_keywords": "walking tour tavira, visite a pied tavira, promenade tavira, tour historique tavira"
   },
   "nav": {
     "home": "Accueil",
     "tuk_tuk": "Tuk Tuk",
     "jeep": "Jeep",
+    "walking_tours": "Walking Tours",
     "before_booking": "Avant de Réserver",
     "faqs": "FAQs",
     "about": "À Propos",
@@ -183,7 +187,62 @@
     "terracotta": "Terre Cuite",
     "manual_production": "Fabrication Manuelle",
     "private_guide": "Guide Privé",
-    "insurance": "Assurance Responsabilité Civile"
+    "insurance": "Assurance Responsabilité Civile",
+    "praca_padinha": "Point de Rencontre : Praça Dr. António Padinha",
+    "historic_circuit": "Circuit à pied dans le Centre Historique",
+    "photography_museum_entry": "Entrée au Musée de la Photographie de Tavira"
+  },
+  "good_to_know": {
+    "meeting_point_padinha": "Point de rencontre à la Praça Dr. António Padinha",
+    "comfortable_shoes": "Chaussures de marche confortables recommandées",
+    "min_max_pax": "Minimum 2 personnes ; maximum 10 personnes"
+  },
+  "itinerary": {
+    "praca_padinha": "Praça Dr. António Padinha",
+    "rio_gilao_ponte_antiga": "Rivière Gilão & Vieux Pont",
+    "praca_republica": "Praça da República",
+    "mercado_ribeira_coreto": "Ancien Marché Ribeira / Jardin du Kiosque",
+    "tavira_islamica_palacio_galeria": "Tavira Islamique / Palácio da Galeria",
+    "igreja_misericordia": "Église de la Misericórdia",
+    "arco_muralhas": "Arc et Murailles",
+    "igreja_santa_maria_castelo": "Église Santa Maria do Castelo",
+    "castelo_tavira_miradouro": "Château de Tavira & Belvédère",
+    "museu_fotografia": "Musée de la Photographie de Tavira"
+  },
+  "walking_page": {
+    "title": "Tavira Walking Tours",
+    "concept_tag": "Concept Walking Tour",
+    "subtitle_top": "Promenades Guidées dans le Centre Historique",
+    "hero_headline": "Découvrez Tavira à Pied : Histoire, Présent et Mémoire",
+    "description": "Une façon authentique et de grande proximité pour découvrir Tavira. Nos Walking Tours sont des promenades dans le centre historique vendues au billet par personne, permettant d'explorer la ville en détail, en comprenant tant son passé fascinant que son présent dynamique.",
+    "concept_title": "Comment Fonctionne Notre Concept de Walking Tour ?",
+    "concept_subtitle": "Marcher dans le centre historique est le meilleur moyen de ressentir l'âme de la ville à rythme humain.",
+    "concept_card1_title": "Vente au Billet (Par Personne)",
+    "concept_card1_desc": "Achetez des billets individuels par personne, une option flexible pour les voyageurs solo, en couple ou en petit groupe.",
+    "concept_card2_title": "Le Centre Historique de Près",
+    "concept_card2_desc": "Parcourez les ruelles pavées pittoresques, les cours fleuries, les ponts et les monuments inaccessibles aux véhicules.",
+    "concept_card3_title": "Passé, Présent et Traditions",
+    "concept_card3_desc": "Un récit vivant reliant la Tavira islamique et médiévale à la ville d'aujourd'hui, à ses habitants et à sa culture.",
+    "concept_card4_title": "Patrimoine & Musée Inclus",
+    "concept_card4_desc": "Petits groupes (2 à 10 personnes) avec guide local et billet d'entrée inclus au Musée de la Photographie de Tavira.",
+    "tour_showcase_title": "Circuit Disponible",
+    "tour_showcase_subtitle": "Découvrez notre itinéraire guidé à pied actuellement disponible dans le centre historique :",
+    "tour_showcase_badge": "Itinéraire Disponible",
+    "badge_ticket_sale": "Walking Tour • Vente au Billet",
+    "price_per_person_label": "Prix Par Personne",
+    "per_person": "par personne",
+    "cta_reserve": "Réserver un Billet",
+    "cta_details": "Voir les Détails de la Visite",
+    "meeting_point_title": "Point de Rencontre",
+    "meeting_point_location": "Praça Dr. António Padinha, Tavira",
+    "itinerary_title": "Le Parcours des 10 Étapes Historiques",
+    "itinerary_subtitle": "10 étapes mémorables au cœur de Tavira",
+    "info_meeting_title": "Point de Rencontre",
+    "info_meeting_desc": "Praça Dr. António Padinha, au centre de Tavira.",
+    "info_includes_title": "Ce qui est inclus",
+    "info_includes_desc": "Guide local spécialisé, billet d'entrée au Musée de la Photographie et Assurance Responsabilité Civile.",
+    "info_recommendations_title": "Recommandations",
+    "info_recommendations_desc": "Chaussures de marche confortables, eau et crème solaire en journée chaude."
   },
   "home": {
     "featured_title": "The most Complete",
@@ -296,7 +355,7 @@
     },
     "jeep_boat_anchors": {
       "name": "Cimetière des Ancres: Tavira 4x4 à Travers la Ria Formosa",
-      "desc": "Découvrez les traditions de pêche de Tavira lors d'une excursion privée en jeep à travers la Ria Formosa, où le cimetière d'ancres est le point fort de l'expérience, aux côtés des marais salants, des oiseaux et des traditions locales de pêche.\n\nLe point fort de la visite est le Cimetière des Ancres, l'un des lieux les plus uniques de la région de Tavira. Des centaines d'anciennes ancres rappellent l'importance de la pêche au thon et des communautés qui vivaient de la mer depuis des générations.\n\nNous visiterons également les marais salants traditionnels de Tavira, où vous pourrez découvrir le processus de production du sel marin. Tout au long du parcours, vous pourrez observer certains des oiseaux qui vivent et se nourrissent dans la Ria Formosa.\n\nL'expérience comprend également une introduction à l'histoire de la pêche au thon et à la pêche traditionnelle au poulpe, en découvrant les techniques et histoires des communautés de pêcheurs de Tavira.\n\nUne visite privée conçue pour ceux qui souhaitent découvrir un côté plus authentique de Tavira."
+      "desc": "Découvrez les traditions de pêche de Tavira lors d'une excursion privée en jeep à travers la Ria Formosa, où le cimetière d'ancres est le point fort de l'expérience, aux côtés des marais salants, des oiseaux et des traditions locales de pêche."
     },
     "tavira_roots_wine": {
       "name": "Marais Salants, Poulpe, Thon, Vin et Tapas",
@@ -309,6 +368,10 @@
     "full_day_sotavento": {
       "name": "Journée Complète dans l'Est de l'Algarve Avec Déjeuner",
       "desc": "Une journée entière pour découvrir l'Est de l'Algarve avec déjeuner inclus et expériences authentiques."
+    },
+    "walking_tavira": {
+      "name": "Tavira Walking Tour: History, Secrets & Memories",
+      "desc": "Une promenade relaxante au cœur historique de Tavira, racontant l'évolution de la ville depuis ses racines islamiques, la conquête chrétienne, l'ère des Grandes Découvertes, jusqu'à la Tavira d'aujourd'hui."
     }
   },
   "footer": {

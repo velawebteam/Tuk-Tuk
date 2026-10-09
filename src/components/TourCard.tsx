@@ -26,12 +26,12 @@ export function TourCard({ tour }: TourCardProps) {
           />
           <div className="absolute top-4 left-4">
             <span className="px-3 py-1 bg-white/90 backdrop-blur shadow-sm rounded-full text-[10px] font-bold uppercase tracking-wider text-brand-black">
-              {tour.type === 'tuk-tuk' ? t('nav.tuk_tuk') : `${t('nav.jeep')} 4x4`}
+              {tour.type === 'tuk-tuk' ? t('nav.tuk_tuk') : tour.type === 'walking' ? t('nav.walking_tours') : `${t('nav.jeep')} 4x4`}
             </span>
           </div>
           <div className="absolute bottom-4 right-4">
             <span className="px-3 py-1 bg-brand-brown text-white rounded-full text-[10px] font-bold uppercase tracking-widest">
-              {t('common.private')}
+              {tour.type === 'walking' ? 'Por Pessoa' : t('common.private')}
             </span>
           </div>
         </div>

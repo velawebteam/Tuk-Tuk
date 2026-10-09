@@ -882,38 +882,39 @@ export const walkingTours: Tour[] = [
   {
     id: 'tavira-walking-tour',
     type: 'walking',
-    nameKey: 'tours.walking.name',
+    nameKey: 'tours.walking_tavira.name',
     price: '27€',
     duration: '2h',
     pax: '2-10',
-    descriptionKey: 'tours.walking.desc',
+    descriptionKey: 'tours.walking_tavira.desc',
     features: [
       'features.praca_padinha',
-      'features.historical_center_circuit',
-      'features.photo_museum_ticket',
+      'features.historic_circuit',
+      'features.photography_museum_entry',
       'features.private_guide'
     ],
     image: WALKING_TOUR_GALLERY[0],
     gallery: WALKING_TOUR_GALLERY,
     languages: ['Português', 'Espanhol', 'Inglês'],
     goodToKnow: [
-      'tour_detail.gtk.meeting_point_padinha',
-      'tour_detail.gtk.min_pax_2'
+      'good_to_know.meeting_point_padinha',
+      'good_to_know.comfortable_shoes',
+      'good_to_know.min_max_pax'
     ],
     priceOptions: [
-      { price: '27€', group: 'Bilhete Individual / Por Pessoa', details: 'Preço por pessoa | Mínimo 2, máximo 10 pessoas' }
+      { price: '27€', group: 'Preço por Pessoa', details: 'Mínimo 2 pessoas | Máximo 10 pessoas' }
     ],
     itinerary: [
-      { activity: 'features.walking_itinerary_1' },
-      { activity: 'features.walking_itinerary_2' },
-      { activity: 'features.walking_itinerary_3' },
-      { activity: 'features.walking_itinerary_4' },
-      { activity: 'features.walking_itinerary_5' },
-      { activity: 'features.walking_itinerary_6' },
-      { activity: 'features.walking_itinerary_7' },
-      { activity: 'features.walking_itinerary_8' },
-      { activity: 'features.walking_itinerary_9' },
-      { activity: 'features.walking_itinerary_10' }
+      { activity: 'itinerary.praca_padinha' },
+      { activity: 'itinerary.rio_gilao_ponte_antiga' },
+      { activity: 'itinerary.praca_republica' },
+      { activity: 'itinerary.mercado_ribeira_coreto' },
+      { activity: 'itinerary.tavira_islamica_palacio_galeria' },
+      { activity: 'itinerary.igreja_misericordia' },
+      { activity: 'itinerary.arco_muralhas' },
+      { activity: 'itinerary.igreja_santa_maria_castelo' },
+      { activity: 'itinerary.castelo_tavira_miradouro' },
+      { activity: 'itinerary.museu_fotografia' }
     ]
   }
 ];

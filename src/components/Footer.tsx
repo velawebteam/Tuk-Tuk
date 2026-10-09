@@ -63,6 +63,7 @@ export function Footer() {
             <ul className="space-y-4 text-sm text-brand-black/60">
               <li><Link to="/tuk-tuk" className="hover:text-brand-brown transition-colors font-bold uppercase tracking-wider">{t('hero.cta_tuk')}</Link></li>
               <li><Link to="/jipe" className="hover:text-brand-brown transition-colors font-bold uppercase tracking-wider">{t('hero.cta_jeep')}</Link></li>
+              <li><Link to="/walking-tours" className="hover:text-brand-brown transition-colors font-bold uppercase tracking-wider">{t('nav.walking_tours')}</Link></li>
               <li><Link to="/sobre-nos" className="hover:text-brand-brown transition-colors font-bold uppercase tracking-wider">{t('nav.about')}</Link></li>
               <li><Link to="/faqs" className="hover:text-brand-brown transition-colors font-bold uppercase tracking-wider">{t('nav.faqs')}</Link></li>
             </ul>
@@ -99,8 +100,19 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-20 pt-8 border-t border-brand-brown/10 text-center text-[10px] text-brand-black/40 font-bold uppercase tracking-[0.2em]">
+        <div className="mt-20 pt-8 border-t border-brand-brown/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-brand-black/50 font-bold uppercase tracking-[0.2em]">
           <p>© {new Date().getFullYear()} TAVIRA ROOTS. {t('footer.rights')}.</p>
+          <p className="normal-case tracking-wider text-[11px] leading-[19.5px]">
+            Website desenvolvido por{' '}
+            <a 
+              href="https://agencia-vela.com" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-brand-brown hover:underline font-extrabold transition-colors"
+            >
+              Agência Vela
+            </a>
+          </p>
         </div>
       </div>
     </footer>

@@ -21,14 +21,15 @@
     "privacy_desc": "Política de privacidade da Tavira Roots relativa ao tratamento de dados dos nossos clientes de passeios e tours em Tavira.",
     "terms_title": "Tavira Roots | Termos e Condições",
     "terms_desc": "Termos e condições de reserva e utilização dos serviços de passeios turísticos da Tavira Roots em Tavira.",
-    "walking_title": "Walking Tours em Tavira | Passeios a Pé pelo Centro Histórico | Tavira Roots",
-    "walking_desc": "Descubra os segredos e a história de Tavira num walking tour guiado a pé pelo centro histórico com entrada no Museu da Fotografia incluída."
+    "walking_title": "Caminhadas em Tavira - Passeios Guiados a Pé | Tavira Roots",
+    "walking_desc": "Participe nas nossas Caminhadas em Tavira. Conheça a história, segredos e memórias do centro histórico com guia local especialista.",
+    "walking_keywords": "caminhadas tavira, passeio a pe tavira, guia a pe tavira, tour historico tavira"
   },
   "nav": {
     "home": "Início",
     "tuk_tuk": "Tuk Tuk",
     "jeep": "Jipe",
-    "walking": "Walking Tours",
+    "walking_tours": "Caminhadas",
     "before_booking": "Antes de Reservar",
     "faqs": "FAQs",
     "about": "Sobre Nós",
@@ -110,9 +111,7 @@
       "wine_tasting_3": "Inclui prova de 3 vinhos (Tinto, Rosé e Branco)",
       "bread_olive_oil": "Acompanhado com Pão e Azeite",
       "ice_cream_pax": "Inclui 1 bola de gelado por pessoa (copo ou cone)",
-      "min_age_12": "Idade mínima: 12 anos",
-      "meeting_point_padinha": "Ponto de encontro: Praça Dr. António Padinha (circuito a pé pelo centro histórico)",
-      "min_pax_2": "Lotação: Mínimo 2 pessoas, máximo 10 pessoas por grupo"
+      "min_age_12": "Idade mínima: 12 anos"
     }
   },
   "contact_page": {
@@ -190,18 +189,60 @@
     "private_guide": "Guia Privado",
     "insurance": "Seguro de Responsabilidade",
     "praca_padinha": "Ponto de Encontro: Praça Dr. António Padinha",
-    "historical_center_circuit": "Circuito a pé pelo Centro Histórico",
-    "photo_museum_ticket": "Entrada no Museu de Fotografia de Tavira",
-    "walking_itinerary_1": "Praça Dr. António Padinha",
-    "walking_itinerary_2": "Rio Gilão e Ponte Antiga",
-    "walking_itinerary_3": "Praça da República",
-    "walking_itinerary_4": "Antigo Mercado da Ribeira / Jardim do Coreto",
-    "walking_itinerary_5": "Tavira Islâmica / Palácio da Galeria",
-    "walking_itinerary_6": "Igreja da Misericórdia",
-    "walking_itinerary_7": "Arco e Muralhas",
-    "walking_itinerary_8": "Igreja de Santa Maria do Castelo",
-    "walking_itinerary_9": "Castelo de Tavira e Miradouro",
-    "walking_itinerary_10": "Museu da Fotografia de Tavira"
+    "historic_circuit": "Circuito a pé pelo Centro Histórico",
+    "photography_museum_entry": "Entrada no Museu da Fotografia de Tavira"
+  },
+  "good_to_know": {
+    "meeting_point_padinha": "Ponto de encontro na Praça Dr. António Padinha",
+    "comfortable_shoes": "Recomendado calçado confortável para caminhar",
+    "min_max_pax": "Mínimo 2 pessoas; máximo 10 pessoas"
+  },
+  "itinerary": {
+    "praca_padinha": "Praça Dr. António Padinha",
+    "rio_gilao_ponte_antiga": "Rio Gilão e Ponte Antiga",
+    "praca_republica": "Praça da República",
+    "mercado_ribeira_coreto": "Antigo Mercado da Ribeira / Jardim do Coreto",
+    "tavira_islamica_palacio_galeria": "Tavira Islâmica / Palácio da Galeria",
+    "igreja_misericordia": "Igreja da Misericórdia",
+    "arco_muralhas": "Arco e Muralhas",
+    "igreja_santa_maria_castelo": "Igreja de Santa Maria do Castelo",
+    "castelo_tavira_miradouro": "Castelo de Tavira e Miradouro",
+    "museu_fotografia": "Museu da Fotografia de Tavira"
+  },
+  "walking_page": {
+    "title": "Caminhadas em Tavira",
+    "concept_tag": "Conceito de Caminhadas",
+    "subtitle_top": "Caminhadas Guiadas pelo Centro Histórico",
+    "hero_headline": "Conheça Tavira a Pé: História, Presente e Memórias",
+    "description": "Uma forma autêntica e de grande proximidade para conhecer Tavira. As nossas Caminhadas são passeios a pé pelo centro histórico com venda a bilhete por pessoa, permitindo explorar a cidade ao pormenor, compreendendo tanto o seu passado fascinante como o seu presente dinâmico.",
+    "concept_title": "Como Funciona o Nosso Conceito de Caminhadas?",
+    "concept_subtitle": "Caminhar a pé pelo centro histórico é a melhor forma de sentir a alma da cidade a ritmo humano.",
+    "concept_card1_title": "Venda por Bilhete (Por Pessoa)",
+    "concept_card1_desc": "Compre bilhetes individuais por pessoa, uma opção flexível para quem viaja a sós, em casal ou em pequenos grupos.",
+    "concept_card2_title": "Centro Histórico de Perto",
+    "concept_card2_desc": "Percorra as calçadas pitorescas, pátios floridos, pontes e monumentos onde os veículos não conseguem entrar.",
+    "concept_card3_title": "Passado, Presente e Tradições",
+    "concept_card3_desc": "Uma narrativa viva que liga a Tavira islâmica e medieval à cidade atual, às suas gentes e cultura.",
+    "concept_card4_title": "Património & Museu Incluído",
+    "concept_card4_desc": "Grupos reduzidos (2 a 10 pessoas) com guia local e bilhete de entrada no Museu da Fotografia de Tavira.",
+    "tour_showcase_title": "O Nosso Passeio Escolhido",
+    "tour_showcase_subtitle": "Conheça o nosso roteiro guiado a pé atualmente disponível pelo centro histórico:",
+    "tour_showcase_badge": "Roteiro Disponível",
+    "badge_ticket_sale": "Caminhadas • Venda a Bilhete",
+    "price_per_person_label": "Preço por Pessoa",
+    "per_person": "por pessoa",
+    "cta_reserve": "Reservar Bilhete",
+    "cta_details": "Ver Ficha do Passeio",
+    "meeting_point_title": "Ponto de Encontro",
+    "meeting_point_location": "Praça Dr. António Padinha, Tavira",
+    "itinerary_title": "O Percurso das 10 Etapas Históricas",
+    "itinerary_subtitle": "10 paragens memoráveis no coração de Tavira",
+    "info_meeting_title": "Ponto de Encontro",
+    "info_meeting_desc": "Praça Dr. António Padinha, no centro de Tavira.",
+    "info_includes_title": "O que inclui",
+    "info_includes_desc": "Guia local especializado, ingresso no Museu da Fotografia e Seguro de Responsabilidade.",
+    "info_recommendations_title": "Recomendações",
+    "info_recommendations_desc": "Calçado confortável para caminhar, água e protetor solar em dias quentes."
   },
   "home": {
     "featured_title": "The most Complete",
@@ -314,7 +355,7 @@
     },
     "jeep_boat_anchors": {
       "name": "Cemitério das Âncoras: Tavira 4x4 Pela Ria Formosa",
-      "desc": "Descubra as tradições piscatórias de Tavira num passeio privado de jipe pela Ria Formosa, onde o Cemitério das Âncoras é o ponto alto da experiência, juntamente com as salinas, as aves e as tradições da pesca local.\n\nO ponto principal do passeio é o Cemitério das Âncoras, um dos lugares mais singulares da região de Tavira. Centenas de antigas âncoras recordam a importância da pesca do atum e das comunidades que durante gerações viveram do mar.\n\nVisitaremos também as salinas tradicionais de Tavira, onde poderá conhecer o processo de produção de sal marinho e a sua importância para a região. Ao longo do percurso, poderá observar algumas das aves que habitam e se alimentam na Ria Formosa.\n\nA experiência inclui ainda uma introdução à história da pesca do atum e da pesca tradicional do polvo, conhecendo técnicas, tradições e histórias que fazem parte da identidade das comunidades piscatórias de Tavira.\n\nUm passeio privado pensado para quem quer conhecer um lado mais autêntico de Tavira, descobrindo a sua ligação ao mar, à pesca e à Ria Formosa."
+      "desc": "Descubra as tradições piscatórias de Tavira num passeio privado de jipe pela Ria Formosa, onde o Cemitério das Âncoras é o ponto alto da experiência, juntamente com as salinas, as aves e as tradições da pesca local."
     },
     "tavira_roots_wine": {
       "name": "Salinas, Polvo, Atum, Vinho e Tapas",
@@ -328,7 +369,7 @@
       "name": "Dia Completo no Sotavento Algarvio Com Almoço",
       "desc": "O dia inteiro para descobrir o Sotavento Algarvio com almoço incluído e experiências autênticas."
     },
-    "walking": {
+    "walking_tavira": {
       "name": "Tavira Walking Tour: History, Secrets & Memories",
       "desc": "Passeio descontraído pelo coração histórico de Tavira, contando a evolução da cidade desde as raízes islâmicas, passando pela conquista cristã e época dos Descobrimentos, até à Tavira atual."
     }
@@ -446,10 +487,5 @@
       "terms_section4_text": "Não nos responsabilizamos por perdas ou danos em objetos pessoais dos clientes durante as tours. Reservamo-nos o direito de alterar itinerários por motivos de força maior, como condições meteorológicas adversas.",
       "terms_section5_title": "5. Resolução de Litígios",
       "terms_section5_text": "Em caso de litígio, o consumidor pode recorrer a uma Entidade de Resolução Alternativa de Litígios de Consumo (Ex: CIMAAL - Centro de Informação, Mediação e Arbitragem de Consumo do Algarve). Dispomos também de Livro de Reclamações Eletrónico."
-    },
-    "walking_page": {
-      "title": "Walking Tours em Tavira",
-      "subtitle": "Passeios a Pé Pelo Centro Histórico",
-      "description": "Explore os segredos, a história e as memórias do coração histórico de Tavira num passeio a pé guiado com bilhete individual."
     }
 }
