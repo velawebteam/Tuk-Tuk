@@ -325,8 +325,8 @@ export default function WalkingTours() {
                 ))}
               </div>
 
-              {/* Price & Booking Button (Placed below checkmarks) */}
-              <div className="pt-4 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 bg-brand-cream/60 p-4 sm:p-5 rounded-2xl border border-brand-brown/10">
+              {/* Price & Booking Button (Desktop: Placed below checkmarks; Mobile: Placed after itinerary) */}
+              <div className="hidden sm:flex items-center justify-between gap-4 bg-brand-cream/60 p-4 sm:p-5 rounded-2xl border border-brand-brown/10 mt-4">
                 <div>
                   <span className="text-[10px] uppercase font-bold text-brand-black/40 block">{t('walking_page.price_per_person_label')}</span>
                   <span className="text-2xl sm:text-3xl font-black text-brand-brown">{tour.price}</span>
@@ -335,7 +335,7 @@ export default function WalkingTours() {
                   type="button"
                   disabled
                   aria-disabled="true"
-                  className="w-full sm:w-auto text-center px-6 py-3.5 bg-brand-black/15 text-brand-black/40 rounded-xl font-bold uppercase tracking-wide text-xs cursor-not-allowed select-none border border-brand-black/10 shadow-none"
+                  className="w-auto text-center px-6 py-3.5 bg-brand-black/15 text-brand-black/40 rounded-xl font-bold uppercase tracking-wide text-xs cursor-not-allowed select-none border border-brand-black/10 shadow-none"
                 >
                   {t('walking_page.cta_unavailable', 'Tour Unavailable at the moment')}
                 </button>
@@ -359,8 +359,26 @@ export default function WalkingTours() {
               </div>
 
               {/* Single Uniform Background Container for All Stops */}
-              <div className="bg-brand-cream/60 p-6 sm:p-8 rounded-3xl border border-brand-brown/10 space-y-4">
+              <div className="bg-brand-cream/60 p-4 sm:p-8 rounded-3xl border border-brand-brown/10 space-y-4">
                 <SerpentineItinerary itinerary={tour.itinerary} desktopItemsPerRow={5} />
+              </div>
+
+              {/* Mobile Booking Card (Placed after itinerary on mobile) */}
+              <div className="block sm:hidden">
+                <div className="flex flex-col items-start justify-between gap-4 bg-brand-cream/60 p-4 rounded-2xl border border-brand-brown/10">
+                  <div>
+                    <span className="text-[10px] uppercase font-bold text-brand-black/40 block">{t('walking_page.price_per_person_label')}</span>
+                    <span className="text-2xl font-black text-brand-brown">{tour.price}</span>
+                  </div>
+                  <button 
+                    type="button"
+                    disabled
+                    aria-disabled="true"
+                    className="w-full text-center px-6 py-3.5 bg-brand-black/15 text-brand-black/40 rounded-xl font-bold uppercase tracking-wide text-xs cursor-not-allowed select-none border border-brand-black/10 shadow-none"
+                  >
+                    {t('walking_page.cta_unavailable', 'Tour Unavailable at the moment')}
+                  </button>
+                </div>
               </div>
             </div>
           )}

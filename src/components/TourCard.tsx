@@ -75,22 +75,14 @@ export function TourCard({ tour }: TourCardProps) {
             </div>
           </div>
   
-          <div className="flex items-center justify-between">
-            <div className="flex flex-col">
-              <span className="text-[10px] uppercase tracking-wider text-brand-black/40 font-bold">{t('common.from')}</span>
-              <div className="flex flex-col">
-                <span className="text-xl font-black text-brand-brown">{tour.price}</span>
-                {tour.priceWithFee && tour.priceWithFee !== tour.price && (
-                  <span className="text-[10px] text-brand-black/40 font-bold -mt-1">
-                    ({tour.priceWithFee} total)
-                  </span>
-                )}
-              </div>
-            </div>
+          <div className="pt-2 border-t border-brand-brown/10 flex items-center justify-between">
+            <span className="text-xs font-black uppercase tracking-wider text-brand-black/70 group-hover:text-brand-brown transition-colors">
+              {t('common.view_details')}
+            </span>
             <div 
-              className="w-12 h-12 bg-brand-black text-white rounded-full flex items-center justify-center group-hover:bg-brand-brown transition-all shadow-lg shadow-brand-black/10"
+              className="w-10 h-10 bg-brand-black text-white rounded-full flex items-center justify-center group-hover:bg-brand-brown transition-all shadow-md group-hover:translate-x-1"
             >
-              <ChevronRight size={20} />
+              <ChevronRight size={18} />
             </div>
           </div>
         </div>

@@ -368,11 +368,6 @@ export default function TourDetail() {
               )}
             </div>
 
-            {/* Mobile Booking Card (Immediately after Gallery on Mobile) */}
-            <div className="lg:hidden">
-              {renderBookingCard()}
-            </div>
-
             {/* Mobile Tour Description */}
             <div className="lg:hidden">
               <p className="text-base sm:text-lg text-brand-black/70 font-medium leading-relaxed whitespace-pre-line">
@@ -471,6 +466,11 @@ export default function TourDetail() {
                   </ul>
                 </div>
               )}
+            </div>
+
+            {/* Mobile Booking Card (Placed between What's Included and Why Book With Us on mobile) */}
+            <div className="lg:hidden">
+              {renderBookingCard()}
             </div>
           </div>
         </div>

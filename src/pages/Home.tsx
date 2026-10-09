@@ -105,6 +105,13 @@ export default function Home() {
                   transition={{ duration: 0.8 }}
                   className="lg:col-span-6 relative flex flex-col gap-3"
                 >
+                  {/* Mobile Tour Title (Above Images on Mobile) */}
+                  <div className="lg:hidden mb-1">
+                    <h3 className="text-2xl sm:text-3xl font-black text-white uppercase tracking-tight leading-tight">
+                      {t(anchorTour.nameKey)}
+                    </h3>
+                  </div>
+
                   <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl group border border-white/10 bg-black">
                     <AnimatePresence mode="wait">
                       <motion.img 
@@ -202,7 +209,7 @@ export default function Home() {
                   transition={{ duration: 0.8 }}
                   className="lg:col-span-6 space-y-6"
                 >
-                  <h3 className="text-2xl sm:text-3xl md:text-4xl font-black text-white uppercase tracking-tight leading-tight">
+                  <h3 className="hidden lg:block text-2xl sm:text-3xl md:text-4xl font-black text-white uppercase tracking-tight leading-tight">
                     {t(anchorTour.nameKey)}
                   </h3>
 
