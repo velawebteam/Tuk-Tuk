@@ -6,6 +6,7 @@ import { allTours } from '@/src/data/tours';
 import { useTranslation } from 'react-i18next';
 import { SEO } from '../components/SEO';
 import { trackEvent } from '../utils/analytics';
+import { SerpentineItinerary } from '../components/SerpentineItinerary';
 
 declare global {
   interface Window {
@@ -84,6 +85,151 @@ export default function TourDetail() {
   const tourDesc = `${t(tour.descriptionKey)} Passeio privado em Tavira e Sotavento Algarvio. Duração: ${tour.duration}.`;
   const tourKeywords = `Passeios Tavira, Tuktuk Tavira, ${t(tour.nameKey)}, ${tour.type === 'tuk-tuk' ? 'Passeios de Tuktuk Tavira' : 'Passeios de Jipe Tavira'}, Passeios Algarve, Tavira Roots`;
 
+  const renderBookingCard = () => (
+    <div className="space-y-3 sm:space-y-4">
+      <div className="bg-brand-black rounded-2xl sm:rounded-3xl p-5 sm:p-8 shadow-xl relative overflow-hidden text-white">
+        <div className="absolute top-0 right-0 w-32 h-32 bg-brand-brown/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
+        <div className="flex flex-col sm:flex-row lg:flex-row sm:items-center lg:items-center justify-between gap-4 sm:gap-6 mb-5 sm:mb-8">
+          <div className="flex flex-col gap-0.5 sm:gap-1">
+            <span className="text-[10px] text-brand-cream/40 block uppercase tracking-widest font-bold">{t('common.from')}</span>
+            <div className="flex flex-wrap items-baseline gap-x-2 sm:gap-x-3">
+              <span className="text-3xl sm:text-4xl md:text-5xl font-black text-brand-cream leading-none">{tour.price}</span>
+              {tour.priceWithFee && (
+                <span className="text-xs sm:text-base md:text-lg font-bold text-brand-cream/40 whitespace-nowrap">
+                  ({tour.priceWithFee} total)
+                </span>
+              )}
+            </div>
+          </div>
+          {tour.type === 'walking' || tour.id === 'walking-tavira' ? (
+            <button
+              type="button"
+              disabled
+              aria-disabled="true"
+              className="w-full sm:w-auto lg:flex-none px-6 sm:px-8 lg:px-10 py-3.5 sm:py-4 lg:py-5 bg-white/10 text-white/40 border border-white/15 rounded-xl sm:rounded-2xl font-bold uppercase tracking-wide text-xs sm:text-sm cursor-not-allowed select-none flex items-center justify-center gap-2.5 sm:gap-3 shrink-0"
+            >
+              {t('walking_page.cta_unavailable', 'Tour Unavailable at the moment')}
+            </button>
+          ) : tour.fareHarborProductId ? (
+            <a 
+              href={`https://fareharbor.com/embeds/book/mariastuktuk/items/${tour.fareHarborProductId}/?full-items=yes&flow=${tour.fareHarborFlowId || 1007986}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={(e) => {
+                // Track click in Google Ads
+                trackEvent('book_now_click', {
+                  tour_id: tour.id,
+                  tour_name: t(tour.nameKey),
+                  method: 'fareharbor'
+                });
+
+                if (window.FH) {
+                  try {
+                    e.preventDefault();
+                    window.FH.open({ 
+                      shortname: 'mariastuktuk', 
+                      fallback: 'simple', 
+                      fullItems: 'yes', 
+                      flow: tour.fareHarborFlowId || 1007986, 
+                      view: { item: tour.fareHarborProductId } 
+                    });
+                  } catch (err) {
+                    console.error('FareHarbor error:', err);
+                  }
+                }
+              }}
+              className="w-full sm:w-auto lg:flex-none px-6 sm:px-8 lg:px-10 py-3.5 sm:py-4 lg:py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-xl sm:rounded-2xl font-black uppercase tracking-wide text-xs sm:text-sm transition-all transform active:scale-[0.98] lg:hover:scale-[1.02] shadow-lg shadow-brand-brown/20 flex items-center justify-center gap-2.5 sm:gap-3 shrink-0"
+            >
+              <Calendar size={18} className="sm:w-5 sm:h-5" />
+              {t('common.reserve_now')}
+            </a>
+          ) : (
+            <a 
+              href={`https://wa.me/351968995275?text=${encodeURIComponent(`Olá! Gostaria de reservar o passeio: ${t(tour.nameKey)}`)}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => {
+                trackEvent('book_now_click', {
+                  tour_id: tour.id,
+                  tour_name: t(tour.nameKey),
+                  method: 'whatsapp'
+                });
+              }}
+              className="w-full sm:w-auto lg:flex-none px-6 sm:px-8 lg:px-10 py-3.5 sm:py-4 lg:py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-xl sm:rounded-2xl font-black uppercase tracking-wide text-xs sm:text-sm transition-all transform active:scale-[0.98] lg:hover:scale-[1.02] shadow-lg shadow-brand-brown/20 flex items-center justify-center gap-2.5 sm:gap-3 shrink-0"
+            >
+              <Calendar size={18} className="sm:w-5 sm:h-5" />
+              {t('common.reserve_now')}
+            </a>
+          )}
+        </div>
+
+        {/* Expandable All Prices Section */}
+        {tour?.priceOptions && tour.priceOptions.length > 0 && (
+          <div className="mb-4 sm:mb-6 pt-3 sm:pt-4 border-t border-white/10">
+            <button 
+              onClick={() => setShowPrices(!showPrices)}
+              type="button"
+              className="w-full flex items-center justify-between py-2.5 sm:py-3 px-3.5 sm:px-4 rounded-xl sm:rounded-2xl bg-white/10 hover:bg-white/15 transition-all text-brand-cream text-xs md:text-sm font-bold border border-white/10 group cursor-pointer"
+            >
+              <span className="flex items-center gap-2">
+                <Tag size={15} className="text-brand-brown group-hover:scale-110 transition-transform shrink-0" />
+                {t('common.see_all_prices', 'Consulte todos os preços aqui')}
+              </span>
+              <ChevronDown size={16} className={`text-brand-cream/70 transition-transform duration-300 shrink-0 ${showPrices ? 'rotate-180' : ''}`} />
+            </button>
+
+            <AnimatePresence>
+              {showPrices && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: 'auto' }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.25 }}
+                  className="overflow-hidden mt-2.5 sm:mt-3"
+                >
+                  <div className="bg-white/5 backdrop-blur-md rounded-xl sm:rounded-2xl p-2.5 sm:p-4 border border-white/10 space-y-2">
+                    {tour.priceOptions.map((opt, idx) => (
+                      <div 
+                        key={idx} 
+                        className="flex items-center justify-between p-2.5 sm:p-3 rounded-lg sm:rounded-xl bg-white/5 hover:bg-white/10 transition-colors gap-2 border border-white/5"
+                      >
+                        <div className="flex flex-col min-w-0 pr-2">
+                          <span className="font-bold text-xs sm:text-sm text-white">{opt.group}</span>
+                          {opt.details && (
+                            <span className="text-[10px] sm:text-xs text-brand-cream/60">{opt.details}</span>
+                          )}
+                        </div>
+                        <span className="font-black text-sm sm:text-base md:text-lg text-brand-brown shrink-0 bg-brand-brown/10 px-2 sm:px-2.5 py-1 rounded-md sm:rounded-lg border border-brand-brown/20 whitespace-nowrap">{opt.price}</span>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+        )}
+
+        <p className="text-[10px] sm:text-xs text-brand-cream/30 text-center uppercase tracking-widest font-bold flex items-center justify-center gap-1.5 sm:gap-2">
+          <ShieldCheck size={14} className="text-brand-brown" />
+          {t('tour_detail.secure_booking')}
+        </p>
+      </div>
+
+      {includesMuseum && (
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          className="p-3.5 sm:p-4 bg-orange-50 border border-orange-200 rounded-xl sm:rounded-2xl flex items-center gap-2.5 sm:gap-3 text-orange-900"
+        >
+          <AlertCircle className="shrink-0 text-orange-600" size={18} />
+          <p className="font-bold text-xs uppercase tracking-wide">
+            {t('common.museum_closure_notice')}
+          </p>
+        </motion.div>
+      )}
+    </div>
+  );
+
   return (
     <div className="pb-24 bg-brand-cream min-h-screen">
       <SEO 
@@ -130,8 +276,18 @@ export default function TourDetail() {
 
       <section className="max-w-7xl xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 xl:gap-16 items-start">
-          {/* Gallery Carousel (Hero Area) */}
-          <div className="lg:col-span-7 space-y-8">
+          {/* Gallery Carousel & Tour Details (Left Column) */}
+          <div className="lg:col-span-7 space-y-6 sm:space-y-8">
+            {/* Mobile Tour Title (Above Gallery on Mobile) */}
+            <div className="lg:hidden">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-brown/10 text-brand-brown text-[10px] font-bold uppercase tracking-widest mb-3">
+                {tour.type === 'walking' ? t('nav.walking_tours') : `${t('common.private')} ${tour.type === 'tuk-tuk' ? t('nav.tuk_tuk') : t('nav.jeep')}`}
+              </div>
+              <h1 className="text-3xl font-black text-brand-black leading-tight uppercase tracking-tight mb-2">
+                {t(tour.nameKey)}
+              </h1>
+            </div>
+
             <div className="space-y-6">
               <div className="relative group">
                 {/* Main Image Viewer */}
@@ -212,130 +368,35 @@ export default function TourDetail() {
               )}
             </div>
 
+            {/* Mobile Booking Card (Immediately after Gallery on Mobile) */}
+            <div className="lg:hidden">
+              {renderBookingCard()}
+            </div>
+
+            {/* Mobile Tour Description */}
+            <div className="lg:hidden">
+              <p className="text-base sm:text-lg text-brand-black/70 font-medium leading-relaxed whitespace-pre-line">
+                {t(tour.descriptionKey)}
+              </p>
+            </div>
+
             {/* Serpentine / Snake Flow Tour Itinerary Card directly below photographs */}
-            {tour.itinerary && tour.itinerary.length > 0 && (() => {
-              const itemsPerRow = 4;
-              const totalItems = tour.itinerary.length;
-              const numRows = Math.ceil(totalItems / itemsPerRow);
-
-              // Group items into rows with exact serpentine column placement
-              const rows = [];
-              for (let r = 0; r < numRows; r++) {
-                const rowItems = [];
-                for (let c = 0; c < itemsPerRow; c++) {
-                  const originalIndex = r % 2 === 0 ? r * itemsPerRow + c : r * itemsPerRow + (itemsPerRow - 1 - c);
-                  if (originalIndex < totalItems) {
-                    rowItems.push({
-                      step: tour.itinerary[originalIndex],
-                      originalIndex
-                    });
-                  } else {
-                    rowItems.push(null);
-                  }
-                }
-                rows.push(rowItems);
-              }
-
-              return (
-                <div className="bg-white p-6 sm:p-8 rounded-[2rem] border border-brand-brown/10 shadow-sm space-y-6">
-                  <div className="flex items-center gap-3 border-b border-brand-brown/10 pb-4">
-                    <div className="w-10 h-10 bg-brand-brown/10 rounded-2xl flex items-center justify-center text-brand-brown shrink-0">
-                      <Map size={22} />
-                    </div>
-                    <div>
-                      <h3 className="text-xl font-black text-brand-black uppercase tracking-tight">
-                        {t('tour_detail.itinerary')}
-                      </h3>
-                    </div>
+            {tour.itinerary && tour.itinerary.length > 0 && (
+              <div className="bg-white p-6 sm:p-8 rounded-[2rem] border border-brand-brown/10 shadow-sm space-y-6">
+                <div className="flex items-center gap-3 border-b border-brand-brown/10 pb-4">
+                  <div className="w-10 h-10 bg-brand-brown/10 rounded-2xl flex items-center justify-center text-brand-brown shrink-0">
+                    <Map size={22} />
                   </div>
-
-                  {/* Grid Snake Flow Container */}
-                  <div className="space-y-4 py-2">
-                    {rows.map((rowCells, r) => {
-                      const isEvenRow = r % 2 === 0;
-                      const isLastRow = r === numRows - 1;
-
-                      return (
-                        <div key={r} className="space-y-4">
-                          {/* Row Grid */}
-                          <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 items-start">
-                            {rowCells.map((cell, c) => {
-                              if (!cell) {
-                                return <div key={c} className="hidden sm:block" />;
-                              }
-
-                              const { step, originalIndex } = cell;
-                              const isNextStepInSameRow =
-                                isEvenRow
-                                  ? c < itemsPerRow - 1 && originalIndex + 1 < totalItems
-                                  : c > 0 && originalIndex + 1 < totalItems;
-
-                              return (
-                                <div key={originalIndex} className="flex items-center justify-between gap-1 relative">
-                                  {/* Arrow on LEFT for Odd Rows (pointing left to next step) */}
-                                  {!isEvenRow && isNextStepInSameRow && (
-                                    <div className="shrink-0 flex items-center text-brand-brown/60 -ml-2 z-10">
-                                      <ChevronLeft size={18} className="text-brand-brown" />
-                                    </div>
-                                  )}
-
-                                  {/* Step Item */}
-                                  <div className="flex flex-col items-center text-center w-full group">
-                                    <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-brand-brown text-white font-black text-xs sm:text-sm flex items-center justify-center shadow-md shadow-brand-brown/20 mb-2 border-2 border-white group-hover:scale-110 transition-transform">
-                                      {originalIndex + 1}
-                                    </div>
-                                    {step.time && (
-                                      <span className="text-[10px] font-black text-brand-brown uppercase tracking-wider block mb-1">
-                                        {step.time}
-                                      </span>
-                                    )}
-                                    <p className="text-xs sm:text-sm font-bold text-brand-black uppercase tracking-wide leading-snug">
-                                      {t(step.activity)}
-                                    </p>
-                                  </div>
-
-                                  {/* Arrow on RIGHT for Even Rows (pointing right to next step) */}
-                                  {isEvenRow && isNextStepInSameRow && (
-                                    <div className="shrink-0 flex items-center text-brand-brown/60 -mr-2 z-10">
-                                      <ChevronRight size={18} className="text-brand-brown" />
-                                    </div>
-                                  )}
-                                </div>
-                              );
-                            })}
-                          </div>
-
-                          {/* Downward Connector Arrow between rows */}
-                          {!isLastRow && (
-                            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 sm:gap-4 my-1">
-                              {isEvenRow ? (
-                                <>
-                                  <div className="hidden sm:block" />
-                                  <div className="hidden sm:block" />
-                                  <div className="hidden sm:block" />
-                                  <div className="flex justify-center items-center py-1">
-                                    <ChevronDown size={18} className="text-brand-brown" />
-                                  </div>
-                                </>
-                              ) : (
-                                <>
-                                  <div className="flex justify-center items-center py-1">
-                                    <ChevronDown size={18} className="text-brand-brown" />
-                                  </div>
-                                  <div className="hidden sm:block" />
-                                  <div className="hidden sm:block" />
-                                  <div className="hidden sm:block" />
-                                </>
-                              )}
-                            </div>
-                          )}
-                        </div>
-                      );
-                    })}
+                  <div>
+                    <h3 className="text-xl font-black text-brand-black uppercase tracking-tight">
+                      {t('tour_detail.itinerary')}
+                    </h3>
                   </div>
                 </div>
-              );
-            })()}
+
+                <SerpentineItinerary itinerary={tour.itinerary} desktopItemsPerRow={4} />
+              </div>
+            )}
 
             <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 md:gap-4">
               <div className="bg-white p-4 md:p-6 rounded-3xl text-center border border-brand-brown/5 shadow-sm">
@@ -416,146 +477,19 @@ export default function TourDetail() {
 
         {/* Booking & Description */}
         <div className="lg:col-span-5 space-y-10">
-            <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-brown/10 text-brand-brown text-[10px] font-bold uppercase tracking-widest mb-4">
-                {tour.type === 'walking' ? t('nav.walking_tours') : `${t('common.private')} ${tour.type === 'tuk-tuk' ? t('nav.tuk_tuk') : t('nav.jeep')}`}
-              </div>
-              <h1 className="text-3xl md:text-5xl font-black text-brand-black mb-6 leading-tight uppercase tracking-tight">{t(tour.nameKey)}</h1>
-              <p className="text-lg md:text-xl text-brand-black/70 font-medium leading-relaxed mb-8 whitespace-pre-line">{t(tour.descriptionKey)}</p>
+          {/* Desktop Title & Description (Hidden on Mobile) */}
+          <div className="hidden lg:block">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-brown/10 text-brand-brown text-[10px] font-bold uppercase tracking-widest mb-4">
+              {tour.type === 'walking' ? t('nav.walking_tours') : `${t('common.private')} ${tour.type === 'tuk-tuk' ? t('nav.tuk_tuk') : t('nav.jeep')}`}
             </div>
+            <h1 className="text-3xl md:text-5xl font-black text-brand-black mb-6 leading-tight uppercase tracking-tight">{t(tour.nameKey)}</h1>
+            <p className="text-lg md:text-xl text-brand-black/70 font-medium leading-relaxed mb-8 whitespace-pre-line">{t(tour.descriptionKey)}</p>
+          </div>
 
-            <div className="bg-brand-black rounded-3xl p-8 shadow-xl relative overflow-hidden text-white">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-brand-brown/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-2xl"></div>
-              <div className="flex flex-col lg:flex-row lg:items-center justify-between gap-6 mb-8">
-                <div className="flex flex-col gap-1">
-                  <span className="text-[10px] text-brand-cream/40 block uppercase tracking-widest font-bold">{t('common.from')}</span>
-                  <div className="flex flex-wrap items-baseline gap-x-3">
-                    <span className="text-4xl md:text-5xl font-black text-brand-cream leading-none">{tour.price}</span>
-                    {tour.priceWithFee && (
-                      <span className="text-base md:text-lg font-bold text-brand-cream/40 whitespace-nowrap">
-                        ({tour.priceWithFee} total)
-                      </span>
-                    )}
-                  </div>
-                </div>
-                {tour.fareHarborProductId ? (
-                  <a 
-                    href={`https://fareharbor.com/embeds/book/mariastuktuk/items/${tour.fareHarborProductId}/?full-items=yes&flow=${tour.fareHarborFlowId || 1007986}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={(e) => {
-                      // Track click in Google Ads
-                      trackEvent('book_now_click', {
-                        tour_id: tour.id,
-                        tour_name: t(tour.nameKey),
-                        method: 'fareharbor'
-                      });
-
-                      if (window.FH) {
-                        try {
-                          e.preventDefault();
-                          window.FH.open({ 
-                            shortname: 'mariastuktuk', 
-                            fallback: 'simple', 
-                            fullItems: 'yes', 
-                            flow: tour.fareHarborFlowId || 1007986, 
-                            view: { item: tour.fareHarborProductId } 
-                          });
-                        } catch (err) {
-                          console.error('FareHarbor error:', err);
-                          // Fallback to default link behavior if FH.open fails
-                        }
-                      }
-                    }}
-                    className="flex-grow lg:flex-none px-6 lg:px-10 py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-2xl font-black uppercase tracking-wide text-sm transition-all transform hover:scale-[1.02] shadow-lg shadow-brand-brown/20 flex items-center justify-center gap-3 shrink-0"
-                  >
-                    <Calendar size={20} />
-                    {t('common.reserve_now')}
-                  </a>
-                ) : (
-                  <a 
-                    href={`https://wa.me/351968995275?text=${encodeURIComponent(`Olá! Gostaria de reservar o passeio: ${t(tour.nameKey)}`)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    onClick={() => {
-                      trackEvent('book_now_click', {
-                        tour_id: tour.id,
-                        tour_name: t(tour.nameKey),
-                        method: 'whatsapp'
-                      });
-                    }}
-                    className="flex-grow lg:flex-none px-6 lg:px-10 py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-2xl font-black uppercase tracking-wide text-sm transition-all transform hover:scale-[1.02] shadow-lg shadow-brand-brown/20 flex items-center justify-center gap-3 shrink-0"
-                  >
-                    <Calendar size={20} />
-                    {t('common.reserve_now')}
-                  </a>
-                )}
-              </div>
-
-              {/* Expandable All Prices Section */}
-              {tour?.priceOptions && tour.priceOptions.length > 0 && (
-                <div className="mb-6 pt-4 border-t border-white/10">
-                  <button 
-                    onClick={() => setShowPrices(!showPrices)}
-                    type="button"
-                    className="w-full flex items-center justify-between py-3 px-4 rounded-2xl bg-white/10 hover:bg-white/15 transition-all text-brand-cream text-xs md:text-sm font-bold border border-white/10 group cursor-pointer"
-                  >
-                    <span className="flex items-center gap-2">
-                      <Tag size={16} className="text-brand-brown group-hover:scale-110 transition-transform" />
-                      {t('common.see_all_prices', 'Consulte todos os preços aqui')}
-                    </span>
-                    <ChevronDown size={18} className={`text-brand-cream/70 transition-transform duration-300 ${showPrices ? 'rotate-180' : ''}`} />
-                  </button>
-
-                  <AnimatePresence>
-                    {showPrices && (
-                      <motion.div
-                        initial={{ opacity: 0, height: 0 }}
-                        animate={{ opacity: 1, height: 'auto' }}
-                        exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.25 }}
-                        className="overflow-hidden mt-3"
-                      >
-                        <div className="bg-white/5 backdrop-blur-md rounded-2xl p-3 md:p-4 border border-white/10 space-y-2">
-                          {tour.priceOptions.map((opt, idx) => (
-                            <div 
-                              key={idx} 
-                              className="flex flex-col sm:flex-row sm:items-center justify-between p-3 rounded-xl bg-white/5 hover:bg-white/10 transition-colors gap-1 border border-white/5"
-                            >
-                              <div className="flex flex-col">
-                                <span className="font-bold text-sm text-white">{opt.group}</span>
-                                {opt.details && (
-                                  <span className="text-xs text-brand-cream/60">{opt.details}</span>
-                                )}
-                              </div>
-                              <span className="font-black text-base md:text-lg text-brand-brown self-start sm:self-center shrink-0 bg-brand-brown/10 px-2.5 py-1 rounded-lg border border-brand-brown/20">{opt.price}</span>
-                            </div>
-                          ))}
-                        </div>
-                      </motion.div>
-                    )}
-                  </AnimatePresence>
-                </div>
-              )}
-
-              <p className="text-[10px] text-brand-cream/30 text-center uppercase tracking-widest font-bold flex items-center justify-center gap-2">
-                <ShieldCheck size={14} className="text-brand-brown" />
-                {t('tour_detail.secure_booking')}
-              </p>
-            </div>
-
-            {includesMuseum && (
-              <motion.div 
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="p-4 bg-orange-50 border border-orange-200 rounded-2xl flex items-center gap-3 text-orange-900"
-              >
-                <AlertCircle className="shrink-0 text-orange-600" size={20} />
-                <p className="font-bold text-xs uppercase tracking-wide">
-                  {t('common.museum_closure_notice')}
-                </p>
-              </motion.div>
-            )}
+          {/* Desktop Booking Card (Hidden on Mobile) */}
+          <div className="hidden lg:block">
+            {renderBookingCard()}
+          </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               {tour.toBring && (

@@ -5,6 +5,7 @@ import { walkingTours } from '@/src/data/tours';
 import { useTranslation } from 'react-i18next';
 import { SEO } from '../components/SEO';
 import { trackEvent } from '../utils/analytics';
+import { SerpentineItinerary } from '../components/SerpentineItinerary';
 import { 
   Footprints, 
   MapPin, 
@@ -330,146 +331,39 @@ export default function WalkingTours() {
                   <span className="text-[10px] uppercase font-bold text-brand-black/40 block">{t('walking_page.price_per_person_label')}</span>
                   <span className="text-2xl sm:text-3xl font-black text-brand-brown">{tour.price}</span>
                 </div>
-                <a 
-                  href={`https://wa.me/351968995275?text=${encodeURIComponent(`Olá! Gostaria de reservar o passeio: Tavira Walking Tour: History, Secrets & Memories`)}`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={() => {
-                    trackEvent('book_now_click', {
-                      tour_id: tour.id,
-                      tour_name: t(tour.nameKey),
-                      method: 'whatsapp'
-                    });
-                  }}
-                  className="w-full sm:w-auto text-center px-6 py-3.5 bg-brand-black hover:bg-brand-brown text-white rounded-xl font-bold uppercase tracking-wide text-xs transition-all shadow-md"
+                <button 
+                  type="button"
+                  disabled
+                  aria-disabled="true"
+                  className="w-full sm:w-auto text-center px-6 py-3.5 bg-brand-black/15 text-brand-black/40 rounded-xl font-bold uppercase tracking-wide text-xs cursor-not-allowed select-none border border-brand-black/10 shadow-none"
                 >
-                  {t('walking_page.cta_reserve')} (27€)
-                </a>
+                  {t('walking_page.cta_unavailable', 'Tour Unavailable at the moment')}
+                </button>
               </div>
             </div>
           </div>
 
-          {/* 10-Step Interactive Serpentine Itinerary (5 per row) */}
-          {tour.itinerary && tour.itinerary.length > 0 && (() => {
-            const itemsPerRow = 5; // 5 items per row as requested
-            const totalItems = tour.itinerary.length;
-            const numRows = Math.ceil(totalItems / itemsPerRow);
-
-            const rows = [];
-            for (let r = 0; r < numRows; r++) {
-              const rowItems = [];
-              for (let c = 0; c < itemsPerRow; c++) {
-                const originalIndex = r % 2 === 0 ? r * itemsPerRow + c : r * itemsPerRow + (itemsPerRow - 1 - c);
-                if (originalIndex < totalItems) {
-                  rowItems.push({
-                    step: tour.itinerary[originalIndex],
-                    originalIndex
-                  });
-                } else {
-                  rowItems.push(null);
-                }
-              }
-              rows.push(rowItems);
-            }
-
-            return (
-              <div className="pt-8 border-t border-brand-brown/10 space-y-6">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 bg-brand-brown/10 rounded-2xl flex items-center justify-center text-brand-brown shrink-0">
-                    <Map size={22} />
-                  </div>
-                  <div>
-                    <h4 className="text-2xl font-black text-brand-black uppercase tracking-tight">
-                      {t('walking_page.itinerary_title')}
-                    </h4>
-                    <p className="text-xs text-brand-black/60 font-medium">{t('walking_page.itinerary_subtitle')}</p>
-                  </div>
+          {/* 10-Step Interactive Serpentine Itinerary */}
+          {tour.itinerary && tour.itinerary.length > 0 && (
+            <div className="pt-8 border-t border-brand-brown/10 space-y-6">
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 bg-brand-brown/10 rounded-2xl flex items-center justify-center text-brand-brown shrink-0">
+                  <Map size={22} />
                 </div>
-
-                {/* Single Uniform Background Container for All Stops */}
-                <div className="bg-brand-cream/60 p-6 sm:p-8 rounded-3xl border border-brand-brown/10 space-y-4">
-                  {rows.map((rowCells, r) => {
-                    const isEvenRow = r % 2 === 0;
-                    const isLastRow = r === numRows - 1;
-
-                    return (
-                      <div key={r} className="space-y-4">
-                        {/* Row Grid: 5 columns */}
-                        <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 sm:gap-4 items-start">
-                          {rowCells.map((cell, c) => {
-                            if (!cell) {
-                              return <div key={c} className="hidden sm:block" />;
-                            }
-
-                            const { step, originalIndex } = cell;
-                            const isNextStepInSameRow =
-                              isEvenRow
-                                ? c < itemsPerRow - 1 && originalIndex + 1 < totalItems
-                                : c > 0 && originalIndex + 1 < totalItems;
-
-                            return (
-                              <div key={originalIndex} className="flex items-center justify-between gap-1 relative">
-                                {/* Arrow on LEFT for Odd Rows (pointing left to next step) */}
-                                {!isEvenRow && isNextStepInSameRow && (
-                                  <div className="shrink-0 flex items-center text-brand-brown/60 -ml-2 z-10">
-                                    <ChevronLeft size={18} className="text-brand-brown" />
-                                  </div>
-                                )}
-
-                                {/* Step Item */}
-                                <div className="flex flex-col items-center text-center w-full group">
-                                  <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-brand-brown text-white font-black text-xs sm:text-sm flex items-center justify-center shadow-md shadow-brand-brown/20 mb-2 border-2 border-white group-hover:scale-110 transition-transform">
-                                    {originalIndex + 1}
-                                  </div>
-                                  <p className="text-xs sm:text-sm font-bold text-brand-black uppercase tracking-wide leading-snug">
-                                    {t(step.activity)}
-                                  </p>
-                                </div>
-
-                                {/* Arrow on RIGHT for Even Rows (pointing right to next step) */}
-                                {isEvenRow && isNextStepInSameRow && (
-                                  <div className="shrink-0 flex items-center text-brand-brown/60 -mr-2 z-10">
-                                    <ChevronRight size={18} className="text-brand-brown" />
-                                  </div>
-                                )}
-                              </div>
-                            );
-                          })}
-                        </div>
-
-                        {/* Downward Connector Arrow between rows */}
-                        {!isLastRow && (
-                          <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 sm:gap-4 my-1">
-                            {isEvenRow ? (
-                              <>
-                                <div className="hidden sm:block" />
-                                <div className="hidden sm:block" />
-                                <div className="hidden sm:block" />
-                                <div className="hidden sm:block" />
-                                <div className="flex justify-center items-center py-1">
-                                  <ChevronDown size={18} className="text-brand-brown" />
-                                </div>
-                              </>
-                            ) : (
-                              <>
-                                <div className="flex justify-center items-center py-1">
-                                  <ChevronDown size={18} className="text-brand-brown" />
-                                </div>
-                                <div className="hidden sm:block" />
-                                <div className="hidden sm:block" />
-                                <div className="hidden sm:block" />
-                                <div className="hidden sm:block" />
-                              </>
-                            )}
-                          </div>
-                        )}
-                      </div>
-                    );
-                  })}
+                <div>
+                  <h4 className="text-2xl font-black text-brand-black uppercase tracking-tight">
+                    {t('walking_page.itinerary_title')}
+                  </h4>
+                  <p className="text-xs text-brand-black/60 font-medium">{t('walking_page.itinerary_subtitle')}</p>
                 </div>
               </div>
-            );
-          })()}
+
+              {/* Single Uniform Background Container for All Stops */}
+              <div className="bg-brand-cream/60 p-6 sm:p-8 rounded-3xl border border-brand-brown/10 space-y-4">
+                <SerpentineItinerary itinerary={tour.itinerary} desktopItemsPerRow={5} />
+              </div>
+            </div>
+          )}
 
           {/* Link to Full Detail Page */}
           <div className="pt-6 border-t border-brand-brown/10 flex justify-end">

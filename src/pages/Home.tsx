@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, type MouseEvent } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Users, Map, Star, ChevronRight, ChevronLeft, Camera, Coffee, Leaf, Wine, UtensilsCrossed, Fish, Castle, Clock, CheckCircle2, Anchor, Calendar, Compass, Award } from 'lucide-react';
 import { Link } from 'react-router-dom';
@@ -16,12 +16,12 @@ export default function Home() {
   const anchorTour = jeepTours.find(t => t.id === 'jeep-boat-anchors') || jeepTours[0];
   const anchorImages = anchorTour?.gallery && anchorTour.gallery.length > 0 ? anchorTour.gallery : [anchorTour.image];
 
-  const nextAnchorImg = (e?: React.MouseEvent) => {
+  const nextAnchorImg = (e?: MouseEvent) => {
     e?.stopPropagation();
     setAnchorImgIndex((prev) => (prev + 1) % anchorImages.length);
   };
 
-  const prevAnchorImg = (e?: React.MouseEvent) => {
+  const prevAnchorImg = (e?: MouseEvent) => {
     e?.stopPropagation();
     setAnchorImgIndex((prev) => (prev - 1 + anchorImages.length) % anchorImages.length);
   };
@@ -219,23 +219,23 @@ export default function Home() {
                     ))}
                   </ul>
 
-                  <div className="flex flex-row gap-2.5 sm:gap-4 pt-4 border-t border-white/10">
+                  <div className="flex flex-col sm:flex-row gap-4 pt-4 border-t border-white/10">
                     <Link 
                       to={`/tour/${anchorTour.id}`}
-                      className="flex-1 px-3 sm:px-8 py-3.5 sm:py-4 bg-brand-brown hover:bg-brand-brown-light text-white rounded-xl sm:rounded-2xl font-black uppercase tracking-wider text-[11px] sm:text-xs md:text-sm text-center transition-all shadow-lg shadow-brand-brown/20 flex items-center justify-center gap-1.5 sm:gap-2"
+                      className="px-8 py-4 bg-brand-brown hover:bg-brand-brown-light text-white rounded-2xl font-black uppercase tracking-widest text-center transition-all shadow-lg shadow-brand-brown/20 flex items-center justify-center gap-2"
                     >
-                      <span className="truncate">{t('home.anchor_section.cta_details')}</span>
-                      <ChevronRight size={16} className="shrink-0" />
+                      {t('home.anchor_section.cta_details')}
+                      <ChevronRight size={18} />
                     </Link>
                     <a 
                       href={`https://wa.me/351968995275?text=${encodeURIComponent(`Olá! Gostaria de reservar o passeio: ${t(anchorTour.nameKey)}`)}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       onClick={() => trackEvent('book_now_click', { tour_id: anchorTour.id, location: 'home_anchor_section' })}
-                      className="flex-1 px-3 sm:px-8 py-3.5 sm:py-4 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-xl sm:rounded-2xl font-black uppercase tracking-wider text-[11px] sm:text-xs md:text-sm text-center transition-all flex items-center justify-center gap-1.5 sm:gap-2"
+                      className="px-8 py-4 bg-white/10 hover:bg-white/20 text-white border border-white/20 rounded-2xl font-black uppercase tracking-widest text-center transition-all flex items-center justify-center gap-2"
                     >
-                      <Calendar size={16} className="text-brand-brown shrink-0" />
-                      <span className="truncate">{t('home.anchor_section.cta_book')}</span>
+                      <Calendar size={18} className="text-brand-brown" />
+                      {t('home.anchor_section.cta_book')}
                     </a>
                   </div>
                 </motion.div>
