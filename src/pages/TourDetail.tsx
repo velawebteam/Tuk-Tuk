@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
-import { Clock, Users, ShieldCheck, MapPin, CheckCircle2, ChevronLeft, ChevronRight, Calendar, Backpack, Info, XCircle, Map, Star, AlertCircle, Maximize2, ChevronDown, Tag } from 'lucide-react';
+import { Clock, Users, ShieldCheck, MapPin, CheckCircle2, ChevronLeft, ChevronRight, Calendar, Backpack, Info, XCircle, Map, Star, AlertCircle, Maximize2, ChevronDown, Tag, MessageSquare } from 'lucide-react';
 import { allTours } from '@/src/data/tours';
 import { useTranslation } from 'react-i18next';
 import { SEO } from '../components/SEO';
@@ -101,49 +101,67 @@ export default function TourDetail() {
               )}
             </div>
           </div>
-          {tour.type === 'walking' || tour.id === 'walking-tavira' ? (
-            <button
-              type="button"
-              disabled
-              aria-disabled="true"
-              className="w-full sm:w-auto lg:flex-none px-6 sm:px-8 lg:px-10 py-3.5 sm:py-4 lg:py-5 bg-white/10 text-white/40 border border-white/15 rounded-xl sm:rounded-2xl font-bold uppercase tracking-wide text-xs sm:text-sm cursor-not-allowed select-none flex items-center justify-center gap-2.5 sm:gap-3 shrink-0"
-            >
-              {t('walking_page.cta_unavailable', 'Tour Unavailable at the moment')}
-            </button>
-          ) : tour.fareHarborProductId ? (
-            <a 
-              href={`https://fareharbor.com/embeds/book/mariastuktuk/items/${tour.fareHarborProductId}/?full-items=yes&flow=${tour.fareHarborFlowId || 1007986}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={(e) => {
-                // Track click in Google Ads
-                trackEvent('book_now_click', {
-                  tour_id: tour.id,
-                  tour_name: t(tour.nameKey),
-                  method: 'fareharbor'
-                });
+          <div className="flex flex-col gap-3 w-full sm:w-[260px]">
+            {tour.type === 'walking' || tour.id === 'walking-tavira' ? (
+              <button
+                type="button"
+                disabled
+                aria-disabled="true"
+                className="w-full px-6 py-3.5 bg-white/10 text-white/40 border border-white/15 rounded-xl font-bold uppercase tracking-wide text-xs sm:text-sm cursor-not-allowed select-none flex items-center justify-center gap-2.5"
+              >
+                {t('walking_page.cta_unavailable', 'Tour Unavailable at the moment')}
+              </button>
+            ) : tour.fareHarborProductId ? (
+              <a 
+                href={`https://fareharbor.com/embeds/book/mariastuktuk/items/${tour.fareHarborProductId}/?full-items=yes&flow=${tour.fareHarborFlowId || 1007986}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={(e) => {
+                  trackEvent('book_now_click', {
+                    tour_id: tour.id,
+                    tour_name: t(tour.nameKey),
+                    method: 'fareharbor'
+                  });
 
-                if (window.FH) {
-                  try {
-                    e.preventDefault();
-                    window.FH.open({ 
-                      shortname: 'mariastuktuk', 
-                      fallback: 'simple', 
-                      fullItems: 'yes', 
-                      flow: tour.fareHarborFlowId || 1007986, 
-                      view: { item: tour.fareHarborProductId } 
-                    });
-                  } catch (err) {
-                    console.error('FareHarbor error:', err);
+                  if (window.FH) {
+                    try {
+                      e.preventDefault();
+                      window.FH.open({ 
+                        shortname: 'mariastuktuk', 
+                        fallback: 'simple', 
+                        fullItems: 'yes', 
+                        flow: tour.fareHarborFlowId || 1007986, 
+                        view: { item: tour.fareHarborProductId } 
+                      });
+                    } catch (err) {
+                      console.error('FareHarbor error:', err);
+                    }
                   }
-                }
-              }}
-              className="w-full sm:w-auto lg:flex-none px-6 sm:px-8 lg:px-10 py-3.5 sm:py-4 lg:py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-xl sm:rounded-2xl font-black uppercase tracking-wide text-xs sm:text-sm transition-all transform active:scale-[0.98] lg:hover:scale-[1.02] shadow-lg shadow-brand-brown/20 flex items-center justify-center gap-2.5 sm:gap-3 shrink-0"
-            >
-              <Calendar size={18} className="sm:w-5 sm:h-5" />
-              {t('common.reserve_now')}
-            </a>
-          ) : (
+                }}
+                className="w-full px-6 py-3.5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-xl font-black uppercase tracking-wide text-xs sm:text-sm transition-all transform active:scale-[0.98] shadow-lg shadow-brand-brown/20 flex items-center justify-center gap-2.5"
+              >
+                <Calendar size={18} />
+                {t('common.reserve_now')}
+              </a>
+            ) : (
+              <a 
+                href={`https://wa.me/351968995275?text=${encodeURIComponent(`Olá! Gostaria de reservar o passeio: ${t(tour.nameKey)}`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => {
+                  trackEvent('book_now_click', {
+                    tour_id: tour.id,
+                    tour_name: t(tour.nameKey),
+                    method: 'whatsapp'
+                  });
+                }}
+                className="w-full px-6 py-3.5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-xl font-black uppercase tracking-wide text-xs sm:text-sm transition-all transform active:scale-[0.98] shadow-lg shadow-brand-brown/20 flex items-center justify-center gap-2.5"
+              >
+                <Calendar size={18} />
+                {t('common.reserve_now')}
+              </a>
+            )}
+
             <a 
               href={`https://wa.me/351968995275?text=${encodeURIComponent(`Olá! Gostaria de reservar o passeio: ${t(tour.nameKey)}`)}`}
               target="_blank"
@@ -155,12 +173,12 @@ export default function TourDetail() {
                   method: 'whatsapp'
                 });
               }}
-              className="w-full sm:w-auto lg:flex-none px-6 sm:px-8 lg:px-10 py-3.5 sm:py-4 lg:py-5 bg-brand-brown hover:bg-brand-brown-light text-white rounded-xl sm:rounded-2xl font-black uppercase tracking-wide text-xs sm:text-sm transition-all transform active:scale-[0.98] lg:hover:scale-[1.02] shadow-lg shadow-brand-brown/20 flex items-center justify-center gap-2.5 sm:gap-3 shrink-0"
+              className="w-full px-6 py-3.5 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-xl font-black uppercase tracking-wide text-xs sm:text-sm transition-all transform active:scale-[0.98] shadow-lg shadow-[#25D366]/20 flex items-center justify-center gap-2.5"
             >
-              <Calendar size={18} className="sm:w-5 sm:h-5" />
-              {t('common.reserve_now')}
+              <MessageSquare size={18} />
+              {t('common.book_whatsapp', 'Book via WhatsApp')}
             </a>
-          )}
+          </div>
         </div>
 
         {/* Expandable All Prices Section */}
