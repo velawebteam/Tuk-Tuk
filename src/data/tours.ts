@@ -489,7 +489,7 @@ export const tukTukTours: Tour[] = [
     id: 'tuk-tuk-boat',
     type: 'tuk-tuk',
     nameKey: 'tours.tuk_tuk_boat.name',
-    price: '48,76€',
+    price: '65€',
     duration: '2h30',
     pax: '2-5',
     descriptionKey: 'tours.tuk_tuk_boat.desc',
@@ -499,10 +499,8 @@ export const tukTukTours: Tour[] = [
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     fareHarborProductId: 695490,
     priceOptions: [
-      { price: '48,76€', group: 'Grupo de 5 Pessoas', details: 'Preço por pessoa' },
-      { price: '55,65€', group: 'Grupo de 4 Pessoas', details: 'Preço por pessoa' },
-      { price: '61,48€', group: 'Grupo de 3 Pessoas', details: 'Preço por pessoa' },
-      { price: '55,65€', group: 'Grupo de 2 Pessoas', details: 'Preço por pessoa' }
+      { price: '65€', group: 'Grupo de 3 Pessoas', details: 'Preço por pessoa' },
+      { price: '70€', group: 'Grupo de 2 Pessoas', details: 'Preço por pessoa' }
     ],
     itinerary: [
       { activity: 'features.historical_center' },
@@ -544,7 +542,7 @@ export const tukTukTours: Tour[] = [
     id: 'city-olive-factory',
     type: 'tuk-tuk',
     nameKey: 'tours.city_olive_factory.name',
-    price: '58,30€',
+    price: '63€',
     duration: '2h',
     pax: '1-9',
     descriptionKey: 'tours.city_olive_factory.desc',
@@ -554,7 +552,7 @@ export const tukTukTours: Tour[] = [
     languages: ['Português', 'Espanhol', 'Inglês', 'Francês'],
     fareHarborProductId: 535407,
     priceOptions: [
-      { price: '58,30€', group: 'Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' }
+      { price: '63€', group: 'Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' }
     ],
     itinerary: [
       { activity: 'features.historical_center' },
