@@ -411,7 +411,7 @@ export const tukTukTours: Tour[] = [
     id: 'city-tapas',
     type: 'tuk-tuk',
     nameKey: 'tours.city_tapas.name',
-    price: '53€',
+    price: '60€',
     duration: '1h30',
     pax: '1-9',
     descriptionKey: 'tours.city_tapas.desc',
@@ -422,7 +422,7 @@ export const tukTukTours: Tour[] = [
     fareHarborProductId: 480337,
     goodToKnow: ['tour_detail.gtk.ends_restaurant', 'tour_detail.gtk.menu_ti_maria', 'tour_detail.gtk.no_pickup_restaurant'],
     priceOptions: [
-      { price: '53€', group: 'Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' }
+      { price: '60€', group: 'Pessoas', details: 'Preço por pessoa | Para idades a partir dos 12 anos' }
     ],
     itinerary: [
       { activity: 'features.historical_center' },
