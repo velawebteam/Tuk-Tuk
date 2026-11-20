@@ -23,7 +23,16 @@
     "terms_desc": "Termos e condições de reserva e utilização dos serviços de passeios turísticos da Tavira Roots em Tavira.",
     "walking_title": "Caminhadas em Tavira - Passeios Guiados a Pé | Tavira Roots",
     "walking_desc": "Participe nas nossas Caminhadas em Tavira. Conheça a história, segredos e memórias do centro histórico com guia local especialista.",
-    "walking_keywords": "caminhadas tavira, passeio a pe tavira, guia a pe tavira, tour historico tavira"
+    "walking_keywords": "caminhadas tavira, passeio a pe tavira, guia a pe tavira, tour historico tavira",
+    "tour_type_tuk": "Passeios Tuktuk Tavira",
+    "tour_type_jeep": "Passeios Jipe Tavira",
+    "tour_type_walking": "Caminhadas em Tavira",
+    "tour_desc_suffix": "Passeio privado em Tavira e Sotavento Algarvio. Duração:",
+    "tour_keywords_prefix": "Passeios Tavira, Tuktuk Tavira",
+    "tour_keywords_type_tuk": "Passeios de Tuktuk Tavira",
+    "tour_keywords_type_jeep": "Passeios de Jipe Tavira",
+    "tour_keywords_type_walking": "Caminhadas em Tavira",
+    "tour_keywords_suffix": "Passeios Algarve, Tavira Roots"
   },
   "nav": {
     "home": "Início",

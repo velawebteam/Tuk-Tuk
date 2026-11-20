@@ -81,9 +81,11 @@ export default function TourDetail() {
     );
   }
 
-  const tourTitle = `${t(tour.nameKey)} | Passeios ${tour.type === 'tuk-tuk' ? 'Tuktuk' : 'Jipe'} Tavira`;
-  const tourDesc = `${t(tour.descriptionKey)} Passeio privado em Tavira e Sotavento Algarvio. Duração: ${tour.duration}.`;
-  const tourKeywords = `Passeios Tavira, Tuktuk Tavira, ${t(tour.nameKey)}, ${tour.type === 'tuk-tuk' ? 'Passeios de Tuktuk Tavira' : 'Passeios de Jipe Tavira'}, Passeios Algarve, Tavira Roots`;
+  const tourTypeLabel = tour.type === 'tuk-tuk' ? t('seo.tour_type_tuk') : tour.type === 'walking' ? t('seo.tour_type_walking') : t('seo.tour_type_jeep');
+  const tourTypeKeyword = tour.type === 'tuk-tuk' ? t('seo.tour_keywords_type_tuk') : tour.type === 'walking' ? t('seo.tour_keywords_type_walking') : t('seo.tour_keywords_type_jeep');
+  const tourTitle = `${t(tour.nameKey)} | ${tourTypeLabel}`;
+  const tourDesc = `${t(tour.descriptionKey)} ${t('seo.tour_desc_suffix')} ${tour.duration}.`;
+  const tourKeywords = `${t('seo.tour_keywords_prefix')}, ${t(tour.nameKey)}, ${tourTypeKeyword}, ${t('seo.tour_keywords_suffix')}`;
 
   const renderBookingCard = () => (
     <div className="space-y-3 sm:space-y-4">
