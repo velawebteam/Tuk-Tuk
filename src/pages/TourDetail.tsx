@@ -5,7 +5,7 @@ import { Clock, Users, ShieldCheck, MapPin, CheckCircle2, ChevronLeft, ChevronRi
 import { allTours } from '@/src/data/tours';
 import { useTranslation } from 'react-i18next';
 import { SEO } from '../components/SEO';
-import { trackEvent } from '../utils/analytics';
+import { trackEvent, trackBookViaWhatsApp } from '../utils/analytics';
 import { SerpentineItinerary } from '../components/SerpentineItinerary';
 
 declare global {
@@ -167,11 +167,7 @@ export default function TourDetail() {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => {
-                trackEvent('book_now_click', {
-                  tour_id: tour.id,
-                  tour_name: t(tour.nameKey),
-                  method: 'whatsapp'
-                });
+                trackBookViaWhatsApp(tour.id, t(tour.nameKey), tour.type);
               }}
               className="w-full px-6 py-3.5 bg-[#25D366] hover:bg-[#20ba5a] text-white rounded-xl font-black uppercase tracking-wide text-xs sm:text-sm transition-all transform active:scale-[0.98] shadow-lg shadow-[#25D366]/20 flex items-center justify-center gap-2.5"
             >
