@@ -25,7 +25,7 @@ jobs:
           git config --global user.email "github-actions@github.com"
           rm -rf production-build
           mkdir production-build
-          cp -r dist/* production-build/
+          cp -r dist/. production-build/
           cd production-build
           git init
           git checkout -b production
