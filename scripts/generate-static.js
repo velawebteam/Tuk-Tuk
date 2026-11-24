@@ -414,32 +414,7 @@ const websiteSchema = {
 
 const baseHtml = fs.readFileSync(path.join(distPath, 'index.html'), 'utf-8');
 
-const buildStaticRootHtml = ({ h1, intro, extraHtml }) => `
-    <div style="background:#F7F3EB;color:#141414;font-family:sans-serif;padding:24px;max-width:1100px;margin:0 auto;">
-      <header>
-        <nav aria-label="Main Navigation">
-          <a href="/">Tavira Roots</a> |
-          <a href="/tuk-tuk">TukTuk Tavira</a> |
-          <a href="/jipe">Jeep &amp; Jipe Tavira</a> |
-          <a href="/walking-tours">Tavira Walking Tours</a> |
-          <a href="/before-booking">Before Booking</a> |
-          <a href="/faqs">FAQs</a> |
-          <a href="/sobre-nos">About Us</a> |
-          <a href="/contactos">Contact</a>
-        </nav>
-      </header>
-      <main>
-        <h1>${escapeHtml(h1)}</h1>
-        <p>${escapeHtml(intro)}</p>
-        ${extraHtml || ''}
-      </main>
-      <footer>
-        <p><strong>Tavira Roots</strong> — Tavira Tours &amp; Algarve Tours (TukTuk Tavira &amp; Jeep 4x4)</p>
-        <p>R. Gonçalo Velho 7, 8800-349 Tavira, Algarve, Portugal | +351 968 995 275 | info@mariastuktuk.com | RNAAT: 535/2026</p>
-      </footer>
-    </div>`;
-
-const buildRouteHtml = ({ title, description, keywords, canonicalUrl, h1, intro, extraHtml, schemaData }) => {
+const buildRouteHtml = ({ title, description, keywords, canonicalUrl, schemaData }) => {
   let html = baseHtml;
 
   const fullTitle = title.includes('Tavira Roots') ? title : `${title} | Tavira Roots`;
@@ -516,11 +491,6 @@ ${ldScripts}
   </head>`;
 
   html = html.replace(/<\/head>/i, seoHeadTags);
-
-  // Inject semantic static HTML inside <div id="root"></div> (replaced smoothly when React mounts)
-  const rootContent = buildStaticRootHtml({ h1, intro, extraHtml });
-  html = html.replace(/<div id="root"><\/div>/i, `<div id="root">${rootContent}</div>`);
-
   return html;
 };
 

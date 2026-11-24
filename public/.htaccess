@@ -21,3 +21,12 @@
   RewriteCond %{REQUEST_FILENAME} !-d
   RewriteRule ^ index.html [L]
 </IfModule>
+
+<IfModule mod_headers.c>
+  # Prevent stale cached HTML pages after deploys while keeping hashed JS/CSS assets cached
+  <FilesMatch "\.(html)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires 0
+  </FilesMatch>
+</IfModule>
