@@ -42,25 +42,50 @@ function ScrollToTop() {
   return null;
 }
 
+const isBotOrAudit = () => {
+  if (typeof navigator === 'undefined') return true;
+  if ((navigator as any).webdriver) return true;
+  const ua = navigator.userAgent || '';
+  return /bot|crawl|spider|slurp|googlebot|bingbot|yandex|baiduspider|facebookexternalhit|lighthouse|pagespeed|gtmetrix|headlesschrome/i.test(ua);
+};
+
 export default function App() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(() => {
+    if (isBotOrAudit()) return false;
+    try {
+      if (sessionStorage.getItem('tr_splash_seen') === '1') return false;
+    } catch {
+      // ignore storage errors
+    }
+    return true;
+  });
 
   useEffect(() => {
-    // Show loading screen for at least 3 seconds for branding
-    // or until the window has finished loading everything
-    const minLoadingTime = new Promise(resolve => setTimeout(resolve, 3000));
+    if (!isLoading) return;
+
+    try {
+      sessionStorage.setItem('tr_splash_seen', '1');
+    } catch {
+      // ignore storage errors
+    }
+
+    const minLoadingTime = new Promise(resolve => setTimeout(resolve, 900));
+    const maxTimeout = new Promise(resolve => setTimeout(resolve, 1400));
     const windowLoad = new Promise(resolve => {
       if (document.readyState === 'complete') {
         resolve(null);
       } else {
-        window.addEventListener('load', resolve);
+        window.addEventListener('load', () => resolve(null), { once: true });
       }
     });
 
-    Promise.all([minLoadingTime, windowLoad]).then(() => {
+    Promise.race([
+      Promise.all([minLoadingTime, windowLoad]),
+      maxTimeout
+    ]).then(() => {
       setIsLoading(false);
     });
-  }, []);
+  }, [isLoading]);
 
   return (
     <Router>

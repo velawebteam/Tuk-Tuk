@@ -80,7 +80,7 @@ export function Navbar() {
           <Link to="/" className="flex items-center group">
             <img 
               src="https://lh3.googleusercontent.com/d/1nBgIFM_5E5vclRhVItfSWT8rdG_Xt_Ml" 
-              alt="Tavira Roots Logo" 
+              alt="Tavira Roots - Tavira Tours, TukTuk & Jeep Algarve" 
               referrerPolicy="no-referrer"
               className={cn(
                 "object-contain transition-all duration-300 w-[85px] pl-0 mr-[20px] -ml-[20px] border-0",

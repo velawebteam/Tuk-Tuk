@@ -1,5 +1,4 @@
 import { Helmet } from 'react-helmet-async';
-
 import { useTranslation } from 'react-i18next';
 
 interface SEOProps {
@@ -16,7 +15,7 @@ export function SEO({
   title, 
   description, 
   canonical, 
-  keywords = "Passeios Tavira, Tuktuk Tavira, Passeios Algarve, Tours Tavira, Passeios de Jipe Tavira, Passeios de Tuktuk Tavira, O que fazer em Tavira, Tavira Roots, Sotavento Algarvio",
+  keywords = "Tours Tavira, Tavira Tours, TukTuk Tavira, Jeep Tavira, Jipe Tavira, Tours Algarve, Algarve Tours, Private Tours Tavira, Tavira Roots",
   ogType = 'website', 
   ogImage = 'https://lh3.googleusercontent.com/d/1nBgIFM_5E5vclRhVItfSWT8rdG_Xt_Ml',
   schemaData 
@@ -25,6 +24,11 @@ export function SEO({
   const siteName = 'Tavira Roots';
   const fullTitle = title?.includes?.(siteName) ? title : `${title} | ${siteName}`;
   const siteUrl = 'https://taviraroots.com';
+  const canonicalUrl = canonical && canonical !== '/' ? `${siteUrl}${canonical}` : `${siteUrl}/`;
+
+  const langCode = i18n.language ? i18n.language.split('-')[0] : 'en';
+  const ogLocale = langCode === 'pt' ? 'pt_PT' : langCode === 'fr' ? 'fr_FR' : 'en_US';
+  const altLocales = ['en_US', 'pt_PT', 'fr_FR'].filter(l => l !== ogLocale);
 
   // Base Schema for Sitelinks & Breadcrumbs
   const breadcrumbSchema = {
@@ -35,7 +39,7 @@ export function SEO({
         "@type": "ListItem",
         "position": 1,
         "name": t('nav.home'),
-        "item": siteUrl
+        "item": `${siteUrl}/`
       }
     ]
   };
@@ -57,24 +61,30 @@ export function SEO({
       {
         "@type": "SiteNavigationElement",
         "position": 1,
-        "name": t('nav.tuk_tuk'),
+        "name": `TukTuk Tavira - ${t('nav.tuk_tuk')}`,
         "url": `${siteUrl}/tuk-tuk`
       },
       {
         "@type": "SiteNavigationElement",
         "position": 2,
-        "name": t('nav.jeep'),
+        "name": `Jeep & Jipe Tavira - ${t('nav.jeep')}`,
         "url": `${siteUrl}/jipe`
       },
       {
         "@type": "SiteNavigationElement",
         "position": 3,
+        "name": `Walking Tours Tavira - ${t('nav.walking_tours')}`,
+        "url": `${siteUrl}/walking-tours`
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "position": 4,
         "name": t('nav.about'),
         "url": `${siteUrl}/sobre-nos`
       },
       {
         "@type": "SiteNavigationElement",
-        "position": 4,
+        "position": 5,
         "name": t('nav.contact'),
         "url": `${siteUrl}/contactos`
       }
@@ -82,19 +92,24 @@ export function SEO({
   };
 
   return (
-    <Helmet htmlAttributes={{ lang: i18n.language ? i18n.language.split('-')[0] : 'en' }}>
+    <Helmet htmlAttributes={{ lang: langCode }}>
       {/* Basic Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
-      <link rel="canonical" href={canonical ? `${siteUrl}${canonical}` : siteUrl} />
+      <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+      <link rel="canonical" href={canonicalUrl} />
 
       {/* Open Graph / Facebook */}
       <meta property="og:type" content={ogType} />
+      <meta property="og:locale" content={ogLocale} />
+      {altLocales.map((loc) => (
+        <meta key={loc} property="og:locale:alternate" content={loc} />
+      ))}
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
-      <meta property="og:url" content={canonical ? `${siteUrl}${canonical}` : siteUrl} />
+      <meta property="og:url" content={canonicalUrl} />
       <meta property="og:site_name" content={siteName} />
 
       {/* Twitter */}
@@ -132,12 +147,25 @@ export function SEO({
           "@context": "https://schema.org",
           "@type": "TravelAgency",
           "name": "Tavira Roots",
-          "alternateName": "Tavira Roots by Maria's Tuk Tuk",
-          "description": "Tavira Roots offers the best private Tuk Tuk and Jeep tours in Tavira. Explore salt pans, the historic center, and Ria Formosa with local guides.",
+          "alternateName": ["Tavira Roots by Maria's Tuk Tuk", "Tavira Tours", "TukTuk Tavira", "Jeep & Jipe Tavira"],
+          "description": t('seo.home_desc'),
+          "keywords": "Tours Tavira, Tavira Tours, TukTuk Tavira, Jeep Tavira, Jipe Tavira, Tours Algarve, Algarve Tours, Private Tours Tavira",
+          "knowsAbout": [
+            "Tavira Tours",
+            "Tours Tavira",
+            "TukTuk Tavira",
+            "Jeep Tavira",
+            "Jipe Tavira",
+            "Algarve Tours",
+            "Tours Algarve",
+            "Ria Formosa Natural Park",
+            "Private Guided Tours in Eastern Algarve"
+          ],
           "image": "https://lh3.googleusercontent.com/d/1nBgIFM_5E5vclRhVItfSWT8rdG_Xt_Ml",
-          "@id": "https://taviraroots.com",
-          "url": "https://taviraroots.com",
+          "@id": "https://taviraroots.com/#travelagency",
+          "url": "https://taviraroots.com/",
           "telephone": "+351968995275",
+          "email": "info@mariastuktuk.com",
           "priceRange": "€€",
           "address": {
             "@type": "PostalAddress",
@@ -175,27 +203,41 @@ export function SEO({
               "name": "Cabanas de Tavira"
             },
             {
-              "@type": "Region",
+              "@type": "Place",
+              "name": "Cacela Velha"
+            },
+            {
+              "@type": "AdministrativeArea",
               "name": "Algarve",
               "sameAs": "https://en.wikipedia.org/wiki/Algarve"
             }
           ],
           "hasOfferCatalog": {
             "@type": "OfferCatalog",
-            "name": "Tours in Tavira",
+            "name": "Tavira Tours & Algarve Tours",
             "itemListElement": [
               {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Tuk Tuk Tours Tavira"
+                  "name": "TukTuk Tavira - Private Tuk Tuk Tours",
+                  "url": `${siteUrl}/tuk-tuk`
                 }
               },
               {
                 "@type": "Offer",
                 "itemOffered": {
                   "@type": "Service",
-                  "name": "Jeep Tours Tavira"
+                  "name": "Jeep & Jipe Tavira - 4x4 Algarve Tours",
+                  "url": `${siteUrl}/jipe`
+                }
+              },
+              {
+                "@type": "Offer",
+                "itemOffered": {
+                  "@type": "Service",
+                  "name": "Tavira Walking Tours",
+                  "url": `${siteUrl}/walking-tours`
                 }
               }
             ]
@@ -222,12 +264,16 @@ export function SEO({
         })}
       </script>
 
-      {/* Sitelinks Searchbox Schema (Google only shows if deemed appropriate) */}
+      {/* WebSite Schema */}
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
           "@type": "WebSite",
-          "url": siteUrl,
+          "@id": `${siteUrl}/#website`,
+          "name": "Tavira Roots",
+          "alternateName": ["Tavira Tours", "Tours Tavira", "TukTuk Tavira", "Jeep & Jipe Tavira", "Algarve Tours"],
+          "url": `${siteUrl}/`,
+          "inLanguage": ["en", "pt", "fr"],
           "potentialAction": {
             "@type": "SearchAction",
             "target": `${siteUrl}/faqs?q={search_term_string}`,

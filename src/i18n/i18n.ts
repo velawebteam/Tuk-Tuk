@@ -15,8 +15,14 @@ i18n
       en: { translation: en },
       fr: { translation: fr },
     },
+    supportedLngs: ['en', 'pt', 'fr'],
+    nonExplicitSupportedLngs: true,
     fallbackLng: 'en',
-    lng: 'en',
+    detection: {
+      order: ['querystring', 'localStorage', 'navigator', 'htmlTag'],
+      lookupQuerystring: 'lang',
+      caches: ['localStorage'],
+    },
     interpolation: {
       escapeValue: false,
     },

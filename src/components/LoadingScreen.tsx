@@ -23,14 +23,14 @@ export function LoadingScreen() {
             Your browser does not support the video tag.
           </video>
         </div>
-        <motion.h1 
+        <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.5, duration: 0.8 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
           className="mt-8 text-3xl md:text-4xl font-cinzel text-[#6A5636] uppercase tracking-[0.3em] font-bold text-center"
         >
           Tavira Roots
-        </motion.h1>
+        </motion.div>
       </div>
     </motion.div>
   );

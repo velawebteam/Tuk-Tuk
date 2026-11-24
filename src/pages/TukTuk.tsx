@@ -18,15 +18,23 @@ export default function TukTuk() {
         schemaData={{
           "@context": "https://schema.org",
           "@type": "ItemList",
+          "name": "TukTuk Tavira - Private Tuk Tuk Tours",
           "itemListElement": tukTukTours.map((tour, index) => ({
             "@type": "ListItem",
             "position": index + 1,
+            "url": `https://taviraroots.com/tour/${tour.id}`,
             "item": {
               "@type": "TouristTrip",
               "name": t(tour.nameKey),
               "description": t(tour.descriptionKey),
               "image": tour.image,
-              "touristType": "Sightseeing",
+              "url": `https://taviraroots.com/tour/${tour.id}`,
+              "touristType": "TukTuk Tavira Private Sightseeing",
+              "provider": {
+                "@type": "TravelAgency",
+                "name": "Tavira Roots",
+                "url": "https://taviraroots.com/"
+              },
               "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "5.0",
@@ -41,7 +49,7 @@ export default function TukTuk() {
                   {
                     "@type": "ListItem",
                     "position": 1,
-                    "name": "Tavira"
+                    "name": "Tavira, Algarve"
                   }
                 ]
               }

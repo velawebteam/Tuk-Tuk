@@ -1,6 +1,6 @@
 import { useState, type MouseEvent } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
-import { Users, Map, Star, ChevronRight, ChevronLeft, Camera, Coffee, Leaf, Wine, UtensilsCrossed, Fish, Castle, Clock, CheckCircle2, Anchor, Calendar, Compass, Award } from 'lucide-react';
+import { Users, Map, Star, ChevronRight, ChevronLeft, Camera, Coffee, Leaf, Wine, UtensilsCrossed, Fish, Castle, Clock, CheckCircle2, Anchor, Calendar, Compass, Award, Plus, Minus } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { tukTukTours, jeepTours } from '@/src/data/tours';
 import { useTranslation } from 'react-i18next';
@@ -11,6 +11,14 @@ export default function Home() {
   const { t } = useTranslation();
   const [showBookingOptions, setShowBookingOptions] = useState(false);
   const [anchorImgIndex, setAnchorImgIndex] = useState(0);
+  const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
+
+  const homeFaqs = [
+    { question: t('faqs_page.q7'), answer: t('faqs_page.a7') },
+    { question: t('faqs_page.q1'), answer: t('faqs_page.a1') },
+    { question: t('faqs_page.q8'), answer: t('faqs_page.a8') },
+    { question: t('faqs_page.q11'), answer: t('faqs_page.a11') },
+  ];
   
   const featuredTours = [...tukTukTours.slice(0, 2), ...jeepTours.slice(0, 1)];
   const anchorTour = jeepTours.find(t => t.id === 'jeep-boat-anchors') || jeepTours[0];
@@ -33,6 +41,38 @@ export default function Home() {
         description={t('seo.home_desc')}
         keywords={t('seo.home_keywords')}
         canonical="/"
+        schemaData={{
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "ItemList",
+              "name": "Tavira Tours & Algarve Tours",
+              "itemListElement": featuredTours.map((tour, index) => ({
+                "@type": "ListItem",
+                "position": index + 1,
+                "url": `https://taviraroots.com/tour/${tour.id}`,
+                "item": {
+                  "@type": "TouristTrip",
+                  "name": t(tour.nameKey),
+                  "description": t(tour.descriptionKey),
+                  "image": tour.image,
+                  "touristType": tour.type === 'tuk-tuk' ? 'TukTuk Tavira Sightseeing' : 'Jeep & Jipe Tavira 4x4 Safari'
+                }
+              }))
+            },
+            {
+              "@type": "FAQPage",
+              "mainEntity": homeFaqs.map((faq) => ({
+                "@type": "Question",
+                "name": faq.question,
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": faq.answer
+                }
+              }))
+            }
+          ]
+        }}
       />
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-brand-black w-full max-w-full py-12">
@@ -307,9 +347,14 @@ export default function Home() {
                 {t('home.featured_subtitle')}
               </p>
             </div>
-            <Link to="/tuk-tuk" className="text-brand-brown font-bold uppercase tracking-widest flex items-center gap-2 hover:gap-3 transition-all">
-              {t('home.view_all')} <ChevronRight size={20} />
-            </Link>
+            <div className="flex flex-wrap items-center gap-6">
+              <Link to="/tuk-tuk" className="text-brand-brown font-bold uppercase tracking-widest flex items-center gap-2 hover:gap-3 transition-all text-sm">
+                {t('hero.cta_tuk')} <ChevronRight size={18} />
+              </Link>
+              <Link to="/jipe" className="text-brand-cream hover:text-brand-brown font-bold uppercase tracking-widest flex items-center gap-2 hover:gap-3 transition-all text-sm">
+                {t('hero.cta_jeep')} <ChevronRight size={18} />
+              </Link>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -495,6 +540,46 @@ export default function Home() {
                 ))}
               </div>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Home FAQ Highlights Section */}
+      <section className="py-16 md:py-24 bg-brand-cream border-t border-brand-brown/10">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-black text-brand-black uppercase tracking-tight mb-3">
+              {t('home.faq_section_title')}
+            </h2>
+            <p className="text-brand-black/60 font-medium">
+              {t('home.faq_section_subtitle')}
+            </p>
+          </div>
+          <div className="space-y-4">
+            {homeFaqs.map((faq, i) => (
+              <div key={i} className="border border-brand-brown/10 rounded-2xl overflow-hidden shadow-sm bg-white">
+                <button
+                  type="button"
+                  onClick={() => setOpenFaqIndex(openFaqIndex === i ? null : i)}
+                  className="w-full flex items-center justify-between p-6 text-left hover:bg-brand-cream/40 transition-colors cursor-pointer"
+                >
+                  <span className="font-bold text-brand-black pr-6 uppercase tracking-tight text-sm sm:text-base">{faq.question}</span>
+                  <span className="shrink-0 text-brand-brown">
+                    {openFaqIndex === i ? <Minus size={20} /> : <Plus size={20} />}
+                  </span>
+                </button>
+                {openFaqIndex === i && (
+                  <div className="px-6 pb-6 text-brand-black/70 font-medium leading-relaxed text-sm sm:text-base">
+                    {faq.answer}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-8">
+            <Link to="/faqs" className="inline-flex items-center gap-2 text-brand-brown hover:text-brand-brown-light font-black uppercase tracking-widest text-xs">
+              {t('home.faq_section_cta')} <ChevronRight size={16} />
+            </Link>
           </div>
         </div>
       </section>

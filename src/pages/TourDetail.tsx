@@ -320,7 +320,7 @@ export default function TourDetail() {
                       exit={{ opacity: 0 }}
                       transition={{ duration: 0.4 }}
                       className={`w-full h-full object-cover ${selectedImageIndex === 0 && tour.imagePosition ? tour.imagePosition : ''} ${images[selectedImageIndex]?.includes?.('1AgBECV3LgIOLdu520PZLGPzQNVrUFNbZ') ? 'object-left' : ''}`}
-                      alt={`${tour?.nameKey} gallery ${selectedImageIndex}`}
+                      alt={`${t(tour.nameKey)} - ${tourTypeLabel} (${selectedImageIndex + 1})`}
                       referrerPolicy="no-referrer"
                     />
                 </AnimatePresence>
@@ -376,7 +376,7 @@ export default function TourDetail() {
                       <div className={`w-20 h-14 md:w-24 md:h-16 rounded-xl overflow-hidden transition-all ${
                         selectedImageIndex === i ? 'ring-4 ring-brand-brown ring-offset-2 shadow-lg' : 'hover:scale-105'
                       }`}>
-                        <img src={img} className="w-full h-full object-cover" alt={`Thumbnail ${i}`} referrerPolicy="no-referrer" />
+                        <img src={img} className="w-full h-full object-cover" alt={`${t(tour.nameKey)} - ${i + 1}`} referrerPolicy="no-referrer" />
                       </div>
                     </button>
                   ))}

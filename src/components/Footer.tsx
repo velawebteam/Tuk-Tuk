@@ -25,7 +25,7 @@ export function Footer() {
             <Link to="/" className="inline-block">
               <img 
                 src="https://lh3.googleusercontent.com/d/1nBgIFM_5E5vclRhVItfSWT8rdG_Xt_Ml" 
-                alt="Tavira Roots Logo" 
+                alt="Tavira Roots - Tavira & Algarve Tours" 
                 className="h-12 w-auto"
                 referrerPolicy="no-referrer"
               />
@@ -61,8 +61,8 @@ export function Footer() {
           <div>
             <h3 className="text-brand-black font-bold uppercase tracking-widest text-sm mb-6">{t('footer.explore')}</h3>
             <ul className="space-y-4 text-sm text-brand-black/60">
-              <li><Link to="/tuk-tuk" className="hover:text-brand-brown transition-colors font-bold uppercase tracking-wider">{t('hero.cta_tuk')}</Link></li>
-              <li><Link to="/jipe" className="hover:text-brand-brown transition-colors font-bold uppercase tracking-wider">{t('hero.cta_jeep')}</Link></li>
+              <li><Link to="/tuk-tuk" className="hover:text-brand-brown transition-colors font-bold uppercase tracking-wider">{t('footer.link_tuk', t('hero.cta_tuk'))}</Link></li>
+              <li><Link to="/jipe" className="hover:text-brand-brown transition-colors font-bold uppercase tracking-wider">{t('footer.link_jeep', t('hero.cta_jeep'))}</Link></li>
               <li><Link to="/walking-tours" className="hover:text-brand-brown transition-colors font-bold uppercase tracking-wider">{t('nav.walking_tours')}</Link></li>
               <li><Link to="/sobre-nos" className="hover:text-brand-brown transition-colors font-bold uppercase tracking-wider">{t('nav.about')}</Link></li>
               <li><Link to="/faqs" className="hover:text-brand-brown transition-colors font-bold uppercase tracking-wider">{t('nav.faqs')}</Link></li>

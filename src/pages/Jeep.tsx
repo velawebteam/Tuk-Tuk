@@ -17,15 +17,23 @@ export default function Jeep() {
         schemaData={{
           "@context": "https://schema.org",
           "@type": "ItemList",
+          "name": "Jeep & Jipe Tavira - 4x4 Algarve Tours",
           "itemListElement": jeepTours.map((tour, index) => ({
             "@type": "ListItem",
             "position": index + 1,
+            "url": `https://taviraroots.com/tour/${tour.id}`,
             "item": {
               "@type": "TouristTrip",
               "name": t(tour.nameKey),
               "description": t(tour.descriptionKey),
               "image": tour.image,
-              "touristType": "Off-Road",
+              "url": `https://taviraroots.com/tour/${tour.id}`,
+              "touristType": "Jeep & Jipe Tavira 4x4 Off-Road Safari",
+              "provider": {
+                "@type": "TravelAgency",
+                "name": "Tavira Roots",
+                "url": "https://taviraroots.com/"
+              },
               "aggregateRating": {
                 "@type": "AggregateRating",
                 "ratingValue": "5.0",
@@ -40,7 +48,7 @@ export default function Jeep() {
                   {
                     "@type": "ListItem",
                     "position": 1,
-                    "name": "Algarve Mountains"
+                    "name": "Tavira & Eastern Algarve Mountains"
                   }
                 ]
               }

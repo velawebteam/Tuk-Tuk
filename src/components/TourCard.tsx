@@ -20,7 +20,7 @@ export function TourCard({ tour }: TourCardProps) {
         <div className="relative h-64 overflow-hidden">
           <img 
             src={tour.image} 
-            alt={t(tour.nameKey)} 
+            alt={`${t(tour.nameKey)} - ${tour.type === 'tuk-tuk' ? 'TukTuk Tavira' : tour.type === 'walking' ? 'Tavira Walking Tour' : 'Jeep & Jipe Tavira'} | Tavira Roots`} 
             className={`w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 ${tour.imagePosition || ''} ${tour.image?.includes?.('1AgBECV3LgIOLdu520PZLGPzQNVrUFNbZ') ? 'object-left' : ''}`}
             referrerPolicy="no-referrer"
           />
