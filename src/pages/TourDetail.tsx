@@ -254,33 +254,33 @@ export default function TourDetail() {
         keywords={tourKeywords}
         canonical={`/tour/${tour.id}`}
         ogImage={tour.image}
-        schemaData={{
-          "@context": "https://schema.org",
-          "@type": "TouristTrip",
-          "name": t(tour.nameKey),
-          "description": t(tour.descriptionKey),
-          "image": tour.image,
-          "touristType": tour.type === 'tuk-tuk' ? 'Tuk Tuk Sightseeing' : 'Jeep Safari Off-Road',
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "203",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "provider": {
-            "@type": "TravelAgency",
-            "name": "Tavira Roots",
-            "alternateName": "Tavira Roots by Maria's Tuk Tuk",
-            "url": "https://taviraroots.com"
-          },
-          "offers": {
-            "@type": "Offer",
-            "price": tour.price.replace('€', '').replace(',', '.').trim(),
-            "priceCurrency": "EUR",
-            "availability": "https://schema.org/InStock"
-          }
-        }}
+        schemaData={(() => {
+          const numericPrice = tour.price.replace('€', '').replace(',', '.').trim();
+          const hasValidPrice = /^\d+(\.\d+)?$/.test(numericPrice);
+          return {
+            "@context": "https://schema.org",
+            "@type": "TouristTrip",
+            "name": t(tour.nameKey),
+            "description": t(tour.descriptionKey),
+            "image": tour.image,
+            "url": `https://taviraroots.com/tour/${tour.id}`,
+            "touristType": tour.type === 'tuk-tuk' ? 'Tuk Tuk Sightseeing' : tour.type === 'walking' ? 'Tavira Walking Tour' : 'Jeep Safari Off-Road',
+            "provider": {
+              "@type": "TravelAgency",
+              "name": "Tavira Roots",
+              "alternateName": "Tavira Roots by Maria's Tuk Tuk",
+              "url": "https://taviraroots.com"
+            },
+            ...(hasValidPrice ? {
+              "offers": {
+                "@type": "Offer",
+                "price": numericPrice,
+                "priceCurrency": "EUR",
+                "availability": "https://schema.org/InStock"
+              }
+            } : {})
+          };
+        })()}
       />
       {/* Navigation Breadcrumb */}
       <div className="max-w-7xl xl:max-w-[1536px] mx-auto px-4 sm:px-6 lg:px-8 pt-28 md:pt-40 pb-6">

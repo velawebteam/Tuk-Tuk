@@ -41,14 +41,17 @@ export default function WalkingTours() {
         schemaData={{
           "@context": "https://schema.org",
           "@type": "ItemList",
+          "name": "Tavira Walking Tours",
           "itemListElement": walkingTours.map((tour, index) => ({
             "@type": "ListItem",
             "position": index + 1,
+            "url": `https://taviraroots.com/tour/${tour.id}`,
             "item": {
               "@type": "TouristTrip",
               "name": t(tour.nameKey),
               "description": t(tour.descriptionKey),
               "image": tour.image,
+              "url": `https://taviraroots.com/tour/${tour.id}`,
               "touristType": "Walking Tour"
             }
           }))

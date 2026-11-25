@@ -35,13 +35,6 @@ export default function TukTuk() {
                 "name": "Tavira Roots",
                 "url": "https://taviraroots.com/"
               },
-              "aggregateRating": {
-                "@type": "AggregateRating",
-                "ratingValue": "5.0",
-                "reviewCount": "203",
-                "bestRating": "5",
-                "worstRating": "1"
-              },
               "itinerary": {
                 "@type": "ItemList",
                 "numberOfItems": 1,

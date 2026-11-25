@@ -106,13 +106,6 @@ if (fs.existsSync(toursFilePath)) {
           : type === 'walking'
           ? 'Tavira Walking Tour'
           : 'Jeep & Jipe Tavira 4x4 Safari',
-      aggregateRating: {
-        '@type': 'AggregateRating',
-        ratingValue: '5.0',
-        reviewCount: '203',
-        bestRating: '5',
-        worstRating: '1',
-      },
       provider: {
         '@type': 'TravelAgency',
         name: 'Tavira Roots',
