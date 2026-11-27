@@ -307,6 +307,28 @@ const staticPages = [
     intro: t('legal.terms_intro'),
     extraHtml: '',
   },
+  {
+    route: 'cookies',
+    title: t('seo.cookies_title'),
+    description: t('seo.cookies_desc'),
+    keywords: DEFAULT_KEYWORDS,
+    changefreq: 'yearly',
+    priority: '0.3',
+    h1: t('legal.cookies_title'),
+    intro: t('legal.cookies_intro'),
+    extraHtml: '',
+  },
+  {
+    route: 'resolucao-de-litigios',
+    title: t('seo.ral_title'),
+    description: t('seo.ral_desc'),
+    keywords: DEFAULT_KEYWORDS,
+    changefreq: 'yearly',
+    priority: '0.3',
+    h1: t('legal.ral_title'),
+    intro: t('legal.ral_intro'),
+    extraHtml: '',
+  },
 ];
 
 const globalTravelAgencySchema = {

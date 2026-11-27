@@ -94,15 +94,26 @@ export function Footer() {
             <ul className="space-y-4 text-sm text-brand-black/60">
               <li><Link to="/privacidade" className="hover:text-brand-brown transition-colors font-bold uppercase tracking-wider">{t('footer.privacy')}</Link></li>
               <li><Link to="/termos" className="hover:text-brand-brown transition-colors font-bold uppercase tracking-wider">{t('footer.terms')}</Link></li>
+              <li><Link to="/cookies" className="hover:text-brand-brown transition-colors font-bold uppercase tracking-wider">{t('footer.cookies')}</Link></li>
+              <li><Link to="/resolucao-de-litigios" className="hover:text-brand-brown transition-colors font-bold uppercase tracking-wider">{t('footer.ral')}</Link></li>
               <li><a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener noreferrer" className="hover:text-brand-brown transition-colors font-bold uppercase tracking-wider">{t('footer.complaints')}</a></li>
-              <li><span className="text-xs opacity-40 text-brand-black/40 font-bold uppercase tracking-wider">RNAAT: 535/2026</span></li>
+              <li>
+                <button
+                  type="button"
+                  onClick={() => window.dispatchEvent(new CustomEvent('open-cookie-settings'))}
+                  className="hover:text-brand-brown transition-colors font-bold uppercase tracking-wider cursor-pointer text-left"
+                >
+                  {t('footer.manage_cookies')}
+                </button>
+              </li>
+              <li><span className="text-xs opacity-50 text-brand-black/50 font-bold uppercase tracking-wider">RNAAT: 535/2026</span></li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-20 pt-8 border-t border-brand-brown/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-brand-black/50 font-bold uppercase tracking-[0.2em]">
-          <p>© {new Date().getFullYear()} TAVIRA ROOTS. {t('footer.rights')}.</p>
-          <p className="normal-case tracking-wider text-[11px] leading-[19.5px]">
+        <div className="mt-20 pt-8 border-t border-brand-brown/10 flex flex-col md:flex-row items-center justify-between gap-4 text-[11px] text-brand-black/55 font-bold uppercase tracking-[0.15em] text-center md:text-left">
+          <p>© {new Date().getFullYear()} TAVIRA ROOTS · João Carlos Silvério Catarino, Unipessoal, LDA · NIF: PT 519200438 · {t('footer.rights')}.</p>
+          <p className="normal-case tracking-wider text-[11px] leading-[19.5px] shrink-0">
             Website desenvolvido por{' '}
             <a 
               href="https://agencia-vela.com" 

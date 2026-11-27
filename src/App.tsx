@@ -21,6 +21,9 @@ import Contact from './pages/Contact';
 import TourDetail from './pages/TourDetail';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
+import Cookies from './pages/Cookies';
+import DisputeResolution from './pages/DisputeResolution';
+import { CookieConsent } from './components/CookieConsent';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -110,9 +113,12 @@ export default function App() {
             <Route path="/tour/:id" element={<TourDetail />} />
             <Route path="/privacidade" element={<Privacy />} />
             <Route path="/termos" element={<Terms />} />
+            <Route path="/cookies" element={<Cookies />} />
+            <Route path="/resolucao-de-litigios" element={<DisputeResolution />} />
           </Routes>
         </main>
         <Footer />
+        <CookieConsent />
       </div>
     </Router>
   );
