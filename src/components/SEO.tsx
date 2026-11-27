@@ -1,3 +1,4 @@
+import { useLayoutEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 
@@ -20,6 +21,9 @@ export function SEO({
   ogImage = 'https://lh3.googleusercontent.com/d/1nBgIFM_5E5vclRhVItfSWT8rdG_Xt_Ml',
   schemaData 
 }: SEOProps) {
+  useLayoutEffect(() => {
+    document.querySelectorAll('[data-static-seo="true"]').forEach((el) => el.remove());
+  }, []);
   const { i18n, t } = useTranslation();
   const siteName = 'Tavira Roots';
   const fullTitle = title?.includes?.(siteName) ? title : `${title} | ${siteName}`;

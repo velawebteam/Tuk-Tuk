@@ -418,7 +418,7 @@ const buildRouteHtml = ({ title, description, keywords, canonicalUrl, schemaData
   const safeImg = escapeHtml(DEFAULT_OG_IMAGE);
 
   // Strip existing route-specific SEO tags from baseHtml so there are never duplicates
-  html = html.replace(/<title>[\s\S]*?<\/title>/i, `<title>${safeTitle}</title>`);
+  html = html.replace(/<title[^>]*>[\s\S]*?<\/title>/i, `<title data-static-seo="true">${safeTitle}</title>`);
   html = html.replace(/<meta[^>]+name="description"[^>]*>\s*/gi, '');
   html = html.replace(/<meta[^>]+name="keywords"[^>]*>\s*/gi, '');
   html = html.replace(/<link[^>]+rel="canonical"[^>]*>\s*/gi, '');
@@ -455,31 +455,31 @@ const buildRouteHtml = ({ title, description, keywords, canonicalUrl, schemaData
   ]
     .map(
       (obj) =>
-        `    <script data-rh="true" type="application/ld+json">${JSON.stringify(obj)}</script>`
+        `    <script data-static-seo="true" type="application/ld+json">${JSON.stringify(obj)}</script>`
     )
     .join('\n');
 
   const seoHeadTags = `
-    <meta data-rh="true" name="description" content="${safeDesc}" />
-    <meta data-rh="true" name="keywords" content="${safeKeywords}" />
-    <link data-rh="true" rel="canonical" href="${safeUrl}" />
-    <meta data-rh="true" property="og:type" content="website" />
-    <meta data-rh="true" property="og:locale" content="en_US" />
-    <meta data-rh="true" property="og:locale:alternate" content="pt_PT" />
-    <meta data-rh="true" property="og:locale:alternate" content="fr_FR" />
-    <meta data-rh="true" property="og:title" content="${safeTitle}" />
-    <meta data-rh="true" property="og:description" content="${safeDesc}" />
-    <meta data-rh="true" property="og:image" content="${safeImg}" />
-    <meta data-rh="true" property="og:url" content="${safeUrl}" />
-    <meta data-rh="true" property="og:site_name" content="Tavira Roots" />
-    <meta data-rh="true" name="twitter:card" content="summary_large_image" />
-    <meta data-rh="true" name="twitter:title" content="${safeTitle}" />
-    <meta data-rh="true" name="twitter:description" content="${safeDesc}" />
-    <meta data-rh="true" name="twitter:image" content="${safeImg}" />
-    <meta data-rh="true" name="geo.region" content="PT-08" />
-    <meta data-rh="true" name="geo.placename" content="Tavira, Algarve, Portugal" />
-    <meta data-rh="true" name="geo.position" content="37.1268;-7.6499" />
-    <meta data-rh="true" name="ICBM" content="37.1268, -7.6499" />
+    <meta data-static-seo="true" name="description" content="${safeDesc}" />
+    <meta data-static-seo="true" name="keywords" content="${safeKeywords}" />
+    <link data-static-seo="true" rel="canonical" href="${safeUrl}" />
+    <meta data-static-seo="true" property="og:type" content="website" />
+    <meta data-static-seo="true" property="og:locale" content="en_US" />
+    <meta data-static-seo="true" property="og:locale:alternate" content="pt_PT" />
+    <meta data-static-seo="true" property="og:locale:alternate" content="fr_FR" />
+    <meta data-static-seo="true" property="og:title" content="${safeTitle}" />
+    <meta data-static-seo="true" property="og:description" content="${safeDesc}" />
+    <meta data-static-seo="true" property="og:image" content="${safeImg}" />
+    <meta data-static-seo="true" property="og:url" content="${safeUrl}" />
+    <meta data-static-seo="true" property="og:site_name" content="Tavira Roots" />
+    <meta data-static-seo="true" name="twitter:card" content="summary_large_image" />
+    <meta data-static-seo="true" name="twitter:title" content="${safeTitle}" />
+    <meta data-static-seo="true" name="twitter:description" content="${safeDesc}" />
+    <meta data-static-seo="true" name="twitter:image" content="${safeImg}" />
+    <meta data-static-seo="true" name="geo.region" content="PT-08" />
+    <meta data-static-seo="true" name="geo.placename" content="Tavira, Algarve, Portugal" />
+    <meta data-static-seo="true" name="geo.position" content="37.1268;-7.6499" />
+    <meta data-static-seo="true" name="ICBM" content="37.1268, -7.6499" />
 ${ldScripts}
   </head>`;
 
