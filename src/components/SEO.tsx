@@ -21,14 +21,22 @@ export function SEO({
   ogImage = 'https://lh3.googleusercontent.com/d/1nBgIFM_5E5vclRhVItfSWT8rdG_Xt_Ml',
   schemaData 
 }: SEOProps) {
+  const canonicalPath = canonical && canonical !== '/' ? canonical : '/';
+  const hasMatchingStaticLd =
+    typeof document !== 'undefined' &&
+    document.querySelector(`script[data-static-ld="true"][data-static-path="${canonicalPath}"]`) !== null;
+
   useLayoutEffect(() => {
     document.querySelectorAll('[data-static-seo="true"]').forEach((el) => el.remove());
-  }, []);
+    if (!hasMatchingStaticLd) {
+      document.querySelectorAll('script[data-static-ld="true"]').forEach((el) => el.remove());
+    }
+  }, [hasMatchingStaticLd]);
   const { i18n, t } = useTranslation();
   const siteName = 'Tavira Roots';
   const fullTitle = title?.includes?.(siteName) ? title : `${title} | ${siteName}`;
   const siteUrl = 'https://taviraroots.com';
-  const canonicalUrl = canonical && canonical !== '/' ? `${siteUrl}${canonical}` : `${siteUrl}/`;
+  const canonicalUrl = canonicalPath !== '/' ? `${siteUrl}${canonicalPath}` : `${siteUrl}/`;
 
   const langCode = i18n.language ? i18n.language.split('-')[0] : 'en';
   const ogLocale = langCode === 'pt' ? 'pt_PT' : langCode === 'fr' ? 'fr_FR' : 'en_US';
@@ -128,163 +136,169 @@ export function SEO({
       <meta name="geo.position" content="37.1268;-7.6499" />
       <meta name="ICBM" content="37.1268, -7.6499" />
 
-      {/* Breadcrumbs Schema */}
-      <script type="application/ld+json">
-        {JSON.stringify(breadcrumbSchema)}
-      </script>
+      {/* Structured Data (omitted when identical static LD+JSON is already in <head> for this route) */}
+      {!hasMatchingStaticLd && (
+        <script type="application/ld+json">
+          {JSON.stringify(breadcrumbSchema)}
+        </script>
+      )}
 
-      {/* Navigation Schema */}
-      <script type="application/ld+json">
-        {JSON.stringify(navigationSchema)}
-      </script>
+      {!hasMatchingStaticLd && (
+        <script type="application/ld+json">
+          {JSON.stringify(navigationSchema)}
+        </script>
+      )}
 
-      {/* Schema.org JSON-LD */}
-      {schemaData && (
+      {!hasMatchingStaticLd && schemaData && (
         <script type="application/ld+json">
           {JSON.stringify(schemaData)}
         </script>
       )}
 
-      {/* Global TravelAgency & LocalBusiness Schema */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "TravelAgency",
-          "name": "Tavira Roots",
-          "alternateName": ["Tavira Roots by Maria's Tuk Tuk", "Tavira Tours", "TukTuk Tavira", "Jeep & Jipe Tavira"],
-          "description": t('seo.home_desc'),
-          "keywords": "Tours Tavira, Tavira Tours, TukTuk Tavira, Jeep Tavira, Jipe Tavira, Tours Algarve, Algarve Tours, Private Tours Tavira",
-          "knowsAbout": [
-            "Tavira Tours",
-            "Tours Tavira",
-            "TukTuk Tavira",
-            "Jeep Tavira",
-            "Jipe Tavira",
-            "Algarve Tours",
-            "Tours Algarve",
-            "Ria Formosa Natural Park",
-            "Private Guided Tours in Eastern Algarve"
-          ],
-          "image": "https://lh3.googleusercontent.com/d/1nBgIFM_5E5vclRhVItfSWT8rdG_Xt_Ml",
-          "@id": "https://taviraroots.com/#travelagency",
-          "url": "https://taviraroots.com/",
-          "telephone": "+351968995275",
-          "email": "info@mariastuktuk.com",
-          "priceRange": "€€",
-          "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "R. Gonçalo Velho 7",
-            "addressLocality": "Tavira",
-            "postalCode": "8800-349",
-            "addressRegion": "Algarve",
-            "addressCountry": "PT"
-          },
-          "geo": {
-            "@type": "GeoCoordinates",
-            "latitude": 37.1268,
-            "longitude": -7.6499
-          },
-          "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5.0",
-            "reviewCount": "203",
-            "bestRating": "5",
-            "worstRating": "1"
-          },
-          "areaServed": [
-            {
-              "@type": "City",
-              "name": "Tavira",
-              "sameAs": "https://en.wikipedia.org/wiki/Tavira"
-            },
-            {
-              "@type": "City",
-              "name": "Santa Luzia",
-              "sameAs": "https://en.wikipedia.org/wiki/Santa_Luzia_(Tavira)"
-            },
-            {
-              "@type": "City",
-              "name": "Cabanas de Tavira"
-            },
-            {
-              "@type": "Place",
-              "name": "Cacela Velha"
-            },
-            {
-              "@type": "AdministrativeArea",
-              "name": "Algarve",
-              "sameAs": "https://en.wikipedia.org/wiki/Algarve"
-            }
-          ],
-          "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Tavira Tours & Algarve Tours",
-            "itemListElement": [
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "TukTuk Tavira - Private Tuk Tuk Tours",
-                  "url": `${siteUrl}/tuk-tuk`
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Jeep & Jipe Tavira - 4x4 Algarve Tours",
-                  "url": `${siteUrl}/jipe`
-                }
-              },
-              {
-                "@type": "Offer",
-                "itemOffered": {
-                  "@type": "Service",
-                  "name": "Tavira Walking Tours",
-                  "url": `${siteUrl}/walking-tours`
-                }
-              }
-            ]
-          },
-          "openingHoursSpecification": {
-            "@type": "OpeningHoursSpecification",
-            "dayOfWeek": [
-              "Monday",
-              "Tuesday",
-              "Wednesday",
-              "Thursday",
-              "Friday",
-              "Saturday",
-              "Sunday"
+      {!hasMatchingStaticLd && (
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "TravelAgency",
+            "name": "Tavira Roots",
+            "alternateName": ["Tavira Roots by Maria's Tuk Tuk", "Tavira Tours", "TukTuk Tavira", "Jeep & Jipe Tavira"],
+            "description": t('seo.home_desc'),
+            "keywords": "Tours Tavira, Tavira Tours, TukTuk Tavira, Jeep Tavira, Jipe Tavira, Tours Algarve, Algarve Tours, Private Tours Tavira",
+            "knowsAbout": [
+              "Tavira Tours",
+              "Tours Tavira",
+              "TukTuk Tavira",
+              "Jeep Tavira",
+              "Jipe Tavira",
+              "Algarve Tours",
+              "Tours Algarve",
+              "Ria Formosa Natural Park",
+              "Private Guided Tours in Eastern Algarve"
             ],
-            "opens": "09:00",
-            "closes": "19:00"
-          },
-          "sameAs": [
-            "https://www.facebook.com/mariastuktuk",
-            "https://www.instagram.com/mariastuktuk",
-            "https://www.tripadvisor.pt/Attraction_Review-g189121-d25089311-Reviews-Tavira_Roots-Tavira_Faro_District_Algarve.html"
-          ]
-        })}
-      </script>
+            "image": "https://lh3.googleusercontent.com/d/1nBgIFM_5E5vclRhVItfSWT8rdG_Xt_Ml",
+            "@id": "https://taviraroots.com/#travelagency",
+            "url": "https://taviraroots.com/",
+            "telephone": "+351968995275",
+            "email": "info@mariastuktuk.com",
+            "priceRange": "€€",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "R. Gonçalo Velho 7",
+              "addressLocality": "Tavira",
+              "postalCode": "8800-349",
+              "addressRegion": "Algarve",
+              "addressCountry": "PT"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": 37.1268,
+              "longitude": -7.6499
+            },
+            ...(canonicalPath === '/' ? {
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "reviewCount": "203",
+                "bestRating": "5",
+                "worstRating": "1"
+              }
+            } : {}),
+            "areaServed": [
+              {
+                "@type": "City",
+                "name": "Tavira",
+                "sameAs": "https://en.wikipedia.org/wiki/Tavira"
+              },
+              {
+                "@type": "City",
+                "name": "Santa Luzia",
+                "sameAs": "https://en.wikipedia.org/wiki/Santa_Luzia_(Tavira)"
+              },
+              {
+                "@type": "City",
+                "name": "Cabanas de Tavira"
+              },
+              {
+                "@type": "Place",
+                "name": "Cacela Velha"
+              },
+              {
+                "@type": "AdministrativeArea",
+                "name": "Algarve",
+                "sameAs": "https://en.wikipedia.org/wiki/Algarve"
+              }
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Tavira Tours & Algarve Tours",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "TukTuk Tavira - Private Tuk Tuk Tours",
+                    "url": `${siteUrl}/tuk-tuk`
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Jeep & Jipe Tavira - 4x4 Algarve Tours",
+                    "url": `${siteUrl}/jipe`
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Tavira Walking Tours",
+                    "url": `${siteUrl}/walking-tours`
+                  }
+                }
+              ]
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+              ],
+              "opens": "09:00",
+              "closes": "19:00"
+            },
+            "sameAs": [
+              "https://www.facebook.com/mariastuktuk",
+              "https://www.instagram.com/mariastuktuk",
+              "https://www.tripadvisor.pt/Attraction_Review-g189121-d25089311-Reviews-Tavira_Roots-Tavira_Faro_District_Algarve.html"
+            ]
+          })}
+        </script>
+      )}
 
-      {/* WebSite Schema */}
-      <script type="application/ld+json">
-        {JSON.stringify({
-          "@context": "https://schema.org",
-          "@type": "WebSite",
-          "@id": `${siteUrl}/#website`,
-          "name": "Tavira Roots",
-          "alternateName": ["Tavira Tours", "Tours Tavira", "TukTuk Tavira", "Jeep & Jipe Tavira", "Algarve Tours"],
-          "url": `${siteUrl}/`,
-          "inLanguage": ["en", "pt", "fr"],
-          "potentialAction": {
-            "@type": "SearchAction",
-            "target": `${siteUrl}/faqs?q={search_term_string}`,
-            "query-input": "required name=search_term_string"
-          }
-        })}
-      </script>
+      {!hasMatchingStaticLd && (
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "@id": `${siteUrl}/#website`,
+            "name": "Tavira Roots",
+            "alternateName": ["Tavira Tours", "Tours Tavira", "TukTuk Tavira", "Jeep & Jipe Tavira", "Algarve Tours"],
+            "url": `${siteUrl}/`,
+            "inLanguage": ["en", "pt", "fr"],
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": `${siteUrl}/faqs?q={search_term_string}`,
+              "query-input": "required name=search_term_string"
+            }
+          })}
+        </script>
+      )}
     </Helmet>
   );
 }

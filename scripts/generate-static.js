@@ -331,7 +331,7 @@ const staticPages = [
   },
 ];
 
-const globalTravelAgencySchema = {
+const buildGlobalTravelAgencySchema = (includeRating = false) => ({
   '@context': 'https://schema.org',
   '@type': 'TravelAgency',
   name: 'Tavira Roots',
@@ -368,13 +368,17 @@ const globalTravelAgencySchema = {
     latitude: 37.1268,
     longitude: -7.6499,
   },
-  aggregateRating: {
-    '@type': 'AggregateRating',
-    ratingValue: '5.0',
-    reviewCount: '203',
-    bestRating: '5',
-    worstRating: '1',
-  },
+  ...(includeRating
+    ? {
+        aggregateRating: {
+          '@type': 'AggregateRating',
+          ratingValue: '5.0',
+          reviewCount: '203',
+          bestRating: '5',
+          worstRating: '1',
+        },
+      }
+    : {}),
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
     name: 'Tavira Tours & Algarve Tours',
@@ -410,7 +414,7 @@ const globalTravelAgencySchema = {
     'https://www.instagram.com/mariastuktuk',
     'https://www.tripadvisor.pt/Attraction_Review-g189121-d25089311-Reviews-Tavira_Roots-Tavira_Faro_District_Algarve.html',
   ],
-};
+});
 
 const websiteSchema = {
   '@context': 'https://schema.org',
@@ -438,6 +442,8 @@ const buildRouteHtml = ({ title, description, keywords, canonicalUrl, schemaData
   const safeKeywords = escapeHtml(keywords);
   const safeUrl = escapeHtml(canonicalUrl);
   const safeImg = escapeHtml(DEFAULT_OG_IMAGE);
+  const isHome = canonicalUrl === `${SITE_URL}/`;
+  const routePath = isHome ? '/' : canonicalUrl.replace(SITE_URL, '');
 
   // Strip existing route-specific SEO tags from baseHtml so there are never duplicates
   html = html.replace(/<title[^>]*>[\s\S]*?<\/title>/i, `<title data-static-seo="true">${safeTitle}</title>`);
@@ -460,7 +466,7 @@ const buildRouteHtml = ({ title, description, keywords, canonicalUrl, schemaData
     ],
   };
 
-  if (canonicalUrl !== `${SITE_URL}/`) {
+  if (!isHome) {
     breadcrumbSchema.itemListElement.push({
       '@type': 'ListItem',
       position: 2,
@@ -470,14 +476,14 @@ const buildRouteHtml = ({ title, description, keywords, canonicalUrl, schemaData
   }
 
   const ldScripts = [
-    globalTravelAgencySchema,
+    buildGlobalTravelAgencySchema(isHome),
     websiteSchema,
     breadcrumbSchema,
     ...(schemaData ? [schemaData] : []),
   ]
     .map(
       (obj) =>
-        `    <script data-static-seo="true" type="application/ld+json">${JSON.stringify(obj)}</script>`
+        `    <script data-static-ld="true" data-static-path="${escapeHtml(routePath)}" type="application/ld+json">${JSON.stringify(obj)}</script>`
     )
     .join('\n');
 
